@@ -1,19 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-
-import Header from '../components/header'
+import 'tachyons'
 
 const Layout = ({ children, data }) => (
-  <div>
-    <Helmet
-      title={data.site.siteMetadata.title}
-      meta={[
-        { name: 'description', content: data.site.siteMetadata.description },
-      ]}
-    />
-    <Header siteTitle={data.site.siteMetadata.title} />
-    <div>{children()}</div>
+  <div className="sans-serif">
+    <div className="mw8">
+      <Helmet
+        title="Jeff Reiner — Photos"
+        meta={[
+          {
+            name: 'description',
+            content:
+              "This site is a sorted-by-date collection of all the okay photos I've shot, but also all the crappy ones too.",
+          },
+        ]}
+      />
+      <div>{children()}</div>
+    </div>
   </div>
 )
 
@@ -22,14 +26,3 @@ Layout.propTypes = {
 }
 
 export default Layout
-
-export const query = graphql`
-  query SiteQuery {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-  }
-`

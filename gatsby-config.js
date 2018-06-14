@@ -1,8 +1,4 @@
 module.exports = {
-  siteMetadata: {
-    title: 'photos.reiner.design',
-    description: 'random place for shitty photos but also kinda okay ones too',
-  },
   plugins: [
     'gatsby-plugin-react-helmet',
     {

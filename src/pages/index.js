@@ -1,16 +1,33 @@
 import React from 'react'
-import Photo from './photo'
+import Img from 'gatsby-image'
+import Header from '../components/header'
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <div>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure nulla omnis
-      quas saepe, nemo repudiandae aliquam enim placeat obcaecati minus,
-      reiciendis temporibus vel. Illo aliquid, quibusdam ratione est ipsa ipsam!
-    </p>
-    <Photo width="400" alt="random 400px unsplash img" />
-    <Photo width="600" alt="random 600px unsplash img" />
+    <Header />
+
+    {data.allContentfulAsset.edges.map(photo => {
+      const { id, title, sizes } = photo.node
+
+      return <Img className="mb4" key={id} sizes={sizes} title={title} />
+    })}
   </div>
 )
 
 export default IndexPage
+
+export const query = graphql`
+  query PhotosQuery {
+    allContentfulAsset(sort: { fields: [title], order: DESC }) {
+      edges {
+        node {
+          title
+          id
+          sizes(maxWidth: 800) {
+            ...GatsbyContentfulSizes_withWebp
+          }
+        }
+      }
+    }
+  }
+`

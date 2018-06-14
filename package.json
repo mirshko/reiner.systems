@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "photos.reiner.design",
+  "description": "Jeff Reiner — Photos",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Jeff Reiner <jeff@reiner.design>",
   "dependencies": {
     "gatsby": "^1.9.247",
     "gatsby-image": "^1.0.52",
@@ -11,7 +11,8 @@
     "gatsby-plugin-sharp": "^1.6.47",
     "gatsby-source-contentful": "^1.3.52",
     "gatsby-transformer-sharp": "^1.6.26",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "tachyons": "^4.10.0"
   },
   "keywords": [
     "gatsby"
