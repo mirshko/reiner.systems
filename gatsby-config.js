@@ -10,5 +10,27 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-77203242-5`,
+        head: true,
+        anonymize: true,
+        respectDNT: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Jeff Reiner — Photos',
+        short_name: 'Photos',
+        start_url: '/',
+        background_color: '#fff',
+        theme_color: '#333333',
+        display: 'minimal-ui',
+        icon: 'src/favicon.png',
+      },
+    },
+    `gatsby-plugin-netlify-cache`,
   ],
 }
