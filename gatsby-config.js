@@ -13,10 +13,17 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `UA-77203242-5`,
+        trackingId: process.env.GA_TRACKING_ID,
         head: true,
         anonymize: true,
         respectDNT: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `#333333`,
+        showSpinner: false,
       },
     },
     {
