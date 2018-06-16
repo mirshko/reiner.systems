@@ -8,4 +8,4 @@ export const randomPastelHsl = {
   l: 85 + 10 * Math.random(),
 }
 
-export const rgbFromHsl = ({ h, s, l }) => `rgb(${h}, ${s}, ${l})`
+export const rgbFromHsl = ({ h, s, l }) => `hsl(${h}, ${s}%, ${l}%)`
