@@ -1,5 +1,5 @@
 import React from 'react'
-import { generateRandomPastelColor } from '../helpers/helpers'
+import { rgbFromHsl, randomPastelHsl } from '../helpers/helpers'
 
 // Styles
 const paragraph = 'f5 lh-copy black-80 measure'
@@ -9,7 +9,7 @@ const header = 'f5 mt0 lh-title black-80'
 const Header = () => (
   <div
     className="pa4 bt bw4 pt3"
-    style={{ borderColor: generateRandomPastelColor() }}
+    style={{ borderColor: rgbFromHsl(randomPastelHsl) }}
   >
     <h1 className={`${header} mt3`}>
       <a href="https://reiner.design" className={link}>
