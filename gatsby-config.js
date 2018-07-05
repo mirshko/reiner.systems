@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -5,7 +9,11 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `nnekhju478qa`,
-        accessToken: `d90a03cac72b4819a3a1f3b306d733be6237abf63daae8fa3d64f1a895c191f0`,
+        accessToken: process.env.CTF_ACCESS_TOKEN,
+        host:
+          process.env.CTF_USE_PREVIEW == 'true'
+            ? 'preview.contentful.com'
+            : 'cdn.contentful.com',
       },
     },
     `gatsby-transformer-sharp`,
@@ -38,6 +46,5 @@ module.exports = {
         icon: 'src/favicon.png',
       },
     },
-    `gatsby-plugin-netlify-cache`,
   ],
 }

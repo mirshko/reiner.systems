@@ -1,17 +1,39 @@
 import React from 'react'
 import Img from 'gatsby-image'
+import { graphql } from 'gatsby'
+import { rgbFromHsl, randomPastelHsl } from '../helpers/helpers'
+
 import Header from '../components/header'
+import Layout from '../components/layout'
 
 const IndexPage = ({ data }) => (
-  <div>
+  <Layout>
     <Header />
 
     {data.allContentfulAsset.edges.map(photo => {
-      const { id, title, sizes } = photo.node
+      const {
+        id,
+        title,
+        fluid,
+        file: { contentType },
+      } = photo.node
 
-      return <Img className="mb4" key={id} sizes={sizes} title={title} />
+      if (contentType.includes('image')) {
+        return (
+          <Img
+            className="mb4"
+            backgroundColor={`${rgbFromHsl(randomPastelHsl())}`}
+            key={id}
+            fluid={fluid}
+            title={title}
+            alt={title}
+          />
+        )
+      }
+
+      return null
     })}
-  </div>
+  </Layout>
 )
 
 export default IndexPage
@@ -23,8 +45,11 @@ export const query = graphql`
         node {
           title
           id
-          sizes(maxWidth: 800) {
-            ...GatsbyContentfulSizes_withWebp
+          file {
+            contentType
+          }
+          fluid(maxWidth: 800) {
+            ...GatsbyContentfulFluid_withWebp
           }
         }
       }
