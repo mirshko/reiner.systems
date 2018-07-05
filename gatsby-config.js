@@ -27,24 +27,6 @@ module.exports = {
         respectDNT: true,
       },
     },
-    {
-      resolve: `gatsby-plugin-nprogress`,
-      options: {
-        color: `#333333`,
-        showSpinner: false,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: 'Jeff Reiner — Photos',
-        short_name: 'Photos',
-        start_url: '/',
-        background_color: '#fff',
-        theme_color: '#333333',
-        display: 'minimal-ui',
-        icon: 'src/favicon.png',
-      },
-    },
+    `gatsby-plugin-netlify`,
   ],
 }

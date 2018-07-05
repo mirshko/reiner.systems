@@ -1,10 +1,10 @@
-import React from 'react'
-import Img from 'gatsby-image'
-import { graphql } from 'gatsby'
-import { rgbFromHsl, randomPastelHsl } from '../helpers/helpers'
+import React from "react";
+import Img from "gatsby-image";
+import { graphql } from "gatsby";
+import { rgbFromHsl, randomPastelHsl } from "../helpers/helpers";
 
-import Header from '../components/header'
-import Layout from '../components/layout'
+import Header from "../components/header";
+import Layout from "../components/layout";
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -15,10 +15,10 @@ const IndexPage = ({ data }) => (
         id,
         title,
         fluid,
-        file: { contentType },
-      } = photo.node
+        file: { contentType }
+      } = photo.node;
 
-      if (contentType.includes('image')) {
+      if (contentType.includes("image")) {
         return (
           <Img
             className="mb4"
@@ -28,15 +28,15 @@ const IndexPage = ({ data }) => (
             title={title}
             alt={title}
           />
-        )
+        );
       }
 
-      return null
+      return null;
     })}
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;
 
 export const query = graphql`
   query PhotosQuery {
@@ -55,4 +55,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

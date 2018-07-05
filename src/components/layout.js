@@ -1,9 +1,9 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
-import 'tachyons'
+import React from "react";
+import Helmet from "react-helmet";
+import { StaticQuery, graphql } from "gatsby";
+import "tachyons";
 
-import favicon from '../favicon.png'
+import favicon from "../favicon.png";
 
 export default ({ children }) => (
   <StaticQuery
@@ -26,8 +26,8 @@ export default ({ children }) => (
       const {
         seoTitle,
         seoAuthor,
-        seoMetaDescription: { seoMetaDescription },
-      } = data.allContentfulHomepage.edges[0].node
+        seoMetaDescription: { seoMetaDescription }
+      } = data.allContentfulHomepage.edges[0].node;
 
       return (
         <div className="sans-serif">
@@ -41,7 +41,7 @@ export default ({ children }) => (
             <div>{children}</div>
           </div>
         </div>
-      )
+      );
     }}
   />
-)
+);

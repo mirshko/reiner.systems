@@ -1,9 +1,9 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from "react";
+import Link from "gatsby-link";
 
-import Layout from '../components/layout'
+import Layout from "../components/layout";
 
-const button = 'f5 link dim br1 ba ph3 pv2 mb2 dib black-80 b--black-80'
+const button = "f5 link dim br1 ba ph3 pv2 mb2 dib black-80 b--black-80";
 
 const NotFoundPage = () => (
   <Layout>
@@ -14,6 +14,6 @@ const NotFoundPage = () => (
       </Link>
     </div>
   </Layout>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;
