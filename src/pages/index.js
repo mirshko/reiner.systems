@@ -3,13 +3,10 @@ import Img from "gatsby-image";
 import { graphql } from "gatsby";
 import { rgbFromHsl, randomPastelHsl } from "../helpers/helpers";
 
-import Header from "../components/header";
 import Layout from "../components/layout";
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <Header />
-
     {data.allContentfulAsset.edges.map(photo => {
       const {
         id,

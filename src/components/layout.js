@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 import "tachyons";
 
+import Header from "./header";
 import favicon from "../favicon.png";
 
 export default ({ children }) => (
@@ -38,7 +39,10 @@ export default ({ children }) => (
               <meta name="author" content={seoAuthor} />
               <link rel="icon" type="image/png" href={favicon} />
             </Helmet>
-            <div>{children}</div>
+            <div>
+              <Header />
+              {children}
+            </div>
           </div>
         </div>
       );
