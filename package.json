@@ -12,6 +12,7 @@
     "gatsby-plugin-react-helmet": "next",
     "gatsby-plugin-sharp": "next",
     "gatsby-source-contentful": "next",
+    "gatsby-transformer-remark": "^2.1.1-beta.3",
     "gatsby-transformer-sharp": "next",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",

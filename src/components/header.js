@@ -1,9 +1,7 @@
 import React from "react";
 import { graphql, StaticQuery } from "gatsby";
 
-// Styles
-const paragraph = "f5 lh-copy black-80 measure";
-const header = "f5 mt0 lh-title black-80";
+import "./header.css";
 
 const Header = () => (
   <StaticQuery
@@ -12,9 +10,11 @@ const Header = () => (
         allContentfulHomepage {
           edges {
             node {
-              body
-              subtitle
-              headline
+              headerText {
+                childMarkdownRemark {
+                  html
+                }
+              }
             }
           }
         }
@@ -22,16 +22,17 @@ const Header = () => (
     `}
     render={data => {
       const {
-        body,
-        subtitle,
-        headline
+        headerText: {
+          childMarkdownRemark: { html }
+        }
       } = data.allContentfulHomepage.edges[0].node;
       return (
-        <header className="pa4">
-          <h1 className={header}>{headline}</h1>
-          <p className={paragraph}>{subtitle}</p>
-          <p className={`${paragraph} mb0`}>{body}</p>
-        </header>
+        <header
+          className="pa4"
+          dangerouslySetInnerHTML={{
+            __html: html
+          }}
+        />
       );
     }}
   />
