@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import { rgbFromHsl, randomPastelHsl } from "../helpers/helpers";
 
 import Layout from "../components/layout";
+import Window from "../components/window";
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -17,14 +18,14 @@ const IndexPage = ({ data }) => (
 
       if (contentType.includes("image")) {
         return (
-          <Img
-            className="mb4"
-            backgroundColor={`${rgbFromHsl(randomPastelHsl())}`}
-            key={id}
-            fluid={fluid}
-            title={title}
-            alt={title}
-          />
+          <Window key={id}>
+            <Img
+              backgroundColor={`${rgbFromHsl(randomPastelHsl())}`}
+              fluid={fluid}
+              title={title}
+              alt={title}
+            />
+          </Window>
         );
       }
 

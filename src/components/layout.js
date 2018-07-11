@@ -5,6 +5,7 @@ import "tachyons";
 
 import Header from "./header";
 import favicon from "../favicon.png";
+import Window from "./window";
 
 export default ({ children }) => (
   <StaticQuery
@@ -39,8 +40,10 @@ export default ({ children }) => (
               <meta name="author" content={seoAuthor} />
               <link rel="icon" type="image/png" href={favicon} />
             </Helmet>
-            <div>
-              <Header />
+            <div className="pa4-ns pa3">
+              <Window style={{ maxWidth: "max-content" }}>
+                <Header />
+              </Window>
               {children}
             </div>
           </div>
