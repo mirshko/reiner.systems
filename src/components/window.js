@@ -1,10 +1,17 @@
 import React from "react";
 import Draggable from "react-draggable";
+import { rgbFromHsl, randomPastelHsl } from "../helpers/helpers";
 
 const Window = ({ children, style }) => (
   <Draggable handle=".handle" bounds="body">
     <div className="bg-white" style={style}>
-      <div className="ba bw2 handle" style={{ cursor: "move" }}>
+      <div
+        className="ba bw2 handle"
+        style={{
+          cursor: "move",
+          backgroundColor: `${rgbFromHsl(randomPastelHsl())}`
+        }}
+      >
         <div className="flex h2 items-center">
           <div className="w1 h1 bg-black mr2" style={{ marginLeft: "8px" }} />
           <div className="w1 h1 bg-black mr2" />
