@@ -1,0 +1,5 @@
+.filename {
+  @media (width <= 600px) {
+    display: none;
+  }
+}

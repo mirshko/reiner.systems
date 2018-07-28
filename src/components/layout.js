@@ -3,9 +3,9 @@ import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 import "tachyons";
 
-import Header from "./header";
+import Header from "./Header";
 import favicon from "../favicon.png";
-import Window from "./window";
+import Window from "./Window";
 
 export default ({ children }) => (
   <StaticQuery
@@ -41,7 +41,7 @@ export default ({ children }) => (
               <link rel="icon" type="image/png" href={favicon} />
             </Helmet>
             <div className="pa4-ns pa3">
-              <Window style={{ maxWidth: "max-content" }}>
+              <Window filename="header.txt" style={{ maxWidth: "max-content" }}>
                 <Header />
               </Window>
               {children}
