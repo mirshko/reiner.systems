@@ -35,11 +35,7 @@ class Handle extends React.Component {
   }
 
   componentDidMount() {
-    setTimeout(
-      () =>
-        (this.handle.current.style.backgroundColor = generateRandomPastelColor()),
-      1000
-    );
+    this.handle.current.style.backgroundColor = generateRandomPastelColor();
   }
 }
 
