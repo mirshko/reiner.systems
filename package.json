@@ -22,15 +22,11 @@
     "react-helmet": "^5.2.0",
     "tachyons": "^4.10.0"
   },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier --write 'src/**/*.js'"
   },
   "devDependencies": {
     "prettier": "^1.12.0"
