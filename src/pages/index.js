@@ -1,10 +1,9 @@
 import React from "react";
 import Img from "gatsby-image";
 import { graphql } from "gatsby";
-import { rgbFromHsl, randomPastelHsl } from "../helpers/helpers";
+import { hsl, randomPastelHsl } from "../helpers/helpers";
 
 import Layout from "../components/layout";
-import Window from "../components/Window";
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -18,14 +17,14 @@ const IndexPage = ({ data }) => (
 
       if (contentType.includes("image")) {
         return (
-          <Window key={id} filename={title}>
+          <div key={id} style={{ marginBottom: "1rem" }}>
             <Img
-              backgroundColor={`${rgbFromHsl(randomPastelHsl())}`}
+              backgroundColor={hsl(randomPastelHsl())}
               fluid={fluid}
               title={title}
               alt={title}
             />
-          </Window>
+          </div>
         );
       }
 

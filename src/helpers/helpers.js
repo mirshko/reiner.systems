@@ -1,7 +1,3 @@
-export const generateRandomPastelColor = () =>
-  `hsl(${360 * Math.random()}, ${25 + 70 * Math.random()}%, ${85 +
-    10 * Math.random()}%`;
-
 export const randomPastelHsl = () => {
   return {
     h: 360 * Math.random(),
@@ -10,4 +6,4 @@ export const randomPastelHsl = () => {
   };
 };
 
-export const rgbFromHsl = ({ h, s, l }) => `hsl(${h}, ${s}%, ${l}%)`;
+export const hsl = ({ h, s, l }) => `hsl(${h}, ${s}%, ${l}%)`;
