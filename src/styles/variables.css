@@ -1,0 +1,8 @@
+:root {
+  --black: #111517;
+  --blue: blue;
+  --fontFamily: system-ui;
+  --white: #fffeff;
+  --lessWhite: #f6f6f6;
+  --primary: var(--lessWhite);
+}

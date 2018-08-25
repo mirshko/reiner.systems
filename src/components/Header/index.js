@@ -1,8 +1,6 @@
 import React from "react";
 import { graphql, StaticQuery } from "gatsby";
 
-import "./index.module.css";
-
 const Header = () => (
   <StaticQuery
     query={graphql`
@@ -28,7 +26,7 @@ const Header = () => (
       } = data.allContentfulHomepage.edges[0].node;
       return (
         <header
-          className="pa4"
+          style={{ maxWidth: 1280 - 240 }}
           dangerouslySetInnerHTML={{
             __html: html
           }}

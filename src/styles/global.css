@@ -1,0 +1,43 @@
+@import "./variables.css";
+
+html {
+  background-color: var(--white);
+  color: var(--black);
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  font-family: var(--fontFamily);
+  font-size: responsive 24px 40px;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--fontColor);
+  line-height: 1.2;
+  font-size: responsive 1.5rem 2rem;
+}
+
+h1 {
+  font-size: responsive 1.5rem 2rem;
+}
+
+a {
+  color: var(--white);
+  background-color: var(--black);
+
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover,
+a:focus {
+  color: var(--black);
+  background-color: var(--white);
+}
