@@ -8,9 +8,12 @@ html {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 
-  font-family: var(--fontFamily);
   font-size: responsive 24px 40px;
   line-height: 1.6;
+}
+
+body {
+  font-family: var(--fontFamily);
 }
 
 h1,
@@ -19,16 +22,17 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--fontColor);
-  line-height: 1.2;
-  font-size: responsive 1.5rem 2rem;
+  color: var(--black);
+  line-height: 1.1;
+  font-family: var(--fontFamilyBold);
+  font-size: responsive 1.75rem 2rem;
 }
 
 h1 {
   font-size: responsive 1.5rem 2rem;
 }
 
-a {
+:any-link {
   color: var(--white);
   background-color: var(--black);
 
@@ -36,8 +40,7 @@ a {
   font-weight: 600;
 }
 
-a:hover,
-a:focus {
-  color: var(--black);
-  background-color: var(--white);
+:any-link:hover,
+:any-link:focus {
+  background-color: var(--blue);
 }

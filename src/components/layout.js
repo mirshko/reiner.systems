@@ -33,7 +33,7 @@ export default ({ children, header }) => (
       } = data.allContentfulHomepage.edges[0].node;
 
       return (
-        <div style={{ maxWidth: "1280px" }}>
+        <div style={{ maxWidth: 1000 }}>
           <Helmet>
             <title>{seoTitle}</title>
             <meta name="description" content={seoMetaDescription} />

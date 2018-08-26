@@ -26,7 +26,7 @@ const Header = () => (
       } = data.allContentfulHomepage.edges[0].node;
       return (
         <header
-          style={{ maxWidth: 1280 - 240 }}
+          style={{ maxWidth: 1000 }}
           dangerouslySetInnerHTML={{
             __html: html
           }}
