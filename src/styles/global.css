@@ -57,5 +57,6 @@ h1 {
 }
 
 .LinkActive {
-  background-color: var(--blue);
+  background-color: var(--white);
+  color: var(--black);
 }
