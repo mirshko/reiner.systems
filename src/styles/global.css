@@ -53,6 +53,7 @@ h1 {
 
 :any-link:hover,
 :any-link:focus {
+  color: var(--white);
   background-color: var(--blue);
 }
 
