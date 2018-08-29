@@ -4,9 +4,9 @@ import { Link } from "gatsby";
 import Layout from "../components/layout";
 
 const NotFoundPage = () => (
-  <Layout header={false}>
-    <h1>Nope, nothing here.</h1>
-    <Link to="/">Back to stuff</Link>
+  <Layout nav={false}>
+    <p>nope, nothing here. well... not yet at least.</p>
+    <Link to="/">back to stuff</Link>
   </Layout>
 );
 

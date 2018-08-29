@@ -23,13 +23,24 @@ h4,
 h5,
 h6 {
   color: var(--black);
-  line-height: 1.1;
+  line-height: 1.3;
   font-family: var(--fontFamilyBold);
   font-size: responsive 1.75rem 2rem;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  & > *:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+
 h1 {
-  font-size: responsive 1.5rem 2rem;
+  font-size: responsive 1rem 1.5rem;
 }
 
 :any-link {
@@ -42,5 +53,9 @@ h1 {
 
 :any-link:hover,
 :any-link:focus {
+  background-color: var(--blue);
+}
+
+.LinkActive {
   background-color: var(--blue);
 }

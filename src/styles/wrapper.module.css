@@ -1,0 +1,11 @@
+.wrapper {
+  max-width: 1280px;
+
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+
+  @media (width > 600px) {
+    margin-top: 2rem;
+    margin-left: 2rem;
+  }
+}

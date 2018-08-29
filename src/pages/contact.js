@@ -1,17 +1,20 @@
 import React from "react";
+import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
 
-const Home = ({ data }) => {
+const Contact = ({ data }) => {
   const {
+    title,
     introduction: {
       childMarkdownRemark: { html }
     }
-  } = data.allContentfulHome.edges[0].node;
+  } = data.allContentfulContact.edges[0].node;
 
   return (
-    <Layout nav={false}>
+    <Layout>
+      <Helmet title={title} />
       <div
         dangerouslySetInnerHTML={{
           __html: html
@@ -21,13 +24,14 @@ const Home = ({ data }) => {
   );
 };
 
-export default Home;
+export default Contact;
 
 export const query = graphql`
-  query HomeQuery {
-    allContentfulHome {
+  query ContactQuery {
+    allContentfulContact {
       edges {
         node {
+          title
           introduction {
             childMarkdownRemark {
               html

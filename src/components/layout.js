@@ -2,24 +2,22 @@ import React from "react";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 
+import Nav from "../components/Nav";
+
 import "modern-normalize";
 import "../styles/global.css";
 
-import Header from "./Header";
+import styles from "../styles/wrapper.module.css";
 import favicon from "../favicon.png";
 
-export default ({ children, header }) => (
+export default ({ children, nav }) => (
   <StaticQuery
     query={graphql`
       query LayoutQuery {
-        allContentfulHomepage {
+        allContentfulSeo {
           edges {
             node {
-              seoTitle
-              seoAuthor
-              seoMetaDescription {
-                seoMetaDescription
-              }
+              title
             }
           }
         }
@@ -27,20 +25,20 @@ export default ({ children, header }) => (
     `}
     render={data => {
       const {
-        seoTitle,
-        seoAuthor,
-        seoMetaDescription: { seoMetaDescription }
-      } = data.allContentfulHomepage.edges[0].node;
+        title,
+        author,
+        description
+      } = data.allContentfulSeo.edges[0].node;
 
       return (
-        <div style={{ maxWidth: 1000 }}>
+        <div className={styles.wrapper}>
           <Helmet>
-            <title>{seoTitle}</title>
-            <meta name="description" content={seoMetaDescription} />
-            <meta name="author" content={seoAuthor} />
+            <title>{title}</title>
+            <meta name="description" content={description} />
+            <meta name="author" content={author} />
             <link rel="icon" type="image/png" href={favicon} />
           </Helmet>
-          {header === false ? "" : <Header />}
+          {nav !== false ? <Nav /> : null}
           {children}
         </div>
       );

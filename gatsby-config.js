@@ -16,9 +16,29 @@ module.exports = {
             : "cdn.contentful.com"
       }
     },
+    `gatsby-plugin-catch-links`,
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `blue`,
+        showSpinner: false
+      }
+    },
     `gatsby-plugin-postcss`,
     `gatsby-transformer-sharp`,
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank"
+            }
+          }
+        ]
+      }
+    },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,

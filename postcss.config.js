@@ -10,7 +10,8 @@ module.exports = () => ({
     postcssPresetEnv({
       stage: 0,
       features: {
-        "nesting-rules": true
+        "nesting-rules": true,
+        "media-query-ranges": true
       }
     }),
     postcssBrowserReporter(),
