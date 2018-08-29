@@ -8,7 +8,7 @@ module.exports = () => ({
   plugins: [
     postcssImport(),
     postcssPresetEnv({
-      stage: 0,
+      stage: 4,
       features: {
         "nesting-rules": true,
         "media-query-ranges": true
