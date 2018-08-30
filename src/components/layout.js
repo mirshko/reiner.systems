@@ -8,7 +8,7 @@ import "modern-normalize";
 import "../styles/global.css";
 
 import styles from "../styles/wrapper.module.css";
-import favicon from "../favicon.png";
+import favicon from "../favicons/favicon.png";
 
 export default ({ children, nav }) => (
   <StaticQuery

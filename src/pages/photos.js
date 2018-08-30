@@ -7,6 +7,8 @@ import { hsl, randomPastelHsl } from "../helpers/helpers";
 
 import Layout from "../components/layout";
 
+import favicon from "../favicons/photos.png";
+
 const Photos = ({ data }) => {
   const {
     title,
@@ -20,8 +22,10 @@ const Photos = ({ data }) => {
 
   return (
     <Layout>
-      <Helmet title={title} />
-
+      <Helmet>
+        <title>{title}</title>
+        <link rel="icon" type="image/png" href={favicon} />
+      </Helmet>
       <div
         dangerouslySetInnerHTML={{
           __html: html

@@ -4,6 +4,8 @@ import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
 
+import favicon from "../favicons/projects.png";
+
 const Projects = ({ data }) => {
   const {
     title,
@@ -14,7 +16,10 @@ const Projects = ({ data }) => {
 
   return (
     <Layout>
-      <Helmet title={title} />
+      <Helmet>
+        <title>{title}</title>
+        <link rel="icon" type="image/png" href={favicon} />
+      </Helmet>
       <div
         dangerouslySetInnerHTML={{
           __html: html
