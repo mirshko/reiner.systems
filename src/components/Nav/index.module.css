@@ -1,0 +1,19 @@
+@import "../../styles/variables.css";
+
+.nav {
+  position: sticky;
+
+  z-index: var(--zindex-max);
+  line-height: normal;
+
+  top: 0.5rem;
+
+  @media (width > 600px) {
+    top: 2rem;
+  }
+}
+
+:any-link.active {
+  background-color: transparent;
+  color: var(--black);
+}

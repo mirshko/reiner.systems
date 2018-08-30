@@ -1,21 +1,23 @@
 import React from "react";
 import { Link } from "gatsby";
 
+import styles from "./index.module.css";
+
 const Nav = () => (
-  <div styles={{ display: "flex" }}>
-    <Link activeClassName="LinkActive" to="/">
+  <div className={styles.nav}>
+    <Link activeClassName={styles.active} to="/">
       – jeff reiner
     </Link>
-    <Link activeClassName="LinkActive" to="/projects">
+    <Link activeClassName={styles.active} to="/projects">
       – projects
     </Link>
-    <Link activeClassName="LinkActive" to="/about">
+    <Link activeClassName={styles.active} to="/about">
       – about
     </Link>
-    <Link activeClassName="LinkActive" to="/contact">
+    <Link activeClassName={styles.active} to="/contact">
       – contact
     </Link>
-    <Link activeClassName="LinkActive" to="/photos">
+    <Link activeClassName={styles.active} to="/photos">
       – photos
     </Link>
   </div>

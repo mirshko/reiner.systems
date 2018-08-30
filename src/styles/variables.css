@@ -5,18 +5,5 @@
   --red: red;
   --fontFamily: "lunchtype24expanded_regular";
   --fontFamilyBold: "lunchtype24expanded_medium";
-}
-
-@font-face {
-  font-family: "lunchtype24expanded_regular";
-  src: url("../font/lunchtype24-regular-expanded-webfont.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "lunchtype24expanded_medium";
-  src: url("../font/lunchtype24-medium-expanded-webfont.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
+  --zindex-max: 2147483647;
 }
