@@ -1,7 +1,10 @@
 import React from "react";
+import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
+
+import favicon from "../favicons/favicon.png";
 
 const Home = ({ data }) => {
   const {
@@ -12,6 +15,9 @@ const Home = ({ data }) => {
 
   return (
     <Layout nav={false}>
+      <Helmet>
+        <link rel="icon" type="image/png" href={favicon} />
+      </Helmet>
       <div
         dangerouslySetInnerHTML={{
           __html: html
