@@ -44,6 +44,27 @@ h1 {
   font-size: responsive 1.125rem 1.5rem;
 }
 
+@keyframes colorHover {
+  0% {
+    background-color: var(--mediumspringgreen);
+  }
+  20% {
+    background-color: var(--hotpink);
+  }
+  40% {
+    background-color: var(--cyan);
+  }
+  60% {
+    background-color: var(--deepskyblue);
+  }
+  80% {
+    background-color: var(--magenta);
+  }
+  100% {
+    background-color: var(--mediumslateblue);
+  }
+}
+
 :any-link {
   color: var(--white);
   background-color: var(--black);
@@ -54,6 +75,15 @@ h1 {
   &:hover,
   &:focus {
     color: var(--white);
-    background-color: var(--blue);
+
+    animation-name: colorHover;
+    animation-duration: 1s;
+    animation-timing-function: step-end;
+    animation-iteration-count: infinite;
+
+    @media (prefers-reduced-motion: reduce) {
+      background-color: var(--magenta);
+      animation: none !important;
+    }
   }
 }
