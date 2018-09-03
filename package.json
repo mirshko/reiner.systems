@@ -1,14 +1,13 @@
 {
-  "name": "photos.reiner.design",
-  "description": "Jeff Reiner — Photos",
+  "name": "",
+  "description": "",
   "version": "1.0.0",
-  "author": "Jeff Reiner <jeff@reiner.design>",
+  "author": "@mirshko <jeff@reiner.design>",
   "dependencies": {
     "dotenv": "^6.0.0",
     "gatsby": "next",
     "gatsby-image": "next",
     "gatsby-plugin-catch-links": "^1.0.24",
-    "gatsby-plugin-google-analytics": "next",
     "gatsby-plugin-netlify": "next",
     "gatsby-plugin-nprogress": "^1.0.14",
     "gatsby-plugin-postcss": "^2.0.0-rc.0",
@@ -28,7 +27,8 @@
     "react-helmet": "^5.2.0",
     "rucksack-css": "^1.0.2"
   },
-  "license": "MIT",
+  "license": "UNLICENSED",
+  "private": true,
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -36,9 +36,5 @@
   },
   "devDependencies": {
     "prettier": "^1.14.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   }
 }
