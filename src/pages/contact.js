@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
+import Messager from "../components/Messager";
 
 import favicon from "../favicons/contact.png";
 
@@ -25,6 +26,7 @@ const Contact = ({ data }) => {
           __html: html
         }}
       />
+      <Messager />
     </Layout>
   );
 };

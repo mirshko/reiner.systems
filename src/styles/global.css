@@ -11,6 +11,14 @@ html {
 
   font-size: responsive 24px 40px;
   line-height: 1.6;
+
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
