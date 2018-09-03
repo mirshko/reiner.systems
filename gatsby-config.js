@@ -40,15 +40,6 @@ module.exports = {
       }
     },
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: process.env.GA_TRACKING_ID,
-        head: true,
-        anonymize: true,
-        respectDNT: true
-      }
-    },
     `gatsby-plugin-netlify`
   ]
 };
