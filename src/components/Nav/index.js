@@ -14,11 +14,11 @@ const Nav = () => (
     <Link activeClassName={styles.active} to="/about">
       – about
     </Link>
-    <Link activeClassName={styles.active} to="/contact">
-      – contact
-    </Link>
     <Link activeClassName={styles.active} to="/photos">
       – photos
+    </Link>
+    <Link activeClassName={styles.active} to="/contact">
+      – contact
     </Link>
   </div>
 );
