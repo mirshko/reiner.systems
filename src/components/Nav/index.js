@@ -5,19 +5,19 @@ import styles from "./index.module.css";
 
 const Nav = () => (
   <div className={styles.nav}>
-    <Link activeClassName={styles.active} to="/">
+    <Link activeClassName="active" to="/">
       – jeff reiner
     </Link>
-    <Link activeClassName={styles.active} to="/projects">
+    <Link activeClassName="active" to="/projects">
       – projects
     </Link>
-    <Link activeClassName={styles.active} to="/about">
+    <Link activeClassName="active" to="/about">
       – about
     </Link>
-    <Link activeClassName={styles.active} to="/photos">
+    <Link activeClassName="active" to="/photos">
       – photos
     </Link>
-    <Link activeClassName={styles.active} to="/contact">
+    <Link activeClassName="active" to="/contact">
       – contact
     </Link>
   </div>
