@@ -1,9 +1,9 @@
 import React from "react";
 import Helmet from "react-helmet";
 import Img from "gatsby-image";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 
-import { hsl, randomPastelHsl } from "../helpers/helpers";
+import { arrayUnique, neons } from "../helpers/helpers";
 
 import Layout from "../components/layout";
 
@@ -18,7 +18,19 @@ const Photos = ({ data }) => {
   } = data.allContentfulPhotos.edges[0].node;
 
   const { edges } = data.allContentfulAsset;
-  const photos = edges;
+
+  let photos = edges;
+  photos = photos
+    .filter(photo => photo.node.file.contentType.includes("image"))
+    .map(photo => {
+      return {
+        ...photo.node,
+        folder: photo.node.title.split("_", 1)[0]
+      };
+    });
+
+  let folders = photos.map(photo => photo.folder);
+  folders = arrayUnique(folders);
 
   return (
     <Layout>
@@ -31,28 +43,37 @@ const Photos = ({ data }) => {
           __html: html
         }}
       />
-      {photos.map(photo => {
-        const {
-          id,
-          title,
-          fluid,
-          file: { contentType }
-        } = photo.node;
 
-        if (contentType.includes("image")) {
-          return (
-            <div key={id} style={{ marginBottom: "1rem" }}>
-              <Img
-                backgroundColor={hsl(randomPastelHsl())}
-                fluid={fluid}
-                title={title}
-                alt={title}
-              />
+      {folders.map((folder, index) => {
+        return (
+          <div key={`${folder}_${index}`}>
+            <p>
+              <Link to={`/photos/${folder}/`}>{folder}</Link>
+            </p>
+            <div className="stack">
+              {photos
+                .filter(photo => photo.folder === folder)
+                .slice(0, 5)
+                .map((photo, index) => {
+                  const { id, title, fluid } = photo;
+                  return (
+                    <div
+                      className={`stack-item stack-level--${index}`}
+                      style={{ zIndex: photos.slice(0, 5).length - index }}
+                    >
+                      <Img
+                        backgroundColor={neons[index]}
+                        key={id}
+                        fluid={fluid}
+                        title={title}
+                        alt={title}
+                      />
+                    </div>
+                  );
+                })}
             </div>
-          );
-        }
-
-        return null;
+          </div>
+        );
       })}
     </Layout>
   );
@@ -70,8 +91,8 @@ export const query = graphql`
           file {
             contentType
           }
-          fluid(maxWidth: 800) {
-            ...GatsbyContentfulFluid_withWebp
+          fluid(maxWidth: 600) {
+            ...GatsbyContentfulFluid_withWebp_noBase64
           }
         }
       }

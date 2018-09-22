@@ -1,9 +1,21 @@
-export const randomPastelHsl = () => {
-  return {
-    h: 360 * Math.random(),
-    s: 25 + 70 * Math.random(),
-    l: 85 + 10 * Math.random()
-  };
+/*!
+ * Remove duplicates from an array.
+ * Adapted from https://stackoverflow.com/a/23263937
+ * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
+ * @param  {Array} arr The array
+ * @return {Array}     A new array without duplicates
+ */
+export const arrayUnique = function(arr) {
+  return arr.filter(function(item, index) {
+    return arr.indexOf(item) >= index;
+  });
 };
 
-export const hsl = ({ h, s, l }) => `hsl(${h}, ${s}%, ${l}%)`;
+export const neons = [
+  "mediumspringgreen",
+  "hotpink",
+  "cyan",
+  "deepskyblue",
+  "magenta",
+  "mediumslateblue"
+];
