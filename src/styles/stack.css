@@ -18,16 +18,16 @@
   width: 100%;
   overflow: hidden;
 
-  &:hover {
-    z-index: 20 !important;
-
-    box-shadow: 0.25rem 0.25rem 0px 0 var(--stack-color);
-  }
-
   @media (width > 850px) {
     position: absolute;
     left: 0;
     top: 0;
+
+    &:hover {
+      z-index: 20 !important;
+
+      box-shadow: 0.25rem 0.25rem 0px 0 var(--stack-color);
+    }
   }
 
   @media (width < 850px) {

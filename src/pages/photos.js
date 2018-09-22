@@ -3,6 +3,9 @@ import Helmet from "react-helmet";
 import Img from "gatsby-image";
 import { graphql, Link } from "gatsby";
 
+import take from "lodash.take";
+import shuffle from "lodash.shuffle";
+
 import { arrayUnique, neons } from "../helpers/helpers";
 
 import Layout from "../components/layout";
@@ -51,26 +54,26 @@ const Photos = ({ data }) => {
               <Link to={`/photos/${folder}/`}>{folder}</Link>
             </p>
             <div className="stack">
-              {photos
-                .filter(photo => photo.folder === folder)
-                .slice(0, 5)
-                .map((photo, index) => {
-                  const { id, title, fluid } = photo;
-                  return (
-                    <div
-                      className={`stack-item stack-level--${index}`}
-                      style={{ zIndex: photos.slice(0, 5).length - index }}
-                    >
-                      <Img
-                        backgroundColor={neons[index]}
-                        key={id}
-                        fluid={fluid}
-                        title={title}
-                        alt={title}
-                      />
-                    </div>
-                  );
-                })}
+              {take(
+                shuffle(photos.filter(photo => photo.folder === folder)),
+                5
+              ).map((photo, index) => {
+                const { id, title, fluid } = photo;
+                return (
+                  <div
+                    className={`stack-item stack-level--${index}`}
+                    style={{ zIndex: 5 - index }}
+                  >
+                    <Img
+                      backgroundColor={neons[index]}
+                      key={id}
+                      fluid={fluid}
+                      title={title}
+                      alt={title}
+                    />
+                  </div>
+                );
+              })}
             </div>
           </div>
         );
