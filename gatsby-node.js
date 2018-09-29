@@ -28,7 +28,15 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `).then(result => {
-      console.log(JSON.stringify(result, null, 4));
+      result.data.allContentfulAsset.group.forEach(group => {
+        createPage({
+          path: `photos/${group.fieldValue}`,
+          component: path.resolve(`./src/templates/folder.js`),
+          context: {
+            folder: group.fieldValue
+          }
+        });
+      });
       resolve();
     });
   });

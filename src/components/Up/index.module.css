@@ -1,0 +1,57 @@
+@keyframes colorHover {
+  0% {
+    background-color: var(--mediumspringgreen);
+  }
+  20% {
+    background-color: var(--hotpink);
+  }
+  40% {
+    background-color: var(--cyan);
+  }
+  60% {
+    background-color: var(--deepskyblue);
+  }
+  80% {
+    background-color: var(--magenta);
+  }
+  100% {
+    background-color: var(--mediumslateblue);
+  }
+}
+
+.upBox {
+  all: unset;
+  cursor: pointer;
+  height: 64px;
+  width: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  line-height: 32px;
+  background-color: var(--black);
+
+  &:hover {
+    animation-name: colorHover;
+    animation-duration: 1s;
+    animation-timing-function: step-end;
+    animation-iteration-count: infinite;
+
+    @media (prefers-reduced-motion: reduce) {
+      background-color: var(--magenta);
+      animation: none !important;
+    }
+  }
+}
+
+.upWrapper {
+  z-index: 123456;
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.5rem;
+
+  @media (width > 600px) {
+    bottom: 2rem;
+    right: 2rem;
+  }
+}
