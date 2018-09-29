@@ -6,7 +6,7 @@ import { graphql, Link } from "gatsby";
 import take from "lodash.take";
 import shuffle from "lodash.shuffle";
 
-import { arrayUnique, neons } from "../helpers/helpers";
+import { neons } from "../helpers/helpers";
 
 import Layout from "../components/layout";
 
@@ -20,21 +20,6 @@ const Photos = ({ data }) => {
     }
   } = data.allContentfulPhotos.edges[0].node;
 
-  const { edges } = data.allContentfulAsset;
-
-  let photos = edges;
-  photos = photos
-    .filter(photo => photo.node.file.contentType.includes("image"))
-    .map(photo => {
-      return {
-        ...photo.node,
-        folder: photo.node.title.split("_", 1)[0]
-      };
-    });
-
-  let folders = photos.map(photo => photo.folder);
-  folders = arrayUnique(folders);
-
   return (
     <Layout>
       <Helmet>
@@ -47,18 +32,16 @@ const Photos = ({ data }) => {
         }}
       />
 
-      {folders.map((folder, index) => {
+      {data.allContentfulAsset.group.reverse().map((folder, index) => {
         return (
-          <div key={`${folder}_${index}`}>
+          <div key={`${folder.fieldValue}_${index}`}>
             <p>
-              <Link to={`/photos/${folder}/`}>{folder}</Link>
+              <Link to={`/photos/${folder.fieldValue}/`}>
+                {folder.fieldValue}
+              </Link>
             </p>
             <div className="stack">
-              {take(
-                shuffle(photos.filter(photo => photo.folder === folder)),
-                5
-              ).map((photo, index) => {
-                const { id, title, fluid } = photo;
+              {take(shuffle(folder.edges), 5).map((photo, index) => {
                 return (
                   <div
                     className={`stack-item stack-level--${index}`}
@@ -66,10 +49,10 @@ const Photos = ({ data }) => {
                   >
                     <Img
                       backgroundColor={neons[index]}
-                      key={id}
-                      fluid={fluid}
-                      title={title}
-                      alt={title}
+                      key={photo.node.id}
+                      fluid={photo.node.fluid}
+                      title={photo.node.title}
+                      alt={photo.node.title}
                     />
                   </div>
                 );
@@ -86,16 +69,21 @@ export default Photos;
 
 export const query = graphql`
   query PhotosQuery {
-    allContentfulAsset(sort: { fields: [title], order: DESC }) {
-      edges {
-        node {
-          title
-          id
-          file {
-            contentType
-          }
-          fluid(maxWidth: 600) {
-            ...GatsbyContentfulFluid_withWebp_noBase64
+    allContentfulAsset(
+      filter: { file: { contentType: { eq: "image/jpeg" } } }
+      sort: { fields: [title], order: DESC }
+    ) {
+      group(field: fields___folder) {
+        fieldValue
+        edges {
+          node {
+            title
+            fields {
+              folder
+            }
+            fluid(maxWidth: 600) {
+              ...GatsbyContentfulFluid_withWebp_noBase64
+            }
           }
         }
       }
