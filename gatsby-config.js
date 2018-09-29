@@ -1,3 +1,6 @@
+const fontMedium = "/static/lunchtype24-medium-expanded-webfont.woff2";
+const fontRegular = "/static/lunchtype24-regular-expanded-webfont.woff2";
+
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`
 });
@@ -40,6 +43,14 @@ module.exports = {
       }
     },
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-netlify`
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        allPageHeaders: [
+          `Link: </static/lunchtype24-medium-expanded-webfont.woff2; rel=preload; as=font; crossorigin=crossorigin; nopush`,
+          `Link: </static/lunchtype24-regular-expanded-webfont.woff2; rel=preload; as=font; crossorigin=crossorigin; nopush`
+        ]
+      }
+    }
   ]
 };
