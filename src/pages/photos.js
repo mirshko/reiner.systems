@@ -1,9 +1,12 @@
 import React from "react";
 import Helmet from "react-helmet";
 import Img from "gatsby-image";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 
-import { hsl, randomPastelHsl } from "../helpers/helpers";
+import take from "lodash.take";
+import shuffle from "lodash.shuffle";
+
+import { neons } from "../helpers/helpers";
 
 import Layout from "../components/layout";
 
@@ -17,9 +20,6 @@ const Photos = ({ data }) => {
     }
   } = data.allContentfulPhotos.edges[0].node;
 
-  const { edges } = data.allContentfulAsset;
-  const photos = edges;
-
   return (
     <Layout>
       <Helmet>
@@ -31,28 +31,35 @@ const Photos = ({ data }) => {
           __html: html
         }}
       />
-      {photos.map(photo => {
-        const {
-          id,
-          title,
-          fluid,
-          file: { contentType }
-        } = photo.node;
 
-        if (contentType.includes("image")) {
-          return (
-            <div key={id} style={{ marginBottom: "1rem" }}>
-              <Img
-                backgroundColor={hsl(randomPastelHsl())}
-                fluid={fluid}
-                title={title}
-                alt={title}
-              />
+      {data.allContentfulAsset.group.reverse().map((folder, index) => {
+        return (
+          <div key={`${folder.fieldValue}_${index}`}>
+            <p>
+              <Link to={`/photos/${folder.fieldValue}/`}>
+                {folder.fieldValue}
+              </Link>
+            </p>
+            <div className="stack">
+              {take(shuffle(folder.edges), 5).map((photo, index) => {
+                return (
+                  <div
+                    className={`stack-item stack-level--${index}`}
+                    style={{ zIndex: 5 - index }}
+                  >
+                    <Img
+                      backgroundColor={neons[index]}
+                      key={photo.node.id}
+                      fluid={photo.node.fluid}
+                      title={photo.node.title}
+                      alt={photo.node.title}
+                    />
+                  </div>
+                );
+              })}
             </div>
-          );
-        }
-
-        return null;
+          </div>
+        );
       })}
     </Layout>
   );
@@ -62,16 +69,21 @@ export default Photos;
 
 export const query = graphql`
   query PhotosQuery {
-    allContentfulAsset(sort: { fields: [title], order: DESC }) {
-      edges {
-        node {
-          title
-          id
-          file {
-            contentType
-          }
-          fluid(maxWidth: 800) {
-            ...GatsbyContentfulFluid_withWebp
+    allContentfulAsset(
+      filter: { file: { contentType: { eq: "image/jpeg" } } }
+      sort: { fields: [title], order: DESC }
+    ) {
+      group(field: fields___folder) {
+        fieldValue
+        edges {
+          node {
+            title
+            fields {
+              folder
+            }
+            fluid(maxWidth: 600) {
+              ...GatsbyContentfulFluid_withWebp_noBase64
+            }
           }
         }
       }
