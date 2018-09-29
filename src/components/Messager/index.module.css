@@ -1,0 +1,31 @@
+.form {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-gap: 0.5rem;
+
+  background-color: var(--black);
+
+  border-style: solid;
+  border-color: var(--black);
+  border-width: 0.5rem;
+
+  @media (width < 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.input {
+  all: unset;
+  padding: 0 0.5rem;
+  background-color: var(--white);
+  /* border: none; */
+  /* background-color: blue; */
+}
+
+.submit {
+  all: unset;
+  padding: 0 0.5rem;
+  background-color: var(--white);
+  /* border: none; */
+  /* background-color: red; */
+}
