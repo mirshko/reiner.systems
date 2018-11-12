@@ -3,6 +3,9 @@ require("dotenv").config({
 });
 
 module.exports = {
+  siteMetadata: {
+    siteUrl: `https://reiner.design`
+  },
   plugins: [
     "gatsby-plugin-react-helmet",
     {
