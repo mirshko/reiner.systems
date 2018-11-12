@@ -40,6 +40,7 @@ module.exports = {
       }
     },
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-netlify-cache`,
     {
       resolve: `gatsby-plugin-netlify`
     }
