@@ -1,6 +1,6 @@
 @font-face {
   font-family: "lunchtype24expanded_regular";
-  src: url("../font/lunchtype24-regular-expanded-webfont.woff2") format("woff2");
+  src: url("/lunchtype24-regular-expanded-webfont.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "lunchtype24expanded_medium";
-  src: url("../font/lunchtype24-medium-expanded-webfont.woff2") format("woff2");
+  src: url("/lunchtype24-medium-expanded-webfont.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;

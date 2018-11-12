@@ -1,5 +1,7 @@
-const fontRegular = "/static/lunchtype24-regular-expanded-webfont.woff2";
-const fontMedium = "/static/lunchtype24-medium-expanded-webfont.woff2";
+const font = {
+  regular: "/lunchtype24-regular-expanded-webfont.woff2",
+  medium: "/lunchtype24-medium-expanded-webfont.woff2"
+};
 
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`
@@ -51,8 +53,12 @@ module.exports = {
       resolve: `gatsby-plugin-netlify`,
       options: {
         allPageHeaders: [
-          `Link: <${fontRegular}>; rel=preload; as=font; crossorigin=crossorigin; nopush`,
-          `Link: <${fontMedium}>; rel=preload; as=font; crossorigin=crossorigin; nopush`
+          `Link: <${
+            font.regular
+          }>; rel=preload; as=font; crossorigin=crossorigin; nopush`,
+          `Link: <${
+            font.medium
+          }>; rel=preload; as=font; crossorigin=crossorigin; nopush`
         ]
       }
     }
