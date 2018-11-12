@@ -4,7 +4,6 @@ import { StaticQuery, graphql } from "gatsby";
 
 import Nav from "../components/Nav";
 
-import "modern-normalize";
 import "../styles/global.css";
 
 import image from "../assets/og.jpg";
