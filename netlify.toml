@@ -13,3 +13,9 @@
   to = "https://reiner.design/:splat"
   status = 302
   force = true
+
+[[redirects]]
+  from = "https://reiner.io/*"
+  to = "https://reiner.design/:splat"
+  status = 302
+  force = true
