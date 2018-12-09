@@ -5,21 +5,23 @@ import styles from "./index.module.css";
 
 const Nav = () => (
   <div className={styles.nav}>
-    <Link activeClassName="active" to="/">
-      – jeff reiner
-    </Link>
-    <Link activeClassName="active" to="/projects">
-      – projects
-    </Link>
+    <Link to="/">jeff reiner</Link> (
     <Link activeClassName="active" to="/about">
-      – about
+      about
     </Link>
-    <Link activeClassName="active" to="/photos">
-      – photos
-    </Link>
+    ) frontend designer (
     <Link activeClassName="active" to="/contact">
-      – contact
+      contact
     </Link>
+    ). builds things (
+    <Link activeClassName="active" to="/projects">
+      projects
+    </Link>
+    ). also → (
+    <Link activeClassName="active" to="/photos">
+      photos
+    </Link>
+    )
   </div>
 );
 

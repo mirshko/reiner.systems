@@ -30,8 +30,11 @@ h5,
 h6 {
   color: var(--black);
   line-height: 1.3;
-  font-family: var(--fontFamilyBold);
-  font-size: responsive 1.125rem 1.5em;
+}
+
+h1 {
+  font-size: responsive 1.125rem 1.4em;
+  margin: 0;
 }
 
 ul {

@@ -12,6 +12,16 @@
   }
 }
 
+.stack-shadow {
+  --stack-color: var(--mediumspringgreen);
+
+  &:hover {
+    z-index: 20 !important;
+
+    box-shadow: 0.25rem 0.25rem 0px 0 var(--stack-color);
+  }
+}
+
 .stack-item {
   max-width: 600px;
   max-height: 400px;

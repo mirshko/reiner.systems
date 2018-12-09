@@ -6,7 +6,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import Up from "../components/Up";
 
-import { neons } from "../helpers/helpers";
+import { neons, formatFolderName } from "../helpers/helpers";
 
 import favicon from "../favicons/photos.png";
 
@@ -21,7 +21,7 @@ const Folder = ({ data, pageContext }) => {
         <link rel="icon" type="image/png" href={favicon} />
       </Helmet>
 
-      <p>{folder}</p>
+      <p>{formatFolderName(folder)}</p>
 
       <div style={{ maxWidth: 1000 }}>
         {data.allContentfulAsset.edges.map(photo => {

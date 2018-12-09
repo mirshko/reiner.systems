@@ -19,3 +19,6 @@ export const neons = [
   "magenta",
   "mediumslateblue"
 ];
+
+export const formatFolderName = name =>
+  `${name.slice(0, -4)} @ ${name.slice(-4).replace(/(.{2})/, "$1:")}`;
