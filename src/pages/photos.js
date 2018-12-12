@@ -6,7 +6,7 @@ import { graphql, Link } from "gatsby";
 import take from "lodash.take";
 import shuffle from "lodash.shuffle";
 
-import { neons, formatFolderName } from "../helpers/helpers";
+import { neons } from "../helpers/helpers";
 
 import Layout from "../components/layout";
 
@@ -37,7 +37,7 @@ const Photos = ({ data }) => {
           <div key={`${folder.fieldValue}_${index}`}>
             <p>
               <Link to={`/photos/${folder.fieldValue}/`}>
-                {formatFolderName(folder.fieldValue)}
+                {folder.fieldValue}
               </Link>
             </p>
             <div className="stack">

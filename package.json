@@ -4,6 +4,8 @@
   "version": "1.0.0",
   "author": "@mirshko <jeff@reiner.design>",
   "dependencies": {
+    "dayjs": "^1.7.7",
+    "dayjs-ext": "^2.2.0",
     "dotenv": "^6.0.0",
     "gatsby": "^2.0.6",
     "gatsby-image": "^2.0.6",
