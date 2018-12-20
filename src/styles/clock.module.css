@@ -1,0 +1,18 @@
+.clock {
+  position: fixed;
+
+  z-index: var(--zindex-max);
+  line-height: normal;
+  white-space: nowrap;
+
+  bottom: .5rem;
+  right: .5rem;
+
+  transform: rotate(90deg) translate(0, 100%);
+  transform-origin: right bottom;
+
+  @media (width > 600px) {
+    bottom: 1rem;
+    right: 1rem;
+  }
+}

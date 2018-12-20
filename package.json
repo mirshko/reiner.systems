@@ -27,9 +27,10 @@
     "postcss-import": "^12.0.0",
     "postcss-preset-env": "^6.0.0",
     "postcss-reporter": "^6.0.0",
-    "react": "^16.5.2",
+    "react": "^16.7.0",
     "react-dom": "^16.5.2",
     "react-helmet": "^5.2.0",
+    "react-live-clock": "^3.0.0",
     "react-scroll": "^1.7.10",
     "rucksack-css": "^1.0.2"
   },
