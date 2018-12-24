@@ -7,15 +7,3 @@
   [headers.values]
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
-
-[[redirects]]
-  from = "https://photos.reiner.design/*"
-  to = "https://reiner.design/:splat"
-  status = 302
-  force = true
-
-[[redirects]]
-  from = "https://reiner.io/*"
-  to = "https://reiner.design/:splat"
-  status = 302
-  force = true
