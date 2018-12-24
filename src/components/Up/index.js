@@ -9,7 +9,7 @@ const Up = () => (
   <div className={styles.upWrapper}>
     <button
       title="back to top"
-      tabindex="0"
+      tabIndex="0"
       className={styles.upBox}
       onClick={() =>
         scroll.scrollToTop({
