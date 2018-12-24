@@ -38,7 +38,10 @@ const Photos = ({ data }) => {
             <p>
               <Link to={`/photos/${folder.fieldValue}/`}>
                 {folder.fieldValue}
-              </Link>
+              </Link>{" "}
+              <span role="img" aria-label="point-right">
+                👉
+              </span>
             </p>
             <div className="stack">
               {take(shuffle(folder.edges), 5).map((photo, index) => {
