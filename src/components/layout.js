@@ -1,15 +1,14 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
-import Clock from "react-live-clock";
 
 import Nav from "./Nav";
+import Clock from "./Clock";
 
 import "../styles/global.css";
 
 import image from "../assets/og.jpg";
 import styles from "../styles/wrapper.module.css";
-import clockStyles from "../styles/clock.module.css";
 
 export default ({ children, nav }) => (
   <StaticQuery
@@ -61,11 +60,7 @@ export default ({ children, nav }) => (
           </Helmet>
           {nav !== false && <Nav />}
           {children}
-          <Clock
-            format="YYYY-MM-DDTHH:mm"
-            className={clockStyles.clock}
-            ticking={true}
-          />
+          <Clock />
         </div>
       );
     }}

@@ -5,14 +5,14 @@
   line-height: normal;
   white-space: nowrap;
 
-  bottom: .5rem;
+  top: .5rem;
   right: .5rem;
 
-  transform: rotate(90deg) translate(0, 100%);
-  transform-origin: right bottom;
+  transform: rotate(90deg) translate(100%, 0);
+  transform-origin: right top;
 
   @media (width > 600px) {
-    bottom: 1rem;
+    top: 1rem;
     right: 1rem;
   }
 }
