@@ -13,6 +13,19 @@ import favicon from "../favicons/photos.png";
 const Folder = ({ data, pageContext }) => {
   const folder = pageContext.folder;
 
+  const renderImage = photo => {
+    return (
+      <div key={photo.node.id} style={{ marginBottom: "1rem" }}>
+        <Img
+          backgroundColor={neons[Math.floor(Math.random() * neons.length)]}
+          fluid={photo.node.fluid}
+          title={photo.node.title}
+          alt={photo.node.title}
+        />
+      </div>
+    );
+  };
+
   return (
     <Layout>
       <Up />
@@ -24,20 +37,9 @@ const Folder = ({ data, pageContext }) => {
       <p>{folder}</p>
 
       <div style={{ maxWidth: 1000 }}>
-        {data.allContentfulAsset.edges.map(photo => {
-          return (
-            <div key={photo.node.id} style={{ marginBottom: "1rem" }}>
-              <Img
-                backgroundColor={
-                  neons[Math.floor(Math.random() * neons.length)]
-                }
-                fluid={photo.node.fluid}
-                title={photo.node.title}
-                alt={photo.node.title}
-              />
-            </div>
-          );
-        })}
+        {data.allContentfulAsset.edges.map((photo, index) =>
+          renderImage(photo)
+        )}
       </div>
     </Layout>
   );
