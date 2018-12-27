@@ -47,6 +47,7 @@ const Photos = ({ data }) => {
               {take(shuffle(folder.edges), 5).map((photo, index) => {
                 return (
                   <div
+                    key={index}
                     className={`stack-item stack-level--${index}`}
                     style={{ zIndex: 5 - index }}
                   >

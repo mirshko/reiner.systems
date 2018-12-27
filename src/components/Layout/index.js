@@ -1,17 +1,18 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
+import PropTypes from "prop-types";
 
 import Nav from "../Nav";
 import Clock from "../Clock";
 
-import image from "../assets/og.jpg";
+import image from "../../assets/og.jpg";
 
 import styles from "./index.module.css";
 
-import "../styles/global.css";
+import "../../styles/global.css";
 
-export default ({ children, nav }) => (
+const Layout = ({ children, nav, maxWidth }) => (
   <StaticQuery
     query={graphql`
       query LayoutQuery {
@@ -40,7 +41,7 @@ export default ({ children, nav }) => (
       const url = data.site.siteMetadata.siteUrl;
 
       return (
-        <div className={styles.wrapper}>
+        <div style={{ maxWidth }} className={styles.wrapper}>
           <Helmet>
             <title>{title}</title>
             <meta name="title" content={title} />
@@ -67,3 +68,16 @@ export default ({ children, nav }) => (
     }}
   />
 );
+
+Layout.defaultProps = {
+  maxWidth: 1000,
+  nav: true
+};
+
+Layout.propTypes = {
+  nav: PropTypes.bool,
+  children: PropTypes.node.isRequired,
+  maxWidth: PropTypes.number
+};
+
+export default Layout;
