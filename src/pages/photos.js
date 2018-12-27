@@ -8,7 +8,7 @@ import shuffle from "lodash.shuffle";
 
 import { neons } from "../helpers/helpers";
 
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 
 import favicon from "../favicons/photos.png";
 

@@ -2,13 +2,14 @@ import React from "react";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 
-import Nav from "./Nav";
-import Clock from "./Clock";
-
-import "../styles/global.css";
+import Nav from "../Nav";
+import Clock from "../Clock";
 
 import image from "../assets/og.jpg";
-import styles from "../styles/wrapper.module.css";
+
+import styles from "./index.module.css";
+
+import "../styles/global.css";
 
 export default ({ children, nav }) => (
   <StaticQuery

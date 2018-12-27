@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 import Img from "gatsby-image";
 import { graphql } from "gatsby";
 
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import Up from "../components/Up";
 
 import { neons } from "../helpers/helpers";
