@@ -4,7 +4,6 @@
 @import "./variables.css";
 
 @import "./links.css";
-@import "./stack.css";
 
 html {
   background-color: var(--white);

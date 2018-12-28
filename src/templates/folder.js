@@ -6,8 +6,6 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Up from "../components/Up";
 
-import { neons } from "../helpers/helpers";
-
 import favicon from "../favicons/photos.png";
 
 const Folder = ({ data, pageContext }) => {
@@ -17,7 +15,6 @@ const Folder = ({ data, pageContext }) => {
     return (
       <div key={photo.node.id} style={{ marginBottom: "1rem" }}>
         <Img
-          backgroundColor={neons[Math.floor(Math.random() * neons.length)]}
           fluid={photo.node.fluid}
           title={photo.node.title}
           alt={photo.node.title}
@@ -37,7 +34,7 @@ const Folder = ({ data, pageContext }) => {
       <p>{folder}</p>
 
       <div style={{ maxWidth: 1000 }}>
-        {data.allContentfulAsset.edges.map((photo, index) =>
+        {data.allContentfulAsset.edges.map((photo) =>
           renderImage(photo)
         )}
       </div>

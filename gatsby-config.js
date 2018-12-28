@@ -4,7 +4,10 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://reiner.design`
+    siteUrl: `https://reiner.design`,
+    title: `jeff reiner`,
+    description: `frontend developer based in berlin.`,
+    author: `jeff reiner <jeff@reiner.design>`
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -19,11 +22,19 @@ module.exports = {
             : "cdn.contentful.com"
       }
     },
+    {
+      resolve: `gatsby-mdx`,
+      options: {
+        defaultLayouts: {
+          default: require.resolve("./src/components/Layout")
+        }
+      }
+    },
     `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
-        color: `magenta`,
+        color: `blue`,
         showSpinner: false
       }
     },
