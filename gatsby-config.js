@@ -10,7 +10,6 @@ module.exports = {
     author: `jeff reiner <jeff@reiner.design>`
   },
   plugins: [
-    "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -30,7 +29,6 @@ module.exports = {
         }
       }
     },
-    `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
@@ -38,21 +36,10 @@ module.exports = {
         showSpinner: false
       }
     },
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-catch-links`,
     `gatsby-plugin-postcss`,
     `gatsby-transformer-sharp`,
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: "gatsby-remark-external-links",
-            options: {
-              target: "_blank"
-            }
-          }
-        ]
-      }
-    },
     `gatsby-plugin-sharp`,
     `gatsby-plugin-netlify-cache`,
     `gatsby-plugin-netlify`

@@ -24,6 +24,7 @@ const Folder = ({ data, pageContext }) => {
   return (
     <Layout>
       <Up />
+
       <Helmet>
         <title>{`${folder} – photos`}</title>
         <link rel="icon" type="image/png" href={favicon} />

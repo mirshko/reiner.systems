@@ -1,8 +1,8 @@
 const path = require(`path`);
 const dayjs = require("dayjs");
-const customParseFormat = require('dayjs-ext/plugin/customParseFormat');
+const customParseFormat = require("dayjs-ext/plugin/customParseFormat");
 
-dayjs.extend(customParseFormat)
+dayjs.extend(customParseFormat);
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
@@ -13,7 +13,9 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: `folder`,
-      value: dayjs(node.title.split("_", 1)[0], { format: 'YYMMDDHHmm' }).format('YYYY-MM-DDTHH:mm')
+      value: dayjs(node.title.split("_", 1)[0], {
+        format: "YYMMDDHHmm"
+      }).format("YYYY-MM-DDTHH:mm")
     });
   }
 };
