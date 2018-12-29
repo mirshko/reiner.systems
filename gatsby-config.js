@@ -4,10 +4,12 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://reiner.design`
+    siteUrl: `https://reiner.design`,
+    title: `jeff reiner`,
+    description: `frontend developer based in berlin.`,
+    author: `jeff reiner <jeff@reiner.design>`
   },
   plugins: [
-    "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -19,29 +21,25 @@ module.exports = {
             : "cdn.contentful.com"
       }
     },
-    `gatsby-plugin-catch-links`,
+    {
+      resolve: `gatsby-mdx`,
+      options: {
+        defaultLayouts: {
+          default: require.resolve("./src/components/Layout")
+        }
+      }
+    },
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
-        color: `magenta`,
+        color: `blue`,
         showSpinner: false
       }
     },
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-catch-links`,
     `gatsby-plugin-postcss`,
     `gatsby-transformer-sharp`,
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: "gatsby-remark-external-links",
-            options: {
-              target: "_blank"
-            }
-          }
-        ]
-      }
-    },
     `gatsby-plugin-sharp`,
     `gatsby-plugin-netlify-cache`,
     `gatsby-plugin-netlify`

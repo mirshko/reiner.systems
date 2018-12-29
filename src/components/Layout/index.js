@@ -6,8 +6,6 @@ import PropTypes from "prop-types";
 import Nav from "../Nav";
 import Clock from "../Clock";
 
-import image from "../../assets/og.jpg";
-
 import styles from "./index.module.css";
 
 import "../../styles/global.css";
@@ -16,29 +14,18 @@ const Layout = ({ children, nav, maxWidth }) => (
   <StaticQuery
     query={graphql`
       query LayoutQuery {
-        allContentfulSeo {
-          edges {
-            node {
-              title
-              author
-              description
-            }
-          }
-        }
         site {
           siteMetadata {
             siteUrl
+            title
+            author
+            description
           }
         }
       }
     `}
     render={data => {
-      const {
-        title,
-        author,
-        description
-      } = data.allContentfulSeo.edges[0].node;
-      const url = data.site.siteMetadata.siteUrl;
+      const { title, author, description, siteUrl } = data.site.siteMetadata;
 
       return (
         <div style={{ maxWidth }} className={styles.wrapper}>
@@ -49,16 +36,14 @@ const Layout = ({ children, nav, maxWidth }) => (
             <meta name="description" content={description} />
 
             <meta property="og:type" content="website" />
-            <meta property="og:url" content={url} />
+            <meta property="og:url" content={siteUrl} />
             <meta property="og:title" content={title} />
             <meta property="og:description" content={description} />
-            <meta property="og:image" content={image} />
 
             <meta property="twitter:card" content="summary_large_image" />
-            <meta property="twitter:url" content={url} />
+            <meta property="twitter:url" content={siteUrl} />
             <meta property="twitter:title" content={title} />
             <meta property="twitter:description" content={description} />
-            <meta property="twitter:image" content={image} />
           </Helmet>
           {nav !== false && <Nav />}
           {children}
