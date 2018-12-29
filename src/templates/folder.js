@@ -12,13 +12,11 @@ const Folder = ({ data, pageContext }) => {
   const folder = pageContext.folder;
 
   const renderImage = photo => {
+    const { id, fluid, title } = photo.node;
+
     return (
-      <div key={photo.node.id} style={{ marginBottom: "1rem" }}>
-        <Img
-          fluid={photo.node.fluid}
-          title={photo.node.title}
-          alt={photo.node.title}
-        />
+      <div key={id} style={{ marginBottom: "1rem" }}>
+        <Img fluid={fluid} title={title} alt={title} />
       </div>
     );
   };
@@ -34,9 +32,7 @@ const Folder = ({ data, pageContext }) => {
       <p>{folder}</p>
 
       <div style={{ maxWidth: 1000 }}>
-        {data.allContentfulAsset.edges.map((photo) =>
-          renderImage(photo)
-        )}
+        {data.allContentfulAsset.edges.map(photo => renderImage(photo))}
       </div>
     </Layout>
   );

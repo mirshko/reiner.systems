@@ -33,7 +33,7 @@ const PhotoGallery = () => (
     `}
     render={data => {
       return (
-        <div>
+        <>
           {data.allContentfulAsset.group.reverse().map((folder, index) => {
             return (
               <div key={`${folder.fieldValue}_${index}`}>
@@ -44,18 +44,15 @@ const PhotoGallery = () => (
                 </p>
                 <div className={styles.stack}>
                   {take(shuffle(folder.edges), 5).map((photo, index) => {
+                    const { fluid, title } = photo.node;
+
                     return (
                       <div
                         key={index}
                         className={styles.stackItem}
                         style={{ zIndex: 5 - index }}
                       >
-                        <Img
-                          key={photo.node.id}
-                          fluid={photo.node.fluid}
-                          title={photo.node.title}
-                          alt={photo.node.title}
-                        />
+                        <Img fluid={fluid} title={title} alt={title} />
                       </div>
                     );
                   })}
@@ -63,7 +60,7 @@ const PhotoGallery = () => (
               </div>
             );
           })}
-        </div>
+        </>
       );
     }}
   />

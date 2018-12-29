@@ -5,8 +5,8 @@
   line-height: normal;
   white-space: nowrap;
 
-  top: .5rem;
-  right: .5rem;
+  top: 0.5rem;
+  right: 0.5rem;
 
   transform: rotate(90deg) translate(100%, 0);
   transform-origin: right top;

@@ -10,12 +10,3 @@ export const arrayUnique = function(arr) {
     return arr.indexOf(item) >= index;
   });
 };
-
-export const neons = [
-  "mediumspringgreen",
-  "hotpink",
-  "cyan",
-  "deepskyblue",
-  "magenta",
-  "mediumslateblue"
-];

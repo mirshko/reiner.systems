@@ -3,8 +3,6 @@
 @import "./fonts.css";
 @import "./variables.css";
 
-@import "./links.css";
-
 html {
   background-color: var(--white);
   color: var(--black);
@@ -44,5 +42,19 @@ ul {
 
   & > *:not(:last-child) {
     margin-bottom: 12px;
+  }
+}
+
+:any-link {
+  color: var(--blue);
+  font-family: var(--fontFamilyBold);
+
+  &:hover,
+  &:focus {
+    color: var(--black);
+  }
+
+  &.active {
+    color: var(--purple);
   }
 }
