@@ -36,6 +36,7 @@ module.exports = {
         showSpinner: false
       }
     },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-postcss`,
