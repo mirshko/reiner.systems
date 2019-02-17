@@ -9,7 +9,7 @@ const Nav = () => (
     <Link activeClassName="active" to="/about">
       about
     </Link>
-    ) frontend designer (
+    ) ux engineer (
     <Link activeClassName="active" to="/contact">
       contact
     </Link>
@@ -17,9 +17,9 @@ const Nav = () => (
     <Link activeClassName="active" to="/projects">
       projects
     </Link>
-    ). also → (
+    ). takes photos → (
     <Link activeClassName="active" to="/photos">
-      photos
+      film
     </Link>
     )
   </div>

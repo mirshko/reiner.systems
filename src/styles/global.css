@@ -26,7 +26,7 @@ h4,
 h5,
 h6 {
   font-weight: normal;
-  font-size: responsive 24px 40px;
+  font-size: 1rem;
   color: var(--black);
 }
 
@@ -35,13 +35,13 @@ strong {
 }
 
 ul {
-  margin: 0;
+  margin: 0 0 1.5rem 0;
   padding: 0;
 
   list-style: none;
 
   & > *:not(:last-child) {
-    margin-bottom: 12px;
+    margin-bottom: 0.5rem;
   }
 }
 
