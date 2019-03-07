@@ -1,9 +1,7 @@
 .wrapper {
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
+  margin: 0.5rem;
 
   @media (width > 600px) {
-    margin-top: 1rem;
-    margin-left: 1rem;
+    margin: 1rem;
   }
 }
