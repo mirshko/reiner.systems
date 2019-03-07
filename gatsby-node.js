@@ -6,14 +6,12 @@ dayjs.extend(customParseFormat);
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
-  if (
-    node.internal.type === `ContentfulAsset` &&
-    node.file.contentType.includes("image")
-  ) {
+
+  if (node.internal.mediaType === `image/jpeg`) {
     createNodeField({
       node,
       name: `folder`,
-      value: dayjs(node.title.split("_", 1)[0], {
+      value: dayjs(node.relativePath.split("_", 1)[0], {
         format: "YYMMDDHHmm"
       }).format("YYYY-MM-DDTHH:mm")
     });
@@ -25,16 +23,14 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     graphql(`
       {
-        allContentfulAsset(
-          filter: { file: { contentType: { eq: "image/jpeg" } } }
-        ) {
+        allFile {
           group(field: fields___folder) {
             fieldValue
           }
         }
       }
-    `).then(result => {
-      result.data.allContentfulAsset.group.forEach(group => {
+    `).then(({ data: { allFile } }) => {
+      allFile.group.forEach(group => {
         createPage({
           path: `photos/${group.fieldValue}`,
           component: path.resolve(`./src/templates/folder.js`),

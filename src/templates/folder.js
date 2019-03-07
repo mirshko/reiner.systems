@@ -8,15 +8,19 @@ import Up from "../components/Up";
 
 import favicon from "../favicons/photos.png";
 
-const Folder = ({ data, pageContext }) => {
+const Folder = ({ data: { allFile }, pageContext }) => {
   const folder = pageContext.folder;
 
   const renderImage = photo => {
-    const { id, fluid, title } = photo.node;
+    const {
+      id,
+      childImageSharp: { fluid },
+      relativePath
+    } = photo.node;
 
     return (
       <div key={id} style={{ marginBottom: "1rem" }}>
-        <Img fluid={fluid} title={title} alt={title} />
+        <Img fluid={fluid} title={relativePath} alt={relativePath} />
       </div>
     );
   };
@@ -33,7 +37,7 @@ const Folder = ({ data, pageContext }) => {
       <p>{folder}</p>
 
       <div style={{ maxWidth: 1000 }}>
-        {data.allContentfulAsset.edges.map(photo => renderImage(photo))}
+        {allFile.edges.map(photo => renderImage(photo))}
       </div>
     </Layout>
   );
@@ -41,13 +45,15 @@ const Folder = ({ data, pageContext }) => {
 
 export const query = graphql`
   query($folder: String!) {
-    allContentfulAsset(filter: { fields: { folder: { eq: $folder } } }) {
+    allFile(filter: { fields: { folder: { eq: $folder } } }) {
       edges {
         node {
           id
-          title
-          fluid(maxWidth: 1000) {
-            ...GatsbyContentfulFluid_withWebp
+          relativePath
+          childImageSharp {
+            fluid(maxWidth: 1000) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
           }
         }
       }
