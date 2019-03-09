@@ -1,7 +1,3 @@
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`
-});
-
 module.exports = {
   siteMetadata: {
     siteUrl: `https://reiner.design`,
@@ -10,17 +6,6 @@ module.exports = {
     author: `jeff reiner <jeff@reiner.design>`
   },
   plugins: [
-    {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: `nnekhju478qa`,
-        accessToken: process.env.CTF_ACCESS_TOKEN,
-        host:
-          process.env.CTF_USE_PREVIEW == "true"
-            ? "preview.contentful.com"
-            : "cdn.contentful.com"
-      }
-    },
     {
       resolve: `gatsby-mdx`,
       options: {
@@ -34,6 +19,13 @@ module.exports = {
       options: {
         color: `blue`,
         showSpinner: false
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`
       }
     },
     `gatsby-plugin-sitemap`,
