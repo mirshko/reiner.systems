@@ -1,6 +1,5 @@
 import React from "react";
 import { graphql, Link, useStaticQuery } from "gatsby";
-import Img from "gatsby-image";
 import take from "lodash.take";
 import shuffle from "lodash.shuffle";
 
@@ -19,8 +18,8 @@ const PhotoGallery = () => {
                 folder
               }
               childImageSharp {
-                fluid(maxWidth: 600) {
-                  ...GatsbyImageSharpFluid
+                original {
+                  src
                 }
               }
             }
@@ -43,7 +42,9 @@ const PhotoGallery = () => {
             <div className={styles.stack}>
               {take(shuffle(folder.edges), 5).map((photo, index) => {
                 const {
-                  childImageSharp: { fluid },
+                  childImageSharp: {
+                    original: { src }
+                  },
                   relativePath
                 } = photo.node;
 
@@ -53,10 +54,10 @@ const PhotoGallery = () => {
                     className={styles.stackItem}
                     style={{ zIndex: 5 - index }}
                   >
-                    <Img
-                      fluid={fluid}
-                      title={relativePath}
+                    <img
+                      src={src}
                       alt={relativePath}
+                      style={{ maxWidth: 600, width: "100%" }}
                     />
                   </div>
                 );

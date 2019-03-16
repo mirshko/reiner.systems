@@ -1,6 +1,5 @@
 import React from "react";
 import Helmet from "react-helmet";
-import Img from "gatsby-image";
 import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
@@ -14,13 +13,19 @@ const Folder = ({ data: { allFile }, pageContext }) => {
   const renderImage = photo => {
     const {
       id,
-      childImageSharp: { fluid },
+      childImageSharp: {
+        original: { src }
+      },
       relativePath
     } = photo.node;
 
     return (
       <div key={id} style={{ marginBottom: "1rem" }}>
-        <Img fluid={fluid} title={relativePath} alt={relativePath} />
+        <img
+          src={src}
+          alt={relativePath}
+          style={{ maxWidth: 1000, width: "100%" }}
+        />
       </div>
     );
   };
@@ -51,8 +56,8 @@ export const query = graphql`
           id
           relativePath
           childImageSharp {
-            fluid(maxWidth: 1000) {
-              ...GatsbyImageSharpFluid_withWebp
+            original {
+              src
             }
           }
         }
