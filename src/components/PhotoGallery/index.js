@@ -17,11 +17,6 @@ const PhotoGallery = () => {
               fields {
                 folder
               }
-              childImageSharp {
-                original {
-                  src
-                }
-              }
             }
           }
         }
@@ -41,12 +36,7 @@ const PhotoGallery = () => {
             </p>
             <div className={styles.stack}>
               {take(shuffle(folder.edges), 5).map((photo, index) => {
-                const {
-                  childImageSharp: {
-                    original: { src }
-                  },
-                  relativePath
-                } = photo.node;
+                const { relativePath } = photo.node;
 
                 return (
                   <div
@@ -55,7 +45,7 @@ const PhotoGallery = () => {
                     style={{ zIndex: 5 - index }}
                   >
                     <img
-                      src={src}
+                      src={`/static/${relativePath}?nf_resize=fit&w=1200`}
                       alt={relativePath}
                       style={{ maxWidth: 600, width: "100%" }}
                     />

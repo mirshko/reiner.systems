@@ -11,18 +11,12 @@ const Folder = ({ data: { allFile }, pageContext }) => {
   const folder = pageContext.folder;
 
   const renderImage = photo => {
-    const {
-      id,
-      childImageSharp: {
-        original: { src }
-      },
-      relativePath
-    } = photo.node;
+    const { id, relativePath } = photo.node;
 
     return (
       <div key={id} style={{ marginBottom: "1rem" }}>
         <img
-          src={src}
+          src={`/static/${relativePath}?nf_resize=fit&w=2000`}
           alt={relativePath}
           style={{ maxWidth: 1000, width: "100%" }}
         />
@@ -55,11 +49,6 @@ export const query = graphql`
         node {
           id
           relativePath
-          childImageSharp {
-            original {
-              src
-            }
-          }
         }
       }
     }
