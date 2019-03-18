@@ -1,5 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
+import Img from "gatsby-image";
 import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
@@ -7,19 +8,15 @@ import Up from "../components/Up";
 
 import favicon from "../favicons/photos.png";
 
-const Folder = ({ data: { allFile }, pageContext }) => {
+const Folder = ({ data: { allContentfulAsset }, pageContext }) => {
   const folder = pageContext.folder;
 
   const renderImage = photo => {
-    const { id, relativePath } = photo.node;
+    const { id, title, fluid } = photo.node;
 
     return (
       <div key={id} style={{ marginBottom: "1rem" }}>
-        <img
-          src={`/static/${relativePath}?nf_resize=fit&w=2000`}
-          alt={relativePath}
-          style={{ maxWidth: 1000, width: "100%" }}
-        />
+        <Img fluid={fluid} title={title} alt={title} />
       </div>
     );
   };
@@ -36,7 +33,7 @@ const Folder = ({ data: { allFile }, pageContext }) => {
       <p>{folder}</p>
 
       <div style={{ maxWidth: 1000 }}>
-        {allFile.edges.map(photo => renderImage(photo))}
+        {allContentfulAsset.edges.map(photo => renderImage(photo))}
       </div>
     </Layout>
   );
@@ -44,11 +41,14 @@ const Folder = ({ data: { allFile }, pageContext }) => {
 
 export const query = graphql`
   query($folder: String!) {
-    allFile(filter: { fields: { folder: { eq: $folder } } }) {
+    allContentfulAsset(filter: { fields: { folder: { eq: $folder } } }) {
       edges {
         node {
           id
-          relativePath
+          title
+          fluid(maxWidth: 1000) {
+            ...GatsbyContentfulFluid_withWebp
+          }
         }
       }
     }

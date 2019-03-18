@@ -22,10 +22,11 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-source-contentful`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images/`
+        spaceId: `xu43og8wrjku`,
+        accessToken: `db03e1217182b84594c8c386e0d642bd59fbeddf6d1690efe87c1e0b6716c30b`,
+        host: `cdn.contentful.com`
       }
     },
     `gatsby-plugin-sitemap`,
