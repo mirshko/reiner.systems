@@ -2,6 +2,9 @@
   publish = "public"
   command = "npm run build"
 
+[build.environment]
+  CTF_ACCESS_TOKEN = "db03e1217182b84594c8c386e0d642bd59fbeddf6d1690efe87c1e0b6716c30b"
+
 [[headers]]
   for = "/"
   [headers.values]
