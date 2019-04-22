@@ -8,6 +8,7 @@ import Clock from "../Clock";
 
 import styles from "./index.module.css";
 
+import "../../fonts/etc-trispace-variable-webfont.css";
 import "../../styles/global.css";
 
 const Layout = ({ children, nav, maxWidth }) => (

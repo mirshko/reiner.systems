@@ -1,7 +1,25 @@
 @import "modern-normalize";
 
-@import "./fonts.css";
-@import "./variables.css";
+:root {
+  --white: #fffeff;
+  --black: #111517;
+  --blue: blue;
+  --purple: purple;
+  --system-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  /* --fontFamily: lunchtype24expanded_regular, var(--system-ui); */
+  /* --fontFamilyBold: lunchtype24expanded_medium, var(--system-ui); */
+  --zindex-max: 2147483647;
+  --fw-regular: "wght" 500, "wdth" 120;
+  --fw-bold: "wght" 900, "wdth" 200;
+  --fw-bold-hover: "wght" 500, "wdth" 200;
+}
+
+/*ETC Anybody*/
+@font-face {
+  font-family: "etc-trispace";
+  src: url(../fonts/ETCTrispaceVariable.woff2) format("woff2-variations");
+}
 
 html {
   background-color: var(--white);
@@ -11,12 +29,13 @@ html {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 
-  font-size: responsive 24px 40px;
+  font-size: responsive 20px 32px;
   line-height: 1.4;
 }
 
 body {
-  font-family: var(--fontFamily);
+  font-family: "etc-trispace";
+  font-variation-settings: var(--fw-regular);
 }
 
 h1,
@@ -47,14 +66,43 @@ ul {
 
 :any-link {
   color: var(--blue);
-  font-family: var(--fontFamilyBold);
+  font-variation-settings: var(--fw-bold);
+
+  transition: font-variation-settings 120ms;
 
   &:hover,
   &:focus {
     color: var(--black);
+    font-variation-settings: var(--fw-bold-hover);
   }
 
   &.active {
     color: var(--purple);
+    font-variation-settings: var(--fw-bold-hover);
   }
 }
+
+/* 
+-- example for ultrabold, extended --
+h1 {
+font-family: 'etc-trispace';
+font-variation-settings: "wght" 800, "wdth" 200;
+}
+
+-- example for thin, condensed width --
+h2 {
+font-family: 'etc-trispace';
+font-variation-settings: "wght" 100, "wdth" 50;
+}
+
+-- example for regular, normal width
+h3 {
+font-family: 'etc-trispace';
+font-variation-settings: "wght" 360, "wdth" 90;
+}
+
+And so on. As you can see, font-variation-settings allows you to control:  
+• the "wght" controls the font-weight, from 100 (thin) to 900 (black)
+• the "wdth" controls the font-stretch (width), from 50 (condensed) to 200 (extended)
+
+*/
