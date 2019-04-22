@@ -21,14 +21,14 @@ module.exports = {
         showSpinner: false
       }
     },
-    {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: `xu43og8wrjku`,
-        accessToken: `db03e1217182b84594c8c386e0d642bd59fbeddf6d1690efe87c1e0b6716c30b`,
-        host: `cdn.contentful.com`
-      }
-    },
+    // {
+    //   resolve: `gatsby-source-contentful`,
+    //   options: {
+    //     spaceId: `xu43og8wrjku`,
+    //     accessToken: `db03e1217182b84594c8c386e0d642bd59fbeddf6d1690efe87c1e0b6716c30b`,
+    //     host: `cdn.contentful.com`
+    //   }
+    // },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-catch-links`,
