@@ -4,13 +4,12 @@ import { StaticQuery, graphql } from "gatsby";
 import PropTypes from "prop-types";
 
 import Nav from "../Nav";
-import Clock from "../Clock";
 
 import styles from "./index.module.css";
 
 import "../../styles/global.css";
 
-const Layout = ({ children, nav, maxWidth }) => (
+const Layout = ({ children, maxWidth }) => (
   <StaticQuery
     query={graphql`
       query LayoutQuery {
@@ -45,9 +44,8 @@ const Layout = ({ children, nav, maxWidth }) => (
             <meta property="twitter:title" content={title} />
             <meta property="twitter:description" content={description} />
           </Helmet>
-          {nav !== false && <Nav />}
+          <Nav />
           {children}
-          <Clock />
         </div>
       );
     }}
@@ -55,12 +53,10 @@ const Layout = ({ children, nav, maxWidth }) => (
 );
 
 Layout.defaultProps = {
-  maxWidth: 1000,
-  nav: true
+  maxWidth: 1000
 };
 
 Layout.propTypes = {
-  nav: PropTypes.bool,
   children: PropTypes.node.isRequired,
   maxWidth: PropTypes.number
 };
