@@ -35,8 +35,6 @@ And so on. As you can see, font-variation-settings allows you to control:
 @font-face {
   font-family: "etc-trispace";
   src: url(../fonts/ETCTrispaceVariable.woff2) format("woff2-variations");
-  font-style: normal;
-  font-display: swap;
 }
 
 html {
