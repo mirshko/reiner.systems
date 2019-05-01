@@ -84,7 +84,7 @@ ul {
   color: var(--blue);
   font-variation-settings: var(--fw-bold);
 
-  transition: font-variation-settings 120ms;
+  /* transition: font-variation-settings 120ms; */
 
   &:hover,
   &:focus {
