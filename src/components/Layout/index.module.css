@@ -1,7 +1,0 @@
-.wrapper {
-  margin: 0.5rem;
-
-  @media (width > 600px) {
-    margin: 1rem;
-  }
-}

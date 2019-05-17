@@ -5,8 +5,6 @@ import PropTypes from "prop-types";
 
 import Nav from "../Nav";
 
-import styles from "./index.module.css";
-
 import "../../styles/global.css";
 
 const Layout = ({ children, maxWidth }) => (
@@ -27,7 +25,7 @@ const Layout = ({ children, maxWidth }) => (
       const { title, author, description, siteUrl } = data.site.siteMetadata;
 
       return (
-        <div style={{ maxWidth }} className={styles.wrapper}>
+        <div style={{ maxWidth }} className="wrapper">
           <Helmet>
             <title>{title}</title>
             <meta name="title" content={title} />
