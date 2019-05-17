@@ -3,7 +3,8 @@ module.exports = {
     siteUrl: `https://reiner.design`,
     title: `jeff reiner`,
     description: `frontend developer based in berlin.`,
-    author: `jeff reiner <jeff@reiner.design>`
+    author: `jeff reiner <jeff@reiner.design>`,
+    twitter: `@mirshko`
   },
   plugins: [
     {
