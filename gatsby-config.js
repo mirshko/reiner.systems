@@ -36,6 +36,19 @@ module.exports = {
     `gatsby-plugin-postcss`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-netlify`
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        allPageHeaders: [
+          "Link: </ETCTrispaceVariable.woff2>; rel=preload; as=font"
+        ],
+        headers: {
+          "/*.woff2": [
+            "Access-Control-Allow-Origin: *",
+            "Content-Type: font/woff2"
+          ]
+        }
+      }
+    }
   ]
 };

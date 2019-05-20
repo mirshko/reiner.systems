@@ -3,7 +3,7 @@
 @font-face {
   font-family: "etc-trispace";
   font-display: swap;
-  src: url(../fonts/ETCTrispaceVariable.woff2) format("woff2-variations");
+  src: url("/ETCTrispaceVariable.woff2") format("woff2-variations");
 }
 
 :root {
