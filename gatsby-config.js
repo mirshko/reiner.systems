@@ -40,7 +40,7 @@ module.exports = {
       resolve: `gatsby-plugin-netlify`,
       options: {
         allPageHeaders: [
-          "Link: </ETCTrispaceVariable.woff2>; rel=preload; as=font"
+          "Link: </ETCTrispaceVariable.woff2>; rel=preload; as=font; crossorigin; type=font/woff2"
         ],
         headers: {
           "/*.woff2": [
