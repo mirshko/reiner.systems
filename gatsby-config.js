@@ -12,7 +12,11 @@ module.exports = {
       options: {
         defaultLayouts: {
           default: require.resolve("./src/components/Layout")
-        }
+        },
+        globalScope: `
+          import Helmet from "react-helmet";
+          export default { Helmet };
+	      `
       }
     },
     {
