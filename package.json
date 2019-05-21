@@ -19,7 +19,6 @@
     "gatsby-plugin-sharp": "^2.0.16",
     "gatsby-plugin-sitemap": "^2.0.4",
     "gatsby-source-are.na": "^1.0.0",
-    "gatsby-source-contentful": "^2.0.39",
     "gatsby-source-filesystem": "^2.0.23",
     "gatsby-transformer-sharp": "^2.1.9",
     "lodash.shuffle": "^4.2.0",
