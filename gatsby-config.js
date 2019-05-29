@@ -26,13 +26,13 @@ module.exports = {
         showSpinner: false
       }
     },
-    {
-      resolve: "gatsby-source-are.na",
-      options: {
-        accessToken: process.env.ARENA_PAT,
-        channelSlugs: ["2018-03-12t1622"]
-      }
-    },
+    // {
+    //   resolve: "gatsby-source-are.na",
+    //   options: {
+    //     accessToken: process.env.ARENA_PAT,
+    //     channelSlugs: ["2018-03-12t1622"]
+    //   }
+    // },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-catch-links`,
