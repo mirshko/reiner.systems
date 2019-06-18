@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: `https://reiner.design`,
     title: `jeff reiner`,
-    description: `frontend developer based in berlin.`,
+    description: `freelance ux engineer based in berlin.`,
     author: `jeff reiner <jeff@reiner.design>`,
     twitter: `@mirshko`
   },
