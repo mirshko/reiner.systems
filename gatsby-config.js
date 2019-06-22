@@ -1,22 +1,3 @@
-var channelSlugs = [
-  "2018-03-12t1622",
-  "2018-03-13t1610",
-  "2018-03-13t1620",
-  "2018-03-13t1624",
-  "2018-04-04t1608",
-  "2018-04-04t1615",
-  "2018-04-11t1448",
-  "2018-04-11t1450",
-  "2018-04-23t1810",
-  "2018-04-23t1813",
-  "2018-04-23t1819",
-  "2018-04-23t1821",
-  "2018-04-23t2002",
-  "2018-04-26t1739",
-  "2018-04-26t1736",
-  "2018-04-26t1733"
-];
-
 module.exports = {
   siteMetadata: {
     siteUrl: `https://reiner.design`,
@@ -41,13 +22,6 @@ module.exports = {
         showSpinner: false
       }
     },
-    // {
-    //   resolve: "gatsby-source-are.na",
-    //   options: {
-    //     accessToken: `ab2a5816af74d871225b2d89c8fc71f6a203937c724711ff3a1c18e0938baace`,
-    //     channelSlugs
-    //   }
-    // },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-catch-links`,
