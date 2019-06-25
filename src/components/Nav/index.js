@@ -28,13 +28,13 @@ const Nav = () => (
         </Link>
         )
       </li>
-      <li>
+      {/* <li>
         takes photos (
         <Link activeClassName="active" to="/photos">
           film
         </Link>
         )
-      </li>
+      </li> */}
     </ul>
   </nav>
 );
