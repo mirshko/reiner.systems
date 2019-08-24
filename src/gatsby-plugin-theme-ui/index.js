@@ -1,11 +1,12 @@
 export default {
   initialColorMode: "light",
   fonts: {
-    body: `-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol`
+    body: `-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol`
   },
   colors: {
     background: "#fffeff",
     primary: "#111517",
+    secondary: "blue",
     text: "#111517",
     black: "#111517",
     white: "#fffeff",
@@ -15,14 +16,14 @@ export default {
       dark: {
         background: "#111517",
         primary: "#fffeff",
+        secondary: "cyan",
         text: "#fffeff",
-        blue: "cyan"
       },
       urple: {
         background: "#29225e",
-        text: "#c7afea",
         primary: "#c7afea",
-        blue: "#896ae8"
+        secondary: "#896ae8",
+        text: "#c7afea",
       }
     }
   },
@@ -47,7 +48,7 @@ export default {
     a: {
       boxShadow: `0 0.65rem 0.25rem -0.35rem`,
       textDecoration: "none",
-      color: "blue",
+      color: "secondary",
       ":hover": {
         color: "primary"
       }
