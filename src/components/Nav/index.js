@@ -1,41 +1,37 @@
-import React from "react";
+/** @jsx jsx */
+import { jsx } from "theme-ui";
+
+import { Styled } from "theme-ui";
 import { Link } from "gatsby";
 
 const Nav = () => (
   <nav>
-    <ul className="notSpaced">
-      <li>
-        <Link activeClassName="active" to="/">
+    <Styled.ul>
+      <Styled.li>
+        <Styled.a as={Link} to="/">
           jeff reiner
-        </Link>
+        </Styled.a>
         (
-        <Link activeClassName="active" to="/about">
+        <Styled.a as={Link} to="/about">
           about
-        </Link>
+        </Styled.a>
         )
-      </li>
-      <li>
+      </Styled.li>
+      <Styled.li>
         ux engineer (
-        <Link activeClassName="active" to="/contact">
+        <Styled.a as={Link} to="/contact">
           contact
-        </Link>
+        </Styled.a>
         )
-      </li>
-      <li>
+      </Styled.li>
+      <Styled.li>
         builds things (
-        <Link activeClassName="active" to="/projects">
+        <Styled.a as={Link} to="/projects">
           projects
-        </Link>
+        </Styled.a>
         )
-      </li>
-      {/* <li>
-        takes photos (
-        <Link activeClassName="active" to="/photos">
-          film
-        </Link>
-        )
-      </li> */}
-    </ul>
+      </Styled.li>
+    </Styled.ul>
   </nav>
 );
 

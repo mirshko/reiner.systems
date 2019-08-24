@@ -1,18 +1,26 @@
 import React from "react";
 import Helmet from "react-helmet";
-import PropTypes from "prop-types";
+import { Styled } from "theme-ui";
+import { Global, css } from "@emotion/core";
 
 import Nav from "../Nav";
+import Container from "../Container";
 
-import { useSiteMetadata } from "../../hooks/use-site-metadata";
+import { useSiteMetadata } from "../../hooks";
 
-import "../../styles/global.css";
+import reset from "../../styles/reset";
 
-const Layout = ({ children, maxWidth }) => {
+import ToggleColorMode from "../ToggleColorMode";
+
+const globalStyles = css`
+  ${reset}
+`;
+
+const Layout = ({ children, ...rest }) => {
   const { title, twitter, description, siteUrl } = useSiteMetadata();
 
   return (
-    <div style={{ maxWidth }} className="wrapper">
+    <>
       <Helmet>
         <title>{title}</title>
 
@@ -30,19 +38,20 @@ const Layout = ({ children, maxWidth }) => {
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
       </Helmet>
-      <Nav />
-      {children}
-    </div>
+
+      <Global styles={globalStyles} />
+
+      <Styled.root>
+        <Container>
+          <Nav />
+
+          <ToggleColorMode />
+
+          {children}
+        </Container>
+      </Styled.root>
+    </>
   );
-};
-
-Layout.defaultProps = {
-  maxWidth: 1000
-};
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-  maxWidth: PropTypes.number
 };
 
 export default Layout;
