@@ -7,7 +7,7 @@ import theme from "../../gatsby-plugin-theme-ui/";
 const ToggleColorMode = () => {
   const [mode, setMode] = useColorMode();
 
-  const modes = Object.values(theme.colors.modes);
+  const modes = ["light", ...Object.values(theme.colors.modes)];
 
   const cycleMode = e => {
     const i = modes.indexOf(mode);
