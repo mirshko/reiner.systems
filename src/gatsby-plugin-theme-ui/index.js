@@ -17,13 +17,13 @@ export default {
         background: "#111517",
         primary: "#fffeff",
         secondary: "cyan",
-        text: "#fffeff",
+        text: "#fffeff"
       },
       urple: {
         background: "#29225e",
         primary: "#c7afea",
         secondary: "#896ae8",
-        text: "#c7afea",
+        text: "#c7afea"
       }
     }
   },
@@ -39,6 +39,9 @@ export default {
       fontSize: [20, 32, 40],
       lineHeight: 1.5
     },
+    strong: {
+      fontWeight: 500
+    },
     p: {
       color: "text"
     },
@@ -48,6 +51,7 @@ export default {
     a: {
       boxShadow: `0 0.65rem 0.25rem -0.35rem`,
       textDecoration: "none",
+      fontWeight: 500,
       color: "secondary",
       ":hover": {
         color: "primary"

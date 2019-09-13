@@ -27,7 +27,7 @@ const Nav = () => (
       <Styled.li>
         builds things (
         <Styled.a as={Link} to="/projects">
-          projects
+          work
         </Styled.a>
         )
       </Styled.li>
