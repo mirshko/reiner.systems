@@ -1,5 +1,4 @@
 /resume    /jeff-reiner.pdf
-/photos/*    /photos/
 
 # domain alias redirects
 https://photos.reiner.design/*    https://reiner.design/:splat 301!
