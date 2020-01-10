@@ -1,5 +1,4 @@
 export default {
-  initialColorMode: "light",
   fonts: {
     body: `-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol`
   },
@@ -11,21 +10,7 @@ export default {
     black: "#111517",
     white: "#fffeff",
     purple: "purple",
-    blue: "blue",
-    modes: {
-      dark: {
-        background: "#111517",
-        primary: "#fffeff",
-        secondary: "cyan",
-        text: "#fffeff"
-      },
-      urple: {
-        background: "#29225e",
-        primary: "#c7afea",
-        secondary: "#896ae8",
-        text: "#c7afea"
-      }
-    }
+    blue: "blue"
   },
   buttons: {
     primary: {

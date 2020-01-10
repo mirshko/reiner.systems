@@ -1,20 +1,11 @@
+import { Global } from "@emotion/core";
 import React from "react";
 import Helmet from "react-helmet";
 import { Styled } from "theme-ui";
-import { Global, css } from "@emotion/core";
-
-import Nav from "../Nav";
-import Container from "../Container";
-
 import { useSiteMetadata } from "../../hooks";
-
 import reset from "../../styles/reset";
-
-import ToggleColorMode from "../ToggleColorMode";
-
-const globalStyles = css`
-  ${reset}
-`;
+import Container from "../Container";
+import Nav from "../Nav";
 
 const Layout = ({ children, ...rest }) => {
   const { title, twitter, description, siteUrl } = useSiteMetadata();
@@ -39,13 +30,11 @@ const Layout = ({ children, ...rest }) => {
         <meta property="twitter:description" content={description} />
       </Helmet>
 
-      <Global styles={globalStyles} />
+      <Global styles={reset} />
 
       <Styled.root>
         <Container>
           <Nav />
-
-          <ToggleColorMode />
 
           {children}
         </Container>

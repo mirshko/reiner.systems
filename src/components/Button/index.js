@@ -17,7 +17,6 @@ const Button = ({ variant = "primary", ...props }) => (
       py: 2,
       border: 0,
       borderRadius: 4,
-      // pass variant prop to sx
       variant: `buttons.${variant}`
     }}
   />
