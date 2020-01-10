@@ -1,7 +1,0 @@
-/resume    /jeff-reiner.pdf
-
-# domain alias redirects
-https://photos.reiner.design/*    https://reiner.design/:splat 301!
-https://componentboi.eth.reiner.design/*    https://reiner.design/:splat 301!
-https://reiner.io/*    https://reiner.design/:splat 301!
-https://www-reiner.netlify.com/*    https://reiner.design/:splat 301!
