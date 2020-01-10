@@ -3,9 +3,6 @@
   "scope": "mirshko",
   "name": "dotdesign",
   "public": true,
-  "redirects": [
-    { "source": "/(.*)", "statusCode": 404, "destination": "/404.html" }
-  ],
   "headers": [
     {
       "source": "/(.*)",
