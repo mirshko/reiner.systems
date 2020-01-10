@@ -9,7 +9,6 @@ export default {
     text: "#111517",
     black: "#111517",
     white: "#fffeff",
-    purple: "purple",
     blue: "blue"
   },
   buttons: {
@@ -25,18 +24,16 @@ export default {
       lineHeight: 1.5
     },
     strong: {
-      fontWeight: 600
+      fontWeight: 500
     },
     p: {
       color: "text"
     },
     container: {
-      maxWidth: 1000
+      maxWidth: 720
     },
     a: {
-      boxShadow: `0 0.65rem 0.25rem -0.35rem`,
-      textDecoration: "none",
-      fontWeight: 600,
+      fontWeight: 500,
       color: "secondary",
       ":hover": {
         color: "primary"
@@ -44,9 +41,7 @@ export default {
     },
     ul: {
       paddingLeft: "unset",
-      margin: "unset"
-    },
-    li: {
+      margin: "unset",
       listStyleType: "none"
     }
   }
