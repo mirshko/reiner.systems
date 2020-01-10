@@ -21,11 +21,11 @@ export default {
   styles: {
     root: {
       fontFamily: "body",
-      fontSize: [20, 32, 40],
+      fontSize: 20,
       lineHeight: 1.5
     },
     strong: {
-      fontWeight: 500
+      fontWeight: 600
     },
     p: {
       color: "text"
@@ -36,7 +36,7 @@ export default {
     a: {
       boxShadow: `0 0.65rem 0.25rem -0.35rem`,
       textDecoration: "none",
-      fontWeight: 500,
+      fontWeight: 600,
       color: "secondary",
       ":hover": {
         color: "primary"
