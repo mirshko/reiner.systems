@@ -30,7 +30,7 @@ export default {
       color: "text"
     },
     container: {
-      maxWidth: 720
+      maxWidth: 640
     },
     a: {
       fontWeight: 500,

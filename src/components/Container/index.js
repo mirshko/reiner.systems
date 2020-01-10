@@ -4,7 +4,7 @@ import { jsx } from "theme-ui";
 const Container = ({ children }) => (
   <div
     sx={{
-      maxWidth: 1000,
+      maxWidth: 640,
       m: "1em"
     }}
   >
