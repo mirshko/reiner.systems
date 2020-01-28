@@ -14,17 +14,16 @@
  */
 html {
   line-sizing: normal;
+  font-size: 18px;
 }
 
 /* Set core body defaults */
 body {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
   text-rendering: optimizeSpeed;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  font-size: 18px;
 
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
     sans-serif, Apple Color Emoji, Segoe UI Emoji;
@@ -50,6 +49,15 @@ dd {
 
 /* Typography
  ***************/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1rem;
+}
 
 /* Line Heights
  ***************/
