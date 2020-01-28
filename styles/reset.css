@@ -1,0 +1,105 @@
+/* Global Remedies
+ ******************/
+
+/* Use border-box by default, globally */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/*
+ * Consistent line spacing...
+ * CSS Inline Layout Module Level 3: https://drafts.csswg.org/css-inline-3/#line-sizing-property
+ */
+html {
+  line-sizing: normal;
+}
+
+/* Set core body defaults */
+body {
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-size: 18px;
+
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Typography
+ ***************/
+
+/* Line Heights
+ ***************/
+
+html {
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.25;
+}
+
+caption,
+figcaption,
+label,
+legend {
+  line-height: 1.375;
+}
+
+/* Embedded Elements
+ ********************/
+
+/*
+   * 1. Remove strange space-below when inline
+   * 2. Responsive by default
+   */
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+/*
+ * Maintain intrinsic aspect ratios when 'max-width' is applied
+ * (iframe, embed, and object have no intrinsic ratio, set height explicitly)
+ */
+img,
+svg,
+video,
+canvas {
+  height: auto;
+}

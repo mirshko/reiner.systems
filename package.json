@@ -1,7 +1,10 @@
 {
   "name": "dotdesign",
-  "version": "0.1.0",
+  "description": "personal website",
+  "version": "2.0.0",
+  "author": "@mirshko <jeff@reiner.design>",
   "private": true,
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,7 +12,11 @@
   },
   "dependencies": {
     "next": "9.2.1",
+    "prop-types": "^15.7.2",
     "react": "16.12.0",
     "react-dom": "16.12.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1"
   }
 }
