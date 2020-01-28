@@ -11,8 +11,18 @@ const List = ({ data }) => (
     {data.map(({ href, label }, i) => (
       <li key={i}>
         <a href={href} target="_blank" rel="noopener noreferrer">
-          {label}
+          <span className="thumbnail">
+            <img
+              src={`https://picsum.photos/seed/${label}/160/104.webp`}
+              loading="lazy"
+              height={104}
+              width={160}
+              alt=""
+            />
+          </span>
+          <span className="label">{label}</span>
         </a>
+        &nbsp;
       </li>
     ))}
 
@@ -27,13 +37,31 @@ const List = ({ data }) => (
         display: inline;
       }
 
-      li::after {
-        content: " ";
+      a {
+        display: inline-flex;
+        align-items: baseline;
+        font-size: 1rem;
+        color: darkblue;
       }
 
-      a {
-        font-size: 2rem;
-        color: darkblue;
+      .label {
+        line-height: 1.2;
+      }
+
+      .thumbnail {
+        height: 1.3em;
+        width: 1.3em;
+        text-align: center;
+        display: inline-block;
+        margin-right: 0.2em;
+      }
+
+      img {
+        max-height: 100%;
+        max-width: 100%;
+        height: auto;
+        width: auto;
+        vertical-align: middle;
       }
 
       a:visited {
