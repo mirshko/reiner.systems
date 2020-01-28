@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import Nav from "../components/Nav";
+import Nav from "../components/nav";
 import "../styles/reset.css";
 
 export default function DotDesignApp({ Component, pageProps }) {
