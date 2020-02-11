@@ -1,8 +1,10 @@
 {
   "version": 2,
   "scope": "mirshko",
-  "name": "dotdesign",
   "public": true,
+  "env": {
+    "DISCOGS_TOKEN": "@discogs_token"
+  },
   "headers": [
     {
       "source": "/(.*)",

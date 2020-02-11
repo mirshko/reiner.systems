@@ -20,8 +20,8 @@ const Nav = () => (
         </Link>
       </li>
       <li>
-        <Link href="/about">
-          <a>About</a>
+        <Link href="/collection/vinyl">
+          <a>Vinyl</a>
         </Link>
       </li>
     </ul>
