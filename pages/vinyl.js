@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 
-const Discogs = dynamic(() => import("../../components/discogs"));
+const Discogs = dynamic(() => import("../components/discogs"));
 
 export default function Vinyl() {
   return (

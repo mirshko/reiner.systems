@@ -9,16 +9,16 @@ const Record = ({
       <img
         src={cover_image}
         loading="lazy"
-        height={100}
-        width={100}
+        height={300}
+        width={300}
         alt={title}
       />
 
       <style jsx>{`
         img {
           display: block;
-          height: 100px;
-          width: 100px;
+          height: 300px;
+          width: 300px;
           object-fit: cover;
         }
       `}</style>
@@ -33,13 +33,13 @@ const Loader = () => (
     </span>
     <style jsx>{`
       div {
-        height: 100px;
-        width: 100px;
+        height: 300px;
+        width: 300px;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 48px;
-        line-height: 48px;
+        font-size: 128px;
+        line-height: 128px;
         user-select: none;
       }
     `}</style>
@@ -53,16 +53,16 @@ const LoadMore = props => (
     </span>
     <style jsx>{`
       button {
-        height: 100px;
-        width: 100px;
+        height: 300px;
+        width: 300px;
         display: flex;
         border: none;
         appearance: none;
         background: transparent;
         align-items: center;
         justify-content: center;
-        font-size: 48px;
-        line-height: 48px;
+        font-size: 128px;
+        line-height: 128px;
         user-select: none;
       }
     `}</style>
@@ -90,11 +90,8 @@ const Discogs = () => {
     },
 
     // one page's SWR => offset of next page
-    ({
-      data: {
-        pagination: { page, pages }
-      }
-    }) => (page < pages ? page + 1 : null),
+    ({ data: { pagination } }) =>
+      pagination.page < pagination.pages ? pagination.page + 1 : null,
 
     // deps of the page component
     []
@@ -113,8 +110,8 @@ const Discogs = () => {
       <style jsx>{`
         section {
           display: grid;
-          grid-template-columns: repeat(auto-fill, 100px);
-          max-width: 1000px;
+          grid-template-columns: repeat(auto-fill, 300px);
+          max-width: 1200px;
         }
       `}</style>
     </section>
