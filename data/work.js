@@ -1,6 +1,6 @@
 export const clients = [
   {
-    href: "https://www.instagram.com/asyncart/",
+    href: "https://async.art",
     label: "Async Art"
   },
   {
