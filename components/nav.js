@@ -17,7 +17,7 @@ const Nav = () => (
     <ul>
       <p>Directory</p>
       <li>
-        <Link href="/work">
+        <Link href="/portfolio">
           <a>Portfolio</a>
         </Link>
       </li>

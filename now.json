@@ -27,7 +27,7 @@
   "redirects": [
     {
       "source": "/projects",
-      "destination": "/work",
+      "destination": "/portfolio",
       "statusCode": 301
     },
     {
