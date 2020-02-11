@@ -36,6 +36,11 @@
       "statusCode": 301
     },
     {
+      "source": "/contact",
+      "destination": "https://twitter.com/mirshko",
+      "statusCode": 302
+    },
+    {
       "source": "/photos",
       "destination": "https://www.instagram.com/mirshko/",
       "statusCode": 302

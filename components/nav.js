@@ -1,46 +1,90 @@
 import Link from "next/link";
 
 const Nav = () => (
-  <nav>
-    <div>
-      <Link href="/">
-        <a>Jeff Reiner</a>
-      </Link>
-    </div>
+  <nav className="flex">
+    <ul>
+      <p>
+        <Link href="/">
+          <a>Jeff Reiner</a>
+        </Link>
+      </p>
+    </ul>
 
     <ul>
+      <p>UX Engineer</p>
+    </ul>
+
+    <ul>
+      <p>Directory</p>
       <li>
         <Link href="/work">
-          <a>Work</a>
+          <a>Portfolio</a>
         </Link>
       </li>
       <li>
-        <Link href="/contact">
-          <a>Contact</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/collection/vinyl">
+        <Link href="/vinyl">
           <a>Vinyl</a>
         </Link>
       </li>
     </ul>
 
-    <div>UX Engineer</div>
+    <ul>
+      <p>Socials</p>
+      <li>
+        <a
+          href="https://github.com/mirshko"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          GitHub
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.instagram.com/mirshko"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Instagram
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://twitter.com/mirshko"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Twitter
+        </a>
+      </li>
+    </ul>
 
     <style jsx>{`
       nav {
-        display: flex;
-      }
-
-      nav > * {
-        flex: 1;
+        border-bottom: 1px solid;
+        margin-bottom: 1rem;
       }
 
       ul {
         list-style: none;
         margin: 0;
         padding: 0;
+        margin-bottom: 1rem;
+      }
+
+      .flex {
+        display: flex;
+        flex-direction: column;
+      }
+
+      @media screen and (min-width: 32em) {
+        .flex {
+          flex-direction: row;
+        }
+      }
+
+      .flex > * {
+        flex: 1 0;
       }
     `}</style>
   </nav>
