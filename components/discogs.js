@@ -14,6 +14,8 @@ const Record = ({
         alt={title}
       />
 
+      <p>{title + ", " + artists[0].name}</p>
+
       <style jsx>{`
         img {
           display: block;
