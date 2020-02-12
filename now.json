@@ -3,7 +3,8 @@
   "scope": "mirshko",
   "public": true,
   "env": {
-    "DISCOGS_TOKEN": "@discogs_token"
+    "DISCOGS_TOKEN": "@discogs_token",
+    "YOUTUBE_TOKEN": "@youtube_token"
   },
   "headers": [
     {
