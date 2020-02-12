@@ -1,9 +1,9 @@
 import useSWR, { useSWRPages } from "swr";
 import fetcher from "../lib/fetcher";
 
-const Record = ({
-  basic_information: { artists, title, year, cover_image }
-}) => {
+const Record = ({ basic_information: { artists, title, cover_image } }) => {
+  const label = title + ", " + artists[0].name;
+
   return (
     <div>
       <img
@@ -11,10 +11,10 @@ const Record = ({
         loading="lazy"
         height={300}
         width={300}
-        alt={title}
+        alt={label}
       />
 
-      <p>{title + ", " + artists[0].name}</p>
+      <p>{label}</p>
 
       <style jsx>{`
         img {
