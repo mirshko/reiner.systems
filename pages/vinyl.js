@@ -8,6 +8,12 @@ export default function Vinyl() {
       <h1>Vinyl</h1>
 
       <Discogs />
+
+      <style jsx>{`
+        h1 {
+          margin-bottom: 1rem;
+        }
+      `}</style>
     </main>
   );
 }
