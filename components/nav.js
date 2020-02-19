@@ -1,15 +1,22 @@
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel
+} from "@reach/disclosure";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 const Nav = () => {
   const { pathname } = useRouter();
+  const [isOpen, setOpen] = useState(false);
 
   return (
     <nav className="flex">
       <ul>
         <p>
           <Link href="/">
-            <a className={pathname === "/" && "active"}>Jeff Reiner</a>
+            <a>Jeff Reiner</a>
           </Link>
         </p>
       </ul>
@@ -61,9 +68,37 @@ const Nav = () => {
             Twitter
           </a>
         </li>
+
+        <Disclosure open={isOpen} onChange={() => setOpen(!isOpen)}>
+          <DisclosureButton>{isOpen ? "Less" : "More"}</DisclosureButton>
+
+          <DisclosurePanel>
+            <li>
+              <a
+                href="https://keybase.io/mirshko"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Keybase
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://are.na/jeff-reiner"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Are.na
+              </a>
+            </li>
+            <li>
+              <a href="mailto:jeff@reiner.design?subject=Heya">Mailto</a>
+            </li>
+          </DisclosurePanel>
+        </Disclosure>
       </ul>
 
-      <style jsx>{`
+      <style jsx global>{`
         nav {
           border-bottom: 1px solid;
           margin-bottom: 1rem;
@@ -98,6 +133,30 @@ const Nav = () => {
 
         a {
           text-decoration: none;
+        }
+
+        [data-reach-disclosure-button] {
+          appearance: none;
+          border: none;
+          background: transparent;
+          margin: 0;
+          padding: 0;
+          font-size: inherit;
+          font-weight: inherit;
+          line-height: inherit;
+        }
+
+        [data-reach-disclosure-button][data-state="open"] {
+        }
+        [data-reach-disclosure-button][data-state="collapsed"] {
+        }
+
+        [data-reach-disclosure-panel] {
+          outline: none;
+        }
+        [data-reach-disclosure-panel][data-state="open"] {
+        }
+        [data-reach-disclosure-panel][data-state="collapsed"] {
         }
       `}</style>
     </nav>
