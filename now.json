@@ -49,6 +49,14 @@
     {
       "source": "/view-source",
       "destination": "https://github.com/mirshko/dotdesign "
+    },
+    {
+      "source": "/stream/00",
+      "destination": "https://t.me/stream_00"
+    },
+    {
+      "source": "/stream/01",
+      "destination": "https://buttondown.email/jeff"
     }
   ]
 }
