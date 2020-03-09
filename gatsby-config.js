@@ -16,22 +16,29 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        defaultLayouts: { default: require.resolve('./src/components/Layout') },
-      },
+        defaultLayouts: { default: require.resolve("./src/components/Layout") }
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        path: `${__dirname}/src/images`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: `${__dirname}/src/pages`,
-      },
+        path: `${__dirname}/src/pages`
+      }
+    },
+    {
+      resolve: "gatsby-plugin-fathom",
+      options: {
+        siteId: "REDRNHLE",
+        whitelistHostnames: ["reiner.design"]
+      }
     },
     {
       resolve: `gatsby-plugin-manifest`,
