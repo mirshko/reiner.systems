@@ -1,7 +1,21 @@
+import * as Fathom from "fathom-client";
+import Router from "next/router";
+import { useEffect } from "react";
 import Nav from "../components/nav";
+import { FATHOM_SITE_ID } from "../lib/fathom";
 import "../styles/reset.css";
 
-export default function DotDesignApp({ Component, pageProps }) {
+// Router.events.on("routeChangeComplete", () => Fathom.trackPageview());
+
+export default function App({ Component, pageProps }) {
+  // useEffect(() => {
+  //   if (process.env.NODE_ENV === "production") {
+  //     Fathom.load();
+  //     Fathom.setSiteId(FATHOM_SITE_ID);
+  //     Fathom.trackPageview();
+  //   }
+  // }, []);
+
   return (
     <div className="site">
       <header>
