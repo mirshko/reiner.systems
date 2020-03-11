@@ -11,6 +11,8 @@ const Nav = () => {
   const { pathname } = useRouter();
   const [isOpen, setOpen] = useState(false);
 
+  const toggleDisclosure = () => setOpen(!isOpen);
+
   return (
     <nav className="flex">
       <ul>
@@ -69,7 +71,7 @@ const Nav = () => {
           </a>
         </li>
 
-        <Disclosure open={isOpen} onChange={() => setOpen(!isOpen)}>
+        <Disclosure open={isOpen} onChange={toggleDisclosure}>
           <DisclosureButton>{isOpen ? "Less" : "More"}</DisclosureButton>
 
           <DisclosurePanel>

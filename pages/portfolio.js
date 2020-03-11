@@ -1,9 +1,14 @@
+import Head from "next/head";
 import List from "../components/list";
-import { clients, projects, experiments, contributions } from "../data/work";
+import { clients, contributions, experiments, projects } from "../data/work";
 
 export default function Page() {
   return (
     <main>
+      <Head>
+        <title>Work | Jeff Reiner, UX Engineer</title>
+      </Head>
+
       <h1>Work</h1>
 
       <section>

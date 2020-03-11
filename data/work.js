@@ -47,6 +47,10 @@ export const clients = [
 
 export const projects = [
   {
+    href: "https://ens-autocomplete.now.sh",
+    label: "ENS Autocomplete"
+  },
+  {
     href: "https://github.com/mirshko/202020",
     label: "202020 🚧"
   },

@@ -2,9 +2,14 @@ import PropTypes from "prop-types";
 import { memo } from "react";
 
 /**
+ * @typedef Link
+ * @description Object with the label and href for the linked work / project / etc...
+ * @property {String} label
+ * @property {String} href
+ *
  * @name List
  * @description Component to render a list of external links
- * @param {Array} data
+ * @param {Array<Link>} data
  */
 const List = ({ data }) => (
   <ul>
