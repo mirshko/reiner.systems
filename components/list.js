@@ -68,10 +68,6 @@ const List = ({ data }) => (
         width: auto;
         vertical-align: middle;
       }
-
-      a:visited {
-        color: purple;
-      }
     `}</style>
   </ul>
 );

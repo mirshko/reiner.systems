@@ -75,6 +75,13 @@ h1 {
   max-width: 60ch;
 }
 
+a,
+:any-link,
+a:visited,
+:any-link:visited {
+  color: darkblue;
+}
+
 @media (hover: hover) {
   .hover-blink:hover:not(:active),
   :any-link:hover:not(:active),
