@@ -41,6 +41,7 @@ export default function App({ Component, pageProps }) {
           position: -webkit-sticky;
           position: sticky;
           top: 0;
+	  z-index: 99999;
         }
 
         .content {
