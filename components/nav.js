@@ -103,6 +103,8 @@ const Nav = () => {
       <style jsx global>{`
         nav {
           border-bottom: 2px solid currentColor;
+          backdrop-filter: blur(10px) brightness(120%);
+          background: hsla(0, 0%, 100%, 0.66);
         }
 
         ul {
