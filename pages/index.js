@@ -28,7 +28,6 @@ export default function Page() {
         <a
           href="/jeff-reiner.pdf"
           // onClick={() => !!window.fathom && fathom("trackGoal", "C8Z7PGH7", 0)}
-          rel="noopener noreferrer"
           target="_blank"
         >
           Resume
@@ -36,8 +35,8 @@ export default function Page() {
       </p>
 
       <style jsx>{`
-        .measure {
-          max-width: 60ch;
+        main {
+          margin-top: 1rem;
         }
       `}</style>
     </main>

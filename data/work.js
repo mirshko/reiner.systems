@@ -1,6 +1,6 @@
 export const clients = [
   {
-    href: "https://www.instagram.com/sampepper",
+    href: "https://www.instagram.com/sampepper/",
     label: "TAP2"
   },
   {

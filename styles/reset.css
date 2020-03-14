@@ -27,7 +27,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   font-family: "Helvetica Neue", Arial, sans-serif;
-  font-feature-settings: "kern" 1, "kern", "kern";
+  font-feature-settings: "kern" 1, "kern", "kern", "liga" 1;
   font-kerning: normal;
 }
 
@@ -63,6 +63,16 @@ canvas {
   vertical-align: middle;
   max-width: 100%;
   height: auto;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 3rem 0 1rem 0;
+}
+
+.measure {
+  max-width: 60ch;
 }
 
 @media (hover: hover) {

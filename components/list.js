@@ -15,10 +15,10 @@ const List = ({ data }) => (
   <ul>
     {data.map(({ href, label }, i) => (
       <li key={i}>
-        <a href={href} target="_blank" rel="noopener noreferrer">
+        <a href={href}>
           <span className="thumbnail">
             <img
-              src={`https://picsum.photos/seed/${label}/160/104.webp`}
+              src={`https://picsum.photos/seed/${label}/160/104`}
               loading="lazy"
               height={104}
               width={160}

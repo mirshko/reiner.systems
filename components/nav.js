@@ -103,7 +103,6 @@ const Nav = () => {
       <style jsx global>{`
         nav {
           border-bottom: 2px solid currentColor;
-          margin-bottom: 1rem;
         }
 
         ul {
@@ -129,7 +128,7 @@ const Nav = () => {
         }
 
         .active::after {
-          content: " ☻";
+          content: " ⚑";
           color: #000;
         }
 

@@ -6,10 +6,17 @@ export default function Page() {
   return (
     <main>
       <Head>
-        <title>Work | Jeff Reiner, Design Engineer</title>
+        <title>Portfolio | Jeff Reiner, Design Engineer</title>
       </Head>
 
-      <h1>Work</h1>
+      <h1>Portfolio</h1>
+
+      <p className="measure">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga,
+        accusantium, minus voluptatem sapiente, distinctio consectetur odio sit
+        facere aspernatur neque placeat eius esse quaerat recusandae rerum
+        obcaecati ipsa provident suscipit!
+      </p>
 
       <section>
         <h2>Clients</h2>

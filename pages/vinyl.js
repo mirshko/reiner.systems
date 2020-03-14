@@ -12,6 +12,13 @@ export default function Vinyl() {
 
       <h1>Vinyl</h1>
 
+      <p className="measure">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum velit nam
+        quos officiis esse, mollitia laudantium aspernatur ut debitis itaque
+        repudiandae possimus maxime corporis, maiores fugiat eius autem quis
+        soluta.
+      </p>
+
       <Discogs />
     </main>
   );
