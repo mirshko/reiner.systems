@@ -51,10 +51,6 @@ export const projects = [
     label: "ENS Autocomplete"
   },
   {
-    href: "https://github.com/mirshko/202020",
-    label: "202020 🚧"
-  },
-  {
     href: "https://unleaded.reiner.design",
     label: "Unleaded"
   },
@@ -66,11 +62,15 @@ export const projects = [
 
 export const experiments = [
   {
+    href: "https://github.com/mirshko/202020",
+    label: "202020"
+  },
+  {
     href: "https://borkchain.lol/",
     label: "borkchain.lol"
   },
   {
-    href: "https://componentboi.netlify.com/",
+    href: "https://componentboi.eth.reiner.design/",
     label: "CryptoKitty Gallery"
   },
   {
