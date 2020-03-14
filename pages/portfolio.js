@@ -6,7 +6,7 @@ export default function Page() {
   return (
     <main>
       <Head>
-        <title>Work | Jeff Reiner, UX Engineer</title>
+        <title>Work | Jeff Reiner, Design Engineer</title>
       </Head>
 
       <h1>Work</h1>

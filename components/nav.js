@@ -24,7 +24,7 @@ const Nav = () => {
       </ul>
 
       <ul>
-        <p>UX Engineer</p>
+        <p>Design Engineer</p>
       </ul>
 
       <ul>
@@ -102,7 +102,7 @@ const Nav = () => {
 
       <style jsx global>{`
         nav {
-          border-bottom: 1px solid;
+          border-bottom: 2px solid currentColor;
           margin-bottom: 1rem;
         }
 

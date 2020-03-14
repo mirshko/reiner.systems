@@ -4,11 +4,11 @@ export default function Page() {
   return (
     <main>
       <Head>
-        <title>Jeff Reiner, UX Engineer</title>
+        <title>Jeff Reiner, Design Engineer</title>
       </Head>
 
       <p className="measure">
-        UX Engineer. Team at{" "}
+        Design Engineer. Team at{" "}
         <a
           href="https://www.instagram.com/we_are_coal/"
           rel="noopener noreferrer"
@@ -25,7 +25,12 @@ export default function Page() {
       </p>
 
       <p className="measure">
-        <a href="/jeff-reiner.pdf" rel="noopener noreferrer" target="_blank">
+        <a
+          href="/jeff-reiner.pdf"
+          // onClick={() => !!window.fathom && fathom("trackGoal", "C8Z7PGH7", 0)}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           Resume
         </a>
       </p>

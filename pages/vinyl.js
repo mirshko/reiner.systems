@@ -7,7 +7,7 @@ export default function Vinyl() {
   return (
     <main>
       <Head>
-        <title>Vinyl | Jeff Reiner, UX Engineer</title>
+        <title>Vinyl | Jeff Reiner, Design Engineer</title>
       </Head>
 
       <h1>Vinyl</h1>
