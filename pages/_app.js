@@ -1,8 +1,8 @@
-import * as Fathom from "fathom-client";
-import Router from "next/router";
-import { useEffect } from "react";
+// import * as Fathom from "fathom-client";
+// import Router from "next/router";
+// import { useEffect } from "react";
 import Nav from "../components/nav";
-import { FATHOM_SITE_ID } from "../lib/fathom";
+// import { FATHOM_SITE_ID } from "../lib/fathom";
 import "../styles/reset.css";
 
 // Router.events.on("routeChangeComplete", () => Fathom.trackPageview());
