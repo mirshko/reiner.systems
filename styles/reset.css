@@ -1,3 +1,11 @@
+@font-face {
+  font-family: Parabole;
+  src: url(/fonts/Parabole-Regular.woff2) format("woff2");
+  font-display: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -66,9 +74,9 @@ canvas {
 }
 
 h1 {
+  font-family: Parabole;
+  font-weight: 400;
   font-size: 3rem;
-  font-weight: bold;
-  margin: 3rem 0 1rem 0;
 }
 
 .measure {

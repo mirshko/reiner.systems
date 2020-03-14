@@ -2,6 +2,7 @@
 // import Router from "next/router";
 // import { useEffect } from "react";
 import Nav from "../components/nav";
+import Head from "next/head";
 // import { FATHOM_SITE_ID } from "../lib/fathom";
 import "../styles/reset.css";
 
@@ -18,6 +19,16 @@ export default function App({ Component, pageProps }) {
 
   return (
     <div className="site">
+      <Head>
+        <link
+          rel="preload"
+          href="/fonts/Parabole-Regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </Head>
+
       <header>
         <Nav />
       </header>

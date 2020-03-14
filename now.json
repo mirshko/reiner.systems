@@ -2,6 +2,10 @@
   "version": 2,
   "scope": "mirshko",
   "public": true,
+  "trailingSlash": false,
+  "github": {
+    "silent": true
+  },
   "env": {
     "DISCOGS_TOKEN": "@discogs_token",
     "YOUTUBE_TOKEN": "@youtube_token"
