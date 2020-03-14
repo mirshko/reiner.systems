@@ -13,6 +13,7 @@ const Record = ({ basic_information: { artists, title, cover_image } }) => {
           height={300}
           width={300}
           alt={label}
+          title={label}
         />
       </div>
 
