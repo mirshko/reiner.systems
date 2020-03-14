@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }) {
 
   return (
     <div className="site">
-      <header className="sticky">
+      <header>
         <Nav />
       </header>
 
@@ -35,13 +35,6 @@ export default function App({ Component, pageProps }) {
           display: flex;
           min-height: 100vh;
           flex-direction: column;
-        }
-
-        .sticky {
-          position: -webkit-sticky;
-          position: sticky;
-          top: 0;
-	  z-index: 99999;
         }
 
         .content {
