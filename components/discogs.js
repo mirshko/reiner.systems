@@ -1,48 +1,6 @@
 import useSWR, { useSWRPages } from "swr";
 import fetcher from "../lib/fetcher";
-
-const Record = ({ basic_information: { artists, title, cover_image } }) => {
-  const label = title + ", " + artists[0].name;
-
-  return (
-    <div>
-      <div className="cover">
-        <img
-          src={cover_image}
-          loading="lazy"
-          height={300}
-          width={300}
-          alt={label}
-          title={label}
-        />
-      </div>
-
-      <style jsx>{`
-        .cover {
-          box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.5);
-          border-radius: 3px;
-          overflow: hidden;
-          position: relative;
-        }
-
-        img {
-          display: block;
-          height: 15rem;
-          width: 15rem;
-          object-fit: cover;
-        }
-
-        p {
-          margin-top: 5px;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          line-height: 25px;
-          overflow: hidden;
-        }
-      `}</style>
-    </div>
-  );
-};
+import Record from "./record";
 
 const Loader = () => (
   <div>
@@ -51,13 +9,13 @@ const Loader = () => (
     </span>
     <style jsx>{`
       div {
-        height: 300px;
-        width: 300px;
+        height: 15rem;
+        width: 15rem;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 128px;
-        line-height: 128px;
+        font-size: 6rem;
+        line-height: 6rem;
         user-select: none;
       }
     `}</style>
@@ -71,16 +29,16 @@ const LoadMore = props => (
     </span>
     <style jsx>{`
       button {
-        height: 300px;
-        width: 300px;
+        height: 15rem;
+        width: 15rem;
         display: flex;
         border: none;
         appearance: none;
         background: transparent;
         align-items: center;
         justify-content: center;
-        font-size: 128px;
-        line-height: 128px;
+        font-size: 6rem;
+        line-height: 6rem;
         user-select: none;
       }
     `}</style>
