@@ -26,8 +26,8 @@ const Record = ({ basic_information: { artists, title, cover_image } }) => {
 
         img {
           display: block;
-          height: 300px;
-          width: 300px;
+          height: 15rem;
+          width: 15rem;
           object-fit: cover;
         }
 
@@ -127,9 +127,8 @@ const Discogs = () => {
       <style jsx>{`
         section {
           display: grid;
-          grid-template-columns: repeat(auto-fill, 300px);
-          grid-column-gap: 50px;
-          grid-row-gap: 20px;
+          grid-template-columns: repeat(auto-fill, 15rem);
+          grid-gap: 1rem;
         }
       `}</style>
     </section>
