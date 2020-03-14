@@ -16,8 +16,6 @@ const Record = ({ basic_information: { artists, title, cover_image } }) => {
         />
       </div>
 
-      <p title={label}>{label}</p>
-
       <style jsx>{`
         .cover {
           box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.5);
