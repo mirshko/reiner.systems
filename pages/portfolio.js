@@ -34,12 +34,6 @@ export default function Page() {
         <p>Weird stuff.</p>
         <List data={experiments} />
       </section>
-
-      <style jsx>{`
-        h1 {
-          margin-bottom: 1rem;
-        }
-      `}</style>
     </main>
   );
 }

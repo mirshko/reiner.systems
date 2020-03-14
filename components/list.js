@@ -72,11 +72,6 @@ const List = ({ data }) => (
       a:visited {
         color: purple;
       }
-
-      a:hover,
-      a:focus {
-        opacity: 0.5;
-      }
     `}</style>
   </ul>
 );
