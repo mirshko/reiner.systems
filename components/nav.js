@@ -3,9 +3,11 @@ import {
   DisclosureButton,
   DisclosurePanel
 } from "@reach/disclosure";
+import { trackGoal } from "fathom-client";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import { GOALS } from "../lib/fathom";
 
 const Nav = () => {
   const { pathname } = useRouter();
@@ -48,6 +50,7 @@ const Nav = () => {
             href="https://github.com/mirshko"
             rel="noopener noreferrer"
             target="_blank"
+            onClick={() => trackGoal(GOALS.CLICK_SOCIAL_GITHUB, 0)}
           >
             GitHub
           </a>
@@ -57,6 +60,7 @@ const Nav = () => {
             href="https://www.instagram.com/mirshko"
             rel="noopener noreferrer"
             target="_blank"
+            onClick={() => trackGoal(GOALS.CLICK_SOCIAL_INSTAGRAM, 0)}
           >
             Instagram
           </a>
@@ -66,6 +70,7 @@ const Nav = () => {
             href="https://twitter.com/mirshko"
             rel="noopener noreferrer"
             target="_blank"
+            onClick={() => trackGoal(GOALS.CLICK_SOCIAL_TWITTER, 0)}
           >
             Twitter
           </a>

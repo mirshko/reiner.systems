@@ -37,7 +37,7 @@ export default function Page() {
       <p className="measure">
         <a
           href="/jeff-reiner.pdf"
-          onClick={() => trackGoal(GOALS.DOWNLOAD_RESUME)}
+          onClick={() => trackGoal(GOALS.DOWNLOAD_RESUME, 0)}
           target="_blank"
         >
           Resume
