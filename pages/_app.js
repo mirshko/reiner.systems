@@ -1,21 +1,19 @@
-// import * as Fathom from "fathom-client";
-// import Router from "next/router";
-// import { useEffect } from "react";
-import Nav from "../components/nav";
+import * as Fathom from "fathom-client";
 import Head from "next/head";
-// import { FATHOM_SITE_ID } from "../lib/fathom";
+import Router from "next/router";
+import { useEffect } from "react";
+import Nav from "../components/nav";
+import { SITE_ID } from "../lib/fathom";
 import "../styles/reset.css";
 
-// Router.events.on("routeChangeComplete", () => Fathom.trackPageview());
+Router.events.on("routeChangeComplete", () => Fathom.trackPageview());
 
 export default function App({ Component, pageProps }) {
-  // useEffect(() => {
-  //   if (process.env.NODE_ENV === "production") {
-  //     Fathom.load();
-  //     Fathom.setSiteId(FATHOM_SITE_ID);
-  //     Fathom.trackPageview();
-  //   }
-  // }, []);
+  useEffect(() => {
+    Fathom.load();
+    Fathom.setSiteId(SITE_ID);
+    Fathom.trackPageview();
+  }, []);
 
   return (
     <div className="site">

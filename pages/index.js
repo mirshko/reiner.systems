@@ -1,4 +1,6 @@
 import Head from "next/head";
+import { trackGoal } from "fathom-client";
+import { GOALS } from "../lib/fathom";
 
 export default function Page() {
   return (
@@ -35,7 +37,7 @@ export default function Page() {
       <p className="measure">
         <a
           href="/jeff-reiner.pdf"
-          // onClick={() => !!window.fathom && fathom("trackGoal", "C8Z7PGH7", 0)}
+          onClick={() => trackGoal(GOALS.DOWNLOAD_RESUME)}
           target="_blank"
         >
           Resume
