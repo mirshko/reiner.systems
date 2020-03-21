@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }) {
       <Head>
         <link
           rel="preload"
-          href="/fonts/Parabole-Regular.woff2"
+          href="/Parabole-Regular.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
