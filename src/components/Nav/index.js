@@ -6,6 +6,12 @@ import { Link } from "gatsby";
 
 const Nav = () => (
   <nav>
+    <Styled.p>
+      <span role="img" aria-label="Information">
+        ℹ️
+      </span>{" "}
+      NEW SITE COMING SOON
+    </Styled.p>
     <Styled.ul>
       <Styled.li>
         <Styled.a as={Link} to="/">
