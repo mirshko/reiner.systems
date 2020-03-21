@@ -19,7 +19,7 @@ export default function Vinyl() {
         />
       </Head>
 
-      <h1>Vinyl</h1>
+      <h1 className="h1">Vinyl</h1>
 
       <p className="measure">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum velit nam

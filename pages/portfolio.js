@@ -18,7 +18,7 @@ export default function Page() {
         />
       </Head>
 
-      <h1>Portfolio</h1>
+      <h1 className="h1">Portfolio</h1>
 
       <p className="measure">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga,

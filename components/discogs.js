@@ -14,8 +14,8 @@ const Loader = () => (
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 6rem;
-        line-height: 6rem;
+        font-size: 3rem;
+        line-height: 3rem;
         user-select: none;
       }
     `}</style>
@@ -23,7 +23,7 @@ const Loader = () => (
 );
 
 const LoadMore = props => (
-  <button {...props}>
+  <button className="enabled:hover-blink" {...props}>
     <span role="img" aria-label="new">
       🆕
     </span>
@@ -37,9 +37,13 @@ const LoadMore = props => (
         background: transparent;
         align-items: center;
         justify-content: center;
-        font-size: 6rem;
-        line-height: 6rem;
+        font-size: 3rem;
+        line-height: 3rem;
         user-select: none;
+      }
+      button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
       }
     `}</style>
   </button>

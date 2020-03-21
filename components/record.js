@@ -16,13 +16,19 @@ const Record = ({ basic_information: { artists, title, cover_image } }) => {
 
       <style jsx>{`
         .cover {
-          box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.5);
           border-radius: 3px;
           overflow: hidden;
+          user-select: none;
+          user-drag: none;
           position: relative;
         }
 
         img {
+          pointer-events: none;
+          border: none;
+          border-radius: 3px;
+          background: black;
+          box-shadow: none;
           display: block;
           height: 15rem;
           width: 15rem;

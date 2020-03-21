@@ -73,7 +73,7 @@ canvas {
   height: auto;
 }
 
-h1 {
+.h1 {
   font-family: Parabole;
   font-weight: 400;
   font-size: 3rem;
@@ -93,7 +93,8 @@ a:visited,
 @media (hover: hover) {
   .hover-blink:hover:not(:active),
   :any-link:hover:not(:active),
-  a:hover:not(:active) {
+  a:hover:not(:active),
+  .enabled\:hover-blink:enabled:hover:not(:active) {
     animation: blink 2s infinite;
   }
 }
