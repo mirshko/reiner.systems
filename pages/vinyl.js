@@ -19,9 +19,9 @@ export default function Vinyl() {
         />
       </Head>
 
-      <h1 className="h1">Vinyl</h1>
+      <h1 className="h1 mt-sm">Vinyl</h1>
 
-      <p className="measure">
+      <p className="measure mt-sm">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum velit nam
         quos officiis esse, mollitia laudantium aspernatur ut debitis itaque
         repudiandae possimus maxime corporis, maiores fugiat eius autem quis

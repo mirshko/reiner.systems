@@ -34,14 +34,6 @@ const Record = ({ basic_information: { artists, title, cover_image } }) => {
           width: 15rem;
           object-fit: cover;
         }
-
-        p {
-          margin-top: 5px;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          line-height: 25px;
-          overflow: hidden;
-        }
       `}</style>
     </div>
   );

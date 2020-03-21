@@ -12,7 +12,7 @@ export default function Page() {
         <meta property="twitter:title" content="Jeff Reiner, Design Engineer" />
       </Head>
 
-      <h1 className="measure">
+      <h1 className="measure mt-sm">
         Design Engineer. Team at{" "}
         <a
           href="https://www.instagram.com/we_are_coal/"
@@ -31,27 +31,21 @@ export default function Page() {
         </a>
       </h1>
 
-      <p className="measure">
+      <p className="measure mt-sm">
         I focus on responsive, mobile-first websites and apps; highly-usable and
         efficient component libraries and design systems; and solving complex UX
         problems, in and around the Web 2.0 and Web3 space.
       </p>
 
-      <p className="measure">
+      <p className="measure mt-lg">
         <a
           href="/jeff-reiner.pdf"
           onClick={() => trackGoal(GOALS.DOWNLOAD_RESUME, 0)}
           target="_blank"
         >
-          Resume
+          Download Resume
         </a>
       </p>
-
-      <style jsx>{`
-        main {
-          margin-top: 1rem;
-        }
-      `}</style>
     </main>
   );
 }

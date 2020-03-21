@@ -17,7 +17,7 @@ export default function Page() {
         />
       </Head>
 
-      <h1 className="h1">Nothing here</h1>
+      <h1 className="h1 mt-sm">Nothing here</h1>
 
       <img src="/404.gif" alt="Nothing here" />
 
@@ -26,12 +26,6 @@ export default function Page() {
           <a>Back home</a>
         </Link>
       </p>
-
-      <style jsx>{`
-        main {
-          margin-top: 1rem;
-        }
-      `}</style>
     </main>
   );
 }

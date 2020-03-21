@@ -52,7 +52,7 @@ export default function App({ Component, pageProps }) {
         <Component {...pageProps} />
       </div>
 
-      <footer>
+      <footer className="mt-lg">
         <p>© 2020</p>
       </footer>
 
