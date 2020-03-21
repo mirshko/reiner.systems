@@ -8,6 +8,15 @@ export default function Vinyl() {
     <main>
       <Head>
         <title>Vinyl | Jeff Reiner, Design Engineer</title>
+        <meta name="title" content="Vinyl | Jeff Reiner, Design Engineer" />
+        <meta
+          property="og:title"
+          content="Vinyl | Jeff Reiner, Design Engineer"
+        />
+        <meta
+          property="twitter:title"
+          content="Vinyl | Jeff Reiner, Design Engineer"
+        />
       </Head>
 
       <h1>Vinyl</h1>

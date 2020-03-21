@@ -25,6 +25,23 @@ export default function App({ Component, pageProps }) {
           type="font/woff2"
           crossOrigin="anonymous"
         />
+        <meta name="author" content="@mirshko" />
+        <meta
+          name="description"
+          content="Freelance Design Engineer based in Berlin. Team @ Coal, and Union"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://reiner.design" />
+        <meta
+          property="og:description"
+          content="Freelance Design Engineer based in Berlin. Team @ Coal, and Union"
+        />
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:url" content="https://reiner.design" />
+        <meta
+          property="twitter:description"
+          content="Freelance Design Engineer based in Berlin. Team @ Coal, and Union"
+        />
       </Head>
 
       <header>

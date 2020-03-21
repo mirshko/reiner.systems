@@ -7,6 +7,9 @@ export default function Page() {
     <main>
       <Head>
         <title>Jeff Reiner, Design Engineer</title>
+        <meta name="title" content="Jeff Reiner, Design Engineer" />
+        <meta property="og:title" content="Jeff Reiner, Design Engineer" />
+        <meta property="twitter:title" content="Jeff Reiner, Design Engineer" />
       </Head>
 
       <p className="measure">

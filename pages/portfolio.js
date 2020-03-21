@@ -7,6 +7,15 @@ export default function Page() {
     <main>
       <Head>
         <title>Portfolio | Jeff Reiner, Design Engineer</title>
+        <meta name="title" content="Portfolio | Jeff Reiner, Design Engineer" />
+        <meta
+          property="og:title"
+          content="Portfolio | Jeff Reiner, Design Engineer"
+        />
+        <meta
+          property="twitter:title"
+          content="Portfolio | Jeff Reiner, Design Engineer"
+        />
       </Head>
 
       <h1>Portfolio</h1>
