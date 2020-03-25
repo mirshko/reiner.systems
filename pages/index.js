@@ -4,7 +4,7 @@ import { GOALS } from "../lib/fathom";
 
 export default function Page() {
   return (
-    <main>
+    <main className="p-sm">
       <Head>
         <title>Jeff Reiner, Design Engineer</title>
         <meta name="title" content="Jeff Reiner, Design Engineer" />
@@ -12,8 +12,8 @@ export default function Page() {
         <meta property="twitter:title" content="Jeff Reiner, Design Engineer" />
       </Head>
 
-      <h1 className="measure mt-sm">
-        Design Engineer. Team at{" "}
+      <h1 className="measure">
+       Freelance Design Engineer. Team at{" "}
         <a
           href="https://www.instagram.com/we_are_coal/"
           rel="noopener noreferrer"
@@ -28,7 +28,7 @@ export default function Page() {
           target="_blank"
         >
           Union
-        </a>
+        </a>.
       </h1>
 
       <p className="measure mt-sm">
@@ -43,7 +43,7 @@ export default function Page() {
           onClick={() => trackGoal(GOALS.DOWNLOAD_RESUME, 0)}
           target="_blank"
         >
-          Download Resume
+          Résumé
         </a>
       </p>
     </main>

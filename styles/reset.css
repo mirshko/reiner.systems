@@ -6,6 +6,14 @@
   font-style: normal;
 }
 
+:root {
+  --primary: darkgreen;
+  --sm: 1rem;
+  --md: 2rem;
+  --lg: 3rem;
+  --font-size: 1.8rem;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -17,7 +25,7 @@ html {
 }
 
 html {
-  font-size: 100%;
+  font-size: 15px;
   font-weight: 500;
   line-height: 1.21053;
   letter-spacing: 0.012em;
@@ -26,7 +34,7 @@ html {
 
 @media screen and (min-width: 48em) {
   html {
-    font-size: 125%;
+    font-size: 19px;
   }
 }
 
@@ -53,13 +61,15 @@ li {
   margin: 0;
 }
 
+p,
+a,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-size: 1rem;
+  font-size: var(--font-size);
   font-weight: inherit;
   line-height: 1.25;
 }
@@ -76,7 +86,7 @@ canvas {
 .h1 {
   font-family: Parabole;
   font-weight: 400;
-  font-size: 3rem;
+  font-size: calc(var(--font-size) * 3);
 }
 
 .measure {
@@ -87,7 +97,8 @@ a,
 :any-link,
 a:visited,
 :any-link:visited {
-  color: darkblue;
+  color: var(--primary);
+  text-decoration: none;
 }
 
 @media (hover: hover) {
@@ -100,111 +111,111 @@ a:visited,
 }
 
 .mt-sm {
-  margin-top: 1rem;
+  margin-top: var(--sm);
 }
 .mb-sm {
-  margin-bottom: 1rem;
+  margin-bottom: var(--sm);
 }
 .mx-sm {
-  margin-right: 1rem;
-  margin-left: 1rem;
+  margin-right: var(--sm);
+  margin-left: var(--sm);
 }
 .my-sm {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: var(--sm);
+  margin-bottom: var(--sm);
 }
 .m-sm {
-  margin: 1rem;
+  margin: var(--sm);
 }
 
 .pt-sm {
-  padding-top: 1rem;
+  padding-top: var(--sm);
 }
 .pb-sm {
-  padding-bottom: 1rem;
+  padding-bottom: var(--sm);
 }
 .px-sm {
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding-right: var(--sm);
+  padding-left: var(--sm);
 }
 .py-sm {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: var(--sm);
+  padding-bottom: var(--sm);
 }
 .p-sm {
-  padding: 1rem;
+  padding: var(--sm);
 }
 
 .mt-md {
-  margin-top: 2rem;
+  margin-top: var(--md);
 }
 .mb-md {
-  margin-bottom: 2rem;
+  margin-bottom: var(--md);
 }
 .mx-md {
-  margin-right: 2rem;
-  margin-left: 2rem;
+  margin-right: var(--md);
+  margin-left: var(--md);
 }
 .my-md {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: var(--md);
+  margin-bottom: var(--md);
 }
 .m-md {
-  margin: 2rem;
+  margin: var(--md);
 }
 
 .pt-md {
-  padding-top: 2rem;
+  padding-top: var(--md);
 }
 .pb-md {
-  padding-bottom: 2rem;
+  padding-bottom: var(--md);
 }
 .px-md {
-  padding-right: 2rem;
-  padding-left: 2rem;
+  padding-right: var(--md);
+  padding-left: var(--md);
 }
 .py-md {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: var(--md);
+  padding-bottom: var(--md);
 }
 .p-md {
-  padding: 2rem;
+  padding: var(--md);
 }
 
 .mt-lg {
-  margin-top: 3rem;
+  margin-top: var(--lg);
 }
 .mb-lg {
-  margin-bottom: 3rem;
+  margin-bottom: var(--lg);
 }
 .mx-lg {
-  margin-right: 3rem;
-  margin-left: 3rem;
+  margin-right: var(--lg);
+  margin-left: var(--lg);
 }
 .my-lg {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: var(--lg);
+  margin-bottom: var(--lg);
 }
 .m-lg {
-  margin: 3rem;
+  margin: var(--lg);
 }
 
 .pt-lg {
-  padding-top: 3rem;
+  padding-top: var(--lg);
 }
 .pb-lg {
-  padding-bottom: 3rem;
+  padding-bottom: var(--lg);
 }
 .px-lg {
-  padding-right: 3rem;
-  padding-left: 3rem;
+  padding-right: var(--lg);
+  padding-left: var(--lg);
 }
 .py-lg {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: var(--lg);
+  padding-bottom: var(--lg);
 }
 .p-lg {
-  padding: 3rem;
+  padding: var(--lg);
 }
 
 @keyframes blink {

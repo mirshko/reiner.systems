@@ -52,8 +52,13 @@ export default function App({ Component, pageProps }) {
         <Component {...pageProps} />
       </div>
 
-      <footer className="mt-lg">
-        <p>© 2020</p>
+      <footer className="px-sm pb-sm mt-lg">
+        <p>
+          <span>© 2020</span>{" "}
+          <span>
+            <a href="mailto:jeff@reiner.design">Mailto</a>
+          </span>
+        </p>
       </footer>
 
       <style jsx>{`

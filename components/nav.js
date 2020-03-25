@@ -1,22 +1,19 @@
-import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel
-} from "@reach/disclosure";
 import { trackGoal } from "fathom-client";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from "react";
 import { GOALS } from "../lib/fathom";
 
 const Nav = () => {
   const { pathname } = useRouter();
-  const [isOpen, setOpen] = useState(false);
 
-  const toggleDisclosure = () => setOpen(!isOpen);
+  /**
+   * @name isActive
+   * @param {String} path The page to match the current pathname against
+   */
+  const isActive = path => (pathname === path ? "active" : undefined);
 
   return (
-    <nav className="flex">
+    <nav className="flex px-sm pt-sm">
       <ul>
         <p>
           <Link href="/">
@@ -33,18 +30,28 @@ const Nav = () => {
         <p>Directory</p>
         <li>
           <Link href="/portfolio">
-            <a className={pathname === "/portfolio" && "active"}>Portfolio</a>
+            <a className={isActive("/portfolio")}>Portfolio</a>
           </Link>
         </li>
         <li>
           <Link href="/vinyl">
-            <a className={pathname === "/vinyl" && "active"}>Vinyl</a>
+            <a className={isActive("/vinyl")}>Vinyl</a>
           </Link>
         </li>
       </ul>
 
       <ul>
-        <p>Socials</p>
+        <p>Social</p>
+        <li>
+          <a
+            href="https://twitter.com/mirshko"
+            rel="noopener noreferrer"
+            target="_blank"
+            onClick={() => trackGoal(GOALS.CLICK_SOCIAL_TWITTER, 0)}
+          >
+            Twitter
+          </a>
+        </li>
         <li>
           <a
             href="https://github.com/mirshko"
@@ -65,56 +72,18 @@ const Nav = () => {
             Instagram
           </a>
         </li>
-        <li>
-          <a
-            href="https://twitter.com/mirshko"
-            rel="noopener noreferrer"
-            target="_blank"
-            onClick={() => trackGoal(GOALS.CLICK_SOCIAL_TWITTER, 0)}
-          >
-            Twitter
-          </a>
-        </li>
-
-        <Disclosure open={isOpen} onChange={toggleDisclosure}>
-          <DisclosureButton>{isOpen ? "Less" : "More"}</DisclosureButton>
-
-          <DisclosurePanel>
-            <li>
-              <a
-                href="https://keybase.io/mirshko"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Keybase
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://are.na/jeff-reiner"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Are.na
-              </a>
-            </li>
-            <li>
-              <a href="mailto:jeff@reiner.design?subject=Heya">Mailto</a>
-            </li>
-          </DisclosurePanel>
-        </Disclosure>
       </ul>
 
       <style jsx global>{`
         nav {
-          border-bottom: 2px solid currentColor;
+          border-bottom: 0.2rem solid currentColor;
         }
 
         ul {
           list-style: none;
           margin: 0;
           padding: 0;
-          margin-bottom: 1rem;
+          margin-bottom: var(--font-size);
         }
 
         .flex {
@@ -122,7 +91,7 @@ const Nav = () => {
           flex-direction: column;
         }
 
-        @media screen and (min-width: 32em) {
+        @media screen and (min-width: 48em) {
           .flex {
             flex-direction: row;
           }
@@ -133,36 +102,7 @@ const Nav = () => {
         }
 
         .active::after {
-          content: " ⚑";
-          color: #000;
-        }
-
-        a {
-          text-decoration: none;
-        }
-
-        [data-reach-disclosure-button] {
-          appearance: none;
-          border: none;
-          background: transparent;
-          margin: 0;
-          padding: 0;
-          font-size: inherit;
-          font-weight: inherit;
-          line-height: inherit;
-        }
-
-        [data-reach-disclosure-button][data-state="open"] {
-        }
-        [data-reach-disclosure-button][data-state="collapsed"] {
-        }
-
-        [data-reach-disclosure-panel] {
-          outline: none;
-        }
-        [data-reach-disclosure-panel][data-state="open"] {
-        }
-        [data-reach-disclosure-panel][data-state="collapsed"] {
+          content: " ☜";
         }
       `}</style>
     </nav>

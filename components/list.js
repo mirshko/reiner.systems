@@ -45,8 +45,8 @@ const List = ({ data }) => (
       a {
         display: inline-flex;
         align-items: baseline;
-        font-size: 1rem;
-        color: darkblue;
+        font-size: var(--font-size);
+        color: var(--primary);
       }
 
       .label {
