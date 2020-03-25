@@ -17,7 +17,7 @@ const Nav = () => {
       <ul>
         <p>
           <Link href="/">
-            <a>Jeff Reiner</a>
+            <a className="home">Jeff Reiner</a>
           </Link>
         </p>
       </ul>
@@ -74,9 +74,17 @@ const Nav = () => {
         </li>
       </ul>
 
-      <style jsx global>{`
+      <style jsx>{`
         nav {
           border-bottom: 0.2rem solid currentColor;
+        }
+
+        .home {
+          color: black;
+          transition: color 200ms;
+        }
+        .home:hover {
+          color: var(--primary)
         }
 
         ul {

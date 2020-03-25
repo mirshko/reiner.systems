@@ -12,8 +12,10 @@ export default function Page() {
         <meta property="twitter:title" content="Jeff Reiner, Design Engineer" />
       </Head>
 
-      <h1 className="measure">
-       Freelance Design Engineer. Team at{" "}
+      <h1 className="h1 measure">Freelance, Currently in Berlin.</h1>
+
+      <p className="measure mt-sm">
+        Team at{" "}
         <a
           href="https://www.instagram.com/we_are_coal/"
           rel="noopener noreferrer"
@@ -28,8 +30,9 @@ export default function Page() {
           target="_blank"
         >
           Union
-        </a>.
-      </h1>
+        </a>
+        .
+      </p>
 
       <p className="measure mt-sm">
         I focus on responsive, mobile-first websites and apps; highly-usable and

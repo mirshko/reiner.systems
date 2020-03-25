@@ -86,7 +86,7 @@ canvas {
 .h1 {
   font-family: Parabole;
   font-weight: 400;
-  font-size: calc(var(--font-size) * 2);
+  font-size: calc(var(--font-size) * 1.75);
 }
 
 .measure {
@@ -97,9 +97,7 @@ canvas {
 }
 
 a,
-:any-link,
-a:visited,
-:any-link:visited {
+a:visited {
   color: var(--primary);
   text-decoration: none;
 }
