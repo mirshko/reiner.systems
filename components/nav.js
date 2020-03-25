@@ -33,11 +33,11 @@ const Nav = () => {
             <a className={isActive("/portfolio")}>Portfolio</a>
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link href="/vinyl">
             <a className={isActive("/vinyl")}>Vinyl</a>
           </Link>
-        </li>
+        </li> */}
       </ul>
 
       <ul>
