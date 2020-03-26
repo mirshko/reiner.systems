@@ -65,7 +65,7 @@ const List = ({ data }) => (
         height: 100%;
         width: 100%;
         object-fit: contain;
-        vertical-align: baseline;
+        vertical-align: middle;
         object-position: center 0.1em;
       }
     `}</style>
