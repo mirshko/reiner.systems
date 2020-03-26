@@ -39,7 +39,9 @@ const List = ({ data }) => (
       }
 
       li {
-        display: inline;
+        display: inline-block;
+        padding-right: var(--sm);
+        padding-bottom: 0.5rem;
       }
 
       a {
@@ -57,8 +59,9 @@ const List = ({ data }) => (
         height: 1.3em;
         width: 1.3em;
         text-align: center;
-        display: inline-block;
-        margin-right: 0.2em;
+        align-items: baseline;
+        display: inline-flex;
+        margin-right: 0.3em;
       }
 
       img {
