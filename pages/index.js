@@ -12,7 +12,7 @@ export default function Page() {
         <meta property="twitter:title" content="Jeff Reiner, Design Engineer" />
       </Head>
 
-      <h1 className="h1 measure">Freelance, Currently in Berlin.</h1>
+      <h1 className="measure">Freelance, Currently in Berlin.</h1>
 
       <p className="measure mt-sm">
         Team at{" "}
