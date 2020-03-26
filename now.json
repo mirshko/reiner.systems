@@ -49,18 +49,6 @@
       "source": "/photos",
       "destination": "https://www.instagram.com/mirshko/",
       "statusCode": 302
-    },
-    {
-      "source": "/view-source",
-      "destination": "https://github.com/mirshko/dotdesign "
-    },
-    {
-      "source": "/stream/00",
-      "destination": "https://t.me/stream_00"
-    },
-    {
-      "source": "/stream/01",
-      "destination": "https://buttondown.email/jeff"
     }
   ]
 }
