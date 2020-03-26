@@ -46,7 +46,7 @@ const List = ({ data }) => (
 
       a {
         display: inline-flex;
-        align-items: baseline;
+        align-items: center;
         font-size: var(--font-size);
         color: var(--primary);
       }
@@ -58,18 +58,15 @@ const List = ({ data }) => (
       .thumbnail {
         height: 1.3em;
         width: 1.3em;
-        text-align: center;
-        align-items: baseline;
-        display: inline-flex;
         margin-right: 0.3em;
       }
 
       img {
-        max-height: 100%;
-        max-width: 100%;
-        height: auto;
-        width: auto;
-        vertical-align: middle;
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        vertical-align: baseline;
+        object-position: center 0.1em;
       }
     `}</style>
   </ul>
