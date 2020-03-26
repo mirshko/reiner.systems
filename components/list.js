@@ -46,12 +46,13 @@ const List = ({ data }) => (
 
       a {
         display: inline-flex;
-        align-items: center;
+        align-items: start;
         font-size: var(--font-size);
         color: var(--primary);
       }
 
       .label {
+        flex: 1;
         line-height: 1.2;
       }
 
