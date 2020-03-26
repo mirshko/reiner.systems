@@ -25,6 +25,7 @@ export default function App({ Component, pageProps }) {
           type="font/woff2"
           crossOrigin="anonymous"
         />
+        <link rel="icon" href="./favicon.png" />
         <meta name="author" content="@mirshko" />
         <meta
           name="description"
