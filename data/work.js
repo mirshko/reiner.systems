@@ -47,6 +47,10 @@ export const clients = [
 
 export const projects = [
   {
+    href: "https://matte.pics",
+    label: "Matte.pics"
+  },
+  {
     href: "https://49friends.party",
     label: "49 FRIENDS"
   },
