@@ -70,6 +70,11 @@ export const experiments = [
     label: "ENS Autocomplete",
   },
   {
+    href:
+      "https://docs.google.com/spreadsheets/d/1IBJRJrIeRYStgxvnBmLWsREMhSA483uvu-A_kK4cB9I/edit#gid=0",
+    label: "$YUNG Personal Token",
+  },
+  {
     href: "https://borkchain.lol/",
     label: "borkchain.lol",
   },
