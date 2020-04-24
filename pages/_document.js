@@ -5,13 +5,6 @@ export default class Doc extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link
-            rel="preload"
-            href="/Parabole-Regular.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          />
           <meta name="author" content="@mirshko" />
           <meta
             name="description"
