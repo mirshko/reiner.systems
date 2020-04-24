@@ -2,20 +2,20 @@ import { google } from "googleapis";
 
 const youtube = google.youtube({
   version: "v3",
-  auth: process.env.YOUTUBE_TOKEN
+  auth: process.env.YOUTUBE_TOKEN,
 });
 
-const fetchYouTubeResults = async term => {
+const fetchYouTubeResults = async (term) => {
   if (!term) {
     throw Error("`term` is required to perform a search");
   }
 
   const {
-    data: { items }
+    data: { items },
   } = await youtube.search.list({
     part: "snippet",
     q: String(term),
-    type: "video"
+    type: "video",
   });
 
   /**
@@ -36,13 +36,13 @@ export default async (req, res) => {
       console.error(err.errors);
       res.status(400).json({
         success: false,
-        message: err.message
+        message: err.message,
       });
     }
   }
 
   res.status(400).json({
     success: false,
-    message: "`term` is required to perform a search"
+    message: "`term` is required to perform a search",
   });
 };

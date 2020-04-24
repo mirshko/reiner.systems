@@ -16,7 +16,7 @@ const List = ({ data }) => (
     {data.map(({ href, label }, i) => (
       <li key={i}>
         <a href={href}>
-          <span className="thumbnail">
+          {/* <span className="thumbnail">
             <img
               src={`https://picsum.photos/seed/${label}/160/104`}
               loading="lazy"
@@ -24,7 +24,7 @@ const List = ({ data }) => (
               width={160}
               alt=""
             />
-          </span>
+          </span> */}
           <span className="label">{label}</span>
         </a>
         &nbsp;
@@ -80,9 +80,9 @@ List.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({
       href: PropTypes.string.isRequired,
-      label: PropTypes.string.isRequired
+      label: PropTypes.string.isRequired,
     }).isRequired
-  ).isRequired
+  ).isRequired,
 };
 
 export default memo(List);

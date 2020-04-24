@@ -110,6 +110,7 @@ const Nav = () => {
         }
 
         .active::after {
+          color: black;
           content: " ☜";
         }
       `}</style>

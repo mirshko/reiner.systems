@@ -1,111 +1,111 @@
 export const clients = [
   {
     href: "https://www.instagram.com/sampepper/",
-    label: "Sam Pepper"
+    label: "Sam Pepper",
   },
   {
     href: "https://async.art",
-    label: "Async Art"
+    label: "Async Art",
   },
   {
     href: "https://union.finance",
-    label: "Union"
+    label: "Union",
   },
   {
     href: "https://metamoneymarket.com",
-    label: "MetaMoneyMarket"
+    label: "MetaMoneyMarket",
   },
   {
     href: "https://pillarproject.io",
-    label: "Pillar"
+    label: "Pillar",
   },
   {
     href: "https://hummingbot.io/",
-    label: "Hummingbot"
+    label: "Hummingbot",
   },
   {
     href: "https://dydx.exchange/",
-    label: "dYdX Exchange"
+    label: "dYdX Exchange",
   },
   {
     href: "https://codefi.consensys.net/",
-    label: "ConsenSys Codefi"
+    label: "ConsenSys Codefi",
   },
   {
     href: "https://sportx.bet/",
-    label: "SportX"
+    label: "SportX",
   },
   {
     href: "https://centrifuge.io/",
-    label: "Centrifuge"
+    label: "Centrifuge",
   },
   {
     href: "https://github.com/balance-io/",
-    label: "Balance"
-  }
+    label: "Balance",
+  },
 ];
 
 export const projects = [
   {
     href: "https://matte.pics",
-    label: "Matte.pics"
+    label: "Matte.pics",
   },
   {
     href: "https://49friends.party",
-    label: "49 FRIENDS"
+    label: "49 Friends",
   },
   {
     href: "https://unleaded.reiner.design",
-    label: "Unleaded"
+    label: "Unleaded",
   },
   {
     href: "https://responsivectabuilder.com/",
-    label: "Responsive CTA Builder"
-  }
+    label: "Responsive CTA Builder",
+  },
 ];
 
 export const experiments = [
   {
     href: "https://ens-autocomplete.now.sh",
-    label: "ENS Autocomplete"
+    label: "ENS Autocomplete",
   },
   {
     href: "https://borkchain.lol/",
-    label: "borkchain.lol"
+    label: "borkchain.lol",
   },
   {
     href: "https://componentboi.eth.reiner.design/",
-    label: "CryptoKitty Gallery"
+    label: "CryptoKitty Gallery",
   },
   {
     href: "https://stakinghood.netlify.com/",
-    label: "Stakinghood"
+    label: "Stakinghood",
   },
   {
     href: "https://geoip.netlify.com/",
-    label: "Static GeoIP Endpoint"
+    label: "Static GeoIP Endpoint",
   },
   {
     href: "https://thumbnailer.netlify.com/",
-    label: "Wistia Thumbnail Generator"
-  }
+    label: "Wistia Thumbnail Generator",
+  },
 ];
 
 export const contributions = [
   {
     href: "https://uniswap.info",
-    label: "Uniswap Info"
+    label: "Uniswap Info",
   },
   {
     href: "https://uniswap.io",
-    label: "Uniswap"
+    label: "Uniswap",
   },
   {
     href: "https://akku.software/",
-    label: "Akku"
+    label: "Akku",
   },
   {
     href: "https://noti.center/",
-    label: "Noti"
-  }
+    label: "Noti",
+  },
 ];
