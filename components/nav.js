@@ -28,14 +28,14 @@ const Nav = () => {
 
       <ul>
         <p>Directory</p>
-        <li>
+        <li className={isActive("/portfolio")}>
           <Link href="/portfolio">
-            <a className={isActive("/portfolio")}>Portfolio</a>
+            <a>Portfolio</a>
           </Link>
         </li>
-        <li>
+        <li className={isActive("/vinyl")}>
           <Link href="/vinyl">
-            <a className={isActive("/vinyl")}>Vinyl</a>
+            <a>Vinyl</a>
           </Link>
         </li>
       </ul>
@@ -111,6 +111,7 @@ const Nav = () => {
 
         .active::after {
           color: black;
+          font-size: var(--font-size);
           content: " ☜";
         }
       `}</style>
