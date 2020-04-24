@@ -10,7 +10,7 @@ const Nav = () => {
    * @name isActive
    * @param {String} path The page to match the current pathname against
    */
-  const isActive = path => (pathname === path ? "active" : undefined);
+  const isActive = (path) => (pathname === path ? "active" : undefined);
 
   return (
     <nav className="flex px-sm pt-sm">
@@ -33,11 +33,11 @@ const Nav = () => {
             <a className={isActive("/portfolio")}>Portfolio</a>
           </Link>
         </li>
-        {/* <li>
+        <li>
           <Link href="/vinyl">
             <a className={isActive("/vinyl")}>Vinyl</a>
           </Link>
-        </li> */}
+        </li>
       </ul>
 
       <ul>
@@ -84,7 +84,7 @@ const Nav = () => {
           transition: color 200ms;
         }
         .home:hover {
-          color: var(--primary)
+          color: var(--primary);
         }
 
         ul {

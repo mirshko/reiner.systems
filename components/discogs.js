@@ -2,51 +2,46 @@ import useSWR, { useSWRPages } from "swr";
 import fetcher from "../lib/fetcher";
 import Record from "./record";
 
-const Loader = () => (
-  <div>
-    <span role="img" aria-label="disk">
-      💿
-    </span>
-    <style jsx>{`
-      div {
-        height: 15rem;
-        width: 15rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 3rem;
-        line-height: 3rem;
-        user-select: none;
-      }
-    `}</style>
-  </div>
-);
+const LoadMore = (props) => (
+  <div className="wrapper">
+    <button className="enabled:hover-blink" {...props}>
+      <span role="img" aria-label="new">
+        ☞
+      </span>
+    </button>
 
-const LoadMore = props => (
-  <button className="enabled:hover-blink" {...props}>
-    <span role="img" aria-label="new">
-      🆕
-    </span>
     <style jsx>{`
       button {
-        height: 15rem;
-        width: 15rem;
+        height: calc(315px - 1px);
+        width: calc(315px - 1px);
+        border: 1px solid;
+        border-color: transparent;
         display: flex;
-        border: none;
         appearance: none;
         background: transparent;
         align-items: center;
         justify-content: center;
-        font-size: 3rem;
-        line-height: 3rem;
+        font-size: 6rem;
+        line-height: 6rem;
         user-select: none;
+        cursor: pointer;
+        focus: none;
+      }
+      button:focus,
+      button:hover {
+        border-color: rgb(232, 232, 232);
       }
       button:disabled {
         opacity: 0.5;
-        cursor: not-allowed;
+        cursor: wait;
+      }
+      .wrapper {
+        width: 315px;
+        position: relative;
+        margin: 0px 10px 40px;
       }
     `}</style>
-  </button>
+  </div>
 );
 
 const Discogs = () => {
@@ -62,9 +57,9 @@ const Discogs = () => {
       );
       // you can still use other SWRs outside
 
-      if (!data) return <Loader />;
+      if (!data) return null;
 
-      return data.releases.map(release => (
+      return data.releases.map((release) => (
         <Record key={release.id} {...release} />
       ));
     },
@@ -89,9 +84,11 @@ const Discogs = () => {
 
       <style jsx>{`
         section {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, 15rem);
-          grid-gap: 1rem;
+          display: flex;
+          flex-wrap: wrap;
+          margin-left: -10px;
+          margin-right: -10px;
+          max-width: 1340px;
         }
       `}</style>
     </section>

@@ -5,7 +5,7 @@ const Discogs = dynamic(() => import("../components/discogs"));
 
 export default function Vinyl() {
   return (
-    <main>
+    <main className="p-sm">
       <Head>
         <title>Vinyl | Jeff Reiner, Design Engineer</title>
         <meta name="title" content="Vinyl | Jeff Reiner, Design Engineer" />

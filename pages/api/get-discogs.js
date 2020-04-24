@@ -2,12 +2,12 @@ import fetch from "isomorphic-unfetch";
 
 const URL =
   "https://api.discogs.com/users/mirshko/collection/folders/0/releases" +
-  "?per_page=25" +
+  "?per_page=50" +
   "&sort=added&sort_order=desc" +
   "&token=" +
   process.env.DISCOGS_TOKEN;
 
-const getURL = page => URL + "&page=" + page;
+const getURL = (page) => URL + "&page=" + page;
 
 export default async (req, res) => {
   const page = parseInt(req.query.page || 1);
@@ -22,7 +22,7 @@ export default async (req, res) => {
     console.error(err);
     res.status(400).json({
       success: false,
-      message: err.message
+      message: err.message,
     });
   }
 };
