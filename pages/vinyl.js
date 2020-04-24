@@ -19,16 +19,30 @@ export default function Vinyl() {
         />
       </Head>
 
-      <h1 className="h1 mt-sm">Vinyl</h1>
+      <h1>Vinyl</h1>
 
-      <p className="measure mt-sm">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum velit nam
-        quos officiis esse, mollitia laudantium aspernatur ut debitis itaque
-        repudiandae possimus maxime corporis, maiores fugiat eius autem quis
-        soluta.
+      <p className="measure mt-md mb-sm">
+        My personal record collection on{" "}
+        <a
+          href="https://www.discogs.com/seller/mirshko/profile"
+          target="_blank"
+          rel="noopener noreferer"
+        >
+          Discogs
+        </a>
+        . Thought I'd make a nicer gallery for all my records.
       </p>
 
-      <Discogs />
+      <p className="measure">
+        <i>
+          Under construction: you'll be able to listen to each record on this
+          page soon.
+        </i>
+      </p>
+
+      <section className="mt-lg">
+        <Discogs />
+      </section>
     </main>
   );
 }
