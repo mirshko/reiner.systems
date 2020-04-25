@@ -8,7 +8,8 @@
   },
   "env": {
     "DISCOGS_TOKEN": "@discogs_token",
-    "YOUTUBE_TOKEN": "@youtube_token"
+    "YOUTUBE_TOKEN": "@youtube_token",
+    "FAUNA_SERVER_KEY": "@fauna_server_key"
   },
   "headers": [
     {
