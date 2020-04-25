@@ -13,7 +13,7 @@ export default function Page() {
 
       <h1 className="measure">Freelance, Currently in Berlin.</h1>
 
-      <p className="measure mt-sm">
+      <p className="measure mt-md">
         Team at{" "}
         <a
           href="https://www.instagram.com/we_are_coal/"
