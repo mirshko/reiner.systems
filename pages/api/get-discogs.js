@@ -17,7 +17,7 @@ export default async (req, res) => {
 
     const data = await raw.json();
 
-    res.status(200).json(await data);
+    res.status(200).json(data);
   } catch (err) {
     console.error(err);
     res.status(400).json({

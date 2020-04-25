@@ -1,0 +1,15 @@
+type Record @collection(name: "record") {
+  title: String!
+  artist: String!
+  cover_image: String!
+  resource_id: Int! @unique(index: "find_record_by_resource")
+  date_added: Time!
+  year: Int!
+  video_id: String
+}
+
+type Query {
+  allRecords: [Record!] @index(name: "all_records")
+  findRecordByResource(resource_id: Int!): Record!
+    @index(name: "find_record_by_resource")
+}
