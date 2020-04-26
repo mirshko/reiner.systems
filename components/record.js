@@ -59,6 +59,8 @@ const Record = ({ artist, title, cover_image, video_id }) => {
           background: white;
           box-shadow: none;
           display: block;
+          height: 100%;
+          width: 100%;
           position: absolute;
           top: 0;
           left: 0;
