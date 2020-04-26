@@ -141,7 +141,7 @@ export default async (req, res) => {
     const records = await getRecordsInFauna();
 
     const recordsWithoutVideos = await records.filter(
-      (record) => record.video_id === "null"
+      (record) => !record.video_id || record.video_id === "null"
     );
 
     const recordsWithVideos = await Promise.all(
