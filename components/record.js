@@ -1,5 +1,7 @@
-const Record = ({ basic_information: { artists, title, cover_image } }) => {
-  const label = title + ", " + artists[0].name;
+import LiteYouTubeEmbed from "./lite-youtube-embed";
+
+const Record = ({ artist, title, cover_image, video_id }) => {
+  const label = title + ", " + artist;
 
   return (
     <div className="record">
@@ -7,10 +9,14 @@ const Record = ({ basic_information: { artists, title, cover_image } }) => {
         <img
           src={cover_image}
           loading="lazy"
-          height={300}
-          width={300}
+          height={314}
+          width={314}
           alt={label}
         />
+
+        {video_id && video_id !== "null" && (
+          <LiteYouTubeEmbed id={video_id} title={label} />
+        )}
       </div>
 
       <p className="label" title={label}>
@@ -24,6 +30,8 @@ const Record = ({ basic_information: { artists, title, cover_image } }) => {
           overflow: hidden;
           user-select: none;
           user-drag: none;
+          height: calc(315px - 1px);
+          width: calc(315px - 1px);
           position: relative;
         }
 
@@ -51,8 +59,9 @@ const Record = ({ basic_information: { artists, title, cover_image } }) => {
           background: white;
           box-shadow: none;
           display: block;
-          height: calc(315px - 1px);
-          width: calc(315px - 1px);
+          position: absolute;
+          top: 0;
+          left: 0;
           object-fit: contain;
         }
 

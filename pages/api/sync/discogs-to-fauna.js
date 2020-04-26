@@ -29,7 +29,7 @@ const getRecordsInFauna = () =>
     Select(
       "data",
       Map(
-        Paginate(Match(Index("all_records"))),
+        Paginate(Match(Index("all_records")), { size: 1000 }),
         Lambda("record", Select("data", Get(Var("record"))))
       )
     )

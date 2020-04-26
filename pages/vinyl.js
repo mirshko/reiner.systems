@@ -30,14 +30,7 @@ export default function Vinyl() {
         >
           Discogs
         </a>
-        . Thought I'd make a nicer gallery for all my records.
-      </p>
-
-      <p className="measure">
-        <i>
-          Under construction: you'll be able to listen to each record on this
-          page soon.
-        </i>
+        . Thought I'd make a fancy gallery and player for all my records.
       </p>
 
       <section className="mt-lg">

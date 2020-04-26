@@ -53,15 +53,13 @@ const Discogs = () => {
     ({ offset, withSWR }) => {
       const { data } = withSWR(
         // use the wrapper to wrap the *pagination API SWR*
-        useSWR("/api/get-discogs?page=" + (offset || 1), fetcher)
+        useSWR("/api/get-records?page=" + (offset || 1), fetcher)
       );
       // you can still use other SWRs outside
 
       if (!data) return null;
 
-      return data.releases.map((release) => (
-        <Record key={release.id} {...release} />
-      ));
+      return data.releases.map((release, i) => <Record key={i} {...release} />);
     },
 
     // one page's SWR => offset of next page
@@ -76,11 +74,11 @@ const Discogs = () => {
     <section>
       {pages}
 
-      <LoadMore
+      {/* <LoadMore
         onClick={loadMore}
         disabled={isReachingEnd || isLoadingMore}
         hidden={isReachingEnd || isLoadingMore}
-      />
+      /> */}
 
       <style jsx>{`
         section {
