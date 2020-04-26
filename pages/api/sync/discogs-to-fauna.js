@@ -14,6 +14,9 @@ const {
   Let,
   Match,
   Index,
+  Map,
+  Lambda,
+  Paginate,
   Create,
   Exists,
   Select,
@@ -21,10 +24,21 @@ const {
   Collection,
 } = faunadb.query;
 
+const getRecordsInFauna = () =>
+  fauna.query(
+    Select(
+      "data",
+      Map(
+        Paginate(Match(Index("all_records"))),
+        Lambda("record", Select("data", Get(Var("record"))))
+      )
+    )
+  );
+
 const createRecords = (records) =>
   Promise.all(
-    records.map(async (data) =>
-      fauna.query(
+    records.map(async (data) => {
+      return fauna.query(
         Let(
           {
             upsert: Match(Index("find_record_by_resource"), data.resource_id),
@@ -43,8 +57,8 @@ const createRecords = (records) =>
             )
           )
         )
-      )
-    )
+      );
+    })
   );
 
 const URL =
@@ -78,7 +92,7 @@ const youtube = google.youtube({
   auth: process.env.YOUTUBE_TOKEN,
 });
 
-const getYouTubeVideoId = (release) => {
+const getYouTubeVideoId = async (release) => {
   const { title, artist } = release;
 
   const term = title + " " + artist;
@@ -87,7 +101,7 @@ const getYouTubeVideoId = (release) => {
 
   console.log(term);
 
-  youtube.search
+  await youtube.search
     .list({
       part: "id,snippet",
       type: "video",
@@ -124,15 +138,31 @@ const getYouTubeVideoId = (release) => {
 
 export default async (req, res) => {
   try {
-    const raw = await fetch(URL);
+    const records = await getRecordsInFauna();
 
-    const discogs = await raw.json();
+    const recordsWithoutVideos = await records.filter(
+      (record) => record.video_id === "null"
+    );
 
-    const records = await discogs.releases
-      .map(getRecordSchema)
-      .map(getYouTubeVideoId);
+    const recordsWithVideos = await Promise.all(
+      recordsWithoutVideos.map(
+        async (record) => await getYouTubeVideoId(record)
+      )
+    );
 
-    const recordRefs = await createRecords(records);
+    // console.log(recordsWithVideos.length);
+
+    // const raw = await fetch(URL);
+
+    // const discogs = await raw.json();
+
+    // const records = await discogs.releases
+    //   .map(getRecordSchema)
+    //   .map(getYouTubeVideoId);
+
+    const recordRefs = await createRecords(recordsWithVideos);
+
+    // console.log(recordRefs);
 
     res.status(200).json({
       success: true,
