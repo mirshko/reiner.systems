@@ -143,26 +143,18 @@ export default async (req, res) => {
     const recordsWithoutVideos = await records.filter(
       (record) => !record.video_id || record.video_id === "null"
     );
+    
+    console.log({ recordsWithoutVideos, length: recordsWithoutVideos.length })
 
     const recordsWithVideos = await Promise.all(
       recordsWithoutVideos.map(
         async (record) => await getYouTubeVideoId(record)
       )
     );
-
-    // console.log(recordsWithVideos.length);
-
-    // const raw = await fetch(URL);
-
-    // const discogs = await raw.json();
-
-    // const records = await discogs.releases
-    //   .map(getRecordSchema)
-    //   .map(getYouTubeVideoId);
+    
+    console.log({ recordsWithVideos, length: recordsWithVideos.length })
 
     const recordRefs = await createRecords(recordsWithVideos);
-
-    // console.log(recordRefs);
 
     res.status(200).json({
       success: true,
