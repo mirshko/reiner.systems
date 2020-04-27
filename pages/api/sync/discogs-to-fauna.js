@@ -144,7 +144,7 @@ export default async (req, res) => {
       (record) => !record.video_id || record.video_id === "null"
     );
     
-    console.log({ recordsWithoutVideos, length: recordsWithoutVideos.length })
+    console.log({ length: recordsWithoutVideos.length })
 
     const recordsWithVideos = await Promise.all(
       recordsWithoutVideos.map(
@@ -152,7 +152,7 @@ export default async (req, res) => {
       )
     );
     
-    console.log({ recordsWithVideos, length: recordsWithVideos.length })
+    console.log({ length: recordsWithVideos.length })
 
     const recordRefs = await createRecords(recordsWithVideos);
 
