@@ -1,5 +1,4 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
-import { SITE_ID } from "../lib/fathom";
 
 export default class Doc extends Document {
   render() {
@@ -81,12 +80,6 @@ export default class Doc extends Document {
         <body>
           <Main />
           <NextScript />
-          {/* Fathom Tracking Code */}
-          <script
-            src="https://cdn.usefathom.com/3.js"
-            site={SITE_ID}
-            spa="pushstate"
-          />
         </body>
       </Html>
     );

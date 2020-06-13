@@ -1,7 +1,10 @@
 import Nav from "../components/nav";
 import "../styles/reset.css";
+import useFathom from "../hooks/useFathom";
 
 export default function App({ Component, pageProps }) {
+  useFathom();
+  
   return (
     <div className="site">
       <header>
