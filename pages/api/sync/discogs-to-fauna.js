@@ -143,16 +143,16 @@ export default async (req, res) => {
     const recordsWithoutVideos = await records.filter(
       (record) => !record.video_id || record.video_id === "null"
     );
-    
-    console.log({ length: recordsWithoutVideos.length })
+
+    console.log({ length: recordsWithoutVideos.length });
 
     const recordsWithVideos = await Promise.all(
       recordsWithoutVideos.map(
         async (record) => await getYouTubeVideoId(record)
       )
     );
-    
-    console.log({ length: recordsWithVideos.length })
+
+    console.log({ length: recordsWithVideos.length });
 
     const recordRefs = await createRecords(recordsWithVideos);
 
