@@ -12,15 +12,15 @@
     "format": "prettier --write \"**/*.js\""
   },
   "dependencies": {
-    "fathom-client": "^2.0.2",
-    "faunadb": "^2.13.1",
-    "googleapis": "^47.0.0",
+    "fathom-client": "^3.0.0",
+    "faunadb": "^2.14.2",
+    "googleapis": "^52.1.0",
     "isomorphic-unfetch": "^3.0.0",
-    "next": "^9.3.5",
+    "next": "^9.4.4",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "swr": "^0.2.0"
+    "swr": "^0.2.3"
   },
   "devDependencies": {
     "prettier": "^2.0.5"
