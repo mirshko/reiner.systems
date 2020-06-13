@@ -23,5 +23,14 @@
   },
   "devDependencies": {
     "prettier": "^2.0.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mirshko/dotdesign.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/mirshko/dotdesign/issues"
+  },
+  "homepage": "https://github.com/mirshko/dotdesign#readme"
 }
