@@ -32,6 +32,11 @@ const Nav = () => {
             <a>Portfolio</a>
           </Link>
         </li>
+        <li className={isActive("/experiments")}>
+          <Link href="/experiments">
+            <a>Experiments</a>
+          </Link>
+        </li>
         <li className={isActive("/vinyl")}>
           <Link href="/vinyl">
             <a>Vinyl</a>

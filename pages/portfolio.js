@@ -43,24 +43,6 @@ export default function Page() {
         </p>
         <List data={projects} />
       </section>
-
-      <section className="mt-lg">
-        <h2 className="mb-sm">Contributions</h2>
-        <p className="measure-tight mb-sm">
-          Open-source projects I've helped out with, either in a design or
-          development capacity.
-        </p>
-        <List data={contributions} />
-      </section>
-
-      <section className="mt-lg">
-        <h2 className="mb-sm">Experiments</h2>
-        <p className="measure-tight mb-sm">
-          Odds and ends I've built over the years, tools and utilities to make
-          my life easier, proof of concepts, and random weird things.
-        </p>
-        <List data={experiments} />
-      </section>
     </main>
   );
 }
