@@ -4,7 +4,7 @@ import useFathom from "../hooks/useFathom";
 
 export default function App({ Component, pageProps }) {
   useFathom();
-  
+
   return (
     <div className="site">
       <header>
