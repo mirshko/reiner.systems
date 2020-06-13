@@ -12,7 +12,6 @@
     "format": "prettier --write \"**/*.js\""
   },
   "dependencies": {
-    "fathom-client": "^3.0.0",
     "faunadb": "^2.14.2",
     "googleapis": "^52.1.0",
     "isomorphic-unfetch": "^3.0.0",
