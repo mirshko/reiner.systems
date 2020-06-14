@@ -1,6 +1,6 @@
 import Head from "next/head";
 import List from "../components/list";
-import { clients, contributions, experiments, projects } from "../data/work";
+import { clients, contributions, experiments, projects } from "../data";
 
 export default function Page() {
   return (

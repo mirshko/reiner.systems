@@ -1,3 +1,26 @@
+export const curated = [
+  {
+    href: "https://async.art",
+    label: "Async Art",
+  },
+  {
+    href: "https://union.finance",
+    label: "Union",
+  },
+  {
+    href: "https://www.alicedapp.com",
+    label: "Alice dApp",
+  },
+  {
+    href: "https://pillarproject.io",
+    label: "Pillar",
+  },
+  {
+    href: "https://hummingbot.io/",
+    label: "Hummingbot",
+  },
+];
+
 export const clients = [
   {
     href: "https://www.alicedapp.com",
