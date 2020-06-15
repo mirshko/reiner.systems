@@ -1,26 +1,48 @@
+/*
+ * @name curated
+ * Curated works for the Portfolio page
+ */
 export const curated = [
   {
     href: "https://async.art",
     label: "Async Art",
+    summary: "",
+    roles: [
+      "Technical Consulting",
+      "Frontend Development",
+      "Initial Design & UX",
+    ],
   },
   {
     href: "https://union.finance",
     label: "Union",
+    summary: "",
+    roles: ["Lead Frontend Development", "Initial Wireframing & Prototyping"],
   },
   {
     href: "https://www.alicedapp.com",
     label: "Alice dApp",
+    summary: "",
+    roles: ["Brand & Design Consulting"],
   },
   {
     href: "https://pillarproject.io",
     label: "Pillar",
+    summary: "",
+    roles: ["Technical Consulting", "Frontend Development"],
   },
   {
     href: "https://hummingbot.io/",
     label: "Hummingbot",
+    summary: "",
+    roles: ["Frontend Development"],
   },
 ];
 
+/*
+ * @name clients
+ * All clients
+ */
 export const clients = [
   {
     href: "https://www.alicedapp.com",
@@ -72,6 +94,10 @@ export const clients = [
   },
 ];
 
+/*
+ * @name projects
+ * Projects I've worked on
+ */
 export const projects = [
   {
     href: "https://matte.pics",
@@ -91,6 +117,10 @@ export const projects = [
   },
 ];
 
+/*
+ * @name experiments
+ * Random experimental projects or the like
+ */
 export const experiments = [
   {
     href: "https://ens-autocomplete.now.sh",
@@ -123,6 +153,10 @@ export const experiments = [
   },
 ];
 
+/*
+ * @name contributions
+ * Open-source projects I've contributed to
+ */
 export const contributions = [
   {
     href: "https://uniswap.info",
