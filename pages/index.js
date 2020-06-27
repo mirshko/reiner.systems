@@ -16,14 +16,6 @@ export default function Page() {
       <p className="measure mt-md">
         Team at{" "}
         <a
-          href="https://www.instagram.com/we_are_coal/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Coal
-        </a>
-        ,{" "}
-        <a
           href="https://union.finance"
           rel="noopener noreferrer"
           target="_blank"
