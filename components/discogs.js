@@ -57,14 +57,16 @@ const Discogs = () => {
       );
       // you can still use other SWRs outside
 
-      if (!data) return null;
+      if (!data || !data.success) return null;
 
       return data.releases.map((release, i) => <Record key={i} {...release} />);
     },
 
     // one page's SWR => offset of next page
     ({ data: { pagination } }) =>
-      pagination.page < pagination.pages ? pagination.page + 1 : null,
+      pagination && pagination.page < pagination.pages
+        ? pagination.page + 1
+        : null,
 
     // deps of the page component
     []
