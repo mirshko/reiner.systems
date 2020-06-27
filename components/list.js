@@ -16,7 +16,7 @@ const List = ({ data }) => (
     {data.map(({ href, label }, i) => (
       <li key={i}>
         <a href={href}>
-          {/* <span className="thumbnail">
+          <span className="thumbnail">
             <img
               src={`https://picsum.photos/seed/${label}/160/104`}
               loading="lazy"
@@ -24,7 +24,7 @@ const List = ({ data }) => (
               width={160}
               alt=""
             />
-          </span> */}
+          </span>
           <span className="label">{label}</span>
         </a>
         &nbsp;
@@ -47,8 +47,6 @@ const List = ({ data }) => (
       a {
         display: inline-flex;
         align-items: start;
-        font-size: var(--font-size);
-        color: var(--primary);
       }
 
       .label {
@@ -81,6 +79,8 @@ List.propTypes = {
     PropTypes.shape({
       href: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
+      summary: PropTypes.string,
+      roles: PropTypes.arrayOf(PropTypes.string),
     }).isRequired
   ).isRequired,
 };

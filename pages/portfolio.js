@@ -1,6 +1,7 @@
 import Head from "next/head";
-import List from "../components/list";
-import { clients, contributions, experiments, projects } from "../data";
+import { curated } from "../data";
+
+const NUMBERS = ["➊", "➋", "➌", "➍", "➎", "➏", "➐", "➑", "➒", "➓"];
 
 export default function Page() {
   return (
@@ -20,13 +21,30 @@ export default function Page() {
 
       <h1>Portfolio</h1>
 
-      <p className="measure mt-md">
-        Cool projects and individuals I've worked with.
-        <br />
-        Includes both Web 2.0 and Web3 projects and experiments.
-      </p>
+      <section className="mt-md">
+        {curated.map(({ label, summary, roles, href }, i) => (
+          <article key={i} className="mb-lg">
+            <img src="https://placehold.it/1440x900/5f05f0/5f0" alt={label} />
 
-      <section className="mt-lg">
+            <header>
+              <h2>{label}</h2>
+            </header>
+
+            <main>
+              {!!summary && <p>Summary: {summary}</p>}{" "}
+              {roles && <p>Roles: {roles.join(", ")}</p>}
+            </main>
+
+            <footer>
+              <p>
+                Visit: <a href={href}>View Project</a>
+              </p>
+            </footer>
+          </article>
+        ))}
+      </section>
+
+      {/* <section className="mt-lg">
         <h2 className="mb-sm">Clients</h2>
         <p className="measure-tight mb-sm">
           Companies and individuals I've had the pleasure to work with to build
@@ -42,7 +60,7 @@ export default function Page() {
           best people around.
         </p>
         <List data={projects} />
-      </section>
+      </section> */}
     </main>
   );
 }
