@@ -1,9 +1,17 @@
 :root {
-  --primary: #f04e25;
+  --primary: #5f05f0;
+  --secondary: #5f0;
   --sm: 1rem;
   --md: 2rem;
   --lg: 3rem;
   --font-size: 1.8rem;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  :root {
+    --primary: color(display-p3 0.3725 0.0196 0.9411);
+    --secondary: color(display-p3 0.3333 1 0);
+  }
 }
 
 html {
@@ -19,7 +27,7 @@ html {
 html {
   font-size: 15px;
   font-weight: 500;
-  line-height: 1.21053;
+  line-height: 1.2;
   letter-spacing: 0.012em;
   -webkit-tap-highlight-color: transparent;
 }
@@ -33,6 +41,7 @@ html {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
 
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-feature-settings: "kern" 1, "kern", "kern", "liga" 1;
@@ -84,6 +93,24 @@ canvas {
 
 a,
 a:visited {
+  color: initial;
+  text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:visited:hover,
+a:visited:active {
+  color: var(--primary);
+}
+
+a::before {
+  content: "❨❨";
+  color: var(--primary);
+}
+
+a::after {
+  content: "❩❩";
   color: var(--primary);
 }
 
