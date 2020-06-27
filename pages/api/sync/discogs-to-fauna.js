@@ -1,6 +1,5 @@
 import faunadb from "faunadb";
 import { google } from "googleapis";
-import fetch from "isomorphic-unfetch";
 
 const fauna = new faunadb.Client({
   secret: process.env.FAUNA_SERVER_KEY,

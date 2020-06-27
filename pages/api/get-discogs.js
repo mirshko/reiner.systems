@@ -1,5 +1,3 @@
-import fetch from "isomorphic-unfetch";
-
 const URL =
   "https://api.discogs.com/users/mirshko/collection/folders/0/releases" +
   "?per_page=50" +
