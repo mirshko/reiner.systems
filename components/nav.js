@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { GOALS, trackGoal } from "../lib/fathom";
 
 const Nav = () => {
   const { pathname } = useRouter();
@@ -51,7 +50,6 @@ const Nav = () => {
             href="https://twitter.com/mirshko"
             rel="noopener noreferrer"
             target="_blank"
-            onClick={() => trackGoal(GOALS.CLICK_SOCIAL_TWITTER)}
           >
             Twitter
           </a>
@@ -61,7 +59,6 @@ const Nav = () => {
             href="https://github.com/mirshko"
             rel="noopener noreferrer"
             target="_blank"
-            onClick={() => trackGoal(GOALS.CLICK_SOCIAL_GITHUB)}
           >
             GitHub
           </a>
@@ -71,7 +68,6 @@ const Nav = () => {
             href="https://www.instagram.com/mirshko"
             rel="noopener noreferrer"
             target="_blank"
-            onClick={() => trackGoal(GOALS.CLICK_SOCIAL_INSTAGRAM)}
           >
             Instagram
           </a>
@@ -114,7 +110,7 @@ const Nav = () => {
         }
 
         .active::after {
-          color: black;
+          color: var(--primary);
           font-size: var(--font-size);
           content: " ☜";
         }
