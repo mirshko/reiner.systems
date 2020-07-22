@@ -1,6 +1,6 @@
 import Head from "next/head";
 import List from "../components/list";
-import { experiments } from "../data";
+import { experiments, projects } from "../data";
 
 export default function Page() {
   return (
@@ -24,10 +24,10 @@ export default function Page() {
       <section>
         <h1 className="mb-md">Experiments</h1>
         <p className="measure-tight mb-sm">
-          Some of the tools and utilities to make my life easier, proof of
-          concepts, and random weird things.
+          Some of the projects, apps, tools, and utilities to make my life
+          easier, proof of concepts, and some random weird things.
         </p>
-        <List data={experiments} />
+        <List data={[...projects, ...experiments]} />
       </section>
     </main>
   );

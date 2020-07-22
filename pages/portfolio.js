@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { curated } from "../data";
+import Browser from "../components/browser";
 
 const NUMBERS = ["➊", "➋", "➌", "➍", "➎", "➏", "➐", "➑", "➒", "➓"];
 
@@ -22,26 +23,41 @@ export default function Page() {
       <h1>Portfolio</h1>
 
       <section className="mt-md">
-        {curated.map(({ label, summary, roles, href }, i) => (
-          <article key={i} className="mb-lg">
-            <img src="https://placehold.it/1440x900/5f05f0/5f0" alt={label} />
+        {curated.map(
+          ({ label, summary, roles, href, website, screenshot }, i) => (
+            <article key={i} className="mb-lg">
+              {screenshot && (
+                <Browser
+                  alt={label}
+                  async
+                  decoding="async"
+                  loading="lazy"
+                  src={`/portfolio/${screenshot}`}
+                  title={label}
+                />
+              )}
 
-            <header>
-              <h2>{label}</h2>
-            </header>
+              <header className="mt-sm mb-sm">
+                <h2>
+                  {label}{" "}
+                  <a
+                    href={href}
+                    aria-label={`${label} Project Website`}
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    {website}
+                  </a>
+                </h2>
+              </header>
 
-            <main>
-              {!!summary && <p>Summary: {summary}</p>}{" "}
-              {roles && <p>Roles: {roles.join(", ")}</p>}
-            </main>
-
-            <footer>
-              <p>
-                Visit: <a href={href}>View Project</a>
-              </p>
-            </footer>
-          </article>
-        ))}
+              <main>
+                {roles && <p className="mb-sm">{roles.join(", ")}</p>}
+                {summary && <p className="measure-tight">{summary}</p>}
+              </main>
+            </article>
+          )
+        )}
       </section>
 
       {/* <section className="mt-lg">

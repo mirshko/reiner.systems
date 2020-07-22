@@ -4,38 +4,50 @@
  */
 export const curated = [
   {
+    href: "https://union.finance",
+    website: "union.finance",
+    label: "Union",
+    summary:
+      "Credit backed by trust, without the need for collateral, credit score, or revealing personal information.",
+    roles: ["Frontend Development", "Design & UX", "Wireframing & Prototyping"],
+    screenshot: "beta.union.finance.png",
+  },
+  {
     href: "https://async.art",
+    website: "async.art",
     label: "Async Art",
-    summary: "",
+    summary:
+      "An experimental art movement born out of the question “what does art look like when it can be programmed?”",
     roles: [
       "Technical Consulting",
       "Frontend Development",
       "Initial Design & UX",
     ],
-  },
-  {
-    href: "https://union.finance",
-    label: "Union",
-    summary: "",
-    roles: ["Lead Frontend Development", "Initial Wireframing & Prototyping"],
+    screenshot: "async.art.png",
   },
   {
     href: "https://www.alicedapp.com",
+    website: "alicedapp.com",
     label: "Alice dApp",
-    summary: "",
+    summary: "An adventure through Web3 with native mini-dApps.",
     roles: ["Brand & Design Consulting"],
+    screenshot: "www.alicedapp.com.png",
   },
   {
     href: "https://pillarproject.io",
+    website: "pillarproject.io",
     label: "Pillar",
     summary: "",
     roles: ["Technical Consulting", "Frontend Development"],
+    screenshot: "pillarproject.io.png",
   },
   {
     href: "https://hummingbot.io/",
+    website: "hummingbot.io",
     label: "Hummingbot",
     summary: "",
     roles: ["Frontend Development"],
+    screenshot: "hummingbot.io.png",
   },
 ];
 
@@ -103,18 +115,18 @@ export const projects = [
     href: "https://matte.pics",
     label: "Matte.pics",
   },
-  {
-    href: "https://49friends.party",
-    label: "49 Friends",
-  },
+  // {
+  //   href: "https://49friends.party",
+  //   label: "49 Friends",
+  // },
   {
     href: "https://unleaded.reiner.design",
     label: "Unleaded",
   },
-  {
-    href: "https://responsivectabuilder.com/",
-    label: "Responsive CTA Builder",
-  },
+  // {
+  //   href: "https://responsivectabuilder.com/",
+  //   label: "Responsive CTA Builder",
+  // },
 ];
 
 /*

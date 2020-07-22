@@ -33,7 +33,7 @@ export default function Vinyl({ records }) {
         . Thought I'd make a fancy gallery and player for all my records.
       </p>
 
-      <section className="mt-lg record-grid">
+      <section className="mt-md record-grid">
         {records.map((release, i) => (
           <Record key={i} {...release} />
         ))}
