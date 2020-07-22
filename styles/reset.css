@@ -93,24 +93,6 @@ canvas {
 
 a,
 a:visited {
-  color: initial;
-  text-decoration: none;
-}
-
-a:hover,
-a:active,
-a:visited:hover,
-a:visited:active {
-  color: var(--primary);
-}
-
-a::before {
-  content: "❨❨";
-  color: var(--primary);
-}
-
-a::after {
-  content: "❩❩";
   color: var(--primary);
 }
 
