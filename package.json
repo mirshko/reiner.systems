@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "faunadb": "^2.14.2",
-    "googleapis": "^52.1.0",
+    "googleapis": "^55.0.0",
     "next": "^9.4.4",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
