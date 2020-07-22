@@ -2,7 +2,7 @@ import { google } from "googleapis";
 
 const youtube = google.youtube({
   version: "v3",
-  auth: process.env.YOUTUBE_TOKEN,
+  auth: process.env.YOUTUBE_KEY,
 });
 
 const fetchYouTubeResults = async (term) => {

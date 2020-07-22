@@ -1,35 +1,5 @@
 {
-  "version": 2,
-  "scope": "mirshko",
-  "public": true,
   "trailingSlash": false,
-  "github": {
-    "silent": true
-  },
-  "env": {
-    "DISCOGS_TOKEN": "@discogs_token",
-    "YOUTUBE_TOKEN": "@youtube_token",
-    "FAUNA_SERVER_KEY": "@fauna_server_key"
-  },
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        }
-      ]
-    }
-  ],
   "redirects": [
     {
       "source": "/projects",

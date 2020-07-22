@@ -1,9 +1,9 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
+import { getRecordsInFauna } from "../lib/db";
+import Record from "../components/record";
 
-const Discogs = dynamic(() => import("../components/discogs"));
-
-export default function Vinyl() {
+export default function Vinyl({ records }) {
   return (
     <main className="p-sm">
       <Head>
@@ -33,9 +33,29 @@ export default function Vinyl() {
         . Thought I'd make a fancy gallery and player for all my records.
       </p>
 
-      <section className="mt-lg">
-        <Discogs />
+      <section className="mt-lg record-grid">
+        {records.map((release, i) => (
+          <Record key={i} {...release} />
+        ))}
       </section>
+
+      <style jsx>{`
+        .record-grid {
+          display: flex;
+          flex-wrap: wrap;
+          margin-left: -10px;
+          margin-right: -10px;
+          max-width: 1340px;
+        }
+      `}</style>
     </main>
   );
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      records: await getRecordsInFauna(),
+    },
+  };
 }

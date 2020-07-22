@@ -7,11 +7,15 @@ const Record = ({ artist, title, cover_image, video_id }) => {
     <div className="record">
       <div className="cover">
         <img
-          src={cover_image}
-          loading="lazy"
-          height={314}
-          width={314}
           alt={label}
+          async
+          decoding="async"
+          height={314}
+          importance="low"
+          loading="lazy"
+          src={cover_image}
+          title={label}
+          width={314}
         />
 
         {video_id && video_id !== "null" && (

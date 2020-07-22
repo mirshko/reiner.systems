@@ -1,9 +1,6 @@
 import faunadb from "faunadb";
 import { google } from "googleapis";
-
-const fauna = new faunadb.Client({
-  secret: process.env.FAUNA_SERVER_KEY,
-});
+import { client } from "../../../lib/db";
 
 const {
   If,
@@ -24,7 +21,7 @@ const {
 } = faunadb.query;
 
 const getRecordsInFauna = () =>
-  fauna.query(
+  client.query(
     Select(
       "data",
       Map(
@@ -37,7 +34,7 @@ const getRecordsInFauna = () =>
 const createRecords = (records) =>
   Promise.all(
     records.map(async (data) => {
-      return fauna.query(
+      return client.query(
         Let(
           {
             upsert: Match(Index("find_record_by_resource"), data.resource_id),
@@ -65,7 +62,7 @@ const URL =
   "?per_page=300" +
   "&sort=added&sort_order=desc" +
   "&token=" +
-  process.env.DISCOGS_TOKEN;
+  process.env.DISCOGS_KEY;
 
 const getRecordSchema = (release) => {
   const {
@@ -88,7 +85,7 @@ const getRecordSchema = (release) => {
 
 const youtube = google.youtube({
   version: "v3",
-  auth: process.env.YOUTUBE_TOKEN,
+  auth: process.env.YOUTUBE_KEY,
 });
 
 const getYouTubeVideoId = async (release) => {

@@ -3,7 +3,7 @@ const URL =
   "?per_page=50" +
   "&sort=added&sort_order=desc" +
   "&token=" +
-  process.env.DISCOGS_TOKEN;
+  process.env.DISCOGS_KEY;
 
 const getURL = (page) => URL + "&page=" + page;
 
