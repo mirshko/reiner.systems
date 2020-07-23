@@ -1,10 +1,10 @@
 const { Fragment } = require("react");
 
-const PostDetails = ({ title, author, dateTime, date, topic }) => (
+const PostDetails = ({ title, dateTime, date, topic }) => (
   <Fragment>
     <h1 className="mb-md">{title}</h1>
     <p className="mb-lg">
-      {author}, <time dateTime={dateTime}>{date}</time>, {topic}
+      <time dateTime={dateTime}>{date}</time>, {topic}
     </p>
   </Fragment>
 );
