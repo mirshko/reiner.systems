@@ -1,8 +1,6 @@
-import dynamic from "next/dynamic";
-import Head from "next/head";
-import { getRecordsInFauna } from "../lib/db";
 import Record from "../components/record";
 import SEO from "../components/seo";
+import { getRecordsInFauna } from "../lib/db";
 
 export default function Vinyl({ records }) {
   return (
