@@ -213,6 +213,42 @@ a:visited {
   padding: var(--lg);
 }
 
+.mt-fz {
+  margin-top: var(--font-size);
+}
+.mb-fz {
+  margin-bottom: var(--font-size);
+}
+.mx-fz {
+  margin-right: var(--font-size);
+  margin-left: var(--font-size);
+}
+.my-fz {
+  margin-top: var(--font-size);
+  margin-bottom: var(--font-size);
+}
+.m-fz {
+  margin: var(--font-size);
+}
+
+.pt-fz {
+  padding-top: var(--font-size);
+}
+.pb-fz {
+  padding-bottom: var(--font-size);
+}
+.px-fz {
+  padding-right: var(--font-size);
+  padding-left: var(--font-size);
+}
+.py-fz {
+  padding-top: var(--font-size);
+  padding-bottom: var(--font-size);
+}
+.p-fz {
+  padding: var(--font-size);
+}
+
 @keyframes blink {
   0% {
     opacity: 1;
@@ -292,3 +328,37 @@ a:visited {
   opacity: 0;
   pointer-events: none;
 }
+
+/* 
+:root {
+  --crop-line-height: 1.25;
+}
+
+h1,
+h2,
+p {
+  line-height: var(--crop-line-height);
+}
+
+h1::before,
+h2::before,
+p::before,
+h1::after,
+h2::after,
+p::after {
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+}
+
+h1::before,
+h2::before,
+p::before {
+  margin-top: calc((1 - var(--crop-line-height)) * 0.5em);
+}
+h1::after,
+h2::after,
+p::after {
+  margin-bottom: calc((1 - var(--crop-line-height)) * 0.5em);
+} */

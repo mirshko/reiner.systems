@@ -56,9 +56,15 @@ const List = ({ data }) => (
       }
 
       li {
-        display: inline-block;
+        display: block;
         padding-right: var(--sm);
         padding-bottom: 0.5rem;
+      }
+
+      @media screen and (min-width: 425px) {
+        li {
+          display: inline-block;
+        }
       }
 
       a {

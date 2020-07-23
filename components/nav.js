@@ -20,11 +20,11 @@ const Nav = () => {
         </p>
       </ul>
 
-      <ul>
+      <ul className="hide-on-mobile">
         <p>Design Engineer</p>
       </ul>
 
-      <ul>
+      <ul className="hide-on-mobile">
         <p>Directory</p>
         <li className={isActive("/portfolio")}>
           <Link href="/portfolio">
@@ -48,7 +48,7 @@ const Nav = () => {
         </li>
       </ul>
 
-      <ul>
+      <ul className="hide-on-mobile">
         <p>Social</p>
         <li>
           <a
@@ -80,6 +80,16 @@ const Nav = () => {
       </ul>
 
       <style jsx>{`
+        .hide-on-mobile {
+          display: none;
+        }
+
+        @media screen and (min-width: 48em) {
+          .hide-on-mobile {
+            display: initial;
+          }
+        }
+
         nav {
           border-bottom: 0.2rem solid currentColor;
         }
