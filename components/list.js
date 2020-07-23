@@ -8,6 +8,7 @@ import Link from "next/link";
  * @property {String} label
  * @property {String} href
  * @property {Boolean} isInternal
+ * @property {String} screenshot
  *
  * @name List
  * @description Component to render a list of external links
@@ -15,21 +16,12 @@ import Link from "next/link";
  */
 const List = ({ data }) => (
   <ul>
-    {data.map(({ href, isInternal, label }, i) => {
+    {data.map(({ href, isInternal, label, screenshot }, i) => {
       if (isInternal)
         return (
           <li key={i}>
             <Link href={href}>
               <a>
-                {/* <span className="thumbnail">
-                  <img
-                    src={`https://picsum.photos/seed/${label}/160/104`}
-                    loading="lazy"
-                    height={104}
-                    width={160}
-                    alt=""
-                  />
-                </span> */}
                 <span className="label">{label}</span>
               </a>
             </Link>{" "}
@@ -40,15 +32,15 @@ const List = ({ data }) => (
       return (
         <li key={i}>
           <a href={href}>
-            {/* <span className="thumbnail">
-            <img
-              src={`https://picsum.photos/seed/${label}/160/104`}
-              loading="lazy"
-              height={104}
-              width={160}
-              alt=""
-            />
-          </span> */}
+            <span className="thumbnail">
+              <img
+                alt={label}
+                async
+                decoding="async"
+                loading="lazy"
+                src={`/experiments/${screenshot}`}
+              />
+            </span>
             <span className="label">{label}</span>
           </a>
           &nbsp;
@@ -83,6 +75,7 @@ const List = ({ data }) => (
         height: 1.3em;
         width: 1.3em;
         margin-right: 0.3em;
+        box-shadow
       }
 
       img {
@@ -105,6 +98,7 @@ List.propTypes = {
       href: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
       isInternal: PropTypes.bool,
+      screenshot: PropTypes.string,
     }).isRequired
   ).isRequired,
 };

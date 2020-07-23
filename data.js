@@ -122,6 +122,7 @@ export const projects = [
   {
     href: "https://matte.pics",
     label: "Matte.pics",
+    screenshot: "matte.pics.png",
   },
   // {
   //   href: "https://49friends.party",
@@ -130,6 +131,7 @@ export const projects = [
   {
     href: "https://unleaded.reiner.design",
     label: "Unleaded",
+    screenshot: "unleaded.reiner.design.png",
   },
   // {
   //   href: "https://responsivectabuilder.com/",
@@ -145,32 +147,39 @@ export const experiments = [
   {
     href: "https://ens-autocomplete.now.sh",
     label: "ENS Autocomplete",
+    screenshot: "ens-autocomplete.now.sh.png",
   },
   {
     href:
       "https://docs.google.com/spreadsheets/d/1IBJRJrIeRYStgxvnBmLWsREMhSA483uvu-A_kK4cB9I/edit#gid=0",
     label: "$YUNG Personal Token",
+    screenshot: "buymagic.xyz.png",
   },
   {
     href: "https://borkchain.lol/",
     label: "borkchain.lol",
+    screenshot: "borkchain.lol.png",
   },
   {
     href: "https://componentboi.eth.reiner.design/",
     label: "CryptoKitty Gallery",
+    screenshot: "componentboi.eth.reiner.design.png",
   },
-  {
-    href: "https://stakinghood.netlify.com/",
-    label: "Stakinghood",
-  },
-  {
-    href: "https://geoip.netlify.com/",
-    label: "Static GeoIP Endpoint",
-  },
-  {
-    href: "https://thumbnailer.netlify.com/",
-    label: "Wistia Thumbnail Generator",
-  },
+  // {
+  //   href: "https://stakinghood.netlify.app/",
+  //   label: "Stakinghood",
+  //   screenshot: "stakinghood.netlify.app.png",
+  // },
+  // {
+  //   href: "https://geoip.netlify.app/",
+  //   label: "Static GeoIP Endpoint",
+  //   screenshot: "geoip.netlify.app.png",
+  // },
+  // {
+  //   href: "https://thumbnailer.netlify.app/",
+  //   label: "Wistia Thumbnail Generator",
+  //   screenshot: "thumbnailer.netlify.app.png",
+  // },
 ];
 
 /*
