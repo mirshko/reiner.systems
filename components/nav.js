@@ -31,14 +31,14 @@ const Nav = () => {
             <a>Portfolio</a>
           </Link>
         </li>
-        <li className={isActive("/writing")}>
-          <Link href="/writing">
-            <a>Writing</a>
-          </Link>
-        </li>
         <li className={isActive("/experiments")}>
           <Link href="/experiments">
             <a>Experiments</a>
+          </Link>
+        </li>
+        <li className={isActive("/entries")}>
+          <Link href="/entries">
+            <a>Entries</a>
           </Link>
         </li>
         <li className={isActive("/vinyl")}>
