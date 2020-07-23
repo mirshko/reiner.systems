@@ -7,8 +7,7 @@ export default function Page() {
       <SEO title="Entries" path="/entries" />
 
       <section>
-        <h1 className="mb-md">Entries</h1>
-        {/* <p className="measure-tight mb-sm">Writings in progress.</p> */}
+        <h1 className="mb-md">All Writing</h1>
 
         <List
           data={[
