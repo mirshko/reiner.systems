@@ -46,9 +46,17 @@ export const curated = [
     website: "hummingbot.io",
     label: "Hummingbot",
     summary: "",
-    roles: ["Frontend Development"],
+    roles: ["Frontend Development", "Design"],
     screenshot: "hummingbot.io.png",
   },
+  // {
+  //   href: "https://dydx.exchange",
+  //   website: "dydx.exchange",
+  //   label: "dYdX",
+  //   summary: "An open trading platform for crypto assets",
+  //   roles: ["Frontend Development"],
+  //   screenshot: "dydx.exchange.png",
+  // },
 ];
 
 /*
