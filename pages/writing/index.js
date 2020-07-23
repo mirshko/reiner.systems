@@ -1,21 +1,10 @@
-import Head from "next/head";
 import List from "../../components/list";
+import SEO from "../../components/seo";
 
 export default function Page() {
   return (
     <main className="p-sm">
-      <Head>
-        <title>Writing | Jeff Reiner, Design Engineer</title>
-        <meta name="title" content="Writing | Jeff Reiner, Design Engineer" />
-        <meta
-          property="og:title"
-          content="Writing | Jeff Reiner, Design Engineer"
-        />
-        <meta
-          property="twitter:title"
-          content="Writing | Jeff Reiner, Design Engineer"
-        />
-      </Head>
+      <SEO title="Writing" path="/writing" />
 
       <section>
         <h1 className="mb-md">Writing</h1>
@@ -24,7 +13,7 @@ export default function Page() {
         <List
           data={[
             {
-              href: "/",
+              href: "/writing/crypto-wallets-are-dead-long-live-crypto-wallets",
               label: "Crypto Wallets Are Dead. Long Live Crypto Wallets",
               isInternal: true,
             },

@@ -1,24 +1,11 @@
-import Head from "next/head";
-import { curated } from "../data";
 import Browser from "../components/browser";
-
-const NUMBERS = ["➊", "➋", "➌", "➍", "➎", "➏", "➐", "➑", "➒", "➓"];
+import SEO from "../components/seo";
+import { curated } from "../data";
 
 export default function Page() {
   return (
     <main className="p-sm">
-      <Head>
-        <title>Portfolio | Jeff Reiner, Design Engineer</title>
-        <meta name="title" content="Portfolio | Jeff Reiner, Design Engineer" />
-        <meta
-          property="og:title"
-          content="Portfolio | Jeff Reiner, Design Engineer"
-        />
-        <meta
-          property="twitter:title"
-          content="Portfolio | Jeff Reiner, Design Engineer"
-        />
-      </Head>
+      <SEO title="Portfolio" path="/portfolio" />
 
       <h1>Portfolio</h1>
 

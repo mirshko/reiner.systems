@@ -5,23 +5,14 @@ export default class Doc extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta name="author" content="@mirshko" />
           <meta
-            name="description"
-            content="Freelance Design Engineer based in Berlin. Team @ Coal, and Union"
+            property="og:site_name"
+            content="Jeff Reiner, Design Engineer"
           />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://reiner.design" />
-          <meta
-            property="og:description"
-            content="Freelance Design Engineer based in Berlin. Team @ Coal, and Union"
-          />
+          <meta name="author" content="Jeff Reiner" />
+          <meta property="twitter:site" content="@mirshko" />
+          <meta property="twitter:creator" content="@mirshko" />
           <meta property="twitter:card" content="summary" />
-          <meta property="twitter:url" content="https://reiner.design" />
-          <meta
-            property="twitter:description"
-            content="Freelance Design Engineer based in Berlin. Team @ Coal, and Union"
-          />
           <meta name="theme-color" content="#ffffff" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <link rel="icon" href="/icon.png" />

@@ -2,22 +2,12 @@ import dynamic from "next/dynamic";
 import Head from "next/head";
 import { getRecordsInFauna } from "../lib/db";
 import Record from "../components/record";
+import SEO from "../components/seo";
 
 export default function Vinyl({ records }) {
   return (
     <main className="p-sm">
-      <Head>
-        <title>Vinyl | Jeff Reiner, Design Engineer</title>
-        <meta name="title" content="Vinyl | Jeff Reiner, Design Engineer" />
-        <meta
-          property="og:title"
-          content="Vinyl | Jeff Reiner, Design Engineer"
-        />
-        <meta
-          property="twitter:title"
-          content="Vinyl | Jeff Reiner, Design Engineer"
-        />
-      </Head>
+      <SEO title="Vinyl" path="/vinyl" />
 
       <h1>Vinyl</h1>
 

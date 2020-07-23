@@ -1,15 +1,10 @@
-import Head from "next/head";
+import SEO from "../components/seo";
 import { GOALS, trackGoal } from "../lib/fathom";
 
 export default function Page() {
   return (
     <main className="p-sm">
-      <Head>
-        <title>Jeff Reiner, Design Engineer</title>
-        <meta name="title" content="Jeff Reiner, Design Engineer" />
-        <meta property="og:title" content="Jeff Reiner, Design Engineer" />
-        <meta property="twitter:title" content="Jeff Reiner, Design Engineer" />
-      </Head>
+      <SEO />
 
       <h1 className="measure">Freelance, Currently in Berlin.</h1>
 

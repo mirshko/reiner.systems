@@ -1,25 +1,11 @@
-import Head from "next/head";
 import List from "../components/list";
+import SEO from "../components/seo";
 import { experiments, projects } from "../data";
 
 export default function Page() {
   return (
     <main className="p-sm">
-      <Head>
-        <title>Experiments | Jeff Reiner, Design Engineer</title>
-        <meta
-          name="title"
-          content="Experiments | Jeff Reiner, Design Engineer"
-        />
-        <meta
-          property="og:title"
-          content="Experiments | Jeff Reiner, Design Engineer"
-        />
-        <meta
-          property="twitter:title"
-          content="Experiments | Jeff Reiner, Design Engineer"
-        />
-      </Head>
+      <SEO title="Experiments" path="/experiments" />
 
       <section>
         <h1 className="mb-md">Experiments</h1>
