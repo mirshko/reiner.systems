@@ -20,7 +20,7 @@ const Nav = () => {
         </p>
       </ul>
 
-      <ul className="hide-on-mobile">
+      <ul>
         <p>Design Engineer</p>
       </ul>
 
