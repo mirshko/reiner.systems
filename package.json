@@ -14,7 +14,6 @@
   "dependencies": {
     "@mdx-js/loader": "^1.6.14",
     "@next/mdx": "^9.5.0",
-    "@reach/menu-button": "^0.10.5",
     "faunadb": "^2.14.2",
     "googleapis": "^56.0.0",
     "next": "^9.5.0",
