@@ -9,6 +9,8 @@ const Nav = () => {
    * @param {String} path The page to match the current pathname against
    */
   const isActive = (path) => (pathname === path ? "active" : undefined);
+  const isActiveIncluding = (path) =>
+    pathname.includes(path) ? "active" : undefined;
 
   return (
     <nav className="flex px-sm pt-sm">
@@ -31,7 +33,7 @@ const Nav = () => {
             <a>Portfolio</a>
           </Link>
         </li>
-        <li className={isActive("/entries")}>
+        <li className={isActiveIncluding("/entries")}>
           <Link href="/entries">
             <a>Writing</a>
           </Link>

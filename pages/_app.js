@@ -2,11 +2,19 @@ import Nav from "../components/nav";
 import "../styles/reset.css";
 import useFathom from "../hooks/useFathom";
 import { MDXProvider } from "@mdx-js/react";
+import PostDetails from "../components/post-details";
+import SEO from "../components/seo";
+
+const PostWrapper = ({ children, frontmatter = {} }) => (
+  <main className="p-sm">
+    <SEO {...frontmatter} />
+    <PostDetails {...frontmatter} />
+    {children}
+  </main>
+);
 
 const components = {
-  wrapper: ({ children, ...props }) => {
-    return <main className="p-sm">{children}</main>;
-  },
+  wrapper: (props) => <PostWrapper {...props} />,
   h1: (props) => <h1 className="mb-md" {...props} />,
   p: (props) => <p className="mb-sm measure" {...props} />,
 };

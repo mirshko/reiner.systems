@@ -1,10 +1,11 @@
-const { Fragment } = require("react");
+import { Fragment } from "react";
 
-const PostDetails = ({ title, dateTime, date, topic }) => (
+const PostDetails = ({ title, published, topic }) => (
   <Fragment>
     <h1 className="mb-md">{title}</h1>
     <p className="mb-lg">
-      <time dateTime={dateTime}>{date}</time>, {topic}
+      {published && <time dateTime={published}>{published}</time>}
+      {topic && (published ? `, ${topic}` : topic)}
     </p>
   </Fragment>
 );
