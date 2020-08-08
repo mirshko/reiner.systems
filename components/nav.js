@@ -1,5 +1,10 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from "@reach/disclosure";
 
 const Nav = () => {
   const { pathname } = useRouter();
@@ -26,72 +31,74 @@ const Nav = () => {
         <p>Design Engineer</p>
       </ul>
 
-      <ul className="hide-on-mobile">
-        <p>Directory</p>
-        <li className={isActive("/portfolio")}>
-          <Link href="/portfolio">
-            <a>Portfolio</a>
-          </Link>
-        </li>
-        <li className={isActiveIncluding("/entries")}>
-          <Link href="/entries">
-            <a>Writing</a>
-          </Link>
-        </li>
-        <li className={isActive("/experiments")}>
-          <Link href="/experiments">
-            <a>Experiments</a>
-          </Link>
-        </li>
-        <li className={isActive("/vinyl")}>
-          <Link href="/vinyl">
-            <a>Vinyl</a>
-          </Link>
-        </li>
-      </ul>
+      <Disclosure defaultOpen={true}>
+        <ul>
+          <DisclosureButton>
+            <p>Directory</p>
+          </DisclosureButton>
+          <DisclosurePanel>
+            <li className={isActive("/portfolio")}>
+              <Link href="/portfolio">
+                <a>Portfolio</a>
+              </Link>
+            </li>
+            <li className={isActiveIncluding("/entries")}>
+              <Link href="/entries">
+                <a>Writing</a>
+              </Link>
+            </li>
+            <li className={isActive("/experiments")}>
+              <Link href="/experiments">
+                <a>Experiments</a>
+              </Link>
+            </li>
+            <li className={isActive("/vinyl")}>
+              <Link href="/vinyl">
+                <a>Vinyl</a>
+              </Link>
+            </li>
+          </DisclosurePanel>
+        </ul>
+      </Disclosure>
 
-      <ul className="hide-on-mobile">
-        <p>Social</p>
-        <li>
-          <a
-            href="https://twitter.com/mirshko"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Twitter
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://github.com/mirshko"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            GitHub
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.instagram.com/mirshko"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Instagram
-          </a>
-        </li>
-      </ul>
+      <Disclosure defaultOpen={true}>
+        <ul>
+          <DisclosureButton>
+            <p>Social</p>
+          </DisclosureButton>
+          <DisclosurePanel>
+            <li>
+              <a
+                href="https://twitter.com/mirshko"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Twitter
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/mirshko"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/mirshko"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Instagram
+              </a>
+            </li>
+          </DisclosurePanel>
+        </ul>
+      </Disclosure>
 
       <style jsx>{`
-        .hide-on-mobile {
-          display: none;
-        }
-
-        @media screen and (min-width: 48em) {
-          .hide-on-mobile {
-            display: initial;
-          }
-        }
-
         nav {
           border-bottom: 0.2rem solid currentColor;
         }

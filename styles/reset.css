@@ -362,3 +362,17 @@ h2::after,
 p::after {
   margin-bottom: calc((1 - var(--crop-line-height)) * 0.5em);
 } */
+
+[data-reach-disclosure-button] {
+  background: none;
+  padding: 0;
+  border: none;
+  font: inherit;
+  text-decoration: underline;
+  display: flex;
+  position: relative;
+}
+
+[data-reach-disclosure-panel] {
+  outline: none;
+}
