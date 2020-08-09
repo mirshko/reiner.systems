@@ -15,8 +15,8 @@ const Nav = () => {
    * @param {String} path The page to match the current pathname against
    */
   const isActive = (path) => (pathname === path ? "active" : undefined);
-  const isActiveIncluding = (path) =>
-    pathname.includes(path) ? "active" : undefined;
+  // const isActiveIncluding = (path) =>
+  //   pathname.includes(path) ? "active" : undefined;
 
   const [isOpen, isOpenSet] = useState(false);
   const toggle = () => isOpenSet(!isOpen);

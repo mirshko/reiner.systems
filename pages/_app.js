@@ -1,7 +1,7 @@
 import Footer from "../components/footer";
 import MDX from "../components/mdx";
 import Nav from "../components/nav";
-import useFathom from "../hooks/useFathom";
+import { useFathom } from "../hooks";
 import "../styles/reset.css";
 
 export default function App({ Component, pageProps }) {

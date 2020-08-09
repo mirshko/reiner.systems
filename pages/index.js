@@ -1,5 +1,6 @@
+import { trackGoal } from "fathom-client";
 import SEO from "../components/seo";
-import { GOALS, trackGoal } from "../lib/fathom";
+import FATHOM from "../lib/fathom";
 
 export default function Page() {
   return (
@@ -29,7 +30,7 @@ export default function Page() {
       <p className="measure mt-lg">
         <a
           href="/jeff-reiner.pdf"
-          onClick={() => trackGoal(GOALS.DOWNLOAD_RESUME)}
+          onClick={() => trackGoal(FATHOM.GOALS.DOWNLOAD_RESUME)}
           target="_blank"
         >
           Résumé
