@@ -1,5 +1,5 @@
 import Footer from "../components/footer";
-import MDX from "../components/mdx";
+import MDXWrapper from "../components/mdx-wrapper";
 import Nav from "../components/nav";
 import { useFathom } from "../hooks";
 import "../styles/reset.css";
@@ -14,9 +14,9 @@ export default function App({ Component, pageProps }) {
       </header>
 
       <div className="content">
-        <MDX>
+        <MDXWrapper>
           <Component {...pageProps} />
-        </MDX>
+        </MDXWrapper>
       </div>
 
       <Footer />
