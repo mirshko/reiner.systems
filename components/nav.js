@@ -1,10 +1,10 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
 import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
 } from "@reach/disclosure";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 const Nav = () => {
