@@ -18,7 +18,7 @@ export default function Vinyl({ records }) {
         >
           Discogs
         </a>
-        . Thought I'd make a fancy gallery and player for all my records.
+        , thought I'd make a nice gallery and player them.
       </p>
 
       <section className="mt-md record-grid">
@@ -33,7 +33,6 @@ export default function Vinyl({ records }) {
           flex-wrap: wrap;
           margin-left: -10px;
           margin-right: -10px;
-          max-width: 1340px;
         }
       `}</style>
     </main>
