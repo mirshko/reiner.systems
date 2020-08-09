@@ -1,4 +1,4 @@
-import List from "../../components/list";
+// import List from "../../components/list";
 import SEO from "../../components/seo";
 
 export default function Page() {
@@ -9,7 +9,7 @@ export default function Page() {
       <section>
         <h1 className="mb-md">All Writing</h1>
 
-        <List
+        {/* <List
           data={[
             {
               href: "/entries/crypto-wallets-are-dead-long-live-crypto-wallets",
@@ -17,7 +17,7 @@ export default function Page() {
               isInternal: true,
             },
           ]}
-        />
+        /> */}
       </section>
     </main>
   );
