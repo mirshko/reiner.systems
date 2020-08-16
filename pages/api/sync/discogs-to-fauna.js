@@ -1,161 +1,73 @@
-import faunadb from "faunadb";
-import { google } from "googleapis";
-import { client } from "../../../lib/db";
-
-const {
-  If,
-  Var,
-  Get,
-  Now,
-  Let,
-  Match,
-  Index,
-  Map,
-  Lambda,
-  Paginate,
-  Create,
-  Exists,
-  Select,
-  Update,
-  Collection,
-} = faunadb.query;
-
-const getRecordsInFauna = () =>
-  client.query(
-    Select(
-      "data",
-      Map(
-        Paginate(Match(Index("all_records")), { size: 1000 }),
-        Lambda("record", Select("data", Get(Var("record"))))
-      )
-    )
-  );
-
-const createRecords = (records) =>
-  Promise.all(
-    records.map(async (data) => {
-      return client.query(
-        Let(
-          {
-            upsert: Match(Index("find_record_by_resource"), data.resource_id),
-          },
-          If(
-            Exists(Var("upsert"), Now()),
-            Select(
-              ["ref", "id"],
-              Update(Select(["ref"], Get(Var("upsert"))), { data })
-            ),
-            Select(
-              ["ref", "id"],
-              Create(Collection("record"), {
-                data,
-              })
-            )
-          )
-        )
-      );
-    })
-  );
-
-const URL =
-  "https://api.discogs.com/users/mirshko/collection/folders/0/releases" +
-  "?per_page=300" +
-  "&sort=added&sort_order=desc" +
-  "&token=" +
-  process.env.DISCOGS_KEY;
-
-const getRecordSchema = (release) => {
-  const {
-    date_added,
-    id: resource_id,
-    basic_information: { artists, title, cover_image, year },
-  } = release;
-
-  const artist = artists[0].name;
-
-  return {
-    title,
-    artist,
-    cover_image,
-    resource_id,
-    date_added,
-    year,
-  };
-};
-
-const youtube = google.youtube({
-  version: "v3",
-  auth: process.env.YOUTUBE_KEY,
-});
-
-const getYouTubeVideoId = async (release) => {
-  const { title, artist } = release;
-
-  const term = title + " " + artist;
-
-  let record = release;
-
-  console.log(term);
-
-  await youtube.search
-    .list({
-      part: "id,snippet",
-      type: "video",
-      q: term,
-    })
-    .then((res) => res.data)
-    .then((data) => {
-      if (data.items) {
-        const first = data.items[0];
-
-        if (
-          first.snippet.title.includes(title) ||
-          first.snippet.title.includes(artist)
-        ) {
-          const video_id = first.id.videoId;
-
-          console.log("Matched!", { video_id });
-
-          record = {
-            ...release,
-            video_id,
-          };
-        }
-      }
-
-      console.log("Video Isn't A Match");
-    })
-    .catch((err) => {
-      console.log(err.message);
-    });
-
-  return record;
-};
+import { createRecordsInFauna, getRecordsInFauna } from "../../../lib/db";
+import { getRecordsInDiscogs } from "../../../lib/discogs";
+import { getYouTubeVideoId } from "../../../lib/youtube";
 
 export default async (req, res) => {
   try {
-    const records = await getRecordsInFauna();
+    /**
+     * Get records from Discogs and schematize
+     */
+    const recordsInDiscogs = await getRecordsInDiscogs();
 
-    const recordsWithoutVideos = await records.filter(
-      (record) => !record.video_id || record.video_id === "null"
+    console.log("Number Of Records In Discogs:", recordsInDiscogs.length);
+
+    /**
+     * Get records from Fauna
+     */
+    const recordsInFauna = await getRecordsInFauna();
+
+    console.log("Number Of Records In Fauna:", recordsInFauna.length);
+
+    /**
+     * Check if Discogs & Fauna collection are out of sync, if so, update Fauna collection from Discogs initially
+     */
+    if (recordsInFauna.length < recordsInDiscogs.length) {
+      console.log("Fauna & Discogs Collections Are Out Of Sync! Updating!");
+
+      await createRecordsInFauna(recordsInDiscogs);
+    }
+
+    /**
+     * Get videos in Fauna that do not have a valid 'video_id'
+     */
+    const recordsWithoutVideos = recordsInFauna.filter(
+      (record) => record?.video_id === "null"
     );
 
-    console.log({ length: recordsWithoutVideos.length });
+    console.log("Number Of Records w/o Videos:", recordsWithoutVideos.length);
 
-    const recordsWithVideos = await Promise.all(
-      recordsWithoutVideos.map(
-        async (record) => await getYouTubeVideoId(record)
-      )
+    /**
+     * Attempt to populate records without videos with a YouTube video
+     */
+    const recordsToUpdate = await Promise.all(
+      recordsWithoutVideos.map(getYouTubeVideoId)
     );
 
-    console.log({ length: recordsWithVideos.length });
+    /**
+     * Filter out 'undefined' results from 'getYouTubeVideoId' call
+     */
+    const validRecordsToUpdate = recordsToUpdate.filter(Boolean);
 
-    const recordRefs = await createRecords(recordsWithVideos);
+    console.log("Number Of Records To Update:", validRecordsToUpdate.length);
 
-    res.status(200).json({
-      success: true,
-      records: recordRefs,
-    });
+    if (validRecordsToUpdate.length > 0) {
+      /**
+       * Update the records in Fauna with new updated 'video_id' property
+       */
+      const refs = await createRecordsInFauna(validRecordsToUpdate);
+
+      res.status(200).json({
+        success: true,
+        message: `Successfully Updated ${refs.length} Records`,
+        result: refs,
+      });
+    } else {
+      res.status(200).json({
+        success: true,
+        message: "No Records Need Updating",
+        result: [],
+      });
+    }
   } catch (err) {
     console.log(err);
 

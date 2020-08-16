@@ -3,6 +3,8 @@ import LiteYouTubeEmbed from "./lite-youtube-embed";
 const Record = ({ artist, title, cover_image, video_id }) => {
   const label = title + ", " + artist;
 
+  const hasVideo = video_id && video_id !== "null";
+
   return (
     <div className="record">
       <div className="cover">
@@ -18,9 +20,7 @@ const Record = ({ artist, title, cover_image, video_id }) => {
           width={314}
         />
 
-        {video_id && video_id !== "null" && (
-          <LiteYouTubeEmbed id={video_id} title={label} />
-        )}
+        {hasVideo && <LiteYouTubeEmbed id={video_id} title={label} />}
       </div>
 
       <p className="label" title={label}>
