@@ -1,6 +1,6 @@
 import Record from "../components/record";
 import SEO from "../components/seo";
-import { getRecordsInFauna } from "../lib/db";
+import { getRecordsInFauna } from "../lib/fauna";
 
 export default function Vinyl({ records }) {
   return (
