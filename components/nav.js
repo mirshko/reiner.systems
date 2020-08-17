@@ -22,7 +22,7 @@ const Nav = () => {
   const toggle = () => isOpenSet(!isOpen);
 
   return (
-    <nav className="md:flex border-b p-4 space-y-4 md:space-y-0">
+    <nav className="md:flex border-b p-4 space-y-4 md:space-y-0 space-x-0 md:space-x-4">
       <ul className="flex-1">
         <li>
           <Link href="/">

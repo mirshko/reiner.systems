@@ -68,7 +68,7 @@ export default class Doc extends Document {
             rel="apple-touch-startup-image"
           />
         </Head>
-        <body className="antialiased text-2xl font-semibold max-w-5xl lg:border-r lg:border-l mx-auto leading-none">
+        <body className="antialiased text-2xl font-semibold max-w-5xl mx-auto leading-none">
           <Main />
           <NextScript />
         </body>
