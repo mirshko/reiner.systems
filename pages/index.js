@@ -4,12 +4,12 @@ import FATHOM from "../lib/fathom";
 
 export default function Page() {
   return (
-    <main className="p-sm">
+    <main className="p-4 space-y-4">
       <SEO />
 
-      <h1 className="measure">Freelance, Currently in Berlin.</h1>
+      <h1>Freelance, Currently in Berlin.</h1>
 
-      <p className="measure mt-md">
+      <p>
         Team at{" "}
         <a
           href="https://union.finance"
@@ -21,13 +21,13 @@ export default function Page() {
         .
       </p>
 
-      <p className="measure mt-sm">
+      <p className="max-w-xl leading-tight">
         I focus on responsive, mobile-first websites and apps; highly-usable and
         efficient component libraries and design systems; and solving complex UX
         problems, in and around the Web 2.0 and Web3 space.
       </p>
 
-      <p className="measure mt-lg">
+      <p>
         <a
           href="/jeff-reiner.pdf"
           onClick={() => trackGoal(FATHOM.GOALS.DOWNLOAD_RESUME)}

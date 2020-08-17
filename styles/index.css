@@ -1,5 +1,59 @@
 @tailwind base;
 
+:root {
+  --primary: #5f05f0;
+  --secondary: #5f0;
+  --black: #000;
+  --white: #fff;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  :root {
+    --primary: color(display-p3 0.3725 0.0196 0.9411);
+    --secondary: color(display-p3 0.3333 1 0);
+  }
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-image: url("/noise.png");
+  background-repeat: repeat;
+  background-blend-mode: overlay;
+  background-size: 200px;
+  background-color: #cfd3dc;
+}
+
+a {
+  color: var(--primary);
+  text-shadow: 0 0.2em var(--secondary);
+}
+
+button {
+  @apply font-semibold;
+}
+
 @tailwind components;
 
 @tailwind utilities;
+
+.active::after {
+  color: var(--primary);
+  text-shadow: 0 0.1em var(--secondary);
+  font-size: inherit;
+  content: "*";
+}
+
+[data-reach-disclosure-button] {
+  text-align: right;
+  display: block;
+  margin-left: auto;
+  color: var(--primary);
+  text-shadow: 0 0.1em var(--secondary);
+}
+
+[data-reach-disclosure-panel] {
+  outline: none;
+}

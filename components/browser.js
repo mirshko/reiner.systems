@@ -1,12 +1,11 @@
 const Browser = ({ ratio = 16 / 10, ...rest }) => (
-  <div className="browser">
+  <div className="browser max-w-2xl">
     <div className="screenshot">
       <img {...rest} />
     </div>
 
     <style jsx>{`
       .browser {
-        max-width: 720px;
         width: 100%;
         position: relative;
         border: 0.2rem solid currentColor;

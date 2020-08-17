@@ -30,68 +30,22 @@ const List = ({ data }) => (
         );
 
       return (
-        <li key={i}>
-          <a href={href}>
-            <span className="thumbnail">
-              <img
-                alt={label}
-                async
-                decoding="async"
-                loading="lazy"
-                src={`/experiments/${screenshot}`}
-              />
-            </span>
-            <span className="label">{label}</span>
+        <li key={i} className="flex sm:inline-flex sm:mr-4">
+          <a className="flex items-center" href={href}>
+            <img
+              className="h-10 w-10 mr-3 object-contain align-middle"
+              alt={label}
+              async
+              decoding="async"
+              loading="lazy"
+              src={`/experiments/${screenshot}`}
+            />
+            <span className="flex-1 -mt-1 leading-none">{label}</span>
           </a>
           &nbsp;
         </li>
       );
     })}
-
-    <style jsx>{`
-      ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      li {
-        display: block;
-        padding-right: var(--sm);
-        padding-bottom: 0.5rem;
-      }
-
-      @media screen and (min-width: 425px) {
-        li {
-          display: inline-block;
-        }
-      }
-
-      a {
-        display: inline-flex;
-        align-items: start;
-      }
-
-      .label {
-        flex: 1;
-        line-height: 1.2;
-      }
-
-      .thumbnail {
-        height: 1.3em;
-        width: 1.3em;
-        margin-right: 0.3em;
-        box-shadow
-      }
-
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: contain;
-        vertical-align: middle;
-        object-position: center 0.1em;
-      }
-    `}</style>
   </ul>
 );
 

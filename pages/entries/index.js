@@ -3,13 +3,12 @@ import SEO from "../../components/seo";
 
 export default function Page() {
   return (
-    <main className="p-sm">
+    <main className="p-4 space-y-4">
       <SEO title="Entries" path="/entries" />
 
-      <section>
-        <h1 className="mb-md">All Writing</h1>
+      <h1>All Writing</h1>
 
-        {/* <List
+      {/* <List
           data={[
             {
               href: "/entries/crypto-wallets-are-dead-long-live-crypto-wallets",
@@ -18,7 +17,6 @@ export default function Page() {
             },
           ]}
         /> */}
-      </section>
     </main>
   );
 }

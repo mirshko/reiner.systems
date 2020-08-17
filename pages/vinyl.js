@@ -4,12 +4,12 @@ import { getRecordsInFauna } from "../lib/fauna";
 
 export default function Vinyl({ records }) {
   return (
-    <main className="p-sm">
+    <main className="p-4 space-y-4">
       <SEO title="Vinyl" path="/vinyl" />
 
       <h1>Vinyl</h1>
 
-      <p className="measure mt-md mb-sm">
+      <p className="max-w-xl leading-tight">
         My personal record collection on{" "}
         <a
           href="https://www.discogs.com/seller/mirshko/profile"
@@ -21,20 +21,11 @@ export default function Vinyl({ records }) {
         , thought I'd make a nice gallery and player them.
       </p>
 
-      <section className="mt-md record-grid">
+      <section className="grid sm:grid-cols-3 gap-4">
         {records.map((release, i) => (
           <Record key={i} {...release} />
         ))}
       </section>
-
-      <style jsx>{`
-        .record-grid {
-          display: flex;
-          flex-wrap: wrap;
-          margin-left: -10px;
-          margin-right: -10px;
-        }
-      `}</style>
     </main>
   );
 }

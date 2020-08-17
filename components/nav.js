@@ -22,26 +22,25 @@ const Nav = () => {
   const toggle = () => isOpenSet(!isOpen);
 
   return (
-    <nav className="flex px-sm pt-sm">
-      <ul>
+    <nav className="md:flex border-b p-4 space-y-4 md:space-y-0">
+      <ul className="flex-1">
         <li>
           <Link href="/">
-            <a className="home">Jeff Reiner</a>
+            <a>Jeff Reiner</a>
           </Link>
         </li>
       </ul>
 
-      <ul>
+      <ul className="flex-1">
         <li>
           <p>Design Engineer</p>
         </li>
       </ul>
 
-      <ul className="nav">
+      <ul className="flex-1 space-y-2 hidden md:block">
         <li>
           <p>Directory</p>
         </li>
-
         <li className={isActive("/portfolio")}>
           <Link href="/portfolio">
             <a>Portfolio</a>
@@ -64,7 +63,7 @@ const Nav = () => {
         </li>
       </ul>
 
-      <ul className="nav">
+      <ul className="flex-1 space-y-2 hidden md:block">
         <p>Social</p>
         <li>
           <a
@@ -95,12 +94,12 @@ const Nav = () => {
         </li>
       </ul>
 
-      <div className="mobile-nav">
-        <Disclosure open={isOpen} onChange={toggle}>
-          <ul>
-            <DisclosureButton>{isOpen ? "Close" : "Menu"}</DisclosureButton>
-            <DisclosurePanel>
-              <li className="mt-fz">
+      <Disclosure open={isOpen} onChange={toggle}>
+        <ul className="md:hidden space-y-4">
+          <DisclosureButton>{isOpen ? "Close" : "Menu"}</DisclosureButton>
+          <DisclosurePanel className="space-y-4">
+            <ul className="mt-4 space-y-2">
+              <li>
                 <p>Directory</p>
               </li>
               <li className={isActive("/portfolio")}>
@@ -123,7 +122,9 @@ const Nav = () => {
                   <a>Vinyl</a>
                 </Link>
               </li>
-              <li className="mt-fz">
+            </ul>
+            <ul className="mt-4 space-y-2">
+              <li>
                 <p>Social</p>
               </li>
               <li>
@@ -153,72 +154,10 @@ const Nav = () => {
                   Instagram
                 </a>
               </li>
-            </DisclosurePanel>
-          </ul>
-        </Disclosure>
-      </div>
-
-      <style jsx>{`
-        nav {
-          border-bottom: 0.2rem solid currentColor;
-        }
-
-        .nav {
-          display: none;
-        }
-        .mobile-nav {
-          display: initial;
-        }
-
-        @media screen and (min-width: 56em) {
-          .nav {
-            display: initial;
-          }
-          .mobile-nav {
-            display: none;
-          }
-        }
-
-        .home {
-          color: black;
-          transition: color 200ms;
-        }
-        .home:hover {
-          color: var(--primary);
-        }
-
-        ul {
-          list-style: none;
-          margin: 0;
-          padding: 0;
-          margin-bottom: var(--font-size);
-        }
-
-        .mt-fz {
-          margin-top: var(--font-size);
-        }
-
-        .flex {
-          display: flex;
-          flex-direction: column;
-        }
-
-        @media screen and (min-width: 56em) {
-          .flex {
-            flex-direction: row;
-          }
-        }
-
-        .flex > * {
-          flex: 1 0;
-        }
-
-        .active::after {
-          color: var(--primary);
-          font-size: var(--font-size);
-          content: "*";
-        }
-      `}</style>
+            </ul>
+          </DisclosurePanel>
+        </ul>
+      </Disclosure>
     </nav>
   );
 };

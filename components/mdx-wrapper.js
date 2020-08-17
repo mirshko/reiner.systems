@@ -6,8 +6,8 @@ import PostWrapper from "./post-wrapper";
  */
 const components = {
   wrapper: (props) => <PostWrapper {...props} />,
-  h1: (props) => <h1 className="mb-md" {...props} />,
-  p: (props) => <p className="mb-sm measure" {...props} />,
+  h1: (props) => <h1 className="mb-8" {...props} />,
+  p: (props) => <p className="mb-4 max-w-xl" {...props} />,
 };
 
 const MDXWrapper = ({ children }) => (

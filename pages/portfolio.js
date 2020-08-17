@@ -4,15 +4,15 @@ import { curated } from "../data";
 
 export default function Page() {
   return (
-    <main className="p-sm">
+    <main className="p-4 space-y-4">
       <SEO title="Portfolio" path="/portfolio" />
 
       <h1>Portfolio</h1>
 
-      <section className="mt-md">
+      <section className="space-y-4">
         {curated.map(
           ({ label, summary, roles, href, website, screenshot }, i) => (
-            <article key={i} className="mb-lg">
+            <article key={i}>
               {screenshot && (
                 <Browser
                   alt={label}
@@ -24,7 +24,7 @@ export default function Page() {
                 />
               )}
 
-              <header className="mt-sm mb-sm">
+              <header className="mt-4 mb-4">
                 <h2>
                   {label}{" "}
                   <a
@@ -39,8 +39,8 @@ export default function Page() {
               </header>
 
               <main>
-                {roles && <p className="mb-sm">{roles.join(", ")}</p>}
-                {summary && <p className="measure-tight">{summary}</p>}
+                {roles && <p className="mb-4">{roles.join(", ")}</p>}
+                {summary && <p className="max-w-lg leading-tight">{summary}</p>}
               </main>
             </article>
           )
