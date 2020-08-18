@@ -1,9 +1,13 @@
 module.exports = {
   purge: ["./components/**/*.js", "./pages/**/*.js"],
   theme: {
+    fontFamily: {
+      sans: ['"Helvetica Neue"', "Arial", "sans-serif"],
+    },
     colors: {
       primary: "var(--primary)",
       secondary: "var(--secondary)",
+      tertiary: "var(--tertiary)",
       black: "var(--black)",
       white: "var(--white)",
     },

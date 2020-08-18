@@ -3,6 +3,7 @@
 :root {
   --primary: #5f05f0;
   --secondary: #5f0;
+  --tertiary: #fe0000;
   --black: #000;
   --white: #fff;
 }
@@ -24,7 +25,7 @@ body {
 
 a {
   color: var(--primary);
-  text-shadow: 0 0.2em var(--secondary);
+  text-shadow: 0 0.2em var(--tertiary);
 }
 
 button {
@@ -37,7 +38,7 @@ button {
 
 .active::after {
   color: var(--primary);
-  text-shadow: 0 0.1em var(--secondary);
+  text-shadow: 0 0.1em var(--tertiary);
   font-size: inherit;
   content: "*";
 }
@@ -47,7 +48,7 @@ button {
   display: block;
   margin-left: auto;
   color: var(--primary);
-  text-shadow: 0 0.1em var(--secondary);
+  text-shadow: 0 0.1em var(--tertiary);
 }
 
 [data-reach-disclosure-panel] {
