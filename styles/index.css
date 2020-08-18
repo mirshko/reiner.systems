@@ -19,10 +19,6 @@ html {
 }
 
 body {
-  background-image: url("/noise.png");
-  background-repeat: repeat;
-  background-blend-mode: overlay;
-  background-size: 200px;
   background-color: #cfd3dc;
 }
 
