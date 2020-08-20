@@ -67,6 +67,13 @@ export default class Doc extends Document {
             media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"
             rel="apple-touch-startup-image"
           />
+          <link
+            rel="preload"
+            href="/font/MintGroteskV0.8-Bold.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
         </Head>
         <body className="antialiased text-2xl font-semibold max-w-5xl mx-auto leading-none">
           <Main />

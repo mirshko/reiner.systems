@@ -18,10 +18,10 @@ export default function Vinyl({ records }) {
         >
           Discogs
         </a>
-        , thought I'd make a nice gallery and player them.
+        , thought I'd make a nice gallery for them.
       </p>
 
-      <section className="grid sm:grid-cols-3 gap-4">
+      <section className="flex flex-wrap">
         {records.map((release, i) => (
           <Record key={i} {...release} />
         ))}

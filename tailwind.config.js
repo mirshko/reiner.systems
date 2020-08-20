@@ -2,7 +2,7 @@ module.exports = {
   purge: ["./components/**/*.js", "./pages/**/*.js"],
   theme: {
     fontFamily: {
-      sans: ['"Helvetica Neue"', "Arial", "sans-serif"],
+      sans: ['"Mint Grotesk"', '"Helvetica Neue"', "Arial", "sans-serif"],
     },
     colors: {
       primary: "var(--primary)",

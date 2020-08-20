@@ -6,16 +6,19 @@ const Record = ({ artist, title, cover_image, video_id }) => {
   const hasVideo = video_id && video_id !== "null";
 
   return (
-    <div className="relative overflow-hidden select-none">
+    <div
+      className="relative select-none w-full sm:w-1/2 md:w-1/3"
+      title={label}
+    >
       <img
-        className="block h-full w-full object-contain absolute left-0 top-0"
+        className="block absolute left-0 top-0 h-full w-full object-cover"
         alt={label}
-        height={314}
+        height={330.66}
         importance="low"
         loading="lazy"
         src={cover_image}
         title={label}
-        width={314}
+        width={330.66}
       />
 
       {hasVideo && <LiteYouTubeEmbed id={video_id} title={label} />}
