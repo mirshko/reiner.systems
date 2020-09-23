@@ -7,7 +7,7 @@ export default function Page() {
     <main className="p-4 space-y-4">
       <SEO />
 
-      <h1>Freelance, Currently in Berlin.</h1>
+      <h1>Design Engineer, Freelance, Currently in Berlin.</h1>
 
       <p>
         Team at{" "}

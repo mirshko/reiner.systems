@@ -8,8 +8,9 @@ module.exports = {
       primary: "var(--primary)",
       secondary: "var(--secondary)",
       tertiary: "var(--tertiary)",
-      black: "var(--black)",
-      white: "var(--white)",
+      black: "#000",
+      white: "#fff",
+      gray: "#cfd3dc",
     },
     borderWidth: {
       default: "0.2rem",

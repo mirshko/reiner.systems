@@ -1,36 +1,10 @@
 const Browser = ({ ratio = 16 / 10, ...rest }) => (
-  <div className="browser max-w-2xl">
+  <div className="p-4 bg-white bg-opacity-25 max-w-2xl">
     <div className="screenshot">
       <img {...rest} />
     </div>
 
     <style jsx>{`
-      .browser {
-        width: 100%;
-        position: relative;
-        border: 0.2rem solid currentColor;
-      }
-
-      .browser::before {
-        display: block;
-        content: "";
-        height: 32px;
-        border-bottom: 0.2rem solid currentColor;
-        width: 100%;
-      }
-
-      .browser::after {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 50%;
-        top: 6px;
-        height: 16px;
-        content: "";
-        border: 0.2rem solid currentColor;
-        display: block;
-      }
-
       .screenshot > :first-child {
         width: 100%;
       }

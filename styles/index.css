@@ -12,8 +12,6 @@
   --primary: #5f05f0;
   --secondary: #5f0;
   --tertiary: #fe0000;
-  --black: #000;
-  --white: #fff;
 }
 
 @supports (color: color(display-p3 1 1 1)) {
@@ -28,15 +26,11 @@ html {
 }
 
 body {
-  background-color: #cfd3dc;
+  @apply bg-gray;
 }
 
 a {
   color: var(--primary);
-  text-shadow: 0 0.2em var(--secondary);
-}
-a:hover {
-  text-shadow: 0.4em 0.2em var(--secondary);
 }
 
 button {
@@ -49,7 +43,6 @@ button {
 
 .active::after {
   color: var(--primary);
-  text-shadow: 0 0.2em var(--secondary);
   font-size: inherit;
   content: "*";
 }
@@ -59,10 +52,6 @@ button {
   display: block;
   margin-left: auto;
   color: var(--primary);
-  text-shadow: 0 0.2em var(--secondary);
-}
-[data-reach-disclosure-button]:hover {
-  text-shadow: 0.4em 0.2em var(--secondary);
 }
 
 [data-reach-disclosure-panel] {

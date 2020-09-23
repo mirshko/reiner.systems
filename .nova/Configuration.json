@@ -1,0 +1,6 @@
+{
+  "editor.default_syntax" : "jsx",
+  "workspace.color" : 5,
+  "workspace.preview_type" : "custom",
+  "workspace.preview_url" : "localhost:3000"
+}

@@ -22,18 +22,12 @@ const Nav = () => {
   const toggle = () => isOpenSet(!isOpen);
 
   return (
-    <nav className="md:flex border-b p-4 space-y-4 md:space-y-0 space-x-0 md:space-x-4">
+    <nav className="md:flex p-4 space-y-4 md:space-y-0 space-x-0 md:space-x-4 m-4 bg-white bg-opacity-25">
       <ul className="flex-1">
         <li>
           <Link href="/">
-            <a>Jeff Reiner</a>
+            <a className="text-black">Jeff Reiner</a>
           </Link>
-        </li>
-      </ul>
-
-      <ul className="flex-1">
-        <li>
-          <p>Design Engineer</p>
         </li>
       </ul>
 
