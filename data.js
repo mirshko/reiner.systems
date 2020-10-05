@@ -72,14 +72,14 @@ export const clients = [
     href: "https://www.instagram.com/sampepper/",
     label: "Sam Pepper",
   },
-  {
-    href: "https://async.art",
-    label: "Async Art",
-  },
-  {
-    href: "https://union.finance",
-    label: "Union",
-  },
+  // {
+  //   href: "https://async.art",
+  //   label: "Async Art",
+  // },
+  // {
+  //   href: "https://union.finance",
+  //   label: "Union",
+  // },
   {
     href: "https://metamoneymarket.com",
     label: "MetaMoneyMarket",
@@ -88,10 +88,10 @@ export const clients = [
     href: "https://pillarproject.io",
     label: "Pillar",
   },
-  {
-    href: "https://hummingbot.io/",
-    label: "Hummingbot",
-  },
+  // {
+  //   href: "https://hummingbot.io/",
+  //   label: "Hummingbot",
+  // },
   {
     href: "https://dydx.exchange/",
     label: "dYdX Exchange",

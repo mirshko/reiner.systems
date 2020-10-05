@@ -1,15 +1,20 @@
 import Browser from "../components/browser";
 import SEO from "../components/seo";
-import { curated } from "../data";
+import { curated, clients } from "../data";
 
 export default function Page() {
   return (
-    <main className="p-4 space-y-4">
+    <main className="p-4">
       <SEO title="Portfolio" path="/portfolio" />
 
-      <h1>Portfolio</h1>
+      <div className="p-4 inline-block bg-white bg-opacity-25">
+        <h1>Portfolio</h1>
+      </div>
 
-      <section className="space-y-4">
+      {/* Spacer */}
+      <div className="h-8" />
+
+      <section className="space-y-8">
         {curated.map(
           ({ label, summary, roles, href, website, screenshot }, i) => (
             <article key={i}>
@@ -38,32 +43,27 @@ export default function Page() {
                 </h2>
               </header>
 
-              <main>
+              <section>
                 {roles && <p className="mb-4">{roles.join(", ")}</p>}
                 {summary && <p className="max-w-lg leading-tight">{summary}</p>}
-              </main>
+              </section>
             </article>
           )
         )}
+
+        <article>
+          <header>
+            <h2 className="mb-4">Additional Clients</h2>
+          </header>
+
+          <p className="leading-normal">
+            {clients.map((client) => client.label).join(", ")}
+          </p>
+        </article>
       </section>
 
-      {/* <section className="mt-lg">
-        <h2 className="mb-sm">Clients</h2>
-        <p className="measure-tight mb-sm">
-          Companies and individuals I've had the pleasure to work with to build
-          some pretty cool things.
-        </p>
-        <List data={clients} />
-      </section>
-
-      <section className="mt-lg">
-        <h2 className="mb-sm">Projects</h2>
-        <p className="measure-tight mb-sm">
-          My pride and joy; apps I've built and am working on with some of the
-          best people around.
-        </p>
-        <List data={projects} />
-      </section> */}
+      {/* Spacer */}
+      <div className="h-8" />
     </main>
   );
 }

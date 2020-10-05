@@ -1,6 +1,5 @@
-import PropTypes from "prop-types";
-import { memo } from "react";
 import Link from "next/link";
+import PropTypes from "prop-types";
 
 /**
  * @typedef Link
@@ -63,4 +62,4 @@ List.propTypes = {
   ).isRequired,
 };
 
-export default memo(List);
+export default List;
