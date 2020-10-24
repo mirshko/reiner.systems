@@ -6,7 +6,11 @@ const withMDX = require("@next/mdx")({
   extension: /\.mdx?$/,
 });
 
-module.exports = withMDX({
+const withPlugins = require("next-compose-plugins");
+
+const optimizedImages = require("next-optimized-images");
+
+const nextConfiguration = {
   pageExtensions: ["js", "jsx", "mdx"],
   trailingSlash: false,
   async redirects() {
@@ -33,4 +37,9 @@ module.exports = withMDX({
       },
     ];
   },
-});
+};
+
+module.exports = withPlugins(
+  [withMDX, [optimizedImages, {}]],
+  nextConfiguration
+);
