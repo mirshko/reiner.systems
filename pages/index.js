@@ -11,20 +11,17 @@ export default function Page() {
 
       <div className="h-5" />
 
-      <h2>Design Engineer, Freelance, Currently in Berlin.</h2>
-
-      <div className="h-5" />
-
       <p>
-        Team at{" "}
+        I'm currently freelancing as a Design Engineer located in Berlin, as
+        well as working on frontend at{" "}
         <a
           href="https://union.finance"
           rel="noopener noreferrer"
           target="_blank"
         >
-          Union
+          Union{" "}
         </a>
-        . Design at{" "}
+        and design at{" "}
         <a
           href="https://soapbox.social"
           rel="noopener noreferrer"
@@ -51,6 +48,32 @@ export default function Page() {
           target="_blank"
         >
           Résumé
+        </a>
+        {", "}
+        <a href="mailto:jeff@reiner.design">Email</a>
+        {", "}
+        <a
+          href="https://twitter.com/mirshko"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Twitter
+        </a>
+        {", "}
+        <a
+          href="https://github.com/mirshko"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          GitHub
+        </a>
+        {", "}
+        <a
+          href="https://www.instagram.com/mirshko"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Instagram
         </a>
       </p>
     </main>
