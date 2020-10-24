@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }) {
         <Nav />
       </header>
 
-      <div className="flex-1 bg-white cutout-top px-5 pt-5 pb-12">
+      <div className="flex-1 bg-white rounded-xl cutout-top px-5 pt-5 pb-12">
         <Component {...pageProps} />
       </div>
 
