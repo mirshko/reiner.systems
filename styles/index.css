@@ -16,6 +16,10 @@
   a {
     @apply text-primary font-semibold;
   }
+
+  nav {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
 }
 
 @tailwind components;
