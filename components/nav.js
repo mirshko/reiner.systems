@@ -19,22 +19,24 @@ const NavLink = ({ href, children }) => {
 
 const Nav = () => {
   return (
-    <nav className="cutout-bottom bg-black px-5 py-3 flex justify-between fixed inset-x-0 bottom-0 z-50">
-      <NavLink href="/">
-        <Home />
-      </NavLink>
+    <nav className="cutout-bottom bg-black px-5 py-3  fixed inset-x-0 bottom-0 z-50">
+      <div className="max-w-2xl mx-auto flex justify-between">
+        <NavLink href="/">
+          <Home />
+        </NavLink>
 
-      <NavLink href="/portfolio">
-        <Folder />
-      </NavLink>
+        <NavLink href="/portfolio">
+          <Folder />
+        </NavLink>
 
-      <NavLink href="/experiments">
-        <Triangle />
-      </NavLink>
+        <NavLink href="/experiments">
+          <Triangle />
+        </NavLink>
 
-      <NavLink href="/vinyl">
-        <Disc />
-      </NavLink>
+        <NavLink href="/vinyl">
+          <Disc />
+        </NavLink>
+      </div>
     </nav>
   );
 };

@@ -4,7 +4,7 @@ import { getRecordsInFauna } from "../lib/fauna";
 
 export default function Vinyl({ records }) {
   return (
-    <main>
+    <main className="max-w-2xl mx-auto">
       <SEO title="Vinyl" path="/vinyl" />
 
       <h1>Vinyl</h1>

@@ -4,7 +4,7 @@ import { experiments, projects } from "../data";
 
 export default function Page() {
   return (
-    <main>
+    <main className="max-w-2xl mx-auto">
       <SEO title="Experiments" path="/experiments" />
 
       <h1>Experiments</h1>

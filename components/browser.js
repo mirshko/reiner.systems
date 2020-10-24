@@ -1,9 +1,6 @@
 const Browser = ({ ratio = 16 / 10, ...rest }) => (
-  <div className="max-w-2xl">
-    <div className="screenshot">
-      <img className="rounded-md" {...rest} />
-    </div>
-
+  <div className="screenshot">
+    <img className="rounded-md" {...rest} />
     <style jsx>{`
       .screenshot > :first-child {
         width: 100%;
