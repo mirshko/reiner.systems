@@ -18,7 +18,7 @@ export default class Doc extends Document {
           <link rel="icon" href="/icon.png" />
           <link rel="apple-touch-icon" href="/icon-apple.png" />
         </Head>
-        <body className="antialiased font-medium bg-black">
+        <body className="antialiased text-lg font-medium bg-black">
           <Main />
           <NextScript />
         </body>
