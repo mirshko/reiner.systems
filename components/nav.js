@@ -20,7 +20,7 @@ const NavLink = ({ href, children }) => {
 const Nav = () => {
   return (
     <nav className="cutout-bottom bg-black px-5 py-3  fixed inset-x-0 bottom-0 z-50">
-      <div className="max-w-2xl mx-auto flex justify-between">
+      <div className="max-w-xl mx-auto flex justify-between">
         <NavLink href="/">
           <Home />
         </NavLink>

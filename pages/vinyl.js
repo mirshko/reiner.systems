@@ -4,7 +4,7 @@ import { getRecordsInFauna } from "../lib/fauna";
 
 export default function Vinyl({ records }) {
   return (
-    <main className="max-w-2xl mx-auto">
+    <main>
       <SEO title="Vinyl" path="/vinyl" />
 
       <h1>Vinyl</h1>
@@ -25,7 +25,7 @@ export default function Vinyl({ records }) {
 
       <div className="h-5" />
 
-      <section className="grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+      <section className="grid gap-5 grid-cols-1 sm:grid-cols-2">
         {records.map((release, i) => (
           <Record key={i} {...release} />
         ))}

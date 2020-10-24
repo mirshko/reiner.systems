@@ -4,7 +4,7 @@ import FATHOM from "../lib/fathom";
 
 export default function Page() {
   return (
-    <main className="max-w-2xl mx-auto">
+    <main>
       <SEO />
 
       <h1>Jeff Reiner</h1>

@@ -5,6 +5,10 @@
     -webkit-tap-highlight-color: transparent;
   }
 
+  main {
+    @apply max-w-xl mx-auto;
+  }
+
   h1 {
     @apply text-xl font-bold leading-none;
   }

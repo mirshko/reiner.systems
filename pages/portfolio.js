@@ -4,7 +4,7 @@ import { curated, clients } from "../data";
 
 export default function Page() {
   return (
-    <main className="max-w-2xl mx-auto">
+    <main>
       <SEO title="Portfolio" path="/portfolio" />
 
       <h1>Portfolio</h1>
