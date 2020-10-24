@@ -1,48 +1,40 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import classNames from "classnames";
+import { Home, Disc, Folder, Triangle } from "react-feather";
 
-const Nav = () => {
+const NavLink = ({ href, children }) => {
   const { pathname } = useRouter();
 
-  /**
-   * @name isActive
-   * @param {String} path The page to match the current pathname against
-   */
-  const isActive = (path) => (pathname === path ? "active" : undefined);
+  const isActive = pathname === href;
 
-  const isActiveIncluding = (path) =>
-    pathname.includes(path) ? "active" : undefined;
+  const cachedClassNames = classNames(isActive ? "text-primary" : "text-gray");
 
   return (
-    <nav className="p-4 m-4 bg-white bg-opacity-25">
-      <ul className="flex-1">
-        <li>
-          <Link href="/">
-            <a className="text-black">Jeff Reiner</a>
-          </Link>
-        </li>
-      </ul>
+    <Link href={href}>
+      <a className={cachedClassNames}>{children}</a>
+    </Link>
+  );
+};
 
-      {/* Spacer */}
-      <div className="h-4" />
+const Nav = () => {
+  return (
+    <nav className="cutout-bottom bg-black px-5 py-3 flex justify-between fixed inset-x-0 bottom-0 z-50">
+      <NavLink href="/">
+        <Home />
+      </NavLink>
 
-      <div className="text-right">
-        <Link href="/portfolio">
-          <a className={isActive("/portfolio")}>Portfolio</a>
-        </Link>
-        {/* {", "}
-        <Link href="/entries">
-          <a className={isActiveIncluding("/entries")}>Writing</a>
-        </Link> */}
-        {", "}
-        <Link href="/experiments">
-          <a className={isActive("/experiments")}>Experiments</a>
-        </Link>
-        {", "}
-        <Link href="/vinyl">
-          <a className={isActive("/vinyl")}>Vinyl</a>
-        </Link>
-      </div>
+      <NavLink href="/portfolio">
+        <Folder />
+      </NavLink>
+
+      <NavLink href="/experiments">
+        <Triangle />
+      </NavLink>
+
+      <NavLink href="/vinyl">
+        <Disc />
+      </NavLink>
     </nav>
   );
 };

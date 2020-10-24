@@ -3,7 +3,7 @@ import SEO from "../../components/seo";
 
 export default function Page() {
   return (
-    <main className="p-4 space-y-4">
+    <main>
       <SEO title="Entries" path="/entries" />
 
       <h1>All Writing</h1>

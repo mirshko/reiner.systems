@@ -1,7 +1,7 @@
 const Browser = ({ ratio = 16 / 10, ...rest }) => (
-  <div className="p-4 bg-white bg-opacity-25 max-w-2xl">
+  <div className="max-w-2xl">
     <div className="screenshot">
-      <img {...rest} />
+      <img className="rounded-md" {...rest} />
     </div>
 
     <style jsx>{`

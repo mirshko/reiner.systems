@@ -4,17 +4,14 @@ import { curated, clients } from "../data";
 
 export default function Page() {
   return (
-    <main className="p-4">
+    <main>
       <SEO title="Portfolio" path="/portfolio" />
 
-      <div className="p-4 inline-block bg-white bg-opacity-25">
-        <h1>Portfolio</h1>
-      </div>
+      <h1>Portfolio</h1>
 
-      {/* Spacer */}
-      <div className="h-8" />
+      <div className="h-5" />
 
-      <section className="space-y-8">
+      <section className="space-y-10">
         {curated.map(
           ({ label, summary, roles, href, website, screenshot }, i) => (
             <article key={i}>
@@ -29,7 +26,9 @@ export default function Page() {
                 />
               )}
 
-              <header className="mt-4 mb-4">
+              <div className="h-5" />
+
+              <header className="">
                 <h2>
                   {label}{" "}
                   <a
@@ -43,9 +42,14 @@ export default function Page() {
                 </h2>
               </header>
 
+              <div className="h-5" />
+
               <section>
-                {roles && <p className="mb-4">{roles.join(", ")}</p>}
-                {summary && <p className="max-w-lg leading-tight">{summary}</p>}
+                {roles && <p className="leading-tight">{roles.join(", ")}</p>}
+
+                <div className="h-5" />
+
+                {summary && <p className="leading-tight">{summary}</p>}
               </section>
             </article>
           )
@@ -53,17 +57,18 @@ export default function Page() {
 
         <article>
           <header>
-            <h2 className="mb-4">Additional Clients</h2>
+            <h2>Additional Clients</h2>
           </header>
 
-          <p className="leading-normal">
-            {clients.map((client) => client.label).join(", ")}
-          </p>
+          <div className="h-5" />
+
+          <section>
+            <p className="leading-normal">
+              {clients.map((client) => client.label).join(", ")}
+            </p>
+          </section>
         </article>
       </section>
-
-      {/* Spacer */}
-      <div className="h-8" />
     </main>
   );
 }

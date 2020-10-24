@@ -2,7 +2,7 @@ import PostDetails from "./post-details";
 import SEO from "./seo";
 
 const PostWrapper = ({ children, frontmatter = {} }) => (
-  <main className="p-4">
+  <main>
     <SEO {...frontmatter} />
     <PostDetails {...frontmatter} />
     {children}

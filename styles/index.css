@@ -1,59 +1,79 @@
 @tailwind base;
 
-@font-face {
-  font-family: "Mint Grotesk";
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(/fonts/MintGroteskV0.8-Bold.woff2) format("woff2");
-}
-
-:root {
-  --primary: #5f05f0;
-  --secondary: #5f0;
-  --tertiary: #fe0000;
-}
-
-@supports (color: color(display-p3 1 1 1)) {
-  :root {
-    --primary: color(display-p3 0.3725 0.0196 0.9411);
-    --secondary: color(display-p3 0.3333 1 0);
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
   }
-}
 
-html {
-  -webkit-tap-highlight-color: transparent;
-}
+  h1 {
+    @apply text-xl font-bold leading-none;
+  }
 
-body {
-  @apply bg-gray;
-}
-
-a {
-  color: var(--primary);
-}
-
-button {
-  @apply font-semibold;
+  a {
+    @apply text-primary font-semibold;
+  }
 }
 
 @tailwind components;
 
+@layer components {
+  .cutout-bottom {
+    position: relative;
+  }
+
+  .cutout-bottom::before,
+  .cutout-bottom::after {
+    pointer-events: none;
+
+    position: absolute;
+    content: "";
+    height: 2rem;
+    width: 1rem;
+    top: -2rem;
+
+    background-color: transparent;
+
+    box-shadow: 0 1rem 0 0 #000;
+  }
+
+  .cutout-bottom::before {
+    left: 0;
+    border-bottom-left-radius: 1rem;
+  }
+
+  .cutout-bottom::after {
+    right: 0;
+    border-bottom-right-radius: 1rem;
+  }
+
+  .cutout-top {
+    position: relative;
+  }
+
+  .cutout-top::before,
+  .cutout-top::after {
+    pointer-events: none;
+
+    position: fixed;
+    content: "";
+    height: 2rem;
+    width: 1rem;
+    top: 0;
+
+    background-color: transparent;
+
+    box-shadow: 0 -1rem 0 0 #000;
+  }
+
+  .cutout-top::before {
+    left: 0;
+    border-top-left-radius: 1rem;
+  }
+
+  .cutout-top::after {
+    right: 0;
+    border-top-right-radius: 1rem;
+  }
+}
+
 @tailwind utilities;
-
-.active::after {
-  color: var(--primary);
-  font-size: inherit;
-  content: "*";
-}
-
-[data-reach-disclosure-button] {
-  text-align: right;
-  display: block;
-  margin-left: auto;
-  color: var(--primary);
-}
-
-[data-reach-disclosure-panel] {
-  outline: none;
-}

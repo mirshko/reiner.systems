@@ -68,10 +68,10 @@ export const clients = [
     href: "https://www.alicedapp.com",
     label: "Alice dApp",
   },
-  {
-    href: "https://www.instagram.com/sampepper/",
-    label: "Sam Pepper",
-  },
+  // {
+  //   href: "https://www.instagram.com/sampepper/",
+  //   label: "Sam Pepper",
+  // },
   // {
   //   href: "https://async.art",
   //   label: "Async Art",

@@ -3,12 +3,16 @@ import SEO from "../components/seo";
 
 export default function Page() {
   return (
-    <main className="p-4 space-y-4">
+    <main>
       <SEO title="404" path="/404" />
 
-      <h1 hidden>This page doesn't exist or was moved</h1>
+      <h1>404</h1>
+
+      <div className="h-5" />
 
       <img src="/404.gif" alt="Nothing here" />
+
+      <div className="h-5" />
 
       <p>
         <Link href="/">

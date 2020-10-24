@@ -4,15 +4,16 @@ import FATHOM from "../lib/fathom";
 
 export default function Page() {
   return (
-    <main className="p-4 ">
+    <main>
       <SEO />
 
-      <div className="p-4 inline-block bg-white bg-opacity-25">
-        <h1>Design Engineer, Freelance, Currently in Berlin.</h1>
-      </div>
+      <h1>Jeff Reiner</h1>
 
-      {/* Spacer */}
-      <div className="h-8" />
+      <div className="h-5" />
+
+      <h2>Design Engineer, Freelance, Currently in Berlin.</h2>
+
+      <div className="h-5" />
 
       <p>
         Team at{" "}
@@ -33,17 +34,15 @@ export default function Page() {
         </a>
       </p>
 
-      {/* Spacer */}
-      <div className="h-8" />
+      <div className="h-5" />
 
-      <p className="max-w-xl leading-tight">
+      <p>
         I focus on responsive, mobile-first websites and apps; highly-usable and
         efficient component libraries and design systems; and solving complex UX
         problems, in and around the Web 2.0 and Web3 space.
       </p>
 
-      {/* Spacer */}
-      <div className="h-8" />
+      <div className="h-5" />
 
       <p>
         <a

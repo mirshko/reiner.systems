@@ -6,7 +6,10 @@ const Record = ({ artist, title, cover_image, video_id }) => {
   const hasVideo = video_id && video_id !== "null";
 
   return (
-    <div className="relative select-none" title={label}>
+    <div
+      className="relative select-none rounded-md overflow-hidden"
+      title={label}
+    >
       <img
         className="block absolute left-0 top-0 h-full w-full object-cover"
         alt={label}

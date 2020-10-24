@@ -1,21 +1,17 @@
 module.exports = {
   purge: ["./components/**/*.js", "./pages/**/*.js"],
   theme: {
-    fontFamily: {
-      sans: ['"Mint Grotesk"', '"Helvetica Neue"', "Arial", "sans-serif"],
-    },
     colors: {
-      primary: "var(--primary)",
-      secondary: "var(--secondary)",
-      tertiary: "var(--tertiary)",
+      primary: "#E3AF09",
       black: "#000",
       white: "#fff",
       gray: "#cfd3dc",
     },
-    borderWidth: {
-      default: "0.2rem",
+    extend: {
+      borderRadius: {
+        xl: "1rem",
+      },
     },
-    extend: {},
   },
   variants: {},
   plugins: [],

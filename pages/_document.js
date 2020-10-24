@@ -13,7 +13,7 @@ export default class Doc extends Document {
           <meta property="twitter:site" content="@mirshko" />
           <meta property="twitter:creator" content="@mirshko" />
           <meta property="twitter:card" content="summary" />
-          <meta name="theme-color" content="#ffffff" />
+          <meta name="theme-color" content="#000000" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <link rel="icon" href="/icon.png" />
           <link rel="apple-touch-icon" href="/icon-apple.png" />
@@ -67,15 +67,8 @@ export default class Doc extends Document {
             media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"
             rel="apple-touch-startup-image"
           />
-          <link
-            rel="preload"
-            href="/font/MintGroteskV0.8-Bold.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          />
         </Head>
-        <body className="antialiased text-2xl font-semibold max-w-5xl mx-auto leading-none">
+        <body className="antialiased font-medium bg-black">
           <Main />
           <NextScript />
         </body>

@@ -1,13 +1,7 @@
 const Footer = () => (
-  <footer className="m-4 bg-opacity-25 bg-white p-4 leading-none">
-    <p>©2020</p>
-
-    {/* Spacer */}
-    <div className="h-4" />
-
-    <div className="text-right">
+  <footer className="">
+    <div>
       <a href="mailto:jeff@reiner.design">Email</a>
-      {", "}
       <a
         href="https://twitter.com/mirshko"
         rel="noopener noreferrer"
@@ -15,7 +9,6 @@ const Footer = () => (
       >
         Twitter
       </a>
-      {", "}
       <a
         href="https://github.com/mirshko"
         rel="noopener noreferrer"
@@ -23,7 +16,6 @@ const Footer = () => (
       >
         GitHub
       </a>
-      {", "}
       <a
         href="https://www.instagram.com/mirshko"
         rel="noopener noreferrer"

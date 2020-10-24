@@ -1,5 +1,3 @@
-import Footer from "../components/footer";
-import MDXWrapper from "../components/mdx-wrapper";
 import Nav from "../components/nav";
 import { useFathom } from "../hooks";
 import "../styles/index.css";
@@ -14,13 +12,11 @@ export default function App({ Component, pageProps }) {
         <Nav />
       </header>
 
-      <div className="flex-1">
-        <MDXWrapper>
-          <Component {...pageProps} />
-        </MDXWrapper>
+      <div className="flex-1 bg-white cutout-top px-5 pt-5 pb-12">
+        <Component {...pageProps} />
       </div>
 
-      <Footer />
+      <div className="h-5" />
     </div>
   );
 }
