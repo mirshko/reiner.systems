@@ -17,13 +17,12 @@ function Portfolio() {
             <article key={i}>
               {screenshot && (
                 <Image
-                  width={576}
-                  height={360}
                   alt={label}
-                  loading="lazy"
+                  className="object-cover object-top"
+                  height={360}
                   src={`/portfolio/${screenshot}`}
                   title={label}
-                  className="object-cover object-top"
+                  width={576}
                 />
               )}
 
