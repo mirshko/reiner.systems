@@ -7,7 +7,10 @@ const List = ({ data }) => (
 
       return (
         <li key={i} className="flex sm:inline-flex sm:mr-4">
-          <a className="flex items-center space-x-3" href={href}>
+          <a
+            className="flex items-center space-x-3 text-pink-light"
+            href={href}
+          >
             <Image
               className="object-contain align-middle"
               alt={label}

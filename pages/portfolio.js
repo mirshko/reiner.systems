@@ -18,7 +18,7 @@ function Portfolio() {
               {screenshot && (
                 <Image
                   alt={label}
-                  className="object-cover object-top"
+                  className="object-cover object-top rounded-md"
                   height={360}
                   src={`/portfolio/${screenshot}`}
                   title={label}
@@ -32,6 +32,7 @@ function Portfolio() {
                 <h2>
                   {label}{" "}
                   <a
+                    className="text-green-light"
                     href={href}
                     aria-label={`${label} Project Website`}
                     target="_blank"

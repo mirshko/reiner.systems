@@ -14,6 +14,7 @@ function Vinyl({ records }) {
       <p>
         My personal record collection on{" "}
         <a
+          className="text-indigo-light"
           href="https://www.discogs.com/seller/mirshko/profile"
           rel="noreferrer noopener"
           target="_blank"
