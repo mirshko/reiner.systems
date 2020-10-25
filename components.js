@@ -1,10 +1,10 @@
 import Link from "next/link";
-import Page from "./page";
+import Page from "./components/page";
 
 /**
  * @type {import("@mdx-js/react").MDXProviderComponentsProp}
  */
-const components = {
+export default {
   wrapper: (props) => <Page {...props} />,
   a: (props) => {
     const isExternal = props?.href && props?.href.startsWith("http");
@@ -19,5 +19,3 @@ const components = {
     );
   },
 };
-
-export default components;

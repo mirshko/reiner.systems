@@ -1,5 +1,5 @@
 import { MDXProvider } from "@mdx-js/react";
-import components from "../components/components";
+import components from "../components";
 import Nav from "../components/nav";
 import { useFathom } from "../hooks";
 import "../styles/index.css";
