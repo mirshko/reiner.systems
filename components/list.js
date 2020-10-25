@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const List = ({ data }) => (
   <ul>
     {data.map((datum, i) => {
@@ -5,12 +7,12 @@ const List = ({ data }) => (
 
       return (
         <li key={i} className="flex sm:inline-flex sm:mr-4">
-          <a className="flex items-center" href={href}>
-            <img
-              className="h-10 w-10 mr-3 object-contain align-middle"
+          <a className="flex items-center space-x-3" href={href}>
+            <Image
+              className="object-contain align-middle"
               alt={label}
-              async
-              decoding="async"
+              height={40}
+              width={40}
               loading="lazy"
               src={`/experiments/${screenshot}`}
             />
