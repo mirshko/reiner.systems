@@ -1,6 +1,6 @@
-import Browser from "../components/browser";
+import Image from "next/image";
 import SEO from "../components/seo";
-import { curated, clients } from "../data";
+import { clients, curated } from "../data";
 
 export default function Page() {
   return (
@@ -16,13 +16,14 @@ export default function Page() {
           ({ label, summary, roles, href, website, screenshot }, i) => (
             <article key={i}>
               {screenshot && (
-                <Browser
+                <Image
+                width={576}
+                height={360}
                   alt={label}
-                  async
-                  decoding="async"
-                  loading="lazy"
+                 loading="lazy"
                   src={`/portfolio/${screenshot}`}
                   title={label}
+                  className="object-cover object-top"
                 />
               )}
 
