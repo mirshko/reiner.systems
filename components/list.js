@@ -1,6 +1,8 @@
 const List = ({ data }) => (
   <ul>
-    {data.map(({ href, label, screenshot }, i) => {
+    {data.map((datum, i) => {
+      const { href, label, screenshot } = datum;
+
       return (
         <li key={i} className="flex sm:inline-flex sm:mr-4">
           <a className="flex items-center" href={href}>
