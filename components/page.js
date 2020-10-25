@@ -3,7 +3,7 @@ import SEO from "./seo";
 
 const Page = ({ children, frontmatter = {} }) => {
   return (
-  <main>
+  <main className="space-y-5">
     <SEO {...frontmatter} />
     
     {frontmatter?.type === "article" && <PostDetails {...frontmatter} />}
