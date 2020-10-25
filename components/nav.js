@@ -1,16 +1,16 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import classNames from "classnames";
-import { Home, Disc, Folder, Triangle } from "react-feather";
+import { Home, Disc, Briefcase, Tool } from "react-feather";
 
-const NavLink = ({ href, children }) => {
+const NavLink = ({ href, children, activeClassName = "text-primary" }) => {
   const { pathname } = useRouter();
 
   const isActive = pathname === href;
 
   const cachedClassNames = classNames(
     "p-2",
-    isActive ? "text-primary" : "text-gray"
+    isActive ? activeClassName : "text-gray"
   );
 
   return (
@@ -28,15 +28,15 @@ const Nav = () => {
           <Home />
         </NavLink>
 
-        <NavLink href="/portfolio">
-          <Folder />
+        <NavLink href="/portfolio" activeClassName="text-green-dark">
+          <Briefcase />
         </NavLink>
 
-        <NavLink href="/experiments">
-          <Triangle />
+        <NavLink href="/experiments" activeClassName="text-pink-dark">
+          <Tool />
         </NavLink>
 
-        <NavLink href="/vinyl">
+        <NavLink href="/vinyl" activeClassName="text-indigo-dark">
           <Disc />
         </NavLink>
       </div>
