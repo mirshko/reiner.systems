@@ -1,6 +1,4 @@
-import { trackGoal } from "fathom-client";
 import SEO from "../components/seo";
-import FATHOM from "../lib/fathom";
 
 export default function Page() {
   return (
@@ -76,7 +74,7 @@ export default function Page() {
         If you need one of those fancy things,{" "}
         <a
           href="/jeff-reiner.pdf"
-          onClick={() => trackGoal(FATHOM.GOALS.DOWNLOAD_RESUME)}
+          rel="noopener noreferrer"
           target="_blank"
         >
           here's my résumé

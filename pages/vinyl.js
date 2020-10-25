@@ -3,6 +3,7 @@ import SEO from "../components/seo";
 import { getRecordsInFauna } from "../lib/fauna";
 
 export default function Vinyl({ records }) {
+
   return (
     <main>
       <SEO title="Vinyl" path="/vinyl" />
@@ -26,7 +27,7 @@ export default function Vinyl({ records }) {
       <div className="h-5" />
 
       <section className="grid gap-5 grid-cols-1 sm:grid-cols-2">
-        {records.map((release, i) => (
+        {records?.map((release, i) => (
           <Record key={i} {...release} />
         ))}
       </section>
