@@ -1,6 +1,9 @@
+import dayjs from "dayjs";
 import Record from "../components/record";
 import SEO from "../components/seo";
 import { getRecordsInFauna } from "../lib/fauna";
+
+const sortByDateAdded = (a, b) => dayjs(b.date_added) - dayjs(a.date_added);
 
 function Vinyl({ records }) {
   return (
@@ -27,7 +30,7 @@ function Vinyl({ records }) {
       <div className="h-5" />
 
       <section className="grid gap-5 grid-cols-1 sm:grid-cols-2">
-        {records?.map((release, i) => (
+        {records?.sort(sortByDateAdded)?.map((release, i) => (
           <Record key={i} {...release} />
         ))}
       </section>
