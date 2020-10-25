@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 const SEO = ({
-  description = "Freelance Design Engineer based in Berlin. Team @ Coal, and Union",
+  description = "Freelance design engineer based in Berlin.",
   path = "",
   title = "Jeff Reiner, Design Engineer",
   type = "website",
