@@ -1,4 +1,3 @@
-import { MDXProvider } from "@mdx-js/react";
 import Link from "next/link";
 import Page from "./page";
 
@@ -7,8 +6,6 @@ import Page from "./page";
  */
 const components = {
   wrapper: (props) => <Page {...props} />,
-  h1: (props) => <h1 {...props} />,
-  p: (props) => <p {...props} />,
   a: (props) => {
     const isExternal = props?.href && props?.href.startsWith("http");
 
@@ -23,8 +20,4 @@ const components = {
   },
 };
 
-const MDXWrapper = ({ children }) => (
-  <MDXProvider components={components}>{children}</MDXProvider>
-);
-
-export default MDXWrapper;
+export default components
