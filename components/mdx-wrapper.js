@@ -12,13 +12,15 @@ const components = {
   a: (props) => {
     const isExternal = props?.href && props?.href.startsWith("http");
 
-    if (isExternal) return <a {...props} rel="noopener noreferrer"
-    target="_blank" />
+    if (isExternal)
+      return <a {...props} rel="noopener noreferrer" target="_blank" />;
 
-    return <Link href={props.href}>
-      <a>{props.children}</a>
-    </Link>
-  }
+    return (
+      <Link href={props.href}>
+        <a>{props.children}</a>
+      </Link>
+    );
+  },
 };
 
 const MDXWrapper = ({ children }) => (

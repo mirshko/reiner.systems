@@ -2,8 +2,7 @@ import Record from "../components/record";
 import SEO from "../components/seo";
 import { getRecordsInFauna } from "../lib/fauna";
 
-export default function Vinyl({ records }) {
-
+function Vinyl({ records }) {
   return (
     <main>
       <SEO title="Vinyl" path="/vinyl" />
@@ -42,3 +41,5 @@ export async function getStaticProps() {
     },
   };
 }
+
+export default Vinyl;

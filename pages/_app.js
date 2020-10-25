@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }) {
 
       <div className="flex-1 bg-white rounded-xl cutout-top px-5 pt-5 pb-12">
         <MDXWrapper>
-          <Component />
+          <Component {...pageProps} />
         </MDXWrapper>
       </div>
 

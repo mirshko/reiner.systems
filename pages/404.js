@@ -1,7 +1,7 @@
 import Link from "next/link";
 import SEO from "../components/seo";
 
-export default function Page() {
+function NotFound() {
   return (
     <main>
       <SEO title="404" path="/404" />
@@ -22,3 +22,5 @@ export default function Page() {
     </main>
   );
 }
+
+export default NotFound;

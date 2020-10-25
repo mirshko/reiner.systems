@@ -2,7 +2,7 @@ import Image from "next/image";
 import SEO from "../components/seo";
 import { clients, curated } from "../data";
 
-export default function Page() {
+function Portfolio() {
   return (
     <main>
       <SEO title="Portfolio" path="/portfolio" />
@@ -17,10 +17,10 @@ export default function Page() {
             <article key={i}>
               {screenshot && (
                 <Image
-                width={576}
-                height={360}
+                  width={576}
+                  height={360}
                   alt={label}
-                 loading="lazy"
+                  loading="lazy"
                   src={`/portfolio/${screenshot}`}
                   title={label}
                   className="object-cover object-top"
@@ -73,3 +73,5 @@ export default function Page() {
     </main>
   );
 }
+
+export default Portfolio;

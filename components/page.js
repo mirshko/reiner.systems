@@ -3,13 +3,14 @@ import SEO from "./seo";
 
 const Page = ({ children, frontmatter = {} }) => {
   return (
-  <main className="space-y-5">
-    <SEO {...frontmatter} />
-    
-    {frontmatter?.type === "article" && <PostDetails {...frontmatter} />}
+    <main className="space-y-5">
+      <SEO {...frontmatter} />
 
-    {children}
-  </main>
-)};
+      {frontmatter?.type === "article" && <PostDetails {...frontmatter} />}
+
+      {children}
+    </main>
+  );
+};
 
 export default Page;

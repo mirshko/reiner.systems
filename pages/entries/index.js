@@ -1,7 +1,7 @@
 // import List from "../../components/list";
 import SEO from "../../components/seo";
 
-export default function Page() {
+function Entries() {
   return (
     <main>
       <SEO title="Entries" path="/entries" />
@@ -20,3 +20,5 @@ export default function Page() {
     </main>
   );
 }
+
+export default Entries;
