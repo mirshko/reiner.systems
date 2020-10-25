@@ -10,7 +10,7 @@ const components = {
     const isExternal = props?.href && props?.href.startsWith("http");
 
     if (isExternal)
-      return <a {...props} rel="noopener noreferrer" target="_blank" />;
+      return <a {...props} rel="noreferrer noopener" target="_blank" />;
 
     return (
       <Link href={props.href}>

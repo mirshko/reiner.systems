@@ -35,7 +35,7 @@ function Portfolio() {
                     href={href}
                     aria-label={`${label} Project Website`}
                     target="_blank"
-                    rel="noopener"
+                    rel="noreferrer noopener"
                   >
                     {website}
                   </a>

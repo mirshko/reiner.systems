@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 import { createRecordsInFauna, getRecordsInFauna } from "../../../lib/fauna";
 import { getRecordsInDiscogs } from "../../../lib/discogs";
 import { getYouTubeVideoId } from "../../../lib/youtube";
