@@ -1,7 +1,3 @@
-/*
- * @name curated
- * Curated works for the Portfolio page
- */
 export const curated = [
   {
     href: "https://union.finance",
@@ -49,49 +45,13 @@ export const curated = [
     roles: ["Frontend Development", "Design"],
     screenshot: "hummingbot.io.png",
   },
-  // {
-  //   href: "https://dydx.exchange",
-  //   website: "dydx.exchange",
-  //   label: "dYdX",
-  //   summary: "An open trading platform for crypto assets",
-  //   roles: ["Frontend Development"],
-  //   screenshot: "dydx.exchange.png",
-  // },
 ];
 
-/*
- * @name clients
- * All clients
- */
 export const clients = [
-  {
-    href: "https://www.alicedapp.com",
-    label: "Alice dApp",
-  },
-  // {
-  //   href: "https://www.instagram.com/sampepper/",
-  //   label: "Sam Pepper",
-  // },
-  // {
-  //   href: "https://async.art",
-  //   label: "Async Art",
-  // },
-  // {
-  //   href: "https://union.finance",
-  //   label: "Union",
-  // },
   {
     href: "https://metamoneymarket.com",
     label: "MetaMoneyMarket",
   },
-  {
-    href: "https://pillarproject.io",
-    label: "Pillar",
-  },
-  // {
-  //   href: "https://hummingbot.io/",
-  //   label: "Hummingbot",
-  // },
   {
     href: "https://dydx.exchange/",
     label: "dYdX Exchange",
@@ -114,10 +74,6 @@ export const clients = [
   },
 ];
 
-/*
- * @name projects
- * Projects I've worked on
- */
 export const projects = [
   {
     href: "https://matte.pics",
@@ -139,10 +95,6 @@ export const projects = [
   // },
 ];
 
-/*
- * @name experiments
- * Random experimental projects or the like
- */
 export const experiments = [
   {
     href: "https://ens-autocomplete.now.sh",
@@ -182,10 +134,6 @@ export const experiments = [
   // },
 ];
 
-/*
- * @name contributions
- * Open-source projects I've contributed to
- */
 export const contributions = [
   {
     href: "https://uniswap.info",
