@@ -89,10 +89,11 @@ export const projects = [
     label: "Unleaded",
     screenshot: "unleaded.reiner.design.png",
   },
-  // {
-  //   href: "https://responsivectabuilder.com/",
-  //   label: "Responsive CTA Builder",
-  // },
+  {
+    href: "https://responsivectabuilder.com/",
+    label: "Responsive CTA Builder",
+    screenshot: "responsivectabuilder.com.png",
+  },
 ];
 
 export const experiments = [
@@ -100,6 +101,11 @@ export const experiments = [
     href: "https://ens-autocomplete.now.sh",
     label: "ENS Autocomplete",
     screenshot: "ens-autocomplete.now.sh.png",
+  },
+  {
+    href: "https://desktop.photography",
+    label: "Desktop Photography",
+    screenshot: "desktop.photography.png",
   },
   {
     href:
