@@ -14,10 +14,7 @@ const Record = ({ artist, title, cover_image, video_id }) => {
         className="block absolute left-0 top-0 h-full w-full object-cover"
         alt={label}
         height={330.66}
-        importance="low"
         loading="lazy"
-        async
-        decoding="async"
         src={cover_image}
         title={label}
         width={330.66}
