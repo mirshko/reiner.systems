@@ -1,13 +1,12 @@
 import * as Fathom from "fathom-client";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import FATHOM from "./lib/fathom";
 
 export function useFathom() {
   const router = useRouter();
 
   useEffect(() => {
-    Fathom.load(FATHOM.SITE_ID, {
+    Fathom.load("REDRNHLE", {
       includedDomains: ["reiner.design"],
     });
 
