@@ -1,4 +1,5 @@
 import LiteYouTubeEmbed from "./lite-youtube-embed";
+import Image from "next/image";
 
 const Record = ({ artist, title, cover_image, video_id }) => {
   const label = title + ", " + artist;
@@ -10,16 +11,17 @@ const Record = ({ artist, title, cover_image, video_id }) => {
       className="relative select-none rounded-md overflow-hidden"
       title={label}
     >
-      <img
-        className="block absolute left-0 top-0 h-full w-full object-cover"
-        alt={label}
-        height={330.66}
-        loading="lazy"
-        src={cover_image}
-        title={label}
-        width={330.66}
-      />
-
+      <div className="block absolute left-0 top-0">
+        <Image
+          className="h-full w-full object-cover"
+          alt={label}
+          height={278}
+          loading="lazy"
+          src={cover_image}
+          title={label}
+          width={278}
+        />
+      </div>
       {hasVideo && <LiteYouTubeEmbed id={video_id} title={label} />}
     </div>
   );

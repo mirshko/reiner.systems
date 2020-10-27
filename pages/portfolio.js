@@ -20,6 +20,7 @@ function Portfolio() {
                   alt={label}
                   className="object-cover object-top rounded-md"
                   height={360}
+                  loading="eager"
                   src={`/portfolio/${screenshot}`}
                   title={label}
                   width={576}
