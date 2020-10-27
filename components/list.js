@@ -16,7 +16,7 @@ const List = ({ data }) => (
               alt={label}
               height={40}
               width={40}
-              loading="lazy"
+              loading="eager"
               src={`/experiments/${screenshot}`}
             />
             <span className="flex-1 leading-none">{label}</span>
