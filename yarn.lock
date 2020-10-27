@@ -1445,25 +1445,25 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-1.6.19.tgz#5d4d8f66536d6653963ab2600490b52c3df546be"
   integrity sha512-bkkQNSHz3xSr3KRHUQ2Qk2XhewvvXAOUqjIUKwcQuL4ijOA4tUHZfUgXExi5CpMysrX7izcsyICtXjZHlfJUjg==
 
-"@next/env@9.5.6-canary.14":
-  version "9.5.6-canary.14"
-  resolved "https://registry.yarnpkg.com/@next/env/-/env-9.5.6-canary.14.tgz#6dd9ae250531b9649e6f55d340277f7f429b05bd"
-  integrity sha512-evDDFWN93/vTNlxJhFHvc5Nwp7uf3UtQZGa+D+31LFlGIVZtTP8G6l5U8HDUVkFeL/CD5cDefm6OotQp1W1PvA==
+"@next/env@10.0.0":
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/@next/env/-/env-10.0.0.tgz#eb0239062226a9c8b604d58d4a4204e26c22eb16"
+  integrity sha512-59+6BnOxPoMY64Qy2crDGHtvQgHwIL1SIkWeNiEud1V6ASs59SM9oDGN+Bo/EswII1nn+wQRpMvax0IIN2j+VQ==
 
-"@next/mdx@^9.5.5":
-  version "9.5.5"
-  resolved "https://registry.yarnpkg.com/@next/mdx/-/mdx-9.5.5.tgz#c5742c7db722905c4c7456098c1f2ba1cae3994d"
-  integrity sha512-IdwwXrxqNhZuEeyVdCKtv1R2CqIsAZm/rtCUbE5WImFW3VK8nrSFDFi+JkoWoDcHgGgaJYgfoYAoieHV5POGJg==
+"@next/mdx@^10.0.0":
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/@next/mdx/-/mdx-10.0.0.tgz#985ecd32d13e3595d2b9c423cae8c673b2cae5db"
+  integrity sha512-QSXaLs1HZhqaREhgdTlTmW4KQNS9uvbu0OUTLzk3KGfDPlRocdgChA32BOuy2m1rp60uLibYxQIZ7JjI6vqH/w==
 
-"@next/polyfill-module@9.5.6-canary.14":
-  version "9.5.6-canary.14"
-  resolved "https://registry.yarnpkg.com/@next/polyfill-module/-/polyfill-module-9.5.6-canary.14.tgz#de851cd2780095156309db45d9e27a85db377621"
-  integrity sha512-OVOPKfxsi56RPHyXKv/Wrqq2uYbYbwh9kMBskqfNCI05lAoiBaXetABa8JcO2xUO+WM6MPUSmxlyWuN5LLJqXA==
+"@next/polyfill-module@10.0.0":
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/@next/polyfill-module/-/polyfill-module-10.0.0.tgz#17f59cb7325a03f23b66b979fccc56d133411b0a"
+  integrity sha512-FLSwwWQaP/sXjlS7w4YFu+oottbo/bjoh+L+YED7dblsaRJT89ifV+h8zvLvh1hCL7FJUYVar4rehvj/VO5T9w==
 
-"@next/react-dev-overlay@9.5.6-canary.14":
-  version "9.5.6-canary.14"
-  resolved "https://registry.yarnpkg.com/@next/react-dev-overlay/-/react-dev-overlay-9.5.6-canary.14.tgz#993fb9ad23b186aa098348a8c156b4f7ba1dda24"
-  integrity sha512-hPpNDFWBTDQwa1nRMltxpSD0uewkP0jP6CCfGqyVSZugl7N+6VYgdTvM4s/ZZTaL+OKbd2rUdI/U6V7IQVn+4Q==
+"@next/react-dev-overlay@10.0.0":
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/@next/react-dev-overlay/-/react-dev-overlay-10.0.0.tgz#ba1acc79bc9d874f1801a0b312e6a45de74bf425"
+  integrity sha512-HJ44TJXtaGfGxVtljPECZvqw+GctVvBr60Rsedo5A+wU2GIiycJ8n5yUSdc9UiYTnPuxfJFicJec6kgR6GSWKA==
   dependencies:
     "@babel/code-frame" "7.10.4"
     ally.js "1.4.1"
@@ -1476,10 +1476,10 @@
     stacktrace-parser "0.1.10"
     strip-ansi "6.0.0"
 
-"@next/react-refresh-utils@9.5.6-canary.14":
-  version "9.5.6-canary.14"
-  resolved "https://registry.yarnpkg.com/@next/react-refresh-utils/-/react-refresh-utils-9.5.6-canary.14.tgz#738a20723b6895299132694cfa7bf629fdaeb1fe"
-  integrity sha512-uZawKMFl0hxzFF2lPGqo80zVj2XQRrlGN+o37XFQt+W0pR8GgLHNk8xikrPNz7dOwW1s7DNSAwujKmDiutc0og==
+"@next/react-refresh-utils@10.0.0":
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/@next/react-refresh-utils/-/react-refresh-utils-10.0.0.tgz#45cdd1ad3b55ac442f8431cdc43ff53c3dc44d16"
+  integrity sha512-V1/oiDWb2C1Do0eZONsKX1aqGNkqCUqxUahIiCjwKFu9c3bps+Ygg4JjtaCd9oycv0KzYImUZnU+nqveFUjxUw==
 
 "@npmcli/move-file@^1.0.1":
   version "1.0.1"
@@ -5267,10 +5267,10 @@ next-tick@~1.0.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
-next@^9.5.6-canary.14:
-  version "9.5.6-canary.14"
-  resolved "https://registry.yarnpkg.com/next/-/next-9.5.6-canary.14.tgz#13f0496199589ed40880f6c4ef97f14bfdbd8996"
-  integrity sha512-uUcWxznWWMjNBA9fqJ82avTuVe7Rud0/129oRZRsQX+VH5qqhxeBbupEfzP65AihyLD+X5olGZQ2SsmqWqubJQ==
+next@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/next/-/next-10.0.0.tgz#fbc82fa69f05bf82fb5c4e160151f38fb9615e99"
+  integrity sha512-hpJkikt6tqwj7DfD5Mizwc1kDsaaS73TQK6lJL+++Ht8QXIEs+KUqTZULgdMk80mDV2Zhzo9/JYMEranWwAFLA==
   dependencies:
     "@ampproject/toolbox-optimizer" "2.7.0-alpha.1"
     "@babel/code-frame" "7.10.4"
@@ -5291,10 +5291,10 @@ next@^9.5.6-canary.14:
     "@babel/runtime" "7.11.2"
     "@babel/types" "7.11.5"
     "@hapi/accept" "5.0.1"
-    "@next/env" "9.5.6-canary.14"
-    "@next/polyfill-module" "9.5.6-canary.14"
-    "@next/react-dev-overlay" "9.5.6-canary.14"
-    "@next/react-refresh-utils" "9.5.6-canary.14"
+    "@next/env" "10.0.0"
+    "@next/polyfill-module" "10.0.0"
+    "@next/react-dev-overlay" "10.0.0"
+    "@next/react-refresh-utils" "10.0.0"
     ast-types "0.13.2"
     babel-plugin-transform-define "2.0.0"
     babel-plugin-transform-react-remove-prop-types "0.4.24"
