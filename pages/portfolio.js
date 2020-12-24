@@ -1,6 +1,7 @@
 import { getBlurhash } from "@plaiceholder/blurhash";
 import { getImage } from "@plaiceholder/next";
 import Image from "next/image";
+import { Fragment } from "react";
 import { BlurhashCanvas } from "react-blurhash";
 import SEO from "../components/seo";
 import { clients, curated } from "../data";
@@ -15,36 +16,45 @@ function Portfolio({ works }) {
       <div className="h-5" />
 
       <section className="space-y-10">
-        {works.map(
-          (
-            { label, summary, roles, href, website, screenshot, blurhash },
-            i
-          ) => (
+        {works.map((work, i) => {
+          const {
+            label,
+            summary,
+            roles,
+            href,
+            website,
+            screenshot,
+            blurhash,
+          } = work;
+
+          return (
             <article key={i}>
               {screenshot && (
-                <div className="relative flex rounded-md overflow-hidden">
-                  <BlurhashCanvas
-                    hash={blurhash.hash}
-                    width={blurhash.height}
-                    height={blurhash.width}
-                    punch={1}
-                    className="absolute inset-0 w-full h-full rounded-md"
-                  />
-                  <Image
-                    alt={label}
-                    className="object-cover object-top rounded-md"
-                    height={360}
-                    loading="lazy"
-                    src={`/portfolio/${screenshot}`}
-                    title={label}
-                    width={576}
-                  />
-                </div>
+                <Fragment>
+                  <div className="relative flex rounded-md overflow-hidden">
+                    <BlurhashCanvas
+                      hash={blurhash.hash}
+                      width={blurhash.height}
+                      height={blurhash.width}
+                      punch={1}
+                      className="absolute inset-0 w-full h-full rounded-md"
+                    />
+                    <Image
+                      alt={label}
+                      className="object-cover object-top rounded-md"
+                      height={360}
+                      loading="lazy"
+                      src={`/portfolio/${screenshot}`}
+                      title={label}
+                      width={576}
+                    />
+                  </div>
+
+                  <div className="h-5" />
+                </Fragment>
               )}
 
-              <div className="h-5" />
-
-              <header className="">
+              <header>
                 <h2>
                   {label}{" "}
                   <a
@@ -59,18 +69,26 @@ function Portfolio({ works }) {
                 </h2>
               </header>
 
-              <div className="h-5" />
+              {(roles || summary) && (
+                <Fragment>
+                  <div className="h-5" />
 
-              <section>
-                {roles && <p className="leading-tight">{roles.join(", ")}</p>}
+                  <section>
+                    {roles && (
+                      <Fragment>
+                        <p className="leading-tight">{roles.join(", ")}</p>
 
-                <div className="h-5" />
+                        <div className="h-5" />
+                      </Fragment>
+                    )}
 
-                {summary && <p className="leading-tight">{summary}</p>}
-              </section>
+                    {summary && <p className="leading-tight">{summary}</p>}
+                  </section>
+                </Fragment>
+              )}
             </article>
-          )
-        )}
+          );
+        })}
 
         <article>
           <header>
