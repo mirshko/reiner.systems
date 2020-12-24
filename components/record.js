@@ -1,5 +1,4 @@
 import LiteYouTubeEmbed from "./lite-youtube-embed";
-import Image from "next/image";
 
 const Record = ({ artist, title, cover_image, video_id }) => {
   const label = title + ", " + artist;
@@ -12,10 +11,12 @@ const Record = ({ artist, title, cover_image, video_id }) => {
       title={label}
     >
       <div className="block absolute left-0 top-0">
-        <Image
+        <img
           className="h-full w-full object-cover"
           alt={label}
           height={278}
+          async
+          decoding="async"
           loading="lazy"
           src={cover_image}
           title={label}

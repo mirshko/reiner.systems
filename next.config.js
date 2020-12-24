@@ -9,9 +9,6 @@ const withMDX = require("@next/mdx")({
 module.exports = withMDX({
   pageExtensions: ["js", "jsx", "mdx"],
   trailingSlash: false,
-  images: {
-    domains: ["img.discogs.com"],
-  },
   async redirects() {
     return [
       {

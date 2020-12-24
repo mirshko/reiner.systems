@@ -539,6 +539,13 @@
   resolved "https://registry.yarnpkg.com/@plaiceholder/core/-/core-1.0.0.tgz#8ce30534a4b7f7ef467439139a116213a3814448"
   integrity sha512-rlVzjBxtzbMIyfKRAElC3h+jcPpRviVSzd4faMG0sHdPErBR+Jc2vb3eWIZskNPly4BJn4KMoMr2kt/bEqLxaA==
 
+"@plaiceholder/next@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@plaiceholder/next/-/next-1.0.0.tgz#b288d05a37245cfaa734e5bdcad401ed75d810fe"
+  integrity sha512-hIbne8jSh7ipU8tAxqCQIbDCaslQbe9O5/LyeSaaqM4/N4D6acJlTuhjYD5LslNADPMQtlil1QIVhAJoQWHd3Q==
+  dependencies:
+    "@plaiceholder/core" "^1.0.0"
+
 "@types/color-name@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
