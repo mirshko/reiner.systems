@@ -34,7 +34,7 @@ function Portfolio({ works }) {
                     alt={label}
                     className="object-cover object-top rounded-md"
                     height={360}
-                    loading="eager"
+                    loading="lazy"
                     src={`/portfolio/${screenshot}`}
                     title={label}
                     width={576}
