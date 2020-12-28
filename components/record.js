@@ -10,17 +10,15 @@ const Record = ({ artist, title, cover_image, video_id }) => {
       className="relative select-none rounded-md overflow-hidden"
       title={label}
     >
-      <div className="block absolute left-0 top-0">
+      <div className="block absolute inset-0">
         <img
           className="h-full w-full object-cover"
           alt={label}
-          height={278}
           async
           decoding="async"
           loading="lazy"
           src={cover_image}
           title={label}
-          width={278}
         />
       </div>
       {hasVideo && <LiteYouTubeEmbed id={video_id} title={label} />}

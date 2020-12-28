@@ -80,10 +80,6 @@ export const projects = [
     label: "Matte.pics",
     screenshot: "matte.pics.png",
   },
-  // {
-  //   href: "https://49friends.party",
-  //   label: "49 Friends",
-  // },
   {
     href: "https://unleaded.reiner.design",
     label: "Unleaded",
@@ -123,21 +119,6 @@ export const experiments = [
     label: "CryptoKitty Gallery",
     screenshot: "componentboi.eth.reiner.design.png",
   },
-  // {
-  //   href: "https://stakinghood.netlify.app/",
-  //   label: "Stakinghood",
-  //   screenshot: "stakinghood.netlify.app.png",
-  // },
-  // {
-  //   href: "https://geoip.netlify.app/",
-  //   label: "Static GeoIP Endpoint",
-  //   screenshot: "geoip.netlify.app.png",
-  // },
-  // {
-  //   href: "https://thumbnailer.netlify.app/",
-  //   label: "Wistia Thumbnail Generator",
-  //   screenshot: "thumbnailer.netlify.app.png",
-  // },
 ];
 
 export const contributions = [
