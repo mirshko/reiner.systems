@@ -4,7 +4,7 @@ import List from "../components/list";
 import { getBlurhash } from "@plaiceholder/blurhash";
 import { getImage } from "@plaiceholder/next";
 
-function Experiments({ works }) {
+export default function Experiments({ works }) {
   return (
     <main>
       <SEO title="Experiments" path="/experiments" />
@@ -46,5 +46,3 @@ export async function getStaticProps() {
     },
   };
 }
-
-export default Experiments;

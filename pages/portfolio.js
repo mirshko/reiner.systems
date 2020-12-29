@@ -6,7 +6,7 @@ import { BlurhashCanvas } from "react-blurhash";
 import SEO from "../components/seo";
 import { clients, curated } from "../data";
 
-function Portfolio({ works }) {
+export default function Portfolio({ works }) {
   return (
     <main>
       <SEO title="Portfolio" path="/portfolio" />
@@ -129,5 +129,3 @@ export const getStaticProps = async () => {
     },
   };
 };
-
-export default Portfolio;

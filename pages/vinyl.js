@@ -5,7 +5,7 @@ import { getRecordsInFauna } from "../lib/fauna";
 
 const sortByDateAdded = (a, b) => dayjs(b.date_added) - dayjs(a.date_added);
 
-function Vinyl({ records }) {
+export default function Vinyl({ records }) {
   return (
     <main>
       <SEO title="Vinyl" path="/vinyl" />
@@ -45,5 +45,3 @@ export async function getStaticProps() {
     },
   };
 }
-
-export default Vinyl;
