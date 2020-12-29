@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import React, { Fragment, useEffect, useRef, useState } from "react";
+import styles from "../styles/yt-lite.module.css";
 
 const PlayButton = () => (
   <svg viewBox="0 0 68 48">
@@ -11,13 +12,7 @@ const PlayButton = () => (
   </svg>
 );
 
-const LiteYouTubeEmbed = ({
-  id,
-  title,
-  activatedClass = "lyt-activated",
-  playerClass = "lty-playbtn",
-  wrapperClass = "yt-lite",
-}) => {
+const LiteYouTubeEmbed = ({ id, title }) => {
   const [preconnected, setPreconnected] = useState(false);
 
   const [iframe, setIframe] = useState(false);
@@ -63,11 +58,11 @@ const LiteYouTubeEmbed = ({
       )}
 
       <div
-        className={`${wrapperClass} ${iframe && activatedClass}`}
+        className={`${styles.yt} ${iframe && styles.activated}`}
         data-title={videoTitle}
         ref={refVideo}
       >
-        <div className={playerClass}>
+        <div className={styles.playbtn}>
           <PlayButton />
         </div>
 
@@ -89,9 +84,6 @@ const LiteYouTubeEmbed = ({
 LiteYouTubeEmbed.propTypes = {
   id: PropTypes.string,
   title: PropTypes.string,
-  activatedClass: PropTypes.string,
-  playerClass: PropTypes.string,
-  wrapperClass: PropTypes.string,
 };
 
 export default LiteYouTubeEmbed;
