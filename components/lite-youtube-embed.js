@@ -1,7 +1,7 @@
+import Head from "next/head";
 import PropTypes from "prop-types";
 import React, { Fragment, useEffect, useRef, useState } from "react";
 import styles from "../styles/yt-lite.module.css";
-import Head from "next/head";
 
 const PlayButton = () => (
   <svg viewBox="0 0 68 48">

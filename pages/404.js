@@ -1,4 +1,3 @@
-import Link from "next/link";
 import SEO from "../components/seo";
 
 export default function Custom404() {
@@ -10,12 +9,7 @@ export default function Custom404() {
 
       <div className="h-5" />
 
-      <p>
-        There's nothing here{" "}
-        <Link href="/">
-          <a>go back home</a>
-        </Link>
-      </p>
+      <p>There's nothing here</p>
     </main>
   );
 }

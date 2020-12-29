@@ -1,26 +1,7 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
-import classNames from "classnames";
-import { Home, Disc, Briefcase, Tool } from "react-feather";
+import { Briefcase, Disc, Home, Tool } from "react-feather";
+import NavLink from "./nav-link";
 
-const NavLink = ({ href, children, activeClassName = "text-primary" }) => {
-  const { pathname } = useRouter();
-
-  const isActive = pathname === href;
-
-  const cachedClassNames = classNames(
-    "p-2",
-    isActive ? activeClassName : "text-gray"
-  );
-
-  return (
-    <Link href={href}>
-      <a className={cachedClassNames}>{children}</a>
-    </Link>
-  );
-};
-
-const Nav = () => {
+export default function Nav() {
   return (
     <nav className="cutout-bottom bg-black inset-x-0 bottom-0 z-50">
       <div className="px-3 py-1 max-w-xl mx-auto flex justify-between">
@@ -42,6 +23,4 @@ const Nav = () => {
       </div>
     </nav>
   );
-};
-
-export default Nav;
+}

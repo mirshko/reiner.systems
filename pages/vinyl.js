@@ -3,8 +3,6 @@ import Record from "../components/record";
 import SEO from "../components/seo";
 import { getRecordsInFauna } from "../lib/fauna";
 
-const sortByDateAdded = (a, b) => dayjs(b.date_added) - dayjs(a.date_added);
-
 export default function Vinyl({ records }) {
   return (
     <main>
@@ -30,7 +28,7 @@ export default function Vinyl({ records }) {
       <div className="h-5" />
 
       <section className="grid gap-5 grid-cols-1 sm:grid-cols-2">
-        {records?.sort(sortByDateAdded)?.map((release, i) => (
+        {records.map((release, i) => (
           <Record key={i} {...release} />
         ))}
       </section>
@@ -38,10 +36,16 @@ export default function Vinyl({ records }) {
   );
 }
 
+const sortByDateAdded = (a, b) => dayjs(b.date_added) - dayjs(a.date_added);
+
 export async function getStaticProps() {
+  const allRecords = await getRecordsInFauna();
+
+  const records = allRecords.sort(sortByDateAdded);
+
   return {
     props: {
-      records: await getRecordsInFauna(),
+      records,
     },
   };
 }

@@ -1,7 +1,7 @@
 {
   "name": "dotdesign",
   "description": "personal website",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "author": "@mirshko <jeff@reiner.design>",
   "private": false,
   "license": "UNLICENSED",
@@ -15,13 +15,11 @@
   "dependencies": {
     "@plaiceholder/blurhash": "^1.0.0",
     "@plaiceholder/next": "^1.0.0",
-    "autoprefixer": "^10.1.0",
     "classnames": "^2.2.6",
     "dayjs": "^1.9.8",
     "fathom-client": "^3.0.0",
     "faunadb": "^4.0.0",
     "next": "^10.0.4",
-    "postcss": "^8.2.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-blurhash": "^0.1.3",
@@ -31,11 +29,12 @@
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^10.0.4",
+    "autoprefixer": "^10.1.0",
     "eslint": "^7.16.0",
     "eslint-plugin-react": "^7.21.5",
     "husky": "^4.3.6",
     "lint-staged": "^10.5.3",
-    "postcss-preset-env": "^6.7.0",
+    "postcss": "^8.2.1",
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0"
   },
