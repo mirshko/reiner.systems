@@ -1,4 +1,6 @@
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   html {
@@ -21,8 +23,6 @@
     padding-bottom: env(safe-area-inset-bottom);
   }
 }
-
-@tailwind components;
 
 @layer components {
   .cutout-bottom {
@@ -83,5 +83,3 @@
     border-top-right-radius: 1rem;
   }
 }
-
-@tailwind utilities;

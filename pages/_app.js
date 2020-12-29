@@ -1,6 +1,6 @@
 import Nav from "../components/nav";
 import { useFathom } from "../hooks";
-import "../styles/index.css";
+import "../styles/global.css";
 import "../styles/yt-lite.css";
 
 export default function App({ Component, pageProps }) {
