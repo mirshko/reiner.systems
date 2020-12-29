@@ -25,7 +25,7 @@
 }
 
 .cutout-bottom {
-  position: relative;
+  position: fixed;
 }
 
 .cutout-bottom::before,

@@ -22,7 +22,7 @@ const NavLink = ({ href, children, activeClassName = "text-primary" }) => {
 
 const Nav = () => {
   return (
-    <nav className="cutout-bottom bg-black fixed inset-x-0 bottom-0 z-50">
+    <nav className="cutout-bottom bg-black inset-x-0 bottom-0 z-50">
       <div className="px-3 py-1 max-w-xl mx-auto flex justify-between">
         <NavLink href="/">
           <Home />
