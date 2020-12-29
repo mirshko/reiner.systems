@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import React, { Fragment, useEffect, useRef, useState } from "react";
 import styles from "../styles/yt-lite.module.css";
+import Head from "next/head";
 
 const PlayButton = () => (
   <svg viewBox="0 0 68 48">
@@ -51,10 +52,18 @@ const LiteYouTubeEmbed = ({ id, title }) => {
   return (
     <Fragment>
       {preconnected && (
-        <>
-          <link rel="preconnect" href="https://www.youtube-nocookie.com" />
-          <link rel="preconnect" href="https://www.google.com" />
-        </>
+        <Head>
+          <link
+            key="lyt-youtube-nocookie"
+            rel="preconnect"
+            href="https://www.youtube-nocookie.com"
+          />
+          <link
+            key="lyt-google"
+            rel="preconnect"
+            href="https://www.google.com"
+          />
+        </Head>
       )}
 
       <div

@@ -24,62 +24,60 @@
   }
 }
 
-@layer components {
-  .cutout-bottom {
-    position: relative;
-  }
+.cutout-bottom {
+  position: relative;
+}
 
-  .cutout-bottom::before,
-  .cutout-bottom::after {
-    pointer-events: none;
+.cutout-bottom::before,
+.cutout-bottom::after {
+  pointer-events: none;
 
-    position: absolute;
-    content: "";
-    height: 2rem;
-    width: 1rem;
-    top: -2rem;
+  position: absolute;
+  content: "";
+  height: 2rem;
+  width: 1rem;
+  top: -2rem;
 
-    background-color: transparent;
+  background-color: transparent;
 
-    box-shadow: 0 1rem 0 0 #000;
-  }
+  box-shadow: 0 1rem 0 0 #000;
+}
 
-  .cutout-bottom::before {
-    left: 0;
-    border-bottom-left-radius: 1rem;
-  }
+.cutout-bottom::before {
+  left: 0;
+  border-bottom-left-radius: 1rem;
+}
 
-  .cutout-bottom::after {
-    right: 0;
-    border-bottom-right-radius: 1rem;
-  }
+.cutout-bottom::after {
+  right: 0;
+  border-bottom-right-radius: 1rem;
+}
 
-  .cutout-top {
-    position: relative;
-  }
+.cutout-top {
+  position: relative;
+}
 
-  .cutout-top::before,
-  .cutout-top::after {
-    pointer-events: none;
+.cutout-top::before,
+.cutout-top::after {
+  pointer-events: none;
 
-    position: fixed;
-    content: "";
-    height: 2rem;
-    width: 1rem;
-    top: 0;
+  position: fixed;
+  content: "";
+  height: 2rem;
+  width: 1rem;
+  top: 0;
 
-    background-color: transparent;
+  background-color: transparent;
 
-    box-shadow: 0 -1rem 0 0 #000;
-  }
+  box-shadow: 0 -1rem 0 0 #000;
+}
 
-  .cutout-top::before {
-    left: 0;
-    border-top-left-radius: 1rem;
-  }
+.cutout-top::before {
+  left: 0;
+  border-top-left-radius: 1rem;
+}
 
-  .cutout-top::after {
-    right: 0;
-    border-top-right-radius: 1rem;
-  }
+.cutout-top::after {
+  right: 0;
+  border-top-right-radius: 1rem;
 }
