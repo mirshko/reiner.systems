@@ -9,8 +9,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "format": "prettier --write \"**/*.js\"",
-    "lint": "eslint . --ext js --cache"
+    "format": "prettier --write \"**/*.js\""
   },
   "dependencies": {
     "@plaiceholder/blurhash": "^1.0.0",
