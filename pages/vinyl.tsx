@@ -1,6 +1,7 @@
 import dayjs from "dayjs";
 import Record from "../components/record";
 import SEO from "../components/seo";
+import { RecordSchema } from "../lib/discogs";
 import { getRecordsInFauna } from "../lib/fauna";
 
 function VinylPage({ records }) {
@@ -41,7 +42,8 @@ function VinylPage({ records }) {
   );
 }
 
-const sortByDateAdded = (a, b) => dayjs(b.date_added) - dayjs(a.date_added);
+const sortByDateAdded = (a: RecordSchema, b: RecordSchema) =>
+  dayjs(b.date_added).unix() - dayjs(a.date_added).unix();
 
 export async function getStaticProps() {
   const allRecords = await getRecordsInFauna();
