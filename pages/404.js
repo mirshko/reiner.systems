@@ -1,6 +1,6 @@
 import SEO from "../components/seo";
 
-export default function Custom404() {
+function Custom404() {
   return (
     <main>
       <SEO title="404" path="/404" />
@@ -13,3 +13,5 @@ export default function Custom404() {
     </main>
   );
 }
+
+export default Custom404;

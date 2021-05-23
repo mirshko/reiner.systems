@@ -1,3 +1,5 @@
+require("sharp");
+
 module.exports = {
   trailingSlash: false,
   async redirects() {

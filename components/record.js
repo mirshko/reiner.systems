@@ -1,6 +1,6 @@
 import LiteYouTubeEmbed from "./lite-youtube-embed";
 
-export default function Record({ artist, title, cover_image, video_id }) {
+function Record({ artist, title, cover_image, video_id }) {
   const label = title + ", " + artist;
 
   const hasVideo = video_id && video_id !== "null";
@@ -21,7 +21,10 @@ export default function Record({ artist, title, cover_image, video_id }) {
           title={label}
         />
       </div>
+
       {hasVideo && <LiteYouTubeEmbed id={video_id} title={label} />}
     </div>
   );
 }
+
+export default Record;

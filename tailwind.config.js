@@ -1,4 +1,5 @@
 module.exports = {
+  mode: "jit",
   purge: ["./components/**/*.js", "./pages/**/*.js"],
   theme: {
     colors: {
@@ -11,6 +12,7 @@ module.exports = {
       white: "#fff",
 
       gray: "#cfd3dc",
+
       green: {
         light: "#34C759",
         dark: "#32D74B",

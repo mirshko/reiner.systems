@@ -1,12 +1,12 @@
 export const curated = [
   {
-    href: "https://union.finance",
-    website: "union.finance",
-    label: "Union",
+    href: "https://refugeworldwide.com",
+    website: "refugeworldwide.com",
+    label: "Refuge Worldwide",
     summary:
-      "Credit backed by trust, without the need for collateral, credit score, or revealing personal information.",
-    roles: ["Frontend Development", "Design & UX", "Wireframing & Prototyping"],
-    screenshot: "beta.union.finance.png",
+      "A community radio station and fundraising platform based in Berlin.",
+    roles: ["Frontend Development", "Technical Consulting"],
+    screenshot: "refugeworldwide.com.png",
   },
   {
     href: "https://async.art",
@@ -19,7 +19,16 @@ export const curated = [
       "Frontend Development",
       "Initial Design & UX",
     ],
-    screenshot: "async.art.png",
+    screenshot: "async.art-updated.png",
+  },
+  {
+    href: "https://union.finance",
+    website: "union.finance",
+    label: "Union",
+    summary:
+      "Credit backed by trust, without the need for collateral, credit score, or revealing personal information.",
+    roles: ["Frontend Development", "Design & UX", "Wireframing & Prototyping"],
+    screenshot: "beta.union.finance.png",
   },
   {
     href: "https://www.alicedapp.com",
