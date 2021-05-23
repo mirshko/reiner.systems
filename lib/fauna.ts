@@ -1,4 +1,5 @@
 import faunadb from "faunadb";
+import { RecordSchema } from "./discogs";
 
 export const client = new faunadb.Client({
   secret: process.env.FAUNA_KEY,
@@ -22,12 +23,7 @@ const {
   Var,
 } = faunadb.query;
 
-/**
- * @name getRecordsInFauna
- *
- * @returns {Promise<import("./discogs").RecordSchema[]>}
- */
-export const getRecordsInFauna = () =>
+export const getRecordsInFauna = (): Promise<RecordSchema[]> =>
   client.query(
     Select(
       "data",
@@ -40,14 +36,9 @@ export const getRecordsInFauna = () =>
     )
   );
 
-/**
- * @name createRecordsInFauna
- *
- * @param {import("./discogs").RecordSchema[]} records
- *
- * @returns {Promise<String[]>}
- */
-export const createRecordsInFauna = (records) =>
+export const createRecordsInFauna = (
+  records: RecordSchema[]
+): Promise<string[]> =>
   client.query(
     Map(
       records,

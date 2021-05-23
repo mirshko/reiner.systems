@@ -14,7 +14,7 @@ function PlayButton() {
   );
 }
 
-function LiteYouTubeEmbed({ id, title }) {
+function LiteYouTubeEmbed({ id, title }: { id: string; title: string }) {
   const [preconnected, setPreconnected] = useState(false);
 
   const [iframe, setIframe] = useState(false);
@@ -25,7 +25,7 @@ function LiteYouTubeEmbed({ id, title }) {
 
   const iframeSrc = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&controls=0`;
 
-  const refVideo = useRef();
+  const ref = useRef<HTMLDivElement>();
 
   const warmConnections = () => {
     if (preconnected) return;
@@ -38,15 +38,12 @@ function LiteYouTubeEmbed({ id, title }) {
   };
 
   useEffect(() => {
-    const { current } = refVideo;
-
-    current.addEventListener("pointerover", warmConnections, true);
-
-    current.addEventListener("click", addIframe, true);
+    ref?.current?.addEventListener("pointerover", warmConnections, true);
+    ref?.current?.addEventListener("click", addIframe, true);
 
     return () => {
-      current.removeEventListener("pointerover", warmConnections);
-      current.removeEventListener("click", addIframe);
+      ref?.current?.removeEventListener("pointerover", warmConnections);
+      ref?.current?.removeEventListener("click", addIframe);
     };
   });
 
@@ -70,7 +67,7 @@ function LiteYouTubeEmbed({ id, title }) {
       <div
         className={`${styles.yt} ${iframe && styles.activated}`}
         data-title={videoTitle}
-        ref={refVideo}
+        ref={ref}
       >
         <div className={styles.playbtn}>
           <PlayButton />

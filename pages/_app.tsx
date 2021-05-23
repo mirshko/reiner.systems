@@ -1,8 +1,9 @@
+import type { AppProps } from "next/app";
 import Nav from "../components/nav";
 import useFathom from "../hooks/useFathom";
 import "../styles/global.css";
 
-function App({ Component, pageProps }) {
+function App({ Component, pageProps }: AppProps) {
   useFathom();
 
   return (

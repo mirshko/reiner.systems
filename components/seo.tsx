@@ -1,12 +1,18 @@
 import Head from "next/head";
 
+type Props = {
+  description?: string;
+  path?: string;
+  title?: string;
+  type?: string;
+};
+
 function SEO({
   description = "Freelance design engineer based in Berlin.",
   path = "",
   title = "Jeff Reiner, Design Engineer",
   type = "website",
-  published,
-}) {
+}: Props) {
   return (
     <Head>
       <title>{title}</title>
@@ -23,10 +29,6 @@ function SEO({
       <link rel="canonical" href={`https://reiner.design${path}`} />
 
       <meta property="og:type" content={type} />
-
-      {published && (
-        <meta property="article:published_time" content={published} />
-      )}
     </Head>
   );
 }

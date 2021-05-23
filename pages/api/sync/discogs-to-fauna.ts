@@ -1,9 +1,8 @@
-/* eslint-disable no-console */
-
+import type { NextApiRequest, NextApiResponse } from "next";
 import { getRecordsInDiscogs } from "../../../lib/discogs";
 import { createRecordsInFauna, getRecordsInFauna } from "../../../lib/fauna";
 
-export default async (req, res) => {
+export default async (_: NextApiRequest, res: NextApiResponse) => {
   try {
     /**
      * Get records from Discogs and schematize

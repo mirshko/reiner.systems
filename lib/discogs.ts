@@ -1,3 +1,13 @@
+export type RecordSchema = {
+  title: string;
+  artist: string;
+  cover_image: string;
+  resource_id: number;
+  date_added: string;
+  year: number;
+  video_id?: string;
+};
+
 /**
  * @name URL
  * @description Discogs endpoint to fetch collection releases by username 'mirshko'
@@ -11,12 +21,7 @@ const URL =
   "&token=" +
   process.env.DISCOGS_KEY;
 
-/**
- * @name getRecordsInDiscogs
- *
- * @returns {Promise<RecordSchema[]>}
- */
-export const getRecordsInDiscogs = async () => {
+export const getRecordsInDiscogs = async (): Promise<RecordSchema[]> => {
   const res = await fetch(URL);
 
   /**
@@ -33,23 +38,20 @@ export const getRecordsInDiscogs = async () => {
 };
 
 /**
- * @typedef RecordSchema
- * @type {Object}
- * @property {String} title
- * @property {String} artist
- * @property {String} cover_image
- * @property {Number} resource_id
- * @property {String} date_added
- * @property {Number} year
- * @property {(String|"null")} video_id
- *
- * @name getRecordSchema
- *
- * @param {Object} release Discogs release object
- *
- * @returns {RecordSchema}
+ * @note Incomplete Typedef
  */
-export const getRecordSchema = (release) => {
+type ReleaseSchema = {
+  date_added: string;
+  id: number;
+  basic_information: {
+    artists: { name: string }[];
+    title: string;
+    cover_image: string;
+    year: number;
+  };
+};
+
+export const getRecordSchema = (release: ReleaseSchema): RecordSchema => {
   const {
     date_added,
     id: resource_id,
