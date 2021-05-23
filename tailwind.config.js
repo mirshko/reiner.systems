@@ -1,6 +1,6 @@
 module.exports = {
   mode: "jit",
-  purge: ["./components/**/*.js", "./pages/**/*.js"],
+  purge: ["./components/**/*.tsx", "./pages/**/*.tsx"],
   theme: {
     fontFamily: {
       sans: ["Helvetica Neue", "Arial", "sans-serif"],
