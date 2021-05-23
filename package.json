@@ -26,15 +26,9 @@
     "react-feather": "^2.0.9"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^10.2.2",
     "autoprefixer": "^10.2.5",
-    "eslint": "^7.27.0",
-    "eslint-plugin-react": "^7.23.2",
-    "husky": "^4.3.6",
-    "lint-staged": "^11.0.0",
     "postcss": "^8.3.0",
     "prettier": "^2.3.0",
-    "pretty-quick": "^3.1.0",
     "tailwindcss": "^2.1.2"
   },
   "repository": {
@@ -45,16 +39,5 @@
   "bugs": {
     "url": "https://github.com/mirshko/dotdesign/issues"
   },
-  "homepage": "https://github.com/mirshko/dotdesign#readme",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --cache",
-      "pretty-quick --staged"
-    ]
-  }
+  "homepage": "https://github.com/mirshko/dotdesign#readme"
 }
