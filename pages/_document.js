@@ -14,10 +14,12 @@ class Doc extends Document {
           <meta property="twitter:creator" content="@mirshko" />
           <meta property="twitter:card" content="summary" />
 
-          <meta name="theme-color" content="#ffffff" />
+          <meta name="theme-color" content="#000000" />
+
+          <link rel="shortcut icon" href="favicon-pixel.png" type="image/png" />
         </Head>
 
-        <body className="antialiased text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-medium bg-black text-white">
+        <body className="antialiased text-xl lg:text-2xl xl:text-3xl font-medium bg-black text-white">
           <Main />
 
           <NextScript />

@@ -2,6 +2,9 @@ module.exports = {
   mode: "jit",
   purge: ["./components/**/*.js", "./pages/**/*.js"],
   theme: {
+    fontFamily: {
+      sans: ["Helvetica Neue", "Arial", "sans-serif"],
+    },
     colors: {
       primary: "#E3AF09",
 
@@ -29,6 +32,8 @@ module.exports = {
         light: "#5AC8FA",
         dark: "#64D2FF",
       },
+
+      soapbox: "#8359fe",
     },
     extend: {
       borderRadius: {
