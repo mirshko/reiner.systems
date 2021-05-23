@@ -14,7 +14,6 @@ function Record({ artist, title, cover_image, video_id }) {
         <img
           className="h-full w-full object-cover"
           alt={label}
-          async
           decoding="async"
           loading="lazy"
           src={cover_image}
