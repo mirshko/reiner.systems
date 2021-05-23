@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export default function SEO({
+function SEO({
   description = "Freelance design engineer based in Berlin.",
   path = "",
   title = "Jeff Reiner, Design Engineer",
@@ -30,3 +30,5 @@ export default function SEO({
     </Head>
   );
 }
+
+export default SEO;

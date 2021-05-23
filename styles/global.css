@@ -3,81 +3,14 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  main {
-    @apply max-w-xl mx-auto;
-  }
-
-  h1 {
-    @apply text-2xl font-bold leading-none;
-  }
-
   a {
-    @apply text-primary font-semibold;
+    @apply text-primary;
+  }
+  a:hover {
+    @apply italic;
   }
 
-  nav {
-    padding-bottom: env(safe-area-inset-bottom);
+  p {
+    @apply max-w-prose;
   }
-}
-
-.cutout-bottom {
-  position: fixed;
-}
-
-.cutout-bottom::before,
-.cutout-bottom::after {
-  pointer-events: none;
-
-  position: absolute;
-  content: "";
-  height: 2rem;
-  width: 1rem;
-  top: -2rem;
-
-  background-color: transparent;
-
-  box-shadow: 0 1rem 0 0 #000;
-}
-
-.cutout-bottom::before {
-  left: 0;
-  border-bottom-left-radius: 1rem;
-}
-
-.cutout-bottom::after {
-  right: 0;
-  border-bottom-right-radius: 1rem;
-}
-
-.cutout-top {
-  position: relative;
-}
-
-.cutout-top::before,
-.cutout-top::after {
-  pointer-events: none;
-
-  position: fixed;
-  content: "";
-  height: 2rem;
-  width: 1rem;
-  top: 0;
-
-  background-color: transparent;
-
-  box-shadow: 0 -1rem 0 0 #000;
-}
-
-.cutout-top::before {
-  left: 0;
-  border-top-left-radius: 1rem;
-}
-
-.cutout-top::after {
-  right: 0;
-  border-top-right-radius: 1rem;
 }

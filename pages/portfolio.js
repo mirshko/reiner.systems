@@ -6,14 +6,16 @@ import { BlurhashCanvas } from "react-blurhash";
 import SEO from "../components/seo";
 import { clients, curated } from "../data";
 
-export default function Portfolio({ works }) {
+function PortfolioPage({ works }) {
   return (
-    <main>
+    <main className="space-y-20">
       <SEO title="Portfolio" path="/portfolio" />
 
-      <h1>Portfolio</h1>
+      <section>
+        <h1 hidden>Portfolio</h1>
 
-      <div className="h-5" />
+        <p>Clients and projects I've worked with.</p>
+      </section>
 
       <section className="space-y-10">
         {works.map((work, i) => {
@@ -31,7 +33,7 @@ export default function Portfolio({ works }) {
             <article key={i}>
               {screenshot && (
                 <Fragment>
-                  <div className="relative flex rounded-md overflow-hidden">
+                  <div className="max-w-[576px] relative flex rounded-md overflow-hidden">
                     <BlurhashCanvas
                       hash={blurhash.hash}
                       width={blurhash.height}
@@ -129,3 +131,5 @@ export const getStaticProps = async () => {
     },
   };
 };
+
+export default PortfolioPage;

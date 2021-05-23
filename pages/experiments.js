@@ -5,53 +5,53 @@ import { BlurhashCanvas } from "react-blurhash";
 import SEO from "../components/seo";
 import { experiments, projects } from "../data";
 
-export default function Experiments({ works }) {
+function ExperimentsPage({ works }) {
   return (
-    <main>
+    <main className="space-y-20">
       <SEO title="Experiments" path="/experiments" />
 
-      <h1>Experiments</h1>
+      <section>
+        <h1 hidden>Experiments</h1>
 
-      <div className="h-5" />
+        <p>
+          Projects, apps, tools, and utilities to make my life easier, proof of
+          concepts, and some random crypto things.
+        </p>
+      </section>
 
-      <p>
-        Some of the projects, apps, tools, and utilities to make my life easier,
-        proof of concepts, and some random weird things.
-      </p>
+      <section>
+        <ul className="grid gap-5 grid-cols-2 sm:grid-cols-3">
+          {works.map((work, i) => {
+            const { href, label, screenshot, blurhash } = work;
 
-      <div className="h-5" />
-
-      <ul className="grid gap-5 grid-cols-2 sm:grid-cols-3">
-        {works.map((work, i) => {
-          const { href, label, screenshot, blurhash } = work;
-
-          return (
-            <li key={i}>
-              <a className="relative text-pink-light" href={href}>
-                <div className="relative flex rounded-md overflow-hidden">
-                  <BlurhashCanvas
-                    hash={blurhash.hash}
-                    width={blurhash.width}
-                    height={blurhash.height}
-                    punch={1}
-                    className="absolute inset-0 w-full h-full rounded-md"
-                  />
-                  <Image
-                    alt={label}
-                    className="object-contain object-top rounded-md"
-                    height={450}
-                    loading="lazy"
-                    src={`/experiments/${screenshot}`}
-                    title={label}
-                    width={720}
-                  />
-                </div>
-                <span className="leading-none">{label}</span>
-              </a>
-            </li>
-          );
-        })}
-      </ul>
+            return (
+              <li key={i}>
+                <a className="relative text-pink-light" href={href}>
+                  <div className="relative flex rounded-md overflow-hidden">
+                    <BlurhashCanvas
+                      hash={blurhash.hash}
+                      width={blurhash.width}
+                      height={blurhash.height}
+                      punch={1}
+                      className="absolute inset-0 w-full h-full rounded-md"
+                    />
+                    <Image
+                      alt={label}
+                      className="object-contain object-top rounded-md"
+                      height={450}
+                      loading="lazy"
+                      src={`/experiments/${screenshot}`}
+                      title={label}
+                      width={720}
+                    />
+                  </div>
+                  <span className="leading-none">{label}</span>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
     </main>
   );
 }
@@ -77,3 +77,5 @@ export async function getStaticProps() {
     },
   };
 }
+
+export default ExperimentsPage;

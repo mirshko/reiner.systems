@@ -3,35 +3,40 @@ import Record from "../components/record";
 import SEO from "../components/seo";
 import { getRecordsInFauna } from "../lib/fauna";
 
-export default function Vinyl({ records }) {
+function VinylPage({ records }) {
   return (
-    <main>
+    <main className="space-y-20">
       <SEO title="Vinyl" path="/vinyl" />
 
-      <h1>Vinyl</h1>
+      <section>
+        <h1 hidden>Vinyl</h1>
 
-      <div className="h-5" />
+        <p>
+          My personal record collection on{" "}
+          <a
+            className="text-indigo-light"
+            href="https://www.discogs.com/seller/mirshko/profile"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            Discogs
+          </a>
+          , thought I'd make a nice gallery for them.
+        </p>
+      </section>
 
-      <p>
-        My personal record collection on{" "}
-        <a
-          className="text-indigo-light"
-          href="https://www.discogs.com/seller/mirshko/profile"
-          rel="noreferrer noopener"
-          target="_blank"
-        >
-          Discogs
-        </a>
-        , thought I'd make a nice gallery for them.
-      </p>
-
-      <div className="h-5" />
-
-      <section className="grid gap-5 grid-cols-1 sm:grid-cols-2">
+      <section className="record-grid grid gap-5">
         {records.map((release, i) => (
           <Record key={i} {...release} />
         ))}
       </section>
+
+      <style jsx>{`
+        .record-grid {
+          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          grid-auto-rows: minmax(300px, auto);
+        }
+      `}</style>
     </main>
   );
 }
@@ -49,3 +54,5 @@ export async function getStaticProps() {
     },
   };
 }
+
+export default VinylPage;
