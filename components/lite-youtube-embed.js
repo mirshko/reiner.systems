@@ -1,5 +1,4 @@
 import Head from "next/head";
-import PropTypes from "prop-types";
 import React, { Fragment, useEffect, useRef, useState } from "react";
 import styles from "../styles/yt-lite.module.css";
 
@@ -88,11 +87,6 @@ const LiteYouTubeEmbed = ({ id, title }) => {
       </div>
     </Fragment>
   );
-};
-
-LiteYouTubeEmbed.propTypes = {
-  id: PropTypes.string,
-  title: PropTypes.string,
 };
 
 export default LiteYouTubeEmbed;
