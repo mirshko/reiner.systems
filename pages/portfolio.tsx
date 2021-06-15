@@ -1,12 +1,9 @@
-import { getBlurhash } from "@plaiceholder/blurhash";
-import { getImage } from "@plaiceholder/next";
 import Image from "next/image";
 import { Fragment } from "react";
-import { BlurhashCanvas } from "react-blurhash";
 import SEO from "../components/seo";
 import { clients, curated } from "../data";
 
-function PortfolioPage({ works }) {
+function PortfolioPage() {
   return (
     <main className="space-y-20">
       <SEO title="Portfolio" path="/portfolio" />
@@ -18,39 +15,22 @@ function PortfolioPage({ works }) {
       </section>
 
       <section className="space-y-10">
-        {works.map((work, i) => {
-          const {
-            label,
-            summary,
-            roles,
-            href,
-            website,
-            screenshot,
-            blurhash,
-          } = work;
+        {curated.map((work, i) => {
+          const { label, summary, roles, href, website, screenshot } = work;
 
           return (
             <article key={i}>
               {screenshot && (
                 <Fragment>
-                  <div className="max-w-[576px] relative flex rounded-md overflow-hidden">
-                    <BlurhashCanvas
-                      hash={blurhash.hash}
-                      width={blurhash.height}
-                      height={blurhash.width}
-                      punch={1}
-                      className="absolute inset-0 w-full h-full rounded-md"
-                    />
-                    <Image
-                      alt={label}
-                      className="object-cover object-top rounded-md"
-                      height={360}
-                      loading="lazy"
-                      src={`/portfolio/${screenshot}`}
-                      title={label}
-                      width={576}
-                    />
-                  </div>
+                  <Image
+                    alt={label}
+                    className="object-cover object-top rounded-md"
+                    height={360}
+                    loading="lazy"
+                    src={`/portfolio/${screenshot}`}
+                    title={label}
+                    width={576}
+                  />
 
                   <div className="h-5" />
                 </Fragment>
@@ -109,27 +89,5 @@ function PortfolioPage({ works }) {
     </main>
   );
 }
-
-export const getStaticProps = async () => {
-  const works = await Promise.all(
-    curated.map(async ({ screenshot, ...rest }) => {
-      const imgFile = await getImage(`/portfolio/${screenshot}`);
-
-      const blurhash = await getBlurhash(imgFile);
-
-      return {
-        blurhash,
-        screenshot,
-        ...rest,
-      };
-    })
-  );
-
-  return {
-    props: {
-      works,
-    },
-  };
-};
 
 export default PortfolioPage;
