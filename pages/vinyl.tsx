@@ -22,7 +22,7 @@ function VinylPage({ records }) {
           >
             Discogs
           </a>
-          , thought I'd make a nice gallery for them.
+          , thought I&apos;d make a nice gallery for them.
         </p>
       </section>
 
@@ -42,10 +42,10 @@ function VinylPage({ records }) {
   );
 }
 
-const sortByDateAdded = (a: RecordSchema, b: RecordSchema) =>
-  dayjs(b.date_added).unix() - dayjs(a.date_added).unix();
-
 export async function getStaticProps() {
+  const sortByDateAdded = (a: RecordSchema, b: RecordSchema) =>
+    dayjs(b.date_added).unix() - dayjs(a.date_added).unix();
+
   const allRecords = await getRecordsInFauna();
 
   const records = allRecords.sort(sortByDateAdded);

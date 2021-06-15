@@ -11,7 +11,7 @@ function PortfolioPage() {
       <section>
         <h1 hidden>Portfolio</h1>
 
-        <p>Clients and projects I've worked with.</p>
+        <p>Clients and projects I&apos;ve worked with.</p>
       </section>
 
       <section className="space-y-10">

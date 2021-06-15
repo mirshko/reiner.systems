@@ -9,7 +9,7 @@ function Custom404() {
 
       <div className="h-5" />
 
-      <p>There's nothing here</p>
+      <p>There&apos;s nothing here</p>
     </main>
   );
 }
