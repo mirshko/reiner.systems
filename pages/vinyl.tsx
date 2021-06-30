@@ -1,10 +1,11 @@
-import dayjs from "dayjs";
+import { InferGetStaticPropsType } from "next";
 import Record from "../components/record";
 import SEO from "../components/seo";
-import { RecordSchema } from "../lib/discogs";
-import { getRecordsInFauna } from "../lib/fauna";
+import { getRecordsInDb } from "../lib/db";
 
-function VinylPage({ records }) {
+function VinylPage({
+  records,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <main className="space-y-20">
       <SEO title="Vinyl" path="/vinyl" />
@@ -43,16 +44,9 @@ function VinylPage({ records }) {
 }
 
 export async function getStaticProps() {
-  const sortByDateAdded = (a: RecordSchema, b: RecordSchema) =>
-    dayjs(b.date_added).unix() - dayjs(a.date_added).unix();
-
-  const allRecords = await getRecordsInFauna();
-
-  const records = allRecords.sort(sortByDateAdded);
-
   return {
     props: {
-      records,
+      records: await getRecordsInDb(),
     },
   };
 }

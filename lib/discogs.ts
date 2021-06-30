@@ -1,12 +1,4 @@
-export type RecordSchema = {
-  title: string;
-  artist: string;
-  cover_image: string;
-  resource_id: number;
-  date_added: string;
-  year: number;
-  video_id?: string;
-};
+import { RecordSchema } from "../types/supabase";
 
 /**
  * @name URL
@@ -21,7 +13,7 @@ const URL =
   "&token=" +
   process.env.DISCOGS_KEY;
 
-export const getRecordsInDiscogs = async (): Promise<RecordSchema[]> => {
+export const getRecordsInDiscogs = async () => {
   const res = await fetch(URL);
 
   /**
