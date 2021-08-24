@@ -7,23 +7,16 @@ function IndexPage() {
 
       <section className="space-y-5">
         <p>
-          Currently co-founder of{" "}
-          <a className="text-soapbox" href="https://soapbox.social">
-            Soapbox
-          </a>{" "}
-          focused on product and mini games, based out of Berlin.
+          Currently front-end &amp; design at{" "}
+          <a className="text-dialectic" href="https://dialectic.ch">
+            Dialectic
+          </a>
+          , based in Berlin.
         </p>
 
-        {/* <p>
-          I focus on engaging, responsive, mobile-first websites and apps;
-          highly-usable and efficient design systems; and solving complex UX
-          problems, in and around the Web 2.0 and Web3 space.
-        </p> */}
-
-        {/* <p>
-          I build and design digital products and experiences, right now
-          focusing on social audio and playing with Web3.
-        </p> */}
+        <p>
+          I build and design digital products and experiences, focusing on Web3.
+        </p>
 
         <p>
           Give me a shout on <a href="https://twitter.com/mirshko">Twitter</a>{" "}
@@ -39,11 +32,6 @@ function IndexPage() {
             <a href="https://are.na/jeff-reiner">Are.na</a>
           </li>
         </ul>
-
-        {/* <p>
-          If you need one of those fancy things,{" "}
-          <a href="/jeff-reiner.pdf">here's my résume</a>.
-        </p> */}
       </section>
     </main>
   );

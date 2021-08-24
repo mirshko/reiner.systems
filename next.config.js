@@ -22,6 +22,11 @@ module.exports = {
         destination: "https://www.are.na/jeff-reiner/index",
         permanent: false,
       },
+      {
+        source: "/experiments",
+        destination: "https://github.com/mirshko",
+        permanent: false,
+      },
     ];
   },
 };

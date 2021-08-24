@@ -10,10 +10,6 @@ function Nav() {
           Work
         </NavLink>
 
-        <NavLink href="/experiments" activeClassName="text-pink-dark">
-          Experiments
-        </NavLink>
-
         <NavLink href="/vinyl" activeClassName="text-indigo-dark">
           Vinyl
         </NavLink>

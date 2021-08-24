@@ -113,8 +113,7 @@ export const experiments = [
     screenshot: "desktop.photography.png",
   },
   {
-    href:
-      "https://docs.google.com/spreadsheets/d/1IBJRJrIeRYStgxvnBmLWsREMhSA483uvu-A_kK4cB9I/edit#gid=0",
+    href: "https://docs.google.com/spreadsheets/d/1IBJRJrIeRYStgxvnBmLWsREMhSA483uvu-A_kK4cB9I/edit#gid=0",
     label: "$YUNG Personal Token",
     screenshot: "buymagic.xyz.png",
   },
@@ -124,7 +123,7 @@ export const experiments = [
     screenshot: "borkchain.lol.png",
   },
   {
-    href: "https://componentboi.eth.reiner.design/",
+    href: "https://cryptokitties.reiner.design/",
     label: "CryptoKitty Gallery",
     screenshot: "componentboi.eth.reiner.design.png",
   },

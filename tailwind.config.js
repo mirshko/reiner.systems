@@ -34,6 +34,7 @@ module.exports = {
       },
 
       soapbox: "#8359fe",
+      dialectic: "#ed1a24",
     },
     extend: {
       borderRadius: {
