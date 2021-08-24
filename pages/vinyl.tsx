@@ -17,7 +17,7 @@ function VinylPage({
           My personal record collection on{" "}
           <a
             className="text-indigo-light"
-            href="https://www.discogs.com/seller/mirshko/profile"
+            href="https://www.discogs.com/user/mirshko/collection?header=1&layout=big"
             rel="noreferrer noopener"
             target="_blank"
           >
