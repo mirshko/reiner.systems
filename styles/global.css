@@ -14,3 +14,8 @@
     @apply max-w-prose;
   }
 }
+
+.next-image-tweaks > div {
+  vertical-align: middle;
+  border-radius: 0.375rem;
+}

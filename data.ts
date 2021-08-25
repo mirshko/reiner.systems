@@ -1,3 +1,10 @@
+import async from "./images/portfolio/async.art-updated.png";
+import union from "./images/portfolio/beta.union.finance.png";
+import hummingbot from "./images/portfolio/hummingbot.io.png";
+import pillarproject from "./images/portfolio/pillarproject.io.png";
+import refugeworldwide from "./images/portfolio/refugeworldwide.com.png";
+import alicedapp from "./images/portfolio/www.alicedapp.com.png";
+
 export const curated = [
   {
     href: "https://refugeworldwide.com",
@@ -6,7 +13,7 @@ export const curated = [
     summary:
       "A community radio station and fundraising platform based in Berlin.",
     roles: ["Frontend Development", "Technical Consulting"],
-    screenshot: "refugeworldwide.com.png",
+    screenshot: refugeworldwide,
   },
   {
     href: "https://async.art",
@@ -19,7 +26,7 @@ export const curated = [
       "Frontend Development",
       "Initial Design & UX",
     ],
-    screenshot: "async.art-updated.png",
+    screenshot: async,
   },
   {
     href: "https://union.finance",
@@ -28,7 +35,7 @@ export const curated = [
     summary:
       "Credit backed by trust, without the need for collateral, credit score, or revealing personal information.",
     roles: ["Frontend Development", "Design & UX", "Wireframing & Prototyping"],
-    screenshot: "beta.union.finance.png",
+    screenshot: union,
   },
   {
     href: "https://www.alicedapp.com",
@@ -36,7 +43,7 @@ export const curated = [
     label: "Alice dApp",
     summary: "An adventure through Web3 with native mini-dApps.",
     roles: ["Brand & Design Consulting"],
-    screenshot: "www.alicedapp.com.png",
+    screenshot: alicedapp,
   },
   {
     href: "https://pillarproject.io",
@@ -44,7 +51,7 @@ export const curated = [
     label: "Pillar",
     summary: "",
     roles: ["Technical Consulting", "Frontend Development"],
-    screenshot: "pillarproject.io.png",
+    screenshot: pillarproject,
   },
   {
     href: "https://hummingbot.io/",
@@ -52,7 +59,7 @@ export const curated = [
     label: "Hummingbot",
     summary: "",
     roles: ["Frontend Development", "Design"],
-    screenshot: "hummingbot.io.png",
+    screenshot: hummingbot,
   },
 ];
 

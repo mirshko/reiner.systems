@@ -22,15 +22,17 @@ function PortfolioPage() {
             <article key={i}>
               {screenshot && (
                 <Fragment>
-                  <Image
-                    alt={label}
-                    className="object-cover object-top rounded-md"
-                    height={360}
-                    loading="lazy"
-                    src={`/portfolio/${screenshot}`}
-                    title={label}
-                    width={576}
-                  />
+                  <div className="next-image-tweaks">
+                    <Image
+                      alt={label}
+                      className="rounded-md object-cover object-top align-middle"
+                      height={360}
+                      src={screenshot}
+                      placeholder="blur"
+                      title={label}
+                      width={576}
+                    />
+                  </div>
 
                   <div className="h-5" />
                 </Fragment>
