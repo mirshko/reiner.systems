@@ -1,3 +1,4 @@
+import sovreigninterface from "./images/portfolio/app.sovreign.org.png";
 import async from "./images/portfolio/async.art-updated.png";
 import union from "./images/portfolio/beta.union.finance.png";
 import hummingbot from "./images/portfolio/hummingbot.io.png";
@@ -6,6 +7,15 @@ import refugeworldwide from "./images/portfolio/refugeworldwide.com.png";
 import alicedapp from "./images/portfolio/www.alicedapp.com.png";
 
 export const curated = [
+  {
+    href: "https://app.sovreign.org",
+    website: "app.sovreign.org",
+    label: "Sovreign Interface",
+    summary:
+      "A stable cryptocurrency backed by demonstrably collateralized store-of-value assets.",
+    roles: ["Frontend Development", "Design & UX"],
+    screenshot: sovreigninterface,
+  },
   {
     href: "https://refugeworldwide.com",
     website: "refugeworldwide.com",
