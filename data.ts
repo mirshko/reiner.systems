@@ -6,6 +6,16 @@ import pillarproject from "./images/portfolio/pillarproject.io.png";
 import refugeworldwide from "./images/portfolio/refugeworldwide.com.png";
 import alicedapp from "./images/portfolio/www.alicedapp.com.png";
 
+enum Roles {
+  BRANDING = "Brand & Design Consulting",
+  CONSULTING = "Technical Consulting",
+  DESIGN = "Design",
+  DESIGN_UX = "Design & UX",
+  FRONTEND = "Frontend Development",
+  INITIAL_DESIGN = "Initial Design & UX",
+  WIREFRAMING = "Wireframing & Prototyping",
+}
+
 export const curated = [
   {
     href: "https://app.sovreign.org",
@@ -13,7 +23,7 @@ export const curated = [
     label: "Sovreign Interface",
     summary:
       "A stable cryptocurrency backed by demonstrably collateralized store-of-value assets.",
-    roles: ["Frontend Development", "Design & UX"],
+    roles: [Roles.FRONTEND, Roles.DESIGN_UX],
     screenshot: sovreigninterface,
   },
   {
@@ -22,7 +32,7 @@ export const curated = [
     label: "Refuge Worldwide",
     summary:
       "A community radio station and fundraising platform based in Berlin.",
-    roles: ["Frontend Development", "Technical Consulting"],
+    roles: [Roles.FRONTEND, Roles.CONSULTING],
     screenshot: refugeworldwide,
   },
   {
@@ -31,11 +41,7 @@ export const curated = [
     label: "Async Art",
     summary:
       "An experimental art movement born out of the question “what does art look like when it can be programmed?”",
-    roles: [
-      "Technical Consulting",
-      "Frontend Development",
-      "Initial Design & UX",
-    ],
+    roles: [Roles.CONSULTING, Roles.FRONTEND, Roles.INITIAL_DESIGN],
     screenshot: async,
   },
   {
@@ -44,7 +50,7 @@ export const curated = [
     label: "Union",
     summary:
       "Credit backed by trust, without the need for collateral, credit score, or revealing personal information.",
-    roles: ["Frontend Development", "Design & UX", "Wireframing & Prototyping"],
+    roles: [Roles.FRONTEND, Roles.DESIGN_UX, Roles.WIREFRAMING],
     screenshot: union,
   },
   {
@@ -52,7 +58,7 @@ export const curated = [
     website: "alicedapp.com",
     label: "Alice dApp",
     summary: "An adventure through Web3 with native mini-dApps.",
-    roles: ["Brand & Design Consulting"],
+    roles: [Roles.BRANDING],
     screenshot: alicedapp,
   },
   {
@@ -60,7 +66,7 @@ export const curated = [
     website: "pillarproject.io",
     label: "Pillar",
     summary: "",
-    roles: ["Technical Consulting", "Frontend Development"],
+    roles: [Roles.CONSULTING, Roles.FRONTEND],
     screenshot: pillarproject,
   },
   {
@@ -68,7 +74,7 @@ export const curated = [
     website: "hummingbot.io",
     label: "Hummingbot",
     summary: "",
-    roles: ["Frontend Development", "Design"],
+    roles: [Roles.FRONTEND, Roles.DESIGN],
     screenshot: hummingbot,
   },
 ];
