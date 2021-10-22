@@ -1,44 +1,37 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   mode: "jit",
   purge: ["./components/**/*.tsx", "./pages/**/*.tsx"],
   theme: {
-    fontFamily: {
-      sans: ["Helvetica Neue", "Arial", "sans-serif"],
-    },
-    colors: {
-      primary: "#E3AF09",
-
-      transparent: "transparent",
-      current: "currentColor",
-
-      black: "#000",
-      white: "#fff",
-
-      gray: "#cfd3dc",
-
-      green: {
-        light: "#34C759",
-        dark: "#32D74B",
-      },
-      indigo: {
-        light: "#5856D6",
-        dark: "#5E5CE6",
-      },
-      pink: {
-        light: "#FF2D55",
-        dark: "#FF375F",
-      },
-      teal: {
-        light: "#5AC8FA",
-        dark: "#64D2FF",
-      },
-
-      soapbox: "#8359fe",
-      dialectic: "#ed1a24",
-    },
     extend: {
-      borderRadius: {
-        xl: "1rem",
+      fontFamily: {
+        sans: ["Helvetica Neue", "Arial", "sans-serif"],
+      },
+      colors: {
+        primary: "#E3AF09",
+
+        green: {
+          light: "#34C759",
+          dark: "#32D74B",
+        },
+        indigo: {
+          light: "#5856D6",
+          dark: "#5E5CE6",
+        },
+        pink: {
+          light: "#FF2D55",
+          dark: "#FF375F",
+        },
+        teal: {
+          light: "#5AC8FA",
+          dark: "#64D2FF",
+        },
+
+        gray: colors.trueGray,
+
+        soapbox: "#8359fe",
+        dialectic: "#ed1a24",
       },
     },
   },

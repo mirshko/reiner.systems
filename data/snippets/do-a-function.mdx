@@ -1,0 +1,24 @@
+---
+title: "times"
+description: "Do a function n times"
+tags:
+  - "ts"
+---
+
+```ts
+const times = (n: number) => (fn: () => void) => {
+  if (n > 0) {
+    fn();
+    times(n - 1)(fn);
+  }
+};
+
+// Example
+times(3)(() => console.log("Ayo"));
+
+// Output
+/* Ayo
+ * Ayo
+ * Ayo
+ */
+```

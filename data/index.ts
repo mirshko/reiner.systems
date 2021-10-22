@@ -1,10 +1,10 @@
-import sovreigninterface from "./images/portfolio/app.sovreign.org.png";
-import async from "./images/portfolio/async.art-updated.png";
-import union from "./images/portfolio/beta.union.finance.png";
-import hummingbot from "./images/portfolio/hummingbot.io.png";
-import pillarproject from "./images/portfolio/pillarproject.io.png";
-import refugeworldwide from "./images/portfolio/refugeworldwide.com.png";
-import alicedapp from "./images/portfolio/www.alicedapp.com.png";
+import sovreigninterface from "../images/portfolio/app.sovreign.org.png";
+import async from "../images/portfolio/async.art-updated.png";
+import union from "../images/portfolio/beta.union.finance.png";
+import hummingbot from "../images/portfolio/hummingbot.io.png";
+import pillarproject from "../images/portfolio/pillarproject.io.png";
+import refugeworldwide from "../images/portfolio/refugeworldwide.com.png";
+import alicedapp from "../images/portfolio/www.alicedapp.com.png";
 
 export enum Roles {
   BRANDING = "Brand & Design Consulting",

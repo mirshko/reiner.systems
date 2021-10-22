@@ -3,6 +3,8 @@ import {
   defineDocumentType,
   makeSource,
 } from "contentlayer/source-files";
+import rehypePrism from "rehype-prism-plus";
+import rehypeSlug from "rehype-slug";
 
 const computedFields: ComputedFields = {
   slug: {
@@ -26,6 +28,9 @@ const Snippet = defineDocumentType(() => ({
 const contentLayerConfig = makeSource({
   contentDirPath: "data",
   documentTypes: [Snippet],
+  mdx: {
+    rehypePlugins: [rehypeSlug, rehypePrism],
+  },
 });
 
 export default contentLayerConfig;
