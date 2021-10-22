@@ -27,3 +27,6 @@ yarn-error.log*
 .now
 .vercel
 .eslintcache
+
+# Contentlayer
+.contentlayer
