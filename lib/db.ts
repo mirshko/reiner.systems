@@ -2,8 +2,8 @@ import { createClient } from "@supabase/supabase-js";
 import { RecordSchema } from "../types/supabase";
 
 export const db = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_KEY
+  process.env.SUPABASE_URL as string,
+  process.env.SUPABASE_KEY as string
 );
 
 export async function getRecordsInDb() {
@@ -14,5 +14,5 @@ export async function getRecordsInDb() {
 
   if (error) throw error;
 
-  return data;
+  return data as RecordSchema[];
 }

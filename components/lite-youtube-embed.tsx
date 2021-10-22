@@ -25,7 +25,7 @@ function LiteYouTubeEmbed({ id, title }: { id: string; title: string }) {
 
   const iframeSrc = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&controls=0`;
 
-  const ref = useRef<HTMLDivElement>();
+  const ref = useRef<HTMLDivElement>(null);
 
   const warmConnections = () => {
     if (preconnected) return;
