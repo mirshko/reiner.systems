@@ -11,9 +11,10 @@ function NavLink({
   children: string;
   activeClassName?: string;
 }) {
-  const { pathname } = useRouter();
+  const { asPath } = useRouter();
 
-  const isActive = pathname === href;
+  const isActive =
+    href === "/" ? asPath === "/" : new RegExp(`${href}`).test(asPath);
 
   const cachedClassNames = classNames(
     isActive ? activeClassName : "text-white"

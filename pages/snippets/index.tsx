@@ -15,7 +15,7 @@ export default function Snippets({
       <section>
         <h1 hidden>Snippets</h1>
 
-        <p>Code snippets I've found to be exceptionally useful</p>
+        <p>Code snippets I&apos;ve found to be exceptionally useful</p>
       </section>
 
       <section>
