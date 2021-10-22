@@ -1396,7 +1396,7 @@ constants-browserify@1.0.0, constants-browserify@^1.0.0:
   resolved "https://registry.yarnpkg.com/constants-browserify/-/constants-browserify-1.0.0.tgz#c20b96d8c617748aaf1c16021760cd27fcb8cb75"
   integrity sha1-wguW2MYXdIqvHBYCF2DNJ/y4y3U=
 
-contentlayer@^0.0.27:
+contentlayer@latest:
   version "0.0.27"
   resolved "https://registry.yarnpkg.com/contentlayer/-/contentlayer-0.0.27.tgz#570ae01ac041cd7449d4c398ab68b1e3516aba0c"
   integrity sha512-Sd5+/Nehquo93Ehlw5j0LCJ7p21mxfAnbI2H8k28CG5I9RwDhNuCD+mEs0JlnFuUynXQoq2V63yfZNznkL7Yjw==
@@ -3911,7 +3911,7 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
-next-contentlayer@^0.0.27:
+next-contentlayer@latest:
   version "0.0.27"
   resolved "https://registry.yarnpkg.com/next-contentlayer/-/next-contentlayer-0.0.27.tgz#cfa60d529d7ee2dec1c3f9675cfab1d9ea2010da"
   integrity sha512-ZhCuZEITmVKjRYGR7PLouftYVl2VbEsF/SIDc7ojRjUWhbSRTaaoVGdy/GSo858pByRlTXTBneLotaqNblRkMg==
