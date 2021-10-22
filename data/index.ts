@@ -6,7 +6,7 @@ import pillarproject from "./images/portfolio/pillarproject.io.png";
 import refugeworldwide from "./images/portfolio/refugeworldwide.com.png";
 import alicedapp from "./images/portfolio/www.alicedapp.com.png";
 
-enum Roles {
+export enum Roles {
   BRANDING = "Brand & Design Consulting",
   CONSULTING = "Technical Consulting",
   DESIGN = "Design",

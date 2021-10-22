@@ -4,7 +4,7 @@ import LiteYouTubeEmbed from "./lite-youtube-embed";
 function Record({ artist, title, cover_image, video_id }: RecordSchema) {
   const label = title + ", " + artist;
 
-  const hasVideo = video_id && video_id !== "null";
+  const hasVideo = !!video_id;
 
   return (
     <div
