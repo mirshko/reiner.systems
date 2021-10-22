@@ -1,7 +1,7 @@
 import {
+  ComputedFields,
   defineDocumentType,
   makeSource,
-  ComputedFields,
 } from "contentlayer/source-files";
 
 const computedFields: ComputedFields = {
@@ -18,6 +18,7 @@ const Snippet = defineDocumentType(() => ({
   fields: {
     title: { type: "string", required: true },
     description: { type: "string", required: true },
+    tags: { type: "list", default: undefined, of: { type: "string" } },
   },
   computedFields,
 }));
