@@ -9,11 +9,6 @@
       "permanent": true
     },
     {
-      "source": "/about",
-      "destination": "/",
-      "permanent": true
-    },
-    {
       "source": "/contact",
       "destination": "https://twitter.com/mirshko",
       "permanent": false

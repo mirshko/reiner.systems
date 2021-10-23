@@ -1,4 +1,3 @@
-// @ts-check
 const { withContentlayer } = require("next-contentlayer");
 
 /**
@@ -6,4 +5,13 @@ const { withContentlayer } = require("next-contentlayer");
  **/
 module.exports = withContentlayer()({
   trailingSlash: false,
+  redirects() {
+    return [
+      {
+        source: "/about",
+        destination: "/",
+        permanent: true,
+      },
+    ];
+  },
 });
