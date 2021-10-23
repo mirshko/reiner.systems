@@ -9,14 +9,5 @@ module.exports = withContentlayer()({
     swcLoader: true,
   },
   reactStrictMode: true,
-  trailingSlash: false,
-  redirects() {
-    return [
-      {
-        source: "/about",
-        destination: "/",
-        permanent: true,
-      },
-    ];
-  },
+  redirects: async () => [],
 });
