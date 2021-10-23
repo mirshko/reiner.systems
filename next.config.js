@@ -1,3 +1,4 @@
+// @ts-check
 const { withContentlayer } = require("next-contentlayer");
 
 /**
