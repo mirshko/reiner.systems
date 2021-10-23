@@ -24,11 +24,11 @@
   "devDependencies": {
     "@types/react": "^17.0.31",
     "autoprefixer": "^10.3.7",
-    "contentlayer": "latest",
+    "contentlayer": "0.0.26",
     "eslint": "^7.32.0",
     "eslint-config-next": "^11.1.2",
     "mdx-bundler": "^6.0.2",
-    "next-contentlayer": "^0.0.27",
+    "next-contentlayer": "0.0.26",
     "postcss": "^8.3.11",
     "prettier": "^2.4.1",
     "rehype-prism-plus": "^1.1.0",

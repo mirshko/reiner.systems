@@ -91,29 +91,29 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
-"@contentlayer/cli@0.0.27":
-  version "0.0.27"
-  resolved "https://registry.yarnpkg.com/@contentlayer/cli/-/cli-0.0.27.tgz#e2e17c4d8f3742f0604da1c6b6faa0c7cbdc1133"
-  integrity sha512-shtU9KAAMkmk+SKYtRxNtwMw0psCyTxZntNNDfqgIx6M2Vl3sONL+MWUyl2PJRujcbCDCZ79jShCPR4+ssvuqA==
+"@contentlayer/cli@0.0.26":
+  version "0.0.26"
+  resolved "https://registry.yarnpkg.com/@contentlayer/cli/-/cli-0.0.26.tgz#673ad7d2faf41160f7a756be30360d3774dae960"
+  integrity sha512-qzQuixj7cyGoWJn4GcPu226RIbeBHHVFGKp3inHIjLArRrkL89Q0nEwBklmCDzwyeGEaiSenYX6tv51ClpzABQ==
   dependencies:
-    "@contentlayer/core" "0.0.27"
-    "@contentlayer/utils" "0.0.27"
+    "@contentlayer/core" "0.0.26"
+    "@contentlayer/utils" "0.0.26"
     clipanion "^3.2.0-rc.3"
     typanion "^3.5.0"
 
-"@contentlayer/client@0.0.27":
-  version "0.0.27"
-  resolved "https://registry.yarnpkg.com/@contentlayer/client/-/client-0.0.27.tgz#d701764d9eda8142187b3f9163bbe1a4a22c1dbb"
-  integrity sha512-Kqg1FGnmN59z96cfL9MFuN86lGYGpQ6so2LiFu7FW26mr6uzgKJOu6y+b+VfCn39QvfrLWVFU+zoHL14SLjJug==
+"@contentlayer/client@0.0.26":
+  version "0.0.26"
+  resolved "https://registry.yarnpkg.com/@contentlayer/client/-/client-0.0.26.tgz#a0d509f67ad7817bf39ee6690b02750f8a0109e7"
+  integrity sha512-+5MC1NMHwSANf+IIdsCUndxu2tnJNXFGSnUjo5KgpHKqV76QzY6iwoGD7b0NZ7AKLKl5KLXYkW76pTDzGAXbew==
   dependencies:
-    "@contentlayer/core" "0.0.27"
+    "@contentlayer/core" "0.0.26"
 
-"@contentlayer/core@0.0.27":
-  version "0.0.27"
-  resolved "https://registry.yarnpkg.com/@contentlayer/core/-/core-0.0.27.tgz#58ed2123b0eed62dd8f5311a82b691dd535c83f9"
-  integrity sha512-5mBBpLZYSxNGDdAS+77FKatBiqFUUGNbet1WYH55BFVL06cgSxXqCGjjfu3ZGPHyyymiLz3ssEF+NC/kdaXGRg==
+"@contentlayer/core@0.0.26":
+  version "0.0.26"
+  resolved "https://registry.yarnpkg.com/@contentlayer/core/-/core-0.0.26.tgz#bfff9ad9c68669041fadb642b1d1b9ab1e600b6d"
+  integrity sha512-GVny2fEMsDT/S0GeBk9RqsCzi4renRFnmzN+i2k04gbvra3l3uilg1jEG+mU0VRPAs+0rp2vOUyegKvdf+6f7w==
   dependencies:
-    "@contentlayer/utils" "0.0.27"
+    "@contentlayer/utils" "0.0.26"
     camel-case "^4.1.2"
     esbuild "0.11.x || 0.12.x"
     gray-matter "^4.0.3"
@@ -127,13 +127,13 @@
     type-fest "^1.2.1"
     unified "^10.1.0"
 
-"@contentlayer/source-files@0.0.27":
-  version "0.0.27"
-  resolved "https://registry.yarnpkg.com/@contentlayer/source-files/-/source-files-0.0.27.tgz#c79bd4e96e7b2735e871f758afe1484589338dfe"
-  integrity sha512-R//YCqEHFqaK0HNz+3KGjg4uG4oWGap7JN6LaU5+BPVwWw7MYTKJZoInKk/CP4Id7RpMapGFvD1VbgB/+mkvwQ==
+"@contentlayer/source-files@0.0.26":
+  version "0.0.26"
+  resolved "https://registry.yarnpkg.com/@contentlayer/source-files/-/source-files-0.0.26.tgz#7fdf788622f66d7bbc278dc029577d4e0e5e01c3"
+  integrity sha512-/9wTYlRilQcZ6WoUp4WggMJ12AvQdzZpFStFSYxJyJaLHVCWAbdJVQxiOANMF8oNxyCnaZGSUnV9qBKDf3ueTA==
   dependencies:
-    "@contentlayer/core" "0.0.27"
-    "@contentlayer/utils" "0.0.27"
+    "@contentlayer/core" "0.0.26"
+    "@contentlayer/utils" "0.0.26"
     chokidar "^3.5.2"
     glob "^7.1.7"
     glob-promise "^4.1.0"
@@ -143,10 +143,10 @@
     unified "^10.1.0"
     yaml "^1.10.2"
 
-"@contentlayer/utils@0.0.27":
-  version "0.0.27"
-  resolved "https://registry.yarnpkg.com/@contentlayer/utils/-/utils-0.0.27.tgz#63dd72c2b01cbd8ce1fab8e16f04b78d6012eb51"
-  integrity sha512-yygeNY2NjMm8Qog8pdM2i5nPYSNO+6vGTHHwgTOmOASSH7xApDQWs3czYM1HKTNMaXx87UwdSlzVPRiUDUhs7w==
+"@contentlayer/utils@0.0.26":
+  version "0.0.26"
+  resolved "https://registry.yarnpkg.com/@contentlayer/utils/-/utils-0.0.26.tgz#eb01e6f15fc3d6256db31481b2aec60736b1c8ba"
+  integrity sha512-gUV7rfEWNT2Z15SsLbhLiByH/FnIulFnpx2HAYFELu9BQZPJhckm8dSAf37XMnPkDppoK07NloxCnt+2WxrfDg==
   dependencies:
     "@effect-ts/core" "^0.44.4"
     "@effect-ts/otel" next
@@ -1396,16 +1396,16 @@ constants-browserify@1.0.0, constants-browserify@^1.0.0:
   resolved "https://registry.yarnpkg.com/constants-browserify/-/constants-browserify-1.0.0.tgz#c20b96d8c617748aaf1c16021760cd27fcb8cb75"
   integrity sha1-wguW2MYXdIqvHBYCF2DNJ/y4y3U=
 
-contentlayer@latest:
-  version "0.0.27"
-  resolved "https://registry.yarnpkg.com/contentlayer/-/contentlayer-0.0.27.tgz#570ae01ac041cd7449d4c398ab68b1e3516aba0c"
-  integrity sha512-Sd5+/Nehquo93Ehlw5j0LCJ7p21mxfAnbI2H8k28CG5I9RwDhNuCD+mEs0JlnFuUynXQoq2V63yfZNznkL7Yjw==
+contentlayer@0.0.26:
+  version "0.0.26"
+  resolved "https://registry.yarnpkg.com/contentlayer/-/contentlayer-0.0.26.tgz#df75061f4bb76a145f482cb0c23b8d5a4744096b"
+  integrity sha512-JwBLPkWoygvXDsGQpgDsdIQvfTpt40/4MdG9772g4ytenyH41D7f7x5seEzfg1v6UuJZiJrB2ViCa1SyaWblvA==
   dependencies:
-    "@contentlayer/cli" "0.0.27"
-    "@contentlayer/client" "0.0.27"
-    "@contentlayer/core" "0.0.27"
-    "@contentlayer/source-files" "0.0.27"
-    "@contentlayer/utils" "0.0.27"
+    "@contentlayer/cli" "0.0.26"
+    "@contentlayer/client" "0.0.26"
+    "@contentlayer/core" "0.0.26"
+    "@contentlayer/source-files" "0.0.26"
+    "@contentlayer/utils" "0.0.26"
 
 convert-source-map@1.7.0:
   version "1.7.0"
@@ -3911,13 +3911,13 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
-next-contentlayer@^0.0.27:
-  version "0.0.27"
-  resolved "https://registry.yarnpkg.com/next-contentlayer/-/next-contentlayer-0.0.27.tgz#cfa60d529d7ee2dec1c3f9675cfab1d9ea2010da"
-  integrity sha512-ZhCuZEITmVKjRYGR7PLouftYVl2VbEsF/SIDc7ojRjUWhbSRTaaoVGdy/GSo858pByRlTXTBneLotaqNblRkMg==
+next-contentlayer@0.0.26:
+  version "0.0.26"
+  resolved "https://registry.yarnpkg.com/next-contentlayer/-/next-contentlayer-0.0.26.tgz#1828710b1ee59920dd90f893daad54a34b2df494"
+  integrity sha512-wcpi2EeheGpwceOgwCjlc9zdf5sAJhiGm9GfHoEZ1ieE/3TRkXVP2fKAje9KG/q2pDEnnmLTL20AbfRVNVUytA==
   dependencies:
-    "@contentlayer/core" "0.0.27"
-    "@contentlayer/utils" "0.0.27"
+    "@contentlayer/core" "0.0.26"
+    "@contentlayer/utils" "0.0.26"
     rxjs "^7.1.0"
 
 next-tick@~1.0.0:
