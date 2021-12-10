@@ -7,14 +7,6 @@ function IndexPage() {
 
       <section className="space-y-5">
         <p>
-          Currently front-end &amp; design at{" "}
-          <a className="text-dialectic" href="https://dialectic.ch">
-            Dialectic
-          </a>
-          , based in Berlin.
-        </p>
-
-        <p>
           I build and design digital products and experiences, focusing on Web3.
         </p>
 
