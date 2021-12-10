@@ -13,10 +13,6 @@ function Nav() {
         <NavLink href="/vinyl" activeClassName="text-indigo-dark">
           Vinyl
         </NavLink>
-
-        <NavLink href="/snippets" activeClassName="text-teal-dark">
-          Snippets
-        </NavLink>
       </div>
     </nav>
   );
