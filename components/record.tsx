@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { RecordSchema } from "../types/supabase";
 import LiteYouTubeEmbed from "./lite-youtube-embed";
 
@@ -12,13 +13,13 @@ function Record({ artist, title, cover_image, video_id }: RecordSchema) {
       title={label}
     >
       <div className="block absolute inset-0">
-        <img
-          className="h-full w-full object-cover aspect-square"
+        <Image
           alt={label}
-          decoding="async"
-          loading="lazy"
+          className="h-full w-full object-cover aspect-square"
+          layout="fill"
           src={cover_image}
           title={label}
+          unoptimized
         />
       </div>
 

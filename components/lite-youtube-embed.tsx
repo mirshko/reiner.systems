@@ -1,5 +1,11 @@
 import Head from "next/head";
-import React, { Fragment, useEffect, useRef, useState } from "react";
+import React, {
+  Fragment,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import styles from "../styles/yt-lite.module.css";
 
 function PlayButton() {
@@ -27,25 +33,33 @@ function LiteYouTubeEmbed({ id, title }: { id: string; title: string }) {
 
   const ref = useRef<HTMLDivElement>(null);
 
-  const warmConnections = () => {
-    if (preconnected) return;
-    setPreconnected(true);
-  };
+  const warmConnections = useCallback(() => {
+    if (preconnected) {
+      return;
+    }
 
-  const addIframe = () => {
-    if (iframe) return;
+    setPreconnected(true);
+  }, [preconnected, setPreconnected]);
+
+  const addIframe = useCallback(() => {
+    if (iframe) {
+      return;
+    }
+
     setIframe(true);
-  };
+  }, [iframe, setIframe]);
 
   useEffect(() => {
-    ref?.current?.addEventListener("pointerover", warmConnections, true);
-    ref?.current?.addEventListener("click", addIframe, true);
+    const current = ref.current;
+
+    current?.addEventListener("pointerover", warmConnections, true);
+    current?.addEventListener("click", addIframe, true);
 
     return () => {
-      ref?.current?.removeEventListener("pointerover", warmConnections);
-      ref?.current?.removeEventListener("click", addIframe);
+      current?.removeEventListener("pointerover", warmConnections);
+      current?.removeEventListener("click", addIframe);
     };
-  });
+  }, [ref, warmConnections, addIframe]);
 
   return (
     <Fragment>
