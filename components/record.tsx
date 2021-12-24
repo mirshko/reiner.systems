@@ -13,7 +13,7 @@ function Record({ artist, title, cover_image, video_id }: RecordSchema) {
     >
       <div className="block absolute inset-0">
         <img
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover aspect-square"
           alt={label}
           decoding="async"
           loading="lazy"
