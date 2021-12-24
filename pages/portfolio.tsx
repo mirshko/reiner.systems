@@ -21,7 +21,7 @@ function PortfolioPiece({
   screenshot,
 }: Work) {
   return (
-    <article>
+    <article className="max-w-4xl">
       {screenshot && (
         <Fragment>
           <div className="next-image-tweaks">
@@ -88,9 +88,13 @@ function PortfolioPage() {
       </section>
 
       <section className="space-y-10">
-        {curated.map((work, i) => (
-          <PortfolioPiece key={i} {...work} />
-        ))}
+        <div className="relative w-full flex gap-10 snap-x snap-mandatory overflow-x-auto">
+          {curated.map((work, i) => (
+            <div key={i} className="snap-start shrink-0">
+              <PortfolioPiece {...work} />
+            </div>
+          ))}
+        </div>
 
         <article>
           <header>

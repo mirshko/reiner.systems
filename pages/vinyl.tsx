@@ -23,7 +23,7 @@ function VinylPage({
           >
             Discogs
           </a>
-          , thought I&apos;d make a nice gallery for them.
+          .{" "}
         </p>
       </section>
 
