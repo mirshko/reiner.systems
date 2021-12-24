@@ -1,10 +1,20 @@
 import Head from "next/head";
 
+export enum ThemeColors {
+  Black = "#000000",
+  Green = "#32d74b",
+  Indigo = "#5e5ce6",
+  Pink = "#ff375f",
+  Teal = "#64d2ff",
+  Yellow = "#e3af09",
+}
+
 type Props = {
   description?: string;
   path?: string;
   title?: string;
   type?: string;
+  themeColor?: ThemeColors;
 };
 
 function SEO({
@@ -12,6 +22,7 @@ function SEO({
   path = "",
   title = "Jeff Reiner, Design Engineer",
   type = "website",
+  themeColor = ThemeColors.Yellow,
 }: Props) {
   return (
     <Head>
@@ -29,6 +40,8 @@ function SEO({
       <link rel="canonical" href={`https://reiner.design${path}`} />
 
       <meta property="og:type" content={type} />
+
+      <meta name="theme-color" content={themeColor} />
     </Head>
   );
 }

@@ -6,7 +6,7 @@ function Nav() {
       <div className="flex space-x-5">
         <NavLink href="/">Jeff Reiner</NavLink>
 
-        <NavLink href="/portfolio" activeClassName="text-green-dark">
+        <NavLink href="/portfolio" activeClassName="text-pink-dark">
           Work
         </NavLink>
 

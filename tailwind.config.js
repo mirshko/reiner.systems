@@ -1,8 +1,5 @@
-const colors = require("tailwindcss/colors");
-
 module.exports = {
-  mode: "jit",
-  purge: ["./components/**/*.tsx", "./pages/**/*.tsx"],
+  content: ["./components/**/*.tsx", "./pages/**/*.tsx"],
   theme: {
     extend: {
       fontFamily: {
@@ -10,7 +7,6 @@ module.exports = {
       },
       colors: {
         primary: "#E3AF09",
-
         green: {
           light: "#34C759",
           dark: "#32D74B",
@@ -27,14 +23,8 @@ module.exports = {
           light: "#5AC8FA",
           dark: "#64D2FF",
         },
-
-        gray: colors.trueGray,
-
-        soapbox: "#8359fe",
-        dialectic: "#ed1a24",
       },
     },
   },
-  variants: {},
   plugins: [],
 };

@@ -14,8 +14,6 @@ class Doc extends Document {
           <meta property="twitter:creator" content="@mirshko" />
           <meta property="twitter:card" content="summary" />
 
-          <meta name="theme-color" content="#000000" />
-
           <link rel="shortcut icon" href="favicon-pixel.png" type="image/png" />
         </Head>
 

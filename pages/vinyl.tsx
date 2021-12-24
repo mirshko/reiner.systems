@@ -1,6 +1,6 @@
 import { InferGetStaticPropsType } from "next";
 import Record from "../components/record";
-import SEO from "../components/seo";
+import SEO, { ThemeColors } from "../components/seo";
 import { getRecordsInDb } from "../lib/db";
 
 function VinylPage({
@@ -8,7 +8,7 @@ function VinylPage({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <main className="space-y-20">
-      <SEO title="Vinyl" path="/vinyl" />
+      <SEO title="Vinyl" path="/vinyl" themeColor={ThemeColors.Indigo} />
 
       <section>
         <h1 hidden>Vinyl</h1>
@@ -16,7 +16,7 @@ function VinylPage({
         <p>
           My personal record collection on{" "}
           <a
-            className="text-indigo-light"
+            className="text-indigo-dark"
             href="https://www.discogs.com/user/mirshko/collection?header=1&layout=big"
             rel="noreferrer noopener"
             target="_blank"

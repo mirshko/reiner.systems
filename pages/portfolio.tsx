@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Fragment } from "react";
-import SEO from "../components/seo";
+import SEO, { ThemeColors } from "../components/seo";
 import { clients, curated, Roles } from "../data";
 
 type Work = {
@@ -44,7 +44,7 @@ function PortfolioPiece({
         <h2>
           {label}{" "}
           <a
-            className="text-green-light"
+            className="text-pink-dark"
             href={href}
             aria-label={`${label} Project Website`}
             target="_blank"
@@ -79,7 +79,7 @@ function PortfolioPiece({
 function PortfolioPage() {
   return (
     <main className="space-y-20">
-      <SEO title="Portfolio" path="/portfolio" />
+      <SEO title="Portfolio" path="/portfolio" themeColor={ThemeColors.Pink} />
 
       <section>
         <h1 hidden>Portfolio</h1>
