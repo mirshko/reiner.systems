@@ -1,10 +1,6 @@
-import sovreigninterface from "../images/portfolio/app.sovreign.org.png";
 import async from "../images/portfolio/async.art-updated.png";
 import union from "../images/portfolio/beta.union.finance.png";
-import hummingbot from "../images/portfolio/hummingbot.io.png";
-import pillarproject from "../images/portfolio/pillarproject.io.png";
 import refugeworldwide from "../images/portfolio/refugeworldwide.com.png";
-import alicedapp from "../images/portfolio/www.alicedapp.com.png";
 
 export enum Roles {
   BRANDING = "Brand & Design Consulting",
@@ -17,15 +13,6 @@ export enum Roles {
 }
 
 export const curated = [
-  {
-    href: "https://app.sovreign.org",
-    website: "app.sovreign.org",
-    label: "Sovreign Interface",
-    summary:
-      "A stable cryptocurrency backed by demonstrably collateralized store-of-value assets.",
-    roles: [Roles.FRONTEND, Roles.DESIGN_UX],
-    screenshot: sovreigninterface,
-  },
   {
     href: "https://refugeworldwide.com",
     website: "refugeworldwide.com",
@@ -53,33 +40,25 @@ export const curated = [
     roles: [Roles.FRONTEND, Roles.DESIGN_UX, Roles.WIREFRAMING],
     screenshot: union,
   },
-  {
-    href: "https://www.alicedapp.com",
-    website: "alicedapp.com",
-    label: "Alice dApp",
-    summary: "An adventure through Web3 with native mini-dApps.",
-    roles: [Roles.BRANDING],
-    screenshot: alicedapp,
-  },
-  {
-    href: "https://pillarproject.io",
-    website: "pillarproject.io",
-    label: "Pillar",
-    summary: "",
-    roles: [Roles.CONSULTING, Roles.FRONTEND],
-    screenshot: pillarproject,
-  },
-  {
-    href: "https://hummingbot.io/",
-    website: "hummingbot.io",
-    label: "Hummingbot",
-    summary: "",
-    roles: [Roles.FRONTEND, Roles.DESIGN],
-    screenshot: hummingbot,
-  },
 ];
 
 export const clients = [
+  {
+    href: "https://dialectic.ch",
+    label: "Dialectic",
+  },
+  {
+    href: "https://www.alicedapp.com",
+    label: "Alice dApp",
+  },
+  {
+    href: "https://pillarproject.io",
+    label: "Pillar",
+  },
+  {
+    href: "https://hummingbot.io/",
+    label: "Hummingbot",
+  },
   {
     href: "https://metamoneymarket.com",
     label: "MetaMoneyMarket",
