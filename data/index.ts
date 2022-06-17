@@ -1,5 +1,3 @@
-import async from "../images/portfolio/async.art-updated.png";
-import union from "../images/portfolio/beta.union.finance.png";
 import refugeworldwide from "../images/portfolio/refugeworldwide.com.png";
 
 export enum Roles {
@@ -22,30 +20,20 @@ export const curated = [
     roles: [Roles.FRONTEND, Roles.CONSULTING],
     screenshot: refugeworldwide,
   },
-  {
-    href: "https://async.art",
-    website: "async.art",
-    label: "Async Art",
-    summary:
-      "An experimental art movement born out of the question “what does art look like when it can be programmed?”",
-    roles: [Roles.CONSULTING, Roles.FRONTEND, Roles.INITIAL_DESIGN],
-    screenshot: async,
-  },
-  {
-    href: "https://union.finance",
-    website: "union.finance",
-    label: "Union",
-    summary:
-      "Credit backed by trust, without the need for collateral, credit score, or revealing personal information.",
-    roles: [Roles.FRONTEND, Roles.DESIGN_UX, Roles.WIREFRAMING],
-    screenshot: union,
-  },
 ];
 
 export const clients = [
   {
     href: "https://dialectic.ch",
     label: "Dialectic",
+  },
+  {
+    href: "https://async.art",
+    label: "Async Art",
+  },
+  {
+    href: "https://union.finance",
+    label: "Union",
   },
   {
     href: "https://www.alicedapp.com",

@@ -1,11 +1,4 @@
-import Head from "next/head";
-import React, {
-  Fragment,
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import styles from "../styles/yt-lite.module.css";
 
 function PlayButton() {
@@ -21,25 +14,14 @@ function PlayButton() {
 }
 
 function LiteYouTubeEmbed({ id, title }: { id: string; title: string }) {
-  const [preconnected, setPreconnected] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
 
   const [iframe, setIframe] = useState(false);
 
   const videoId = encodeURIComponent(id);
-
   const videoTitle = title;
 
-  const iframeSrc = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&controls=0`;
-
-  const ref = useRef<HTMLDivElement>(null);
-
-  const warmConnections = useCallback(() => {
-    if (preconnected) {
-      return;
-    }
-
-    setPreconnected(true);
-  }, [preconnected, setPreconnected]);
+  const iframeSrc = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&controls=1`;
 
   const addIframe = useCallback(() => {
     if (iframe) {
@@ -52,53 +34,34 @@ function LiteYouTubeEmbed({ id, title }: { id: string; title: string }) {
   useEffect(() => {
     const current = ref.current;
 
-    current?.addEventListener("pointerover", warmConnections, true);
     current?.addEventListener("click", addIframe, true);
 
     return () => {
-      current?.removeEventListener("pointerover", warmConnections);
       current?.removeEventListener("click", addIframe);
     };
-  }, [ref, warmConnections, addIframe]);
+  }, [ref, addIframe]);
 
   return (
-    <Fragment>
-      {preconnected && (
-        <Head>
-          <link
-            key="lyt-youtube-nocookie"
-            rel="preconnect"
-            href="https://www.youtube-nocookie.com"
-          />
-          <link
-            key="lyt-google"
-            rel="preconnect"
-            href="https://www.google.com"
-          />
-        </Head>
-      )}
-
-      <div
-        className={`${styles.yt} ${iframe && styles.activated}`}
-        data-title={videoTitle}
-        ref={ref}
-      >
-        <div className={styles.playbtn}>
-          <PlayButton />
-        </div>
-
-        {iframe && (
-          <iframe
-            title={videoTitle}
-            width={314}
-            height={314}
-            frameBorder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            src={iframeSrc}
-          />
-        )}
+    <div
+      className={`${styles.yt} ${iframe && styles.activated}`}
+      data-title={videoTitle}
+      ref={ref}
+    >
+      <div className={styles.playbtn}>
+        <PlayButton />
       </div>
-    </Fragment>
+
+      {iframe && (
+        <iframe
+          title={videoTitle}
+          width={314}
+          height={314}
+          frameBorder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          src={iframeSrc}
+        />
+      )}
+    </div>
   );
 }
 

@@ -1,11 +1,6 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "build": {
-    "env": {
-      "FORCE_RUNTIME_TAG": "canary"
-    }
-  },
   "github": {
     "silent": true
   },
@@ -17,7 +12,7 @@
     },
     {
       "source": "/projects",
-      "destination": "/portfolio",
+      "destination": "/",
       "permanent": true
     },
     {
@@ -33,6 +28,11 @@
     {
       "source": "/experiments",
       "destination": "https://github.com/mirshko",
+      "permanent": false
+    },
+    {
+      "source": "/portfolio",
+      "destination": "/",
       "permanent": false
     }
   ]

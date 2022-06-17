@@ -17,7 +17,7 @@ class Doc extends Document {
           <link rel="shortcut icon" href="favicon-pixel.png" type="image/png" />
         </Head>
 
-        <body className="antialiased text-2xl lg:text-3xl xl:text-4xl font-medium bg-black text-white">
+        <body className="antialiased font-medium bg-black text-white p-5">
           <Main />
 
           <NextScript />

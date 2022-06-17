@@ -23,6 +23,7 @@ module.exports = {
           light: "#5AC8FA",
           dark: "#64D2FF",
         },
+        magenta: "#ff00ff",
       },
     },
   },

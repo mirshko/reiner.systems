@@ -7,6 +7,7 @@ export enum ThemeColors {
   Pink = "#ff375f",
   Teal = "#64d2ff",
   Yellow = "#e3af09",
+  Magenta = "#ff00ff",
 }
 
 type Props = {
@@ -22,7 +23,7 @@ function SEO({
   path = "",
   title = "Jeff Reiner, Design Engineer",
   type = "website",
-  themeColor = ThemeColors.Yellow,
+  themeColor = ThemeColors.Magenta,
 }: Props) {
   return (
     <Head>

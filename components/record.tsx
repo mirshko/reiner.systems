@@ -12,13 +12,15 @@ function Record({ artist, title, cover_image, video_id }: RecordSchema) {
       className="relative select-none rounded-md overflow-hidden"
       title={label}
     >
-      <div className="block absolute inset-0">
+      <div className="flex absolute inset-0">
         <Image
           alt={label}
           className="h-full w-full object-cover aspect-square"
-          layout="fill"
+          layout="raw"
           src={cover_image}
           title={label}
+          width={300}
+          height={300}
           unoptimized
         />
       </div>

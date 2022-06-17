@@ -2,112 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  a {
-    @apply text-primary;
-  }
-  a:hover {
-    @apply italic;
-  }
-
-  p {
-    @apply max-w-prose;
-  }
+a {
+  @apply text-magenta hover:italic;
 }
 
-.next-image-tweaks > div {
-  vertical-align: middle;
-  border-radius: 0.375rem;
-}
-
-.prose pre {
-  @apply bg-black;
-}
-
-.prose code {
-  @apply text-gray-200 bg-black;
-}
-
-.prose pre code {
-  @apply text-gray-200;
-}
-
-.prose img {
-  /* Don't apply styles to next/image */
-  @apply m-0;
-}
-
-.prose > :first-child {
-  /* Override removing top margin, causing layout shift */
-  margin-top: 1.25em !important;
-  margin-bottom: 1.25em !important;
-}
-
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-  @apply text-gray-300;
-}
-
-.token.punctuation {
-  @apply text-gray-300;
-}
-
-.token.property,
-.token.tag,
-.token.boolean,
-.token.number,
-.token.constant,
-.token.symbol,
-.token.deleted {
-  @apply text-green-500;
-}
-
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-  @apply text-purple-500;
-}
-
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string {
-  @apply text-yellow-500;
-}
-
-.token.atrule,
-.token.attr-value,
-.token.keyword {
-  @apply text-blue-500;
-}
-
-.token.function,
-.token.class-name {
-  @apply text-pink-500;
-}
-
-.token.regex,
-.token.important,
-.token.variable {
-  @apply text-yellow-500;
-}
-
-code[class*="language-"],
-pre[class*="language-"] {
-  @apply text-gray-50;
-}
-
-pre::-webkit-scrollbar {
-  display: none;
-}
-
-pre {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+body {
+  font-size: 2rem;
+  font-size: clamp(2rem, 2vw + 1.5rem, 3rem);
 }
