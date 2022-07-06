@@ -46,7 +46,9 @@ export async function getStaticProps() {
   return {
     props: {
       records: JSON.parse(
-        (await readFile("vinyl.json")) as unknown as string
+        await readFile(join(process.cwd(), "vinyl.json"), {
+          encoding: "utf8",
+        })
       ) as RecordSchema[],
     },
   };
