@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { RecordSchema } from "../types/supabase";
+import { RecordSchema } from "../types/record-schema";
 import LiteYouTubeEmbed from "./lite-youtube-embed";
 
 function Record({ artist, title, cover_image, video_id }: RecordSchema) {

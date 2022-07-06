@@ -1,9 +1,11 @@
+import { readFile } from "fs/promises";
 import { InferGetStaticPropsType } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import { join } from "path";
 import Record from "../components/record";
-import SEO, { ThemeColors } from "../components/seo";
-import { getRecordsInDb } from "../lib/db";
+import SEO from "../components/seo";
+import { RecordSchema } from "../types/record-schema";
 
 function VinylPage({
   records,
@@ -43,7 +45,9 @@ function VinylPage({
 export async function getStaticProps() {
   return {
     props: {
-      records: await getRecordsInDb(),
+      records: JSON.parse(
+        (await readFile("vinyl.json")) as unknown as string
+      ) as RecordSchema[],
     },
   };
 }

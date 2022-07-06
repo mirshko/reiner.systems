@@ -1,4 +1,4 @@
-import { RecordSchema } from "../types/supabase";
+import { RecordSchema } from "../types/record-schema";
 
 /**
  * @name URL
