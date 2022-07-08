@@ -11,7 +11,7 @@ function IndexPage() {
           Jeff engineers products; the experience that brings them to life, and
           the code that drives them. His work specializes on Web3, and ranges
           from designing interfaces, to building high performance apps and
-          websites. He previously worked at Dialectic and Async Art. Most
+          websites. He previously worked at Async Art and Union. Most
           recently he&apos;s been building{" "}
           <a
             href="https://www.pills.game"
