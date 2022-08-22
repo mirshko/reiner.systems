@@ -25,6 +25,19 @@ module.exports = {
         },
         magenta: "#ff00ff",
       },
+      animation: {
+        "ken-burns": "ken-burns-effect 500ms cubic-bezier(0.4, 0, 0.2, 1)",
+      },
+      keyframes: {
+        "ken-burns-effect": {
+          "0%": {
+            opacity: 0,
+            clipPath: "inset(5%)",
+            transform: "scale(111.11%)",
+          },
+          "100%": { opacity: 1, clipPath: "inset(0)", transform: "scale(1)" },
+        },
+      },
     },
   },
   plugins: [],

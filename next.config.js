@@ -1,14 +1,12 @@
-const withPreact = require("next-plugin-preact");
-
 /**
  * @type {import('next').NextConfig}
  **/
-module.exports = withPreact({
+module.exports = {
   swcMinify: true,
   reactStrictMode: true,
   experimental: {
     images: {
-      layoutRaw: true,
+      allowFutureImage: true,
     },
   },
-});
+};
