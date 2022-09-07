@@ -8,16 +8,13 @@ function Record({ artist, title, cover_image, video_id }: RecordSchema) {
   const hasVideo = !!video_id;
 
   return (
-    <div
-      className="relative select-none rounded-md overflow-hidden"
-      title={label}
-    >
+    <div className="relative select-none rounded-md" title={label}>
       <Image
         alt={label}
-        className="absolute w-full h-full inset-0 object-cover aspect-square rounded-md bg-black overflow-hidden"
-        onLoad={(e) => {
-          (e.target as HTMLImageElement).classList.add("animate-ken-burns");
-        }}
+        className="absolute w-full h-full inset-0 object-cover aspect-square rounded-md bg-black"
+        // onLoad={(e) => {
+        //   (e.target as HTMLImageElement).classList.add("animate-ken-burns");
+        // }}
         src={cover_image}
         title={label}
         width={300}

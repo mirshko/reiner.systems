@@ -19,9 +19,9 @@ type Props = {
 };
 
 function SEO({
-  description = "Freelance design engineer based in Berlin.",
+  description = "Freelance Design Engineer, Berlin.",
   path = "",
-  title = "Jeff Reiner, Design Engineer",
+  title = "Jeff Reiner",
   type = "website",
   themeColor = ThemeColors.Magenta,
 }: Props) {

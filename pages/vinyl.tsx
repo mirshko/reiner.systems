@@ -11,7 +11,7 @@ function VinylPage({
   records,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <main>
+    <main className="p-5">
       <SEO title="Vinyl" path="/vinyl" />
 
       <Head>
