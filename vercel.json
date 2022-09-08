@@ -7,7 +7,7 @@
   "redirects": [
     {
       "source": "/about",
-      "destination": "/",
+      "destination": "/info",
       "permanent": true
     },
     {

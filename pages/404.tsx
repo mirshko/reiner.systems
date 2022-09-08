@@ -6,21 +6,17 @@ function Custom404() {
     <main>
       <SEO title="404" path="/404" />
 
-      <div className="flex">
+      <div className="fixed top-5 left-5 z-50">
         <Link href="/">
-          <a className="inline-flex px-5 text-white bg-white/10 rounded-full text-[0.5em]">
+          <a className="inline-flex px-5 text-white bg-white/10 rounded-full">
             Back
           </a>
         </Link>
       </div>
 
-      <div className="h-5" />
-
-      <h1>Whoops, that page is gone.</h1>
-
-      <div className="h-5" />
-
-      <p>There&apos;s nothing here</p>
+      <section className="full-height-and-centered">
+        <h1>There&apos;s nothing here</h1>
+      </section>
     </main>
   );
 }

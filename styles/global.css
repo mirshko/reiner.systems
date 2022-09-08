@@ -6,14 +6,19 @@ a {
   @apply text-magenta hover:italic;
 }
 
-.fill-available {
-  height: -webkit-fill-available;
+.full-height-and-centered {
+  @apply grid place-items-center min-h-screen;
 }
 
-.full-height-and-centered {
-  min-height: 100vh;
-  /* mobile viewport bug fix */
-  min-height: -webkit-fill-available;
+/* Safari-only Query */
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    .full-height-and-centered {
+      min-height: -webkit-fill-available;
+    }
 
-  @apply grid place-items-center;
+    .fill-available {
+      height: -webkit-fill-available;
+    }
+  }
 }

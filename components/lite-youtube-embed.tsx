@@ -54,8 +54,8 @@ function LiteYouTubeEmbed({ id, title }: { id: string; title: string }) {
       {iframe && (
         <iframe
           title={videoTitle}
-          width={314}
-          height={314}
+          width={256}
+          height={256}
           frameBorder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           src={iframeSrc}

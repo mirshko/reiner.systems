@@ -1,11 +1,12 @@
 .yt {
   background-color: transparent;
-  position: relative;
+  position: absolute;
   display: block;
   contain: content;
   background-position: center center;
   background-size: cover;
   cursor: pointer;
+  inset: 0;
 }
 
 .yt::before {
