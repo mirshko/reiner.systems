@@ -15,6 +15,21 @@ class Doc extends Document {
           <meta property="twitter:card" content="summary" />
 
           <link rel="shortcut icon" href="favicon-pixel.png" type="image/png" />
+
+          <link
+            rel="preload"
+            as="font"
+            type="font/woff2"
+            href="/Mint-Grotesk-Medium-V131.woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            as="font"
+            type="font/woff2"
+            href="/Mint-Grotesk-Medium-Italic-V131.woff2"
+            crossOrigin="anonymous"
+          />
         </Head>
 
         <body className="antialiased font-medium bg-black text-white">

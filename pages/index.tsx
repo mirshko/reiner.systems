@@ -26,7 +26,7 @@ function IndexPage() {
         <article>
           <header>
             <div className="flex justify-between">
-              <p>{"2022 –"}</p>
+              <p className="tabular-nums">{"2022 –"}</p>
               <p className="uppercase">Ongoing</p>
             </div>
             <p className="uppercase">
@@ -46,7 +46,7 @@ function IndexPage() {
         <article>
           <header>
             <div className="flex justify-between">
-              <p>{"2020 –"}</p>
+              <p className="tabular-nums">{"2020 –"}</p>
               <p className="uppercase">Ongoing</p>
             </div>
             <p className="uppercase">
@@ -65,7 +65,7 @@ function IndexPage() {
         <article>
           <header>
             <div className="flex justify-between">
-              <p>{"2021"}</p>
+              <p className="tabular-nums">{"2021"}</p>
               <p className="uppercase">Completed</p>
             </div>
             <p className="uppercase">
@@ -84,7 +84,7 @@ function IndexPage() {
         <article>
           <header>
             <div className="flex justify-between">
-              <p>{"2020 – 2021"}</p>
+              <p className="tabular-nums">{"2020 – 2021"}</p>
               <p className="uppercase">Completed</p>
             </div>
             <p className="uppercase">
@@ -102,7 +102,7 @@ function IndexPage() {
         <article>
           <header>
             <div className="flex justify-between">
-              <p>{"2019 – 2021"}</p>
+              <p className="tabular-nums">{"2019 – 2021"}</p>
               <p className="uppercase">Completed</p>
             </div>
             <p className="uppercase">
@@ -121,7 +121,7 @@ function IndexPage() {
         <article>
           <header>
             <div className="flex justify-between">
-              <p>{"2017 – 2019"}</p>
+              <p className="tabular-nums">{"2017 – 2019"}</p>
               <p className="uppercase">Completed</p>
             </div>
             <p className="uppercase">
@@ -139,7 +139,7 @@ function IndexPage() {
         <article>
           <header>
             <div className="flex justify-between">
-              <p>{"2014 – 2017"}</p>
+              <p className="tabular-nums">{"2014 – 2017"}</p>
             </div>
             <p className="uppercase">Previous Work</p>
           </header>
