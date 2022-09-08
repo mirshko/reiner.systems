@@ -5,7 +5,7 @@ import Link from "next/link";
 import { join } from "path";
 import Record from "../components/record";
 import SEO from "../components/seo";
-import { RecordSchema } from "../types/record-schema";
+import type { RecordSchema } from "../types/record-schema";
 
 function VinylPage({
   records,

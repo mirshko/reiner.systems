@@ -6,4 +6,5 @@ export type RecordSchema = {
   title: string;
   video_id?: string;
   year: number;
+  file_name: string;
 };
