@@ -8,6 +8,9 @@ module.exports = {
       colors: {
         magenta: "#ff00ff",
       },
+      animation: {
+        "spin-33": "spin 1.81s linear infinite",
+      },
     },
   },
   plugins: [],
