@@ -121,6 +121,26 @@ function IndexPage() {
         <article>
           <header>
             <div className="flex justify-between">
+              <p className="tabular-nums">{"2019 – 2020"}</p>
+              <p className="uppercase">Completed</p>
+            </div>
+            <p className="uppercase">
+              <a href="https://hummingbot.org">Hummingbot</a>
+            </p>
+          </header>
+
+          <section>
+            <ul>
+              <li>Design System</li>
+              <li>Marketing Website</li>
+              <li>Documentation</li>
+            </ul>
+          </section>
+        </article>
+
+        <article>
+          <header>
+            <div className="flex justify-between">
               <p className="tabular-nums">{"2017 – 2019"}</p>
               <p className="uppercase">Completed</p>
             </div>
