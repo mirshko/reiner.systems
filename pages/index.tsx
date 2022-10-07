@@ -141,6 +141,25 @@ function IndexPage() {
         <article>
           <header>
             <div className="flex justify-between">
+              <p className="tabular-nums">{"2019 – 2020"}</p>
+              <p className="uppercase">Completed</p>
+            </div>
+            <p className="uppercase">
+              <a href="https://www.pillar.fi">Pillar</a>
+            </p>
+          </header>
+
+          <section>
+            <ul>
+              <li>Website</li>
+              <li>Web Recovery Portal</li>
+            </ul>
+          </section>
+        </article>
+
+        <article>
+          <header>
+            <div className="flex justify-between">
               <p className="tabular-nums">{"2017 – 2019"}</p>
               <p className="uppercase">Completed</p>
             </div>
