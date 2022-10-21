@@ -25,6 +25,12 @@ function App({ Component, pageProps }: AppProps) {
           </li>
 
           <li>
+            <Link href="/berlin">
+              <a>Berlin</a>
+            </Link>
+          </li>
+
+          <li>
             <a href="https://read.cv/mirshko">CV</a>
           </li>
         </ul>
