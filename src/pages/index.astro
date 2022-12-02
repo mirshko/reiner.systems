@@ -1,82 +1,185 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Welcome to Astro." path="/">
   <main>
-    <h1>Welcome to <span class="text-gradient">Astro</span></h1>
-    <p class="instructions">
-      To get started, open the directory <code>src/pages</code> in your project.<br
-      />
-      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-    </p>
-    <ul role="list" class="link-card-grid">
-      <Card
-        href="https://docs.astro.build/"
-        title="Documentation"
-        body="Learn how Astro works and explore the official API docs."
-      />
-      <Card
-        href="https://astro.build/integrations/"
-        title="Integrations"
-        body="Supercharge your project with new frameworks and libraries."
-      />
-      <Card
-        href="https://astro.build/themes/"
-        title="Themes"
-        body="Explore a galaxy of community-built starter themes."
-      />
-      <Card
-        href="https://astro.build/chat/"
-        title="Community"
-        body="Come say hi to our amazing Discord community. ❤️"
-      />
-    </ul>
+    <section class="full-height-and-centered">
+      <div class="p-5 sm:p-10">
+        <p class="uppercase">
+          <a href="/info">Jeff Reiner</a>
+          {" "}
+          engineers high performance products and experiences for Web3.{" "}
+          <a href="https://twitter.com/mirshko">@mirshko</a>{" "}
+          <a href="https://github.com/mirshko">mirshko</a>{" "}
+          <a href="mailto:jeff@reiner.design">jeff@reiner.design</a> Berlin
+        </p>
+      </div>
+    </section>
+
+    <section class="p-5 sm:p-10 flex flex-col gap-10">
+      <h2 class="uppercase">Projects</h2>
+
+      <article>
+        <header>
+          <div class="flex justify-between">
+            <p class="tabular-nums">{"2022 –"}</p>
+            <p class="uppercase">Ongoing</p>
+          </div>
+          <p class="uppercase">
+            <a href="https://www.pills.game">PILLS</a>
+          </p>
+        </header>
+
+        <section>
+          <ul>
+            <li>Avatar creation engine and frontend</li>
+            <li>Character asset database</li>
+            <li>Backend API</li>
+          </ul>
+        </section>
+      </article>
+
+      <article>
+        <header>
+          <div class="flex justify-between">
+            <p class="tabular-nums">{"2020 –"}</p>
+            <p class="uppercase">Ongoing</p>
+          </div>
+          <p class="uppercase">
+            <a href="https://www.refugeworldwide.com">Refuge Worldwide</a>
+          </p>
+        </header>
+
+        <section>
+          <ul>
+            <li>Website frontend</li>
+            <li>CMS setup</li>
+          </ul>
+        </section>
+      </article>
+
+      <article>
+        <header>
+          <div class="flex justify-between">
+            <p class="tabular-nums">{"2021"}</p>
+            <p class="uppercase">Completed</p>
+          </div>
+          <p class="uppercase">
+            <a href="https://dialectic.ch">Dialectic</a>
+          </p>
+        </header>
+
+        <section>
+          <ul>
+            <li>Website and editorial</li>
+            <li>Web3 project development</li>
+          </ul>
+        </section>
+      </article>
+
+      <article>
+        <header>
+          <div class="flex justify-between">
+            <p class="tabular-nums">{"2020 – 2021"}</p>
+            <p class="uppercase">Completed</p>
+          </div>
+          <p class="uppercase">
+            <a href="https://union.finance">Union</a>
+          </p>
+        </header>
+
+        <section>
+          <ul>
+            <li>Beta Web3 app</li>
+          </ul>
+        </section>
+      </article>
+
+      <article>
+        <header>
+          <div class="flex justify-between">
+            <p class="tabular-nums">{"2019 – 2021"}</p>
+            <p class="uppercase">Completed</p>
+          </div>
+          <p class="uppercase">
+            <a href="https://async.art">Async Art</a>
+          </p>
+        </header>
+
+        <section>
+          <ul>
+            <li>NFT marketplace</li>
+            <li>Async Canvas creator</li>
+          </ul>
+        </section>
+      </article>
+
+      <article>
+        <header>
+          <div class="flex justify-between">
+            <p class="tabular-nums">{"2019 – 2020"}</p>
+            <p class="uppercase">Completed</p>
+          </div>
+          <p class="uppercase">
+            <a href="https://hummingbot.org">Hummingbot</a>
+          </p>
+        </header>
+
+        <section>
+          <ul>
+            <li>Design System</li>
+            <li>Marketing Website</li>
+            <li>Documentation</li>
+          </ul>
+        </section>
+      </article>
+
+      <article>
+        <header>
+          <div class="flex justify-between">
+            <p class="tabular-nums">{"2019 – 2020"}</p>
+            <p class="uppercase">Completed</p>
+          </div>
+          <p class="uppercase">
+            <a href="https://www.pillar.fi">Pillar</a>
+          </p>
+        </header>
+
+        <section>
+          <ul>
+            <li>Website</li>
+            <li>Web Recovery Portal</li>
+          </ul>
+        </section>
+      </article>
+
+      <article>
+        <header>
+          <div class="flex justify-between">
+            <p class="tabular-nums">{"2017 – 2019"}</p>
+            <p class="uppercase">Completed</p>
+          </div>
+          <p class="uppercase">
+            <a href="https://contentful.com">Contentful</a>
+          </p>
+        </header>
+
+        <section>
+          <ul>
+            <li>Marketing website</li>
+          </ul>
+        </section>
+      </article>
+
+      <article>
+        <header>
+          <div class="flex justify-between">
+            <p class="tabular-nums">{"2014 – 2017"}</p>
+          </div>
+          <p class="uppercase">Previous Work</p>
+        </header>
+      </article>
+    </section>
   </main>
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-    padding: 1.5rem;
-    max-width: 60ch;
-  }
-  h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin: 0;
-  }
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
-  .instructions {
-    line-height: 1.6;
-    margin: 1rem 0;
-    border: 1px solid rgba(var(--accent), 25%);
-    background-color: white;
-    padding: 1rem;
-    border-radius: 0.4rem;
-  }
-  .instructions code {
-    font-size: 0.875em;
-    font-weight: bold;
-    background: rgba(var(--accent), 12%);
-    color: rgb(var(--accent));
-    border-radius: 4px;
-    padding: 0.3em 0.45em;
-  }
-  .instructions strong {
-    color: rgb(var(--accent));
-  }
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 1rem;
-    padding: 0;
-  }
-</style>

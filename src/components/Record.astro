@@ -1,0 +1,28 @@
+---
+import type { RecordInterface } from "../discogs";
+import YouTube from "./YouTube.astro";
+
+export interface Props {
+  record: RecordInterface;
+}
+
+const { record } = Astro.props;
+
+const { artist, title, file_name, video_id } = record;
+
+const label = `${title}, ${artist}`;
+---
+
+<div class="relative select-none rounded-full">
+  <img
+    alt={label}
+    class="object-cover aspect-square rounded-full"
+    draggable={false}
+    height={256}
+    loading="lazy"
+    src={`/cover_images/${file_name}`}
+    width={256}
+  />
+
+  {video_id ? <YouTube id={video_id} title={label} /> : null}
+</div>
