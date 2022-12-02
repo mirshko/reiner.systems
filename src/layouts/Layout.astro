@@ -1,0 +1,81 @@
+---
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+
+export interface Props {
+  title: string;
+  description?: string;
+  path: `/${string}`;
+}
+
+enum ThemeColors {
+  Black = "#000000",
+  Green = "#32d74b",
+  Indigo = "#5e5ce6",
+  Pink = "#ff375f",
+  Teal = "#64d2ff",
+  Yellow = "#e3af09",
+  Magenta = "#ff00ff",
+}
+
+const {
+  title,
+  description = "Freelance Design Engineer, Berlin.",
+  path,
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="favicon-pixel.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta property="og:title" content={title} />
+    <meta property="twitter:title" content={title} />
+
+    <meta name="description" content={description} />
+    <meta property="og:description" content={description} />
+    <meta property="twitter:description" content={description} />
+
+    <meta property="og:url" content={`https://reiner.design${path}`} />
+    <meta property="twitter:url" content={`https://reiner.design${path}`} />
+    <link rel="canonical" href={`https://reiner.design${path}`} />
+
+    <meta property="og:type" content="website" />
+
+    <meta name="theme-color" content={ThemeColors.Magenta} />
+
+    <meta property="og:site_name" content="Jeff Reiner" />
+    <meta name="author" content="Jeff Reiner" />
+    <meta property="twitter:site" content="@mirshko" />
+    <meta property="twitter:creator" content="@mirshko" />
+    <meta property="twitter:card" content="summary" />
+
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/Mint-Grotesk-Medium-V131.woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/Mint-Grotesk-Medium-Italic-V131.woff2"
+      crossorigin="anonymous"
+    />
+
+    <script defer src="/_vercel/insights/script.js"></script>
+  </head>
+
+  <body class="antialiased font-medium bg-black text-white">
+    <slot />
+  </body>
+
+  <Footer />
+</html>

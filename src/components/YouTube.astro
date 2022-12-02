@@ -1,0 +1,14 @@
+---
+export interface Props {
+  id: string;
+  title?: string;
+}
+
+const { id, title } = Astro.props;
+---
+
+<lite-youtube data-id={id} data-title={title}></lite-youtube>
+
+<script>
+  import "../lite-youtube";
+</script>
