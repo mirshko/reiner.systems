@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: "Mint Grotesk";
   src: url("/fonts/subset-Mint-Grotesk-Medium-V131.woff2") format("woff2");
