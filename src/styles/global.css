@@ -22,13 +22,6 @@ a {
 }
 
 .full-height-and-centered {
-  @apply grid place-items-center min-h-screen;
-}
-/* Safari-only Query */
-@media not all and (min-resolution: 0.001dpcm) {
-  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
-    .full-height-and-centered {
-      min-height: -webkit-fill-available;
-    }
-  }
+  min-height: 100dvh;
+  @apply grid place-items-center;
 }
