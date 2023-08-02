@@ -1,0 +1,24 @@
+---
+import MatteComponent from "../components/Matte";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  path="/matte"
+  title="Matte.pics"
+  description="Give your photos that gallery quality aesthetic"
+  className="bg-gray-200"
+  themeColor="#e5e7eb"
+>
+  <main>
+    <div class="fixed top-5 left-5 z-50">
+      <a href="/" class="inline-flex px-5 text-black bg-black/10 rounded-full">
+        Back
+      </a>
+    </div>
+
+    <section class="full-height-and-centered font-sans">
+      <MatteComponent client:load />
+    </section>
+  </main>
+</Layout>

@@ -6,6 +6,8 @@ export interface Props {
   title: string;
   description?: string;
   path: `/${string}`;
+  className?: string;
+  themeColor?: string;
 }
 
 enum ThemeColors {
@@ -22,6 +24,8 @@ const {
   title,
   description = "Freelance UI Engineer, Berlin.",
   path,
+  className = "bg-black text-white",
+  themeColor = ThemeColors.Magenta,
 } = Astro.props;
 ---
 
@@ -47,7 +51,7 @@ const {
 
     <meta property="og:type" content="website" />
 
-    <meta name="theme-color" content={ThemeColors.Magenta} />
+    <meta name="theme-color" content={themeColor} />
 
     <meta property="og:site_name" content="Jeff Reiner, UI Engineer" />
     <meta name="author" content="Jeff Reiner" />
@@ -73,7 +77,7 @@ const {
     <script defer src="/_vercel/insights/script.js"></script>
   </head>
 
-  <body class="antialiased font-medium bg-black text-white">
+  <body class={`antialiased font-mint font-medium ${className}`}>
     <slot />
   </body>
 

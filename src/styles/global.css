@@ -22,6 +22,6 @@ a {
 }
 
 .full-height-and-centered {
-  min-height: 100dvh;
   @apply grid place-items-center;
+  min-height: 100dvh;
 }
