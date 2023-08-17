@@ -1,11 +1,15 @@
 ---
+import { getCollection } from "astro:content";
 import Record from "../components/Record.astro";
 import Layout from "../layouts/Layout.astro";
 import "../styles/vinyl.css";
-import vinyl from "../data/vinyl.json";
-import type { RecordInterface } from "../discogs";
 
-const records = vinyl as RecordInterface[];
+const collection = await getCollection("vinyl");
+
+const records = collection.sort(
+  // @ts-ignore
+  (a, b) => new Date(b.data.date_added) - new Date(a.data.date_added)
+);
 ---
 
 <Layout title="Vinyl" path="/vinyl">

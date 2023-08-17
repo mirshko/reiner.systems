@@ -1,14 +1,14 @@
 ---
-import type { RecordInterface } from "../discogs";
+import type { CollectionEntry } from "astro:content";
 import YouTube from "./YouTube.astro";
 
 export interface Props {
-  record: RecordInterface;
+  record: CollectionEntry<"vinyl">;
 }
 
 const { record } = Astro.props;
 
-const { artist, title, file_name, video_id } = record;
+const { artist, title, file_name, video_id } = record.data;
 
 const label = `${title}, ${artist}`;
 ---

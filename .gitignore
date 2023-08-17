@@ -21,3 +21,6 @@ pnpm-debug.log*
 
 # vercel
 .vercel
+
+# astro
+.astro
