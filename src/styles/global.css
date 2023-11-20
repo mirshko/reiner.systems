@@ -20,8 +20,3 @@
 a[href] {
   @apply text-magenta hover:italic;
 }
-
-.full-height-and-centered {
-  @apply grid place-items-center;
-  min-height: 50dvh;
-}
