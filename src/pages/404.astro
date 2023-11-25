@@ -4,17 +4,13 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="404" path="/">
   <main>
-    <div class="fixed top-5 left-5 z-50">
-      <a href="/" class="inline-flex px-5 text-white bg-white/10 rounded-full">
-        Back
-      </a>
-    </div>
-
     <section class="">
-      <div class="flex flex-col gap-4 items-center">
-        <h1>There&apos;s nothing here</h1>
-
-        <img src="/404.gif" alt="Beyonce" />
+      <div class="p-5 sm:p-10">
+        <div class="flex flex-col gap-4 items-center">
+          <h1>
+            There&apos;s nothing here <a href="/">Back</a>
+          </h1>
+        </div>
       </div>
     </section>
   </main>
