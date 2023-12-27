@@ -24,13 +24,13 @@ const {
   title,
   description = "Freelance UI Engineer, Berlin.",
   path,
-  className = "bg-black text-white",
-  themeColor = ThemeColors.Magenta,
+  className = "",
+  themeColor = ThemeColors.Black,
 } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="antialiased">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -74,12 +74,10 @@ const {
       crossorigin="anonymous"
     />
 
-    <script defer src="/_vercel/insights/script.js"></script>
+    <!-- <script defer src="/_vercel/insights/script.js"></script> -->
   </head>
 
-  <body
-    class={`antialiased font-arial-narrow -tracking-[0.03em] font-bold leading-[1.75rem] text-3xl sm:text-5xl sm:leading-[3.125rem] uppercase ${className}`}
-  >
+  <body class={`font-mint-grotesk ${className}`}>
     <slot />
   </body>
 

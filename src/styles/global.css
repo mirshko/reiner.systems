@@ -17,6 +17,10 @@
   font-style: italic;
 }
 
+html {
+  text-rendering: optimizeLegibility;
+}
+
 a[href] {
-  @apply text-magenta hover:italic;
+  text-decoration: underline;
 }

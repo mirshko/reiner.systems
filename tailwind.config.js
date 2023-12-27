@@ -3,8 +3,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        "arial-narrow": ["Arial Narrow", "sans-serif"],
-        mint: ["Mint Grotesk", "Helvetica Neue", "Arial", "sans-serif"],
+        "mint-grotesk": [
+          "Mint Grotesk",
+          "Helvetica Neue",
+          "Arial",
+          "sans-serif",
+        ],
       },
       colors: {
         magenta: "#ff00ff",

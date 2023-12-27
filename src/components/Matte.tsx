@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from "react";
+import { type ChangeEvent, useState } from "react";
 
 async function applyMatteToImage(file: File, color: string) {
   const imageBitmap = await createImageBitmap(file);
@@ -71,7 +71,7 @@ export default function Matte() {
   };
 
   return (
-    <div className="flex flex-col gap-8 items-center">
+    <div className="flex flex-col gap-8 items-center font-sans">
       <div className="relative md:p-[75px] w-96 h-96 md:w-[40rem] md:h-[40rem] flex">
         {processedBlob ? (
           <img
@@ -85,6 +85,7 @@ export default function Matte() {
             className="w-full h-full object-contain flex items-center justify-center relative group cursor-pointer"
             style={{ backgroundColor: color }}
           >
+            <span className="sr-only">Uploaded File Preview</span>
             <input
               id="file-upload"
               accept="image/png, image/jpeg"
