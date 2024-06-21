@@ -22,7 +22,7 @@ enum ThemeColors {
 
 const {
   title,
-  description = "Freelance UI Engineer, Berlin.",
+  description = "Product Engineer, Berlin.",
   path,
   className = "",
   themeColor = ThemeColors.Black,
@@ -53,7 +53,7 @@ const {
 
     <meta name="theme-color" content={themeColor} />
 
-    <meta property="og:site_name" content="Jeff Reiner, UI Engineer" />
+    <meta property="og:site_name" content={title} />
     <meta name="author" content="Jeff Reiner" />
     <meta property="twitter:site" content="@mirshko" />
     <meta property="twitter:creator" content="@mirshko" />
@@ -73,8 +73,6 @@ const {
       href="/fonts/subset-Mint-Grotesk-Medium-Italic-V131.woff2"
       crossorigin="anonymous"
     />
-
-    <!-- <script defer src="/_vercel/insights/script.js"></script> -->
   </head>
 
   <body class={`font-mint-grotesk ${className}`}>
