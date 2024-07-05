@@ -5,27 +5,32 @@
   "redirects": [
     {
       "source": "/about",
-      "destination": "/info",
-      "permanent": true
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/info",
+      "destination": "/",
+      "permanent": false
     },
     {
       "source": "/projects",
       "destination": "/",
-      "permanent": true
+      "permanent": false
     },
     {
       "source": "/contact",
-      "destination": "https://twitter.com/mirshko",
+      "destination": "https://x.com/mirshko",
       "permanent": false
     },
     {
       "source": "/photos",
-      "destination": "https://www.are.na/jeff-reiner/index",
+      "destination": "/",
       "permanent": false
     },
     {
       "source": "/experiments",
-      "destination": "https://github.com/mirshko",
+      "destination": "/",
       "permanent": false
     },
     {

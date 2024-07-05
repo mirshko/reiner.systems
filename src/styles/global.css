@@ -2,22 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Mint Grotesk";
-  src: url("/fonts/subset-Mint-Grotesk-Medium-V131.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Mint Grotesk";
-  src: url("/fonts/subset-Mint-Grotesk-Medium-Italic-V131.woff2")
-    format("woff2");
-  font-weight: 500;
-  font-style: italic;
-}
-
 html {
+  @apply antialiased;
   text-rendering: optimizeLegibility;
 }
 

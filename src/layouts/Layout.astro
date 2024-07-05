@@ -7,17 +7,6 @@ export interface Props {
   description?: string;
   path: `/${string}`;
   className?: string;
-  themeColor?: string;
-}
-
-enum ThemeColors {
-  Black = "#000000",
-  Green = "#32d74b",
-  Indigo = "#5e5ce6",
-  Pink = "#ff375f",
-  Teal = "#64d2ff",
-  Yellow = "#e3af09",
-  Magenta = "#ff00ff",
 }
 
 const {
@@ -25,12 +14,11 @@ const {
   description = "Product Engineer, Berlin.",
   path,
   className = "",
-  themeColor = ThemeColors.Black,
 } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="antialiased">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -51,33 +39,18 @@ const {
 
     <meta property="og:type" content="website" />
 
-    <meta name="theme-color" content={themeColor} />
+    <meta name="theme-color" content="#000000" />
 
     <meta property="og:site_name" content={title} />
     <meta name="author" content="Jeff Reiner" />
     <meta property="twitter:site" content="@mirshko" />
     <meta property="twitter:creator" content="@mirshko" />
     <meta property="twitter:card" content="summary" />
-
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      href="/fonts/subset-Mint-Grotesk-Medium-V131.woff2"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      href="/fonts/subset-Mint-Grotesk-Medium-Italic-V131.woff2"
-      crossorigin="anonymous"
-    />
   </head>
 
-  <body class={`font-mint-grotesk ${className}`}>
+  <body class={className}>
     <slot />
-  </body>
 
-  <Footer />
+    <Footer />
+  </body>
 </html>
