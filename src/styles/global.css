@@ -10,3 +10,8 @@ html {
 a[href] {
   text-decoration: underline;
 }
+
+a[href]:focus,
+a[href]:hover {
+  @apply outline-none bg-black text-white;
+}

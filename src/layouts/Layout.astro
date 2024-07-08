@@ -1,56 +1,29 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
 import Footer from "../components/Footer.astro";
-import "../styles/global.css";
+// import "../styles/global.css";
 
 export interface Props {
   title: string;
   description?: string;
   path: `/${string}`;
-  className?: string;
 }
 
-const {
-  title,
-  description = "Product Engineer, Berlin.",
-  path,
-  className = "",
-} = Astro.props;
+const props = Astro.props;
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/png" href="favicon-pixel.png" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-    <meta name="title" content={title} />
-    <meta property="og:title" content={title} />
-    <meta property="twitter:title" content={title} />
+<BaseLayout {...props}>
+  <slot />
 
-    <meta name="description" content={description} />
-    <meta property="og:description" content={description} />
-    <meta property="twitter:description" content={description} />
+  <Footer />
+</BaseLayout>
 
-    <meta property="og:url" content={`https://reiner.systems${path}`} />
-    <meta property="twitter:url" content={`https://reiner.systems${path}`} />
-    <link rel="canonical" href={`https://reiner.systems${path}`} />
+<style is:global>
+  .p-5 {
+    padding: 1.25rem /* 20px */;
+  }
 
-    <meta property="og:type" content="website" />
-
-    <meta name="theme-color" content="#000000" />
-
-    <meta property="og:site_name" content={title} />
-    <meta name="author" content="Jeff Reiner" />
-    <meta property="twitter:site" content="@mirshko" />
-    <meta property="twitter:creator" content="@mirshko" />
-    <meta property="twitter:card" content="summary" />
-  </head>
-
-  <body class={className}>
-    <slot />
-
-    <Footer />
-  </body>
-</html>
+  .pl-5 {
+    padding-left: 1.25rem /* 20px */;
+  }
+</style>

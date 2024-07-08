@@ -1,0 +1,44 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  path: `/${string}`;
+}
+
+const { title, description = "Product Engineer, Berlin.", path } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="favicon-pixel.png" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta property="og:title" content={title} />
+    <meta property="og:site_name" content={title} />
+    <meta property="twitter:title" content={title} />
+
+    <meta name="description" content={description} />
+    <meta property="og:description" content={description} />
+    <meta property="twitter:description" content={description} />
+
+    <meta property="og:url" content={`https://reiner.systems${path}`} />
+    <meta property="twitter:url" content={`https://reiner.systems${path}`} />
+    <link rel="canonical" href={`https://reiner.systems${path}`} />
+
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="author" content="Jeff Reiner" />
+    <meta property="twitter:site" content="@mirshko" />
+    <meta property="twitter:creator" content="@mirshko" />
+    <meta property="twitter:card" content="summary" />
+  </head>
+
+  <body>
+    <slot />
+  </body>
+</html>
