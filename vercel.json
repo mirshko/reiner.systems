@@ -2,6 +2,12 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/script.js",
+      "destination": "https://cdn-eu.usefathom.com/script.js"
+    }
+  ],
   "redirects": [
     {
       "source": "/about",
