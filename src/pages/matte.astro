@@ -1,16 +1,21 @@
 ---
 import MatteComponent from "../components/Matte";
-import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
 ---
 
-<Layout
+<BaseLayout
   path="/matte"
   title="Matte.pics"
   description="Give your photos that gallery quality aesthetic"
-  className="bg-gray-200"
-  themeColor="#e5e7eb"
 >
   <main class="min-h-svh flex items-center justify-center">
     <MatteComponent client:load />
   </main>
-</Layout>
+</BaseLayout>
+
+<style>
+  body {
+    @apply bg-gray-200;
+  }
+</style>

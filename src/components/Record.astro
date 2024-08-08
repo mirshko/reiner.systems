@@ -13,10 +13,10 @@ const { artist, title, file_name, video_id } = record.data;
 const label = `${title}, ${artist}`;
 ---
 
-<div class="relative select-none rounded-full">
+<div class="record-wrapper">
   <img
     alt={label}
-    class="object-cover aspect-square rounded-full"
+    class="record-wrapper-image"
     draggable={false}
     height={256}
     loading="lazy"
@@ -26,3 +26,17 @@ const label = `${title}, ${artist}`;
 
   {video_id ? <YouTube id={video_id} title={label} /> : null}
 </div>
+
+<style>
+  .record-wrapper {
+    position: relative;
+    user-select: none;
+    border-radius: 9999px;
+  }
+
+  .record-wrapper-image {
+    aspect-ratio: 1 / 1;
+    border-radius: 9999px;
+    object-fit: cover;
+  }
+</style>
