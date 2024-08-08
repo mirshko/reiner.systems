@@ -7,7 +7,7 @@ export default defineConfig({
   integrations: [tailwind({ applyBaseStyles: false }), react()],
   markdown: {
     shikiConfig: {
-      theme: "github-dark",
+      theme: "github-dark-default",
     },
   },
 });

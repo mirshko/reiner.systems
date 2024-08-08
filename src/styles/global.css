@@ -7,19 +7,6 @@ html {
   text-rendering: optimizeLegibility;
 }
 
-a[href] {
-  text-decoration: underline;
-}
-
-a[class] {
-  text-decoration: none;
-}
-
-a[href]:focus,
-a[href]:hover {
-  @apply outline-none bg-black text-white;
-}
-
 @layer base {
   /* @font-face {
     font-family: "CommitMono";

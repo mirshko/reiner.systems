@@ -18,8 +18,25 @@ const props = Astro.props;
   <Footer />
 </BaseLayout>
 
-<style>
+<style is:global>
   html {
     @apply text-xs font-commitmono;
+  }
+
+  body {
+    @apply bg-ibm-background text-ibm-foreground;
+  }
+
+  a[href] {
+    text-decoration: underline;
+  }
+
+  a[class] {
+    text-decoration: none;
+  }
+
+  a[href]:focus,
+  a[href]:hover {
+    @apply outline-none no-underline bg-ibm-foreground text-ibm-background;
   }
 </style>
