@@ -1,4 +1,6 @@
 ---
+import Fathom from "../components/Fathom.astro";
+
 export interface Props {
   title: string;
   description?: string;
@@ -36,6 +38,8 @@ const { title, description = "Product Engineer, Berlin.", path } = Astro.props;
     <meta property="twitter:site" content="@mirshko" />
     <meta property="twitter:creator" content="@mirshko" />
     <meta property="twitter:card" content="summary" />
+
+    <Fathom site="HJSGCHIA" includedDomains={["reiner.systems"]} honorDnt />
   </head>
 
   <body>

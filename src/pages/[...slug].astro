@@ -1,0 +1,43 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import Prose from "../components/Prose.astro";
+import { format } from "date-fns";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("post");
+
+  return posts.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+
+const { Content } = await entry.render();
+---
+
+<Layout title={entry.data.title} path={`/${entry.slug}`}>
+  <main class="max-w-[80ch]">
+    <div class="p-5">
+      <a href="/" class="">← Index</a>
+    </div>
+
+    <header class="p-5">
+      <h1 class="text-2xl font-bold mb-2">
+        {entry.data.title}
+      </h1>
+
+      <time datetime={entry.data.date.toISOString()}>
+        {format(entry.data.date, "dd MMM yyyy")}
+      </time>
+    </header>
+
+    <section class="p-5">
+      <Prose>
+        <Content />
+      </Prose>
+    </section>
+  </main>
+</Layout>

@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Footer from "../components/Footer.astro";
-// import "../styles/global.css";
+import "../styles/global.css";
 
 export interface Props {
   title: string;
@@ -18,12 +18,8 @@ const props = Astro.props;
   <Footer />
 </BaseLayout>
 
-<style is:global>
-  .p-5 {
-    padding: 1.25rem /* 20px */;
-  }
-
-  .pl-5 {
-    padding-left: 1.25rem /* 20px */;
+<style>
+  html {
+    @apply text-xs font-commitmono;
   }
 </style>
