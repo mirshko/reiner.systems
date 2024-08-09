@@ -1,21 +1,23 @@
 ---
-title: Vercel rewrites as a reverse proxy for LaunchDarkly
-date: 2024-08-08
+title: Preventing missing data with Vercel rewrites as a reverse proxy for LaunchDarkly
+date: 2024-08-09
 ---
 
-At [Conduit.xyz](https://www.conduit.xyz), we use LaunchDarkly to roll out new features. However, ad and tracking blockers often catch event requests made to LaunchDarkly, causing feature flag evaluations to be lower and preventing other event types from being reported.
+If you browse the web with ad blockers and happen to check the browser’s console you’ll likely notice a lot of blocked URLs from trackers and ads. However, these ad blockers often block every tracking script or tool, even if the tool might be privacy-friendly and non-invasive. This ends up being at the detriment to sites who reject adtech in favor of using privacy-friendly product analytics tools.
 
-LaunchDarkly offers a solution called [The Relay Proxy](https://docs.launchdarkly.com/sdk/relay-proxy), which can proxy all requests through a single endpoint. However, this requires running the Relay Proxy on a server.
+At [Conduit.xyz](https://www.conduit.xyz), we use LaunchDarkly to roll out new features. LaunchDarkly is one of those tools that get caught by ad blockers, causing lower flag evaluations and events from being reported.
 
-Upon some research, we noticed tools like [Posthog](https://posthog.com) have a workaround by [using Vercel as a reverse proxy](https://posthog.com/docs/advanced/proxy/vercel).
+LaunchDarkly offers a first-party solution called the [Relay Proxy](https://docs.launchdarkly.com/sdk/relay-proxy), which is able to proxy requests through a single endpoint keeping traffic private. However, this requires running the Relay Proxy on a server which adds some overhead and a new service to maintain.
+
+Upon some research, we noticed tools like [Posthog](https://posthog.com/docs/advanced/proxy/vercel) and [Plausible](https://plausible.io/docs/proxy/guides/vercel) have workarounds by using Vercel rewrites as a reverse proxy. This allows you to send events to these tools using your domain; stopping ad blockers from catching and blocking requests.
+
+If this solution works for them, why couldn’t they work for LaunchDarkly?
 
 ## Setting up Vercel reverse proxies
 
-Using [Vercel rewrites](https://vercel.com/docs/edge-network/rewrites), we can set up our own Relay Proxy with a few lines of JSON in the `vercel.json` file. If you're using [Next.js](https://nextjs.org), you can also add these configurations in [next.config.js](https://nextjs.org/docs/app/api-reference/next-config-js/rewrites).
+Using [Vercel rewrites](https://vercel.com/docs/edge-network/rewrites), we can set up our reverse proxy in the `vercel.json` file. If you're using [Next.js](https://nextjs.org), you can also add these configurations in [next.config.js](https://nextjs.org/docs/app/api-reference/next-config-js/rewrites).
 
 ```json
-// vercel.json
-
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
@@ -24,18 +26,20 @@ Using [Vercel rewrites](https://vercel.com/docs/edge-network/rewrites), we can s
       "destination": "https://app.launchdarkly.com/:path*"
     },
     {
-      "source": "/ld-events/:path*",
+      "source": "/ld-evt/:path*",
       "destination": "https://events.launchdarkly.com/:path*"
     },
     {
-      "source": "/ld-stream/:path*",
+      "source": "/ld-str/:path*",
       "destination": "https://clientstream.launchdarkly.com/:path*"
     }
   ]
 }
 ```
 
-The LaunchDarkly endpoints can now be accessed at `https://example.com/ld{-events,-stream}`. The next step is to configure the LaunchDarkly SDK to use these new endpoints.
+When creating these endpoints, keep in mind to not use `launchdarkly-...` or other tracking-adjacent words which might be picked up by ad blockers, s/o [@pugson](https://wojtek.im).
+
+The LaunchDarkly endpoints can now be accessed at `https://example.com/ld{/,-evt/,-str/}`. The next step is to configure the LaunchDarkly SDK to use these new endpoints.
 
 ## Configuring the LaunchDarkly SDK
 
@@ -52,6 +56,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { asyncWithLDProvider } from "launchdarkly-react-client-sdk";
 
+import App from "./App.jsx";
+
 (async () => {
   const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -59,17 +65,15 @@ import { asyncWithLDProvider } from "launchdarkly-react-client-sdk";
     clientSideID: "...",
     options: {
       baseUrl: "https://example.com/ld",
-      eventsUrl: "https://example.com/ld-events",
-      streamUrl: "https://example.com/ld-stream",
+      eventsUrl: "https://example.com/ld-evt",
+      streamUrl: "https://example.com/ld-str",
     },
   });
 
   root.render(
-    <React.StrictMode>
-      <LDProvider>
-        <YourApp />
-      </LDProvider>
-    </React.StrictMode>
+    <LDProvider>
+      <App />
+    </LDProvider>
   );
 })();
 ```
