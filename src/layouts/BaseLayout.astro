@@ -39,6 +39,21 @@ const { title, description = "Product Engineer, Berlin.", path } = Astro.props;
     <meta property="twitter:creator" content="@mirshko" />
     <meta property="twitter:card" content="summary" />
 
+    <link
+      rel="preload"
+      href="/fonts/CommitMono-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/CommitMono-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
     <Fathom site="HJSGCHIA" includedDomains={["reiner.systems"]} honorDnt />
   </head>
 
