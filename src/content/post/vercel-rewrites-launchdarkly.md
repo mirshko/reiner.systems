@@ -1,5 +1,5 @@
 ---
-title: Preventing missing data with Vercel rewrites as a reverse proxy for LaunchDarkly
+title: Prevent Missing Data in LaunchDarkly with Vercel Rewrites
 date: 2024-08-09
 ---
 
