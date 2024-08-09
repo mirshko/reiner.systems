@@ -7,6 +7,36 @@ html {
   text-rendering: optimizeLegibility;
 }
 
-a[href] {
-  text-decoration: underline;
+@layer base {
+  /* @font-face {
+    font-family: "CommitMono";
+    src: url("/fonts/CommitMono-Italic.woff2") format("woff2");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+  } */
+
+  /* @font-face {
+    font-family: "CommitMono";
+    src: url("/fonts/CommitMono-BoldItalic.woff2") format("woff2");
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+  } */
+
+  @font-face {
+    font-family: "CommitMono";
+    src: url("/fonts/CommitMono-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: auto;
+  }
+
+  @font-face {
+    font-family: "CommitMono";
+    src: url("/fonts/CommitMono-Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+    font-display: auto;
+  }
 }

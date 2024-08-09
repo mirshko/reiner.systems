@@ -1,17 +1,58 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { format } from "date-fns";
+
+const posts = await getCollection("post");
 ---
 
 <Layout title="Jeff Reiner, Product Engineer" path="/">
-  <main class="max-w-2xl">
-    <section class="">
-      <div class="p-5">
+  <main class="max-w-[80ch]">
+    <section>
+      <div class="p-5 space-y-5">
         <p>
-          Jeff Reiner engineers high performance products and experiences.{" "}
-          <a href="https://twitter.com/mirshko">@mirshko</a>{" "}
-          <a href="https://github.com/mirshko">{"<>mirshko"}</a>{" "}
-          <a href="mailto:email@reiner.systems">email@reiner.systems</a> Berlin
+          Jeff Reiner engineers high performance products and experiences.
+          Berlin
         </p>
+
+        <ul>
+          <li><a href="https://x.com/mirshko">@mirshko ↗</a></li>
+          <li><a href="https://github.com/mirshko">{"<>mirshko ↗"}</a></li>
+          <li>
+            <a href="mailto:email@reiner.systems">email@reiner.systems</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="p-5">
+        <table>
+          <thead>
+            <tr>
+              <th class="text-left whitespace-nowrap pr-5">Date Modified</th>
+              <th class="text-left whitespace-nowrap pr-5">Name</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {
+              posts.map((post) => (
+                <tr>
+                  <td class="pr-5 whitespace-nowrap">
+                    <time datetime={post.data.date.toISOString()}>
+                      {format(post.data.date, "dd MMM yyyy")}
+                    </time>
+                  </td>
+
+                  <td class="pr-5">
+                    <a href={post.slug}>{post.data.title}</a>
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
       </div>
     </section>
   </main>

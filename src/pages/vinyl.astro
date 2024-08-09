@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import Record from "../components/Record.astro";
 import Layout from "../layouts/Layout.astro";
+import BackButton from "../components/BackButton.astro";
 import "../styles/vinyl.css";
 
 const collection = await getCollection("vinyl");
@@ -13,11 +14,20 @@ const records = collection.sort(
 ---
 
 <Layout title="Vinyl" path="/vinyl">
-  <main class="p-5 sm:p-10">
-    <a href="/" class="mb-5 sm:mb-10 inline-block">Back</a>
+  <main class="p-5">
+    <BackButton />
 
-    <section class="flex flex-wrap gap-5 justify-center">
+    <section class="record-list">
       {records.map((record) => <Record record={record} />)}
     </section>
   </main>
 </Layout>
+
+<style>
+  .record-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 256px);
+    gap: 1.25rem;
+    justify-content: center;
+  }
+</style>
