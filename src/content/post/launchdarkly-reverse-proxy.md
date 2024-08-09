@@ -20,22 +20,22 @@ Using [Vercel rewrites](https://vercel.com/docs/edge-network/rewrites), we can s
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     {
-      "source": "/launchdarkly/:path*",
+      "source": "/ld/:path*",
       "destination": "https://app.launchdarkly.com/:path*"
     },
     {
-      "source": "/launchdarkly-events/:path*",
+      "source": "/ld-events/:path*",
       "destination": "https://events.launchdarkly.com/:path*"
     },
     {
-      "source": "/launchdarkly-stream/:path*",
+      "source": "/ld-stream/:path*",
       "destination": "https://clientstream.launchdarkly.com/:path*"
     }
   ]
 }
 ```
 
-The LaunchDarkly endpoints can now be accessed at `https://example.com/launchdarkly{-events,-stream}`. The next step is to configure the LaunchDarkly SDK to use these new endpoints.
+The LaunchDarkly endpoints can now be accessed at `https://example.com/ld{-events,-stream}`. The next step is to configure the LaunchDarkly SDK to use these new endpoints.
 
 ## Configuring the LaunchDarkly SDK
 
@@ -58,9 +58,9 @@ import { asyncWithLDProvider } from "launchdarkly-react-client-sdk";
   const LDProvider = await asyncWithLDProvider({
     clientSideID: "...",
     options: {
-      baseUrl: "https://example.com/launchdarkly",
-      eventsUrl: "https://example.com/launchdarkly-events",
-      streamUrl: "https://example.com/launchdarkly-stream",
+      baseUrl: "https://example.com/ld",
+      eventsUrl: "https://example.com/ld-events",
+      streamUrl: "https://example.com/ld-stream",
     },
   });
 
