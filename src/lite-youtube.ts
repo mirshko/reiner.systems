@@ -89,11 +89,6 @@ class LiteYTEmbed extends HTMLElement {
 
     LiteYTEmbed.addPrefetch("preconnect", "https://www.youtube-nocookie.com");
     LiteYTEmbed.addPrefetch("preconnect", "https://www.google.com");
-    LiteYTEmbed.addPrefetch(
-      "preconnect",
-      "https://googleads.g.doubleclick.net"
-    );
-    LiteYTEmbed.addPrefetch("preconnect", "https://static.doubleclick.net");
 
     LiteYTEmbed.preconnected = true;
   }
