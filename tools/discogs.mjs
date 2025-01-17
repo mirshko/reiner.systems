@@ -57,7 +57,7 @@ try {
     };
   });
 
-  await fs.writeJSON(`${process.cwd()}/src/data/vinyl.json`, vinyl);
+  await fs.writeJSON(`${process.cwd()}/src/data/vinyl-raw.json`, vinyl);
 } catch (p) {
   console.log(p);
 }

@@ -5,7 +5,9 @@ try {
   /**
    * @type {import("../src/discogs").RecordInterface[]}
    */
-  const vinyl = await fs.readJSON(`${process.cwd()}/src/data/vinyl.json`);
+  const vinyl = await fs.readJSON(
+    `${process.cwd()}/src/data/vinyl-patched.json`
+  );
 
   for (const record of vinyl) {
     const { cover_image, file_name } = record;

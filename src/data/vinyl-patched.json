@@ -1,5 +1,55 @@
 [
   {
+    "title": "Prelude",
+    "artist": "Shcaa",
+    "cover_image": "https://i.discogs.com/Fcp0CPhCnVuT5Z82XwhkvUR1ivHZG88O7I2hflp-Hjk/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExMDU1/MjU2LTE2MDc4NTky/NjctMjIzOS5qcGVn.jpeg",
+    "file_name": "NjctMjIzOS5qcGVn.jpeg",
+    "resource_id": 11055256,
+    "date_added": "2025-01-17T04:04:16-08:00",
+    "year": 2017,
+    "video_id": null
+  },
+  {
+    "title": "Coypu",
+    "artist": "Alex Smoke",
+    "cover_image": "https://i.discogs.com/zHUlmABHvQemXITyklWzx_1R8jcvLN9xDEXMe_1_4iM/rs:fit/g:sm/q:90/h:603/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyODkx/Mzg4LTE2MDc4NTkz/MjctNjc1MC5qcGVn.jpeg",
+    "file_name": "MjctNjc1MC5qcGVn.jpeg",
+    "resource_id": 12891388,
+    "date_added": "2025-01-17T04:03:40-08:00",
+    "year": 2018,
+    "video_id": null
+  },
+  {
+    "title": "my life with M.",
+    "artist": "Oliver Doerell",
+    "cover_image": "https://i.discogs.com/NVrU06Cb9yqXbitDtzH4x1DwWkBG0UsfJ6EYWTmMco8/rs:fit/g:sm/q:90/h:602/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0NDg5/Mzc2LTE2MDc4NTkz/OTctNDc2NC5qcGVn.jpeg",
+    "file_name": "OTctNDc2NC5qcGVn.jpeg",
+    "resource_id": 14489376,
+    "date_added": "2025-01-17T04:03:28-08:00",
+    "year": 2019,
+    "video_id": null
+  },
+  {
+    "title": "Melanesia",
+    "artist": "Roberto Musci",
+    "cover_image": "https://i.discogs.com/AK71FCSnTteHX0fCgNhjciT2Vi0-mM43p08VZVp40t0/rs:fit/g:sm/q:90/h:602/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE2NTI4/NTI0LTE2MDgzMDU5/NzMtMjY0OS5qcGVn.jpeg",
+    "file_name": "NzMtMjY0OS5qcGVn.jpeg",
+    "resource_id": 16528524,
+    "date_added": "2025-01-17T04:03:13-08:00",
+    "year": 2021,
+    "video_id": null
+  },
+  {
+    "title": "Quandary",
+    "artist": "Bob Meanza",
+    "cover_image": "https://i.discogs.com/Q06Gt25dfkWG9aBiMv5a4c-JnJj3jcsABIOlsUOFKeM/rs:fit/g:sm/q:90/h:606/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MzM3/NjQzLTE2NjU0ODc5/NTYtOTEyOS5wbmc.jpeg",
+    "file_name": "NTYtOTEyOS5wbmc.jpeg",
+    "resource_id": 24337643,
+    "date_added": "2025-01-17T04:02:54-08:00",
+    "year": 2022,
+    "video_id": null
+  },
+  {
     "resource_id": 16111930,
     "title": "Club Quarantäne Sampler I",
     "artist": "Don Williams",
