@@ -41,6 +41,10 @@
   ],
   "rewrites": [
     {
+      "source": "/cv",
+      "destination": "https://cv.reiner.systems/cv"
+    },
+    {
       "source": "/cv:path*",
       "destination": "https://cv.reiner.systems/cv/:path*"
     }
