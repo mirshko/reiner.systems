@@ -42,7 +42,7 @@
   "rewrites": [
     {
       "source": "/cv:path*",
-      "destination": "https://cv.reiner.systems/:path*"
+      "destination": "https://cv.reiner.systems/cv/:path*"
     }
   ]
 }
