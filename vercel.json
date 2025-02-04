@@ -38,5 +38,11 @@
       "destination": "/",
       "permanent": false
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/cv:path*",
+      "destination": "https://cv.reiner.systems/:path*"
+    }
   ]
 }
