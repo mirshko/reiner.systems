@@ -1,0 +1,58 @@
+:root {
+  --font-inter: "Inter Variable", sans-serif;
+  --font-size: 14px;
+  --line-height: 1.6;
+  --background: #fff;
+  --grey1: #111;
+  --grey2: #555;
+  --grey3: #999;
+  --wash1: #e5e5e5;
+  --wash2: #f2f2f2;
+  --transparentBorder: rgba(0, 0, 0, 0.05);
+  
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #222;
+    --grey1: #eee;
+    --grey2: #bbb;
+    --grey3: #888;
+    --wash1: #4E4E4E;
+    --wash2: #383838;
+    --transparentBorder: rgb(255 255 255 / 0.1);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--background);
+  font-family: var(--font-inter), sans-serif;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  color: var(--grey1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}

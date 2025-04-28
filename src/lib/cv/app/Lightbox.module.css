@@ -1,0 +1,171 @@
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+}
+
+.carousel {
+  display: grid;
+  position: absolute;
+  inset: 0px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.lightboxImage {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  padding: 48px 24px;
+  width: 100dvw;
+  height: 100dvh;
+}
+
+.lightboxInner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageWrap {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+}
+
+.imageWrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid var(--transparent-border);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.imageWrap img,
+.imageWrap video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  column-gap: 6px;
+  z-index: 10;
+}
+
+.pagerDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--grey1);
+  opacity: 0.1;
+}
+
+.pagerDot[data-active="true"] {
+  opacity: 0.5;
+}
+
+.navigation {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  z-index: 1;
+}
+
+.navigation button {
+  width: 50%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.navigation button.next {
+  cursor: e-resize;
+}
+
+.navigation button.prev {
+  cursor: w-resize;
+}
+
+.backdrop {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background-color: var(--background);
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+  border-radius: 16px;
+  border: none;
+  background-color: var(--wash2);
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+}
+
+.close::after,
+.close::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 11px;
+  background-color: var(--grey3);
+  left: 50%;
+  top: 50%;
+  border-radius: 1px;
+}
+
+.close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.lightbox[data-mobile="true"] .carouselScroll {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: scroll;
+  scroll-width: none;
+  scroll-snap-type: x mandatory;
+}
+
+.lightbox[data-mobile="true"] .carouselScroll::-webkit-scrollbar {
+  display: none;
+}
+
+.lightbox[data-mobile="true"] .carousel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.lightbox[data-mobile="true"] .lightboxImage {
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  scroll-snap-stop: normal;
+}

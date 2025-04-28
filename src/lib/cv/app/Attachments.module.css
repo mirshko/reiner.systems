@@ -1,0 +1,75 @@
+.attachments {
+  margin-top: 12px;
+  width: 100%;
+  position: relative;
+}
+
+.scrollableArea {
+  position: absolute;
+  inset: 0;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.scrollableArea::-webkit-scrollbar {
+  display: none;
+}
+
+.images {
+  display: flex;
+  column-gap: 8px;
+  position: relative;
+  width: fit-content;
+  min-width: 100%;
+}
+
+.media {
+  background-color: var(--wash2);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.media img,
+.media video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.media::after {
+  position: absolute;
+  inset: 0;
+  content: '';
+  border: 1px solid var(--transparentBorder);
+  border-radius: inherit;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.media:active {
+  cursor: -webkit-grabbing;
+}
+
+@media only screen and (max-width: 480px) {
+  .scrollableArea {
+    position: absolute;
+    left: -40px;
+    right: -24px;
+  }
+
+  .scrollableArea .images > div:first-child {
+    margin-left: 40px;
+  }
+
+  .scrollableArea .images > div:last-child {
+    margin-right: 24px;
+  }
+
+  .scrollableArea::-webkit-scrollbar-track {
+    margin-left: 40px;
+    margin-right: 24px;
+  }
+}

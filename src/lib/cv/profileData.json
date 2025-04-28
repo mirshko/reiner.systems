@@ -1,0 +1,798 @@
+{
+  "general": {
+    "profilePhoto": "/content/media/profilePhoto.jpg",
+    "username": "mirshko",
+    "displayName": "Jeff Reiner",
+    "profession": "Software Engineer",
+    "location": "Berlin, Germany",
+    "pronouns": "He / Him",
+    "byline": "Software Engineer in Berlin, Germany, He / Him",
+    "website": "https://reiner.systems",
+    "websiteURL": "https://reiner.systems",
+    "about": "I build and design digital products and experiences, focusing on Web3.",
+    "status": {
+      "text": null,
+      "emoji": null,
+      "timestamp": null
+    },
+    "sectionOrder": [
+      "Work Experience",
+      "Projects",
+      "Side Projects",
+      "Exhibitions",
+      "Speaking",
+      "Writing",
+      "Awards",
+      "Features",
+      "Volunteering",
+      "Education",
+      "Certifications",
+      "Contact",
+      "Teams"
+    ]
+  },
+  "projects": [
+    {
+      "id": "aTKS1KEYHzaXO9xS1ako",
+      "year": "2024",
+      "heading": "Rollup.wtf at Conduit",
+      "url": "https://rollup.wtf",
+      "collaborators": [
+        {
+          "displayName": "Bertie Corrie",
+          "profilePhoto": "/content/collaborators/bertie.jpg",
+          "profileURL": "https://read.cv/bertie"
+        }
+      ],
+      "description": "Development of Rollup.wtf L2 / L3 tracker with [@emilianobonassi](https://x.com/emilianobonassi), [@bertiecorrie](https://x.com/bertiecorrie) and [@W\\_Y\\_X](https://x.com/W_Y_X)",
+      "attachments": [],
+      "type": "project",
+      "title": "Rollup.wtf",
+      "company": "Conduit"
+    },
+    {
+      "id": "NF8a7dKyLG8a1dQwGlOo",
+      "year": "2023",
+      "heading": "Collection Analytics at Stargaze",
+      "url": "https://www.stargaze.zone/m/stars19jq6mj84cnt9p7sagjxqf8hxtczwc8wlpuwe4sh62w45aheseues57n420/analytics",
+      "collaborators": [],
+      "description": "Data visualisation for Stargaze NFT Collection analytics. This project replaced a Metabase dashboard with an on-brand and integrated dashboard on Stargaze collection pages.",
+      "attachments": [],
+      "type": "project",
+      "title": "Collection Analytics",
+      "company": "Stargaze"
+    },
+    {
+      "id": "V1avhnL9vI3cCHwvpET7",
+      "year": "2023",
+      "heading": "Platform Analytics at Stargaze",
+      "url": "https://www.stargaze.zone/analytics",
+      "collaborators": [],
+      "description": "Data visualisation and data ingestion from Metabase to Prisma (PlanetScale) with Apollo GraphQL resolvers. This project replaced the Metabase dashboard with an on-brand and integrated dashboard on the Stargaze website.",
+      "attachments": [],
+      "type": "project",
+      "title": "Platform Analytics",
+      "company": "Stargaze"
+    },
+    {
+      "id": "4E58H3vaWl5dvgCOFnPh",
+      "year": "2019",
+      "heading": "Freelance Front-end Developer at Pillar",
+      "url": "https://www.pillar.fi",
+      "collaborators": [],
+      "description": "Built out the Pillar landing page for a rebrand and cleanup of the website. Improved user experience of the Pillar Wallet Web Recovery Portal.",
+      "attachments": [],
+      "type": "project",
+      "title": "Freelance Front-end Developer",
+      "company": "Pillar"
+    },
+    {
+      "id": "gxSkHmcDep8RpyfhLhvy",
+      "year": "2019",
+      "heading": "Freelance Front-end Developer at Hummingbot",
+      "url": null,
+      "collaborators": [],
+      "description": "Worked on the design system, marketing website, and improved documentation for the Miner platform, as well as the rewards program.",
+      "attachments": [],
+      "type": "project",
+      "title": "Freelance Front-end Developer",
+      "company": "Hummingbot"
+    }
+  ],
+  "sideProjects": [
+    {
+      "id": "130297123y90213",
+      "year": "2025",
+      "heading": "Website Refresh at Oxmose",
+      "url": "https://www.oxmose.com",
+      "collaborators": [],
+      "description": "Oxmose is an independent french record label with a non-linear contemporary music vision, defining its sound identity through artistic concepts that blur genre lines, while also immersing the audience in a unique visual experience. Worked with the team build their new website, including e-commerce store and a player for their records.",
+      "attachments": [
+        {
+          "type": "image",
+          "width": 2880,
+          "height": 1800,
+          "url": "/content/media/website-refresh-oxmose.png"
+        }
+      ],
+      "type": "sideProject",
+      "title": "Website Refresh",
+      "company": "Oxmose"
+    },
+    {
+      "id": "DJh6rYxdYMJ5igyjads9",
+      "year": "2023",
+      "heading": "Website Refresh at Voices Radio",
+      "url": "https://voicesradio.co.uk",
+      "collaborators": [],
+      "description": "A community radio station based in London.\n\nWorked with https://www.studiopanorama.de and team to design and build out their website refresh.",
+      "attachments": [
+        {
+          "type": "image",
+          "width": 2880,
+          "height": 1800,
+          "url": "/content/media/Website-Refresh-at-Voices-Radio.png"
+        }
+      ],
+      "type": "sideProject",
+      "title": "Website Refresh",
+      "company": "Voices Radio"
+    },
+    {
+      "id": "ooUjQzJ1GhxU8J0ESBXv",
+      "year": "2021",
+      "heading": "Website Consulting at Oroko Radio",
+      "url": "https://oroko.live",
+      "collaborators": [],
+      "description": "Oroko is a not-for-profit independent internet radio station based in Accra, Ghana.\n\nWorked with the team to pick their tech stack and helped provide the basis of the radio station's website and CMS.\n\nDesign by https://www.studiopanorama.de",
+      "attachments": [
+        {
+          "type": "image",
+          "width": 2880,
+          "height": 1800,
+          "url": "/content/media/Website-Consulting-at-Oroko-Radio.png"
+        }
+      ],
+      "type": "sideProject",
+      "title": "Website Consulting",
+      "company": "Oroko Radio"
+    },
+    {
+      "id": "rhJFTUQXZZebuA6GpHVu",
+      "year": "2020",
+      "heading": "Soapbox",
+      "url": "https://github.com/SoapboxSocial",
+      "collaborators": [],
+      "description": "Soapbox was a social audio platform focused on hanging out with your friends and playing games together.\n\nCo-founded with https://twitter.com/DeanEigenmann.\n\nPlatform was shutdown December of 2021.",
+      "attachments": [
+        {
+          "type": "image",
+          "width": 2048,
+          "height": 1593,
+          "url": "/content/media/Soapbox.png"
+        }
+      ],
+      "type": "sideProject",
+      "title": "Soapbox",
+      "company": null
+    },
+    {
+      "id": "LE9VRbKU4rtq9oZTm74v",
+      "year": "2020",
+      "heading": "Website at Refuge Worldwide",
+      "url": "https://refugeworldwide.com",
+      "collaborators": [],
+      "description": "A community radio station and fundraising platform based in Berlin.\n\nWorked with https://www.studiopanorama.de and the Refuge Worldwide team to design and build out the station's website and broadcast platform.",
+      "attachments": [
+        {
+          "type": "image",
+          "width": 2880,
+          "height": 1800,
+          "url": "/content/media/Website-at-Refuge-Worldwide.png"
+        }
+      ],
+      "type": "sideProject",
+      "title": "Website",
+      "company": "Refuge Worldwide"
+    }
+  ],
+  "exhibitions": [],
+  "talks": [],
+  "writing": [],
+  "awards": [],
+  "features": [],
+  "workExperience": [
+    {
+      "id": "IpAuhGn3wpQTwOIXSDgT",
+      "year": "2023 — Now",
+      "heading": "Product Engineer (Software Engineer) at Conduit",
+      "url": "https://www.conduit.xyz",
+      "collaborators": [
+        {
+          "displayName": "Bertie Corrie",
+          "profilePhoto": "/content/collaborators/bertie.jpg",
+          "profileURL": "https://read.cv/bertie"
+        }
+      ],
+      "description": "Conduit dashboard development, implementation of product analytics. Worked with [Moniker](https://monikersf.com) and team on the Conduit rebrand.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Product Engineer (Software Engineer)",
+      "company": "Conduit",
+      "location": ""
+    },
+    {
+      "id": "qEKVBC2iJA5IuJInSJA6",
+      "year": "2019 — 2023",
+      "heading": "Software Engineer at Freelance",
+      "url": null,
+      "collaborators": [],
+      "description": "",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Software Engineer",
+      "company": "Freelance",
+      "location": "Berlin"
+    },
+    {
+      "id": "Rlg9IG6zseXkAnrJPhbx",
+      "year": "2022 — 2023",
+      "heading": "Front-end Developer at Capsule",
+      "url": "https://www.capsule.wtf",
+      "collaborators": [],
+      "description": "Worked with the Capsule team building out the https://www.pills.game project, and Endomo cozy-game prototype using MUD on-chain game engine.\\\n\\\nCreated a cell based Avatar creation engine for the PILLS.game project.  ",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Front-end Developer",
+      "company": "Capsule",
+      "location": ""
+    },
+    {
+      "id": "PvUWDmJlxRV7711cCmm2",
+      "year": "2021 — 2021",
+      "heading": "Front-end Developer at Dialectic",
+      "url": "https://dialectic.ch",
+      "collaborators": [],
+      "description": "Design and development of marketing website and editorial page. Web3 product development.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Front-end Developer",
+      "company": "Dialectic",
+      "location": ""
+    },
+    {
+      "id": "eHHDVKdhw4rJXw7tXCrd",
+      "year": "2020 — 2021",
+      "heading": "Front-end Developer at Union",
+      "url": "https://union.finance",
+      "collaborators": [
+        {
+          "displayName": "murf",
+          "profilePhoto": "/content/collaborators/murf.jpg",
+          "profileURL": "https://read.cv/murf"
+        }
+      ],
+      "description": "Built out the original Union Finance beta application on the Kovan Ethereum testnet, laid the groundwork for the new Union app experience on mainnet Ethereum. https://union.finance",
+      "attachments": [
+        {
+          "type": "image",
+          "width": 2880,
+          "height": 1800,
+          "url": "/content/media/Front-end-Developer-at-Union.png"
+        }
+      ],
+      "type": "workExperience",
+      "title": "Front-end Developer",
+      "company": "Union",
+      "location": ""
+    },
+    {
+      "id": "LPY6s1GMMVXXFShH6nuM",
+      "year": "2019 — 2021",
+      "heading": "Front-end Developer at Async Art",
+      "url": "https://async.art",
+      "collaborators": [],
+      "description": "Built out the original Async Art web app and marketing website, built out the dApp to handle the launch of Async Music as well as Art NFTs.\n\nLaid the groundwork for the Async Canvas creator tools and the set up the tech stack for future Async Art apps.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Front-end Developer",
+      "company": "Async Art",
+      "location": ""
+    },
+    {
+      "id": "T8dCAdVg5zbJvuqjkEvC",
+      "year": "2019 — 2020",
+      "heading": "Co-Founder at Coal",
+      "url": "https://wearecoal.com",
+      "collaborators": [],
+      "description": "Coal was a platform to help tattoo artists find guest spots in cities where their fans are. Tattoo artists had their own page they would link to from their Instagram and their fans could request them to their city from there. We would then help place the artist in our partner studios all over the world.\n\nThe platform was shutdown in mid 2020.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Co-Founder",
+      "company": "Coal",
+      "location": ""
+    },
+    {
+      "id": "VZj3jt9sMifuRofTJDdk",
+      "year": "2019 — 2019",
+      "heading": "Front-end Developer at Centrifuge",
+      "url": "https://centrifuge.io",
+      "collaborators": [],
+      "description": "Development of the Marketing website in Gatsby Framework and implementation of a CMS. Aided in the creation of the Design System used in the Centrifuge dashboard.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Front-end Developer",
+      "company": "Centrifuge",
+      "location": "Berlin, Germany"
+    },
+    {
+      "id": "KBSd2Ls7PHJ30xkOoeSh",
+      "year": "2019 — 2019",
+      "heading": "Co-Founder at Deep Work Studio",
+      "url": "https://deepwork.studio",
+      "collaborators": [],
+      "description": "Helped co-found Deep Work Studio, running the development efforts of the agency. Implementing design systems and developing applications for our clients.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Co-Founder",
+      "company": "Deep Work Studio",
+      "location": ""
+    },
+    {
+      "id": "suo4vjFiJthhaqdpDGkh",
+      "year": "2017 — 2019",
+      "heading": "Web Developer at Contentful",
+      "url": "https://www.contentful.com",
+      "collaborators": [],
+      "description": "Development of the marketing website in Middleman SSG framework. Built the foundation for the migration to Gatsby Framework. Created native integrations between Contentful CMS and other marketing tools to improve developer speed.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Web Developer",
+      "company": "Contentful",
+      "location": "Berlin, Germany"
+    },
+    {
+      "id": "z6mBDrzbqpIx3CSAPIsW",
+      "year": "2014 — 2017",
+      "heading": "Marketing Specialist at Onshape",
+      "url": "https://www.onshape.com",
+      "collaborators": [],
+      "description": "Design and development on Onshape marketing website as well as other Onshape web entities. Video production and script writing for the official YouTube channel as well as 3D printing content for community development. ",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Marketing Specialist",
+      "company": "Onshape",
+      "location": "Boston, Massachusetts"
+    }
+  ],
+  "volunteering": [],
+  "education": [
+    {
+      "id": "EWEV18hUGYmImHsv5Pgr",
+      "year": "2013 — 2015",
+      "heading": "Interactive Media Design spec. Computer Game Design & Programming at Becker College",
+      "url": null,
+      "collaborators": [
+        {
+          "displayName": "Rejon Taylor-Foster",
+          "profilePhoto": "/content/collaborators/maximumcrash.jpg",
+          "profileURL": "https://read.cv/maximumcrash"
+        }
+      ],
+      "description": "",
+      "attachments": [],
+      "type": "education",
+      "degree": "Interactive Media Design spec. Computer Game Design & Programming",
+      "school": "Becker College",
+      "location": "Worcester, Massachusetts"
+    }
+  ],
+  "certifications": [],
+  "contact": [
+    {
+      "id": "hqDoNml7I5aMVUQzEKNJ",
+      "platform": "Email",
+      "handle": "email@reiner.systems",
+      "url": "mailto:email@reiner.systems"
+    },
+    {
+      "id": "88S4yX45SgXUZ0KVKx3X",
+      "platform": "Twitter",
+      "handle": "mirshko",
+      "url": "https://twitter.com/mirshko"
+    },
+    {
+      "id": "LJcaoQeBmZ7pmD1eymvM",
+      "platform": "GitHub",
+      "handle": "mirshko",
+      "url": "https://github.com/mirshko"
+    }
+  ],
+  "allCollections": [
+    {
+      "name": "Work Experience",
+      "items": [
+        {
+          "id": "IpAuhGn3wpQTwOIXSDgT",
+          "year": "2023 — Now",
+          "heading": "Product Engineer (Software Engineer) at Conduit",
+          "url": "https://www.conduit.xyz",
+          "collaborators": [
+            {
+              "displayName": "Bertie Corrie",
+              "profilePhoto": "/content/collaborators/bertie.jpg",
+              "profileURL": "https://read.cv/bertie"
+            }
+          ],
+          "description": "Conduit dashboard development, implementation of product analytics. Worked with [Moniker](https://monikersf.com) and team on the Conduit rebrand.",
+          "attachments": [],
+          "type": "workExperience",
+          "title": "Product Engineer (Software Engineer)",
+          "company": "Conduit",
+          "location": ""
+        },
+        {
+          "id": "qEKVBC2iJA5IuJInSJA6",
+          "year": "2019 — 2023",
+          "heading": "Software Engineer at Freelance",
+          "url": null,
+          "collaborators": [],
+          "description": "",
+          "attachments": [],
+          "type": "workExperience",
+          "title": "Software Engineer",
+          "company": "Freelance",
+          "location": "Berlin"
+        },
+        {
+          "id": "Rlg9IG6zseXkAnrJPhbx",
+          "year": "2022 — 2023",
+          "heading": "Front-end Developer at Capsule",
+          "url": "https://www.capsule.wtf",
+          "collaborators": [],
+          "description": "Worked with the Capsule team building out the https://www.pills.game project, and Endomo cozy-game prototype using MUD on-chain game engine.\\\n\\\nCreated a cell based Avatar creation engine for the PILLS.game project.  ",
+          "attachments": [],
+          "type": "workExperience",
+          "title": "Front-end Developer",
+          "company": "Capsule",
+          "location": ""
+        },
+        {
+          "id": "PvUWDmJlxRV7711cCmm2",
+          "year": "2021 — 2021",
+          "heading": "Front-end Developer at Dialectic",
+          "url": "https://dialectic.ch",
+          "collaborators": [],
+          "description": "Design and development of marketing website and editorial page. Web3 product development.",
+          "attachments": [],
+          "type": "workExperience",
+          "title": "Front-end Developer",
+          "company": "Dialectic",
+          "location": ""
+        },
+        {
+          "id": "eHHDVKdhw4rJXw7tXCrd",
+          "year": "2020 — 2021",
+          "heading": "Front-end Developer at Union",
+          "url": "https://union.finance",
+          "collaborators": [
+            {
+              "displayName": "murf",
+              "profilePhoto": "/content/collaborators/murf.jpg",
+              "profileURL": "https://read.cv/murf"
+            }
+          ],
+          "description": "Built out the original Union Finance beta application on the Kovan Ethereum testnet, laid the groundwork for the new Union app experience on mainnet Ethereum. https://union.finance",
+          "attachments": [
+            {
+              "type": "image",
+              "width": 2880,
+              "height": 1800,
+              "url": "/content/media/Front-end-Developer-at-Union.png"
+            }
+          ],
+          "type": "workExperience",
+          "title": "Front-end Developer",
+          "company": "Union",
+          "location": ""
+        },
+        {
+          "id": "LPY6s1GMMVXXFShH6nuM",
+          "year": "2019 — 2021",
+          "heading": "Front-end Developer at Async Art",
+          "url": "https://async.art",
+          "collaborators": [],
+          "description": "Built out the original Async Art web app and marketing website, built out the dApp to handle the launch of Async Music as well as Art NFTs.\n\nLaid the groundwork for the Async Canvas creator tools and the set up the tech stack for future Async Art apps.",
+          "attachments": [],
+          "type": "workExperience",
+          "title": "Front-end Developer",
+          "company": "Async Art",
+          "location": ""
+        },
+        {
+          "id": "T8dCAdVg5zbJvuqjkEvC",
+          "year": "2019 — 2020",
+          "heading": "Co-Founder at Coal",
+          "url": "https://wearecoal.com",
+          "collaborators": [],
+          "description": "Coal was a platform to help tattoo artists find guest spots in cities where their fans are. Tattoo artists had their own page they would link to from their Instagram and their fans could request them to their city from there. We would then help place the artist in our partner studios all over the world.\n\nThe platform was shutdown in mid 2020.",
+          "attachments": [],
+          "type": "workExperience",
+          "title": "Co-Founder",
+          "company": "Coal",
+          "location": ""
+        },
+        {
+          "id": "VZj3jt9sMifuRofTJDdk",
+          "year": "2019 — 2019",
+          "heading": "Front-end Developer at Centrifuge",
+          "url": "https://centrifuge.io",
+          "collaborators": [],
+          "description": "Development of the Marketing website in Gatsby Framework and implementation of a CMS. Aided in the creation of the Design System used in the Centrifuge dashboard.",
+          "attachments": [],
+          "type": "workExperience",
+          "title": "Front-end Developer",
+          "company": "Centrifuge",
+          "location": "Berlin, Germany"
+        },
+        {
+          "id": "KBSd2Ls7PHJ30xkOoeSh",
+          "year": "2019 — 2019",
+          "heading": "Co-Founder at Deep Work Studio",
+          "url": "https://deepwork.studio",
+          "collaborators": [],
+          "description": "Helped co-found Deep Work Studio, running the development efforts of the agency. Implementing design systems and developing applications for our clients.",
+          "attachments": [],
+          "type": "workExperience",
+          "title": "Co-Founder",
+          "company": "Deep Work Studio",
+          "location": ""
+        },
+        {
+          "id": "suo4vjFiJthhaqdpDGkh",
+          "year": "2017 — 2019",
+          "heading": "Web Developer at Contentful",
+          "url": "https://www.contentful.com",
+          "collaborators": [],
+          "description": "Development of the marketing website in Middleman SSG framework. Built the foundation for the migration to Gatsby Framework. Created native integrations between Contentful CMS and other marketing tools to improve developer speed.",
+          "attachments": [],
+          "type": "workExperience",
+          "title": "Web Developer",
+          "company": "Contentful",
+          "location": "Berlin, Germany"
+        },
+        {
+          "id": "z6mBDrzbqpIx3CSAPIsW",
+          "year": "2014 — 2017",
+          "heading": "Marketing Specialist at Onshape",
+          "url": "https://www.onshape.com",
+          "collaborators": [],
+          "description": "Design and development on Onshape marketing website as well as other Onshape web entities. Video production and script writing for the official YouTube channel as well as 3D printing content for community development. ",
+          "attachments": [],
+          "type": "workExperience",
+          "title": "Marketing Specialist",
+          "company": "Onshape",
+          "location": "Boston, Massachusetts"
+        }
+      ]
+    },
+    {
+      "name": "Projects",
+      "items": [
+        {
+          "id": "aTKS1KEYHzaXO9xS1ako",
+          "year": "2024",
+          "heading": "Rollup.wtf at Conduit",
+          "url": "https://rollup.wtf",
+          "collaborators": [
+            {
+              "displayName": "Bertie Corrie",
+              "profilePhoto": "/content/collaborators/bertie.jpg",
+              "profileURL": "https://read.cv/bertie"
+            }
+          ],
+          "description": "Development of Rollup.wtf L2 / L3 tracker with [@emilianobonassi](https://x.com/emilianobonassi), [@bertiecorrie](https://x.com/bertiecorrie) and [@W\\_Y\\_X](https://x.com/W_Y_X)",
+          "attachments": [],
+          "type": "project",
+          "title": "Rollup.wtf",
+          "company": "Conduit"
+        },
+        {
+          "id": "NF8a7dKyLG8a1dQwGlOo",
+          "year": "2023",
+          "heading": "Collection Analytics at Stargaze",
+          "url": "https://www.stargaze.zone/m/stars19jq6mj84cnt9p7sagjxqf8hxtczwc8wlpuwe4sh62w45aheseues57n420/analytics",
+          "collaborators": [],
+          "description": "Data visualisation for Stargaze NFT Collection analytics. This project replaced a Metabase dashboard with an on-brand and integrated dashboard on Stargaze collection pages.",
+          "attachments": [],
+          "type": "project",
+          "title": "Collection Analytics",
+          "company": "Stargaze"
+        },
+        {
+          "id": "V1avhnL9vI3cCHwvpET7",
+          "year": "2023",
+          "heading": "Platform Analytics at Stargaze",
+          "url": "https://www.stargaze.zone/analytics",
+          "collaborators": [],
+          "description": "Data visualisation and data ingestion from Metabase to Prisma (PlanetScale) with Apollo GraphQL resolvers. This project replaced the Metabase dashboard with an on-brand and integrated dashboard on the Stargaze website.",
+          "attachments": [],
+          "type": "project",
+          "title": "Platform Analytics",
+          "company": "Stargaze"
+        },
+        {
+          "id": "4E58H3vaWl5dvgCOFnPh",
+          "year": "2019",
+          "heading": "Freelance Front-end Developer at Pillar",
+          "url": "https://www.pillar.fi",
+          "collaborators": [],
+          "description": "Built out the Pillar landing page for a rebrand and cleanup of the website. Improved user experience of the Pillar Wallet Web Recovery Portal.",
+          "attachments": [],
+          "type": "project",
+          "title": "Freelance Front-end Developer",
+          "company": "Pillar"
+        },
+        {
+          "id": "gxSkHmcDep8RpyfhLhvy",
+          "year": "2019",
+          "heading": "Freelance Front-end Developer at Hummingbot",
+          "url": null,
+          "collaborators": [],
+          "description": "Worked on the design system, marketing website, and improved documentation for the Miner platform, as well as the rewards program.",
+          "attachments": [],
+          "type": "project",
+          "title": "Freelance Front-end Developer",
+          "company": "Hummingbot"
+        }
+      ]
+    },
+    {
+      "name": "Side Projects",
+      "items": [
+        {
+          "id": "130297123y90213",
+          "year": "2025",
+          "heading": "Website Refresh at Oxmose",
+          "url": "https://www.oxmose.com",
+          "collaborators": [],
+          "description": "Oxmose is an independent french record label with a non-linear contemporary music vision, defining its sound identity through artistic concepts that blur genre lines, while also immersing the audience in a unique visual experience. Worked with the team build their new website, including e-commerce store and a player for their records.",
+          "attachments": [
+            {
+              "type": "image",
+              "width": 2880,
+              "height": 1800,
+              "url": "/content/media/website-refresh-oxmose.png"
+            }
+          ],
+          "type": "sideProject",
+          "title": "Website Refresh",
+          "company": "Oxmose"
+        },
+        {
+          "id": "DJh6rYxdYMJ5igyjads9",
+          "year": "2023",
+          "heading": "Website Refresh at Voices Radio",
+          "url": "https://voicesradio.co.uk",
+          "collaborators": [],
+          "description": "A community radio station based in London.\n\nWorked with https://www.studiopanorama.de and team to design and build out their website refresh.",
+          "attachments": [
+            {
+              "type": "image",
+              "width": 2880,
+              "height": 1800,
+              "url": "/content/media/Website-Refresh-at-Voices-Radio.png"
+            }
+          ],
+          "type": "sideProject",
+          "title": "Website Refresh",
+          "company": "Voices Radio"
+        },
+        {
+          "id": "ooUjQzJ1GhxU8J0ESBXv",
+          "year": "2021",
+          "heading": "Website Consulting at Oroko Radio",
+          "url": "https://oroko.live",
+          "collaborators": [],
+          "description": "Oroko is a not-for-profit independent internet radio station based in Accra, Ghana.\n\nWorked with the team to pick their tech stack and helped provide the basis of the radio station's website and CMS.\n\nDesign by https://www.studiopanorama.de",
+          "attachments": [
+            {
+              "type": "image",
+              "width": 2880,
+              "height": 1800,
+              "url": "/content/media/Website-Consulting-at-Oroko-Radio.png"
+            }
+          ],
+          "type": "sideProject",
+          "title": "Website Consulting",
+          "company": "Oroko Radio"
+        },
+        {
+          "id": "rhJFTUQXZZebuA6GpHVu",
+          "year": "2020",
+          "heading": "Soapbox",
+          "url": "https://github.com/SoapboxSocial",
+          "collaborators": [],
+          "description": "Soapbox was a social audio platform focused on hanging out with your friends and playing games together.\n\nCo-founded with https://twitter.com/DeanEigenmann.\n\nPlatform was shutdown December of 2021.",
+          "attachments": [
+            {
+              "type": "image",
+              "width": 2048,
+              "height": 1593,
+              "url": "/content/media/Soapbox.png"
+            }
+          ],
+          "type": "sideProject",
+          "title": "Soapbox",
+          "company": null
+        },
+        {
+          "id": "LE9VRbKU4rtq9oZTm74v",
+          "year": "2020",
+          "heading": "Website at Refuge Worldwide",
+          "url": "https://refugeworldwide.com",
+          "collaborators": [],
+          "description": "A community radio station and fundraising platform based in Berlin.\n\nWorked with https://www.studiopanorama.de and the Refuge Worldwide team to design and build out the station's website and broadcast platform.",
+          "attachments": [
+            {
+              "type": "image",
+              "width": 2880,
+              "height": 1800,
+              "url": "/content/media/Website-at-Refuge-Worldwide.png"
+            }
+          ],
+          "type": "sideProject",
+          "title": "Website",
+          "company": "Refuge Worldwide"
+        }
+      ]
+    },
+    {
+      "name": "Education",
+      "items": [
+        {
+          "id": "EWEV18hUGYmImHsv5Pgr",
+          "year": "2013 — 2015",
+          "heading": "Interactive Media Design spec. Computer Game Design & Programming at Becker College",
+          "url": null,
+          "collaborators": [
+            {
+              "displayName": "Rejon Taylor-Foster",
+              "profilePhoto": "/content/collaborators/maximumcrash.jpg",
+              "profileURL": "https://read.cv/maximumcrash"
+            }
+          ],
+          "description": "",
+          "attachments": [],
+          "type": "education",
+          "degree": "Interactive Media Design spec. Computer Game Design & Programming",
+          "school": "Becker College",
+          "location": "Worcester, Massachusetts"
+        }
+      ]
+    },
+    {
+      "name": "Contact",
+      "items": [
+        {
+          "id": "hqDoNml7I5aMVUQzEKNJ",
+          "platform": "Email",
+          "handle": "email@reiner.systems",
+          "url": "mailto:email@reiner.systems"
+        },
+        {
+          "id": "88S4yX45SgXUZ0KVKx3X",
+          "platform": "Twitter",
+          "handle": "mirshko",
+          "url": "https://twitter.com/mirshko"
+        },
+        {
+          "id": "LJcaoQeBmZ7pmD1eymvM",
+          "platform": "GitHub",
+          "handle": "mirshko",
+          "url": "https://github.com/mirshko"
+        }
+      ]
+    }
+  ]
+}
