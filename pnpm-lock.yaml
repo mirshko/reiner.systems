@@ -23,9 +23,6 @@ importers:
       '@types/react-dom':
         specifier: ^19.0.3
         version: 19.0.3(@types/react@19.0.7)
-      '@vercel/speed-insights':
-        specifier: ^1.2.0
-        version: 1.2.0(react@19.0.0)
       astro:
         specifier: ^5.1.7
         version: 5.1.7(@types/node@22.10.7)(jiti@2.4.2)(rollup@4.30.1)(typescript@5.7.3)(yaml@2.7.0)
@@ -716,29 +713,6 @@ packages:
 
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
-
-  '@vercel/speed-insights@1.2.0':
-    resolution: {integrity: sha512-y9GVzrUJ2xmgtQlzFP2KhVRoCglwfRQgjyfY607aU0hh0Un6d0OUyrJkjuAlsV18qR4zfoFPs/BiIj9YDS6Wzw==}
-    peerDependencies:
-      '@sveltejs/kit': ^1 || ^2
-      next: '>= 13'
-      react: ^18 || ^19 || ^19.0.0-rc
-      svelte: '>= 4'
-      vue: ^3
-      vue-router: ^4
-    peerDependenciesMeta:
-      '@sveltejs/kit':
-        optional: true
-      next:
-        optional: true
-      react:
-        optional: true
-      svelte:
-        optional: true
-      vue:
-        optional: true
-      vue-router:
-        optional: true
 
   '@vitejs/plugin-react@4.3.4':
     resolution: {integrity: sha512-SCCPBJtYLdE8PX/7ZQAs1QAZ8Jqwih+0VBLum1EGqmCCQal+MIUqLCzj3ZUy8ufbC0cAM4LRlSTm7IQJwWT4ug==}
@@ -2868,10 +2842,6 @@ snapshots:
   '@types/unist@3.0.2': {}
 
   '@ungap/structured-clone@1.2.0': {}
-
-  '@vercel/speed-insights@1.2.0(react@19.0.0)':
-    optionalDependencies:
-      react: 19.0.0
 
   '@vitejs/plugin-react@4.3.4(vite@6.0.7(@types/node@22.10.7)(jiti@2.4.2)(yaml@2.7.0))':
     dependencies:
