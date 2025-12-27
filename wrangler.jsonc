@@ -1,8 +1,19 @@
 {
+  "$schema": "node_modules/wrangler/config-schema.json",
   "name": "reinersystems",
   "compatibility_date": "2025-12-08",
   "assets": {
     "directory": "./dist",
     "not_found_handling": "404-page"
-  }
+  },
+  "routes": [
+    {
+      "pattern": "reiner.systems",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.reiner.systems",
+      "custom_domain": true
+    }
+  ]
 }
