@@ -8,8 +8,7 @@ import "../styles/vinyl.css";
 const collection = await getCollection("vinyl");
 
 const records = collection.sort(
-  // @ts-ignore
-  (a, b) => new Date(b.data.date_added) - new Date(a.data.date_added)
+  (a, b) => +new Date(b.data.date_added) - +new Date(a.data.date_added)
 );
 ---
 

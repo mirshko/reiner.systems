@@ -72,7 +72,7 @@ export default function Matte() {
 
   return (
     <div className="flex flex-col gap-8 items-center font-sans">
-      <div className="relative md:p-[75px] w-96 h-96 md:w-[40rem] md:h-[40rem] flex">
+      <div className="relative md:p-18.75 w-96 h-96 md:w-160 md:h-160 flex">
         {processedBlob ? (
           <img
             className="object-contain aspect-square w-full h-full"
@@ -94,7 +94,7 @@ export default function Matte() {
               onChange={handleFiles}
             />
             <svg
-              className="h-full aspect-[3/4] border-4 border-gray-300 bg-gray-50 text-gray-300 group-hover:text-gray-400 group-hover:border-gray-400 group-hover:bg-gray-100 group-focus-within:text-gray-400
+              className="h-full aspect-3/4 border-4 border-gray-300 bg-gray-50 text-gray-300 group-hover:text-gray-400 group-hover:border-gray-400 group-hover:bg-gray-100 group-focus-within:text-gray-400
               group-focus-within:border-gray-400
               group-focus-within:bg-gray-100"
               preserveAspectRatio="none"
@@ -114,7 +114,7 @@ export default function Matte() {
       </div>
 
       {processedBlob ? (
-        <span className="isolate inline-flex rounded-md shadow-sm">
+        <span className="isolate inline-flex rounded-md shadow-xs">
           <button
             className="relative inline-flex items-center rounded-l-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
             onClick={saveFile}
@@ -131,7 +131,7 @@ export default function Matte() {
         </span>
       ) : (
         <label
-          className="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 font-mono cursor-pointer"
+          className="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-xs ring-1 ring-inset ring-gray-300 hover:bg-gray-50 font-mono cursor-pointer"
           htmlFor="color"
         >
           <span>{color}</span>

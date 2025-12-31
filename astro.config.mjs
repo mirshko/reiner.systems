@@ -1,6 +1,6 @@
-import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
+import tailwindcss from "@tailwindcss/vite";
+import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,10 +13,13 @@ export default defineConfig({
     "/experiments": "/",
     "/portfolio": "/",
   },
-  integrations: [tailwind({ applyBaseStyles: false }), react()],
+  integrations: [react()],
   markdown: {
     shikiConfig: {
       theme: "github-dark-default",
     },
+  },
+  vite: {
+    plugins: [tailwindcss()],
   },
 });

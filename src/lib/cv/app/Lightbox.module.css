@@ -39,11 +39,11 @@
 }
 
 .imageWrap::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  border: 1px solid var(--transparent-border);
+  border: 1px solid var(--transparentBorder);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
