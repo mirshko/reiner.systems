@@ -10,16 +10,13 @@ const Profile: React.FC<ProfileProps> = ({ cv }) => {
   return (
     <div className={styles.profile}>
       <div className={styles.profileHeader}>
-        <div className={styles.profilePhoto}>
-          <img src={cv.general.profilePhoto} alt="" width={92} height={92} />
-        </div>
         <div className={styles.profileInfo}>
           <h1>{cv.general.displayName}</h1>
           <div className={styles.byline}>{cv.general.byline}</div>
           {cv.general.website ? (
             <a
               className={styles.website}
-              href={cv.general.website}
+              href={cv.general.websiteURL}
               target="_blank"
             >
               {cv.general.website}

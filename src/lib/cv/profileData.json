@@ -1,14 +1,13 @@
 {
   "general": {
-    "profilePhoto": "/content/media/profilePhoto.jpg",
     "username": "mirshko",
     "displayName": "Jeff Reiner",
-    "profession": "Software Engineer",
+    "profession": "Product Engineer",
     "location": "Berlin, Germany",
     "pronouns": "He / Him",
-    "byline": "Software Engineer in Berlin, Germany, He / Him",
-    "website": "https://reiner.systems",
-    "websiteURL": "https://reiner.systems",
+    "byline": "Product Engineer in Berlin, Germany, He / Him",
+    "website": "reiner.systems",
+    "websiteURL": "https://www.reiner.systems",
     "about": "I build and design digital products and experiences, focusing on Web3.",
     "status": {
       "text": null,
@@ -40,7 +39,6 @@
       "collaborators": [
         {
           "displayName": "Bertie Corrie",
-          "profilePhoto": "/content/collaborators/bertie.jpg",
           "profileURL": "https://read.cv/bertie"
         }
       ],
@@ -210,7 +208,6 @@
       "collaborators": [
         {
           "displayName": "Bertie Corrie",
-          "profilePhoto": "/content/collaborators/bertie.jpg",
           "profileURL": "https://read.cv/bertie"
         }
       ],
@@ -268,7 +265,6 @@
       "collaborators": [
         {
           "displayName": "murf",
-          "profilePhoto": "/content/collaborators/murf.jpg",
           "profileURL": "https://read.cv/murf"
         }
       ],
@@ -375,7 +371,6 @@
       "collaborators": [
         {
           "displayName": "Rejon Taylor-Foster",
-          "profilePhoto": "/content/collaborators/maximumcrash.jpg",
           "profileURL": "https://read.cv/maximumcrash"
         }
       ],
@@ -420,7 +415,6 @@
           "collaborators": [
             {
               "displayName": "Bertie Corrie",
-              "profilePhoto": "/content/collaborators/bertie.jpg",
               "profileURL": "https://read.cv/bertie"
             }
           ],
@@ -478,7 +472,6 @@
           "collaborators": [
             {
               "displayName": "murf",
-              "profilePhoto": "/content/collaborators/murf.jpg",
               "profileURL": "https://read.cv/murf"
             }
           ],
@@ -587,7 +580,6 @@
           "collaborators": [
             {
               "displayName": "Bertie Corrie",
-              "profilePhoto": "/content/collaborators/bertie.jpg",
               "profileURL": "https://read.cv/bertie"
             }
           ],
@@ -758,7 +750,6 @@
           "collaborators": [
             {
               "displayName": "Rejon Taylor-Foster",
-              "profilePhoto": "/content/collaborators/maximumcrash.jpg",
               "profileURL": "https://read.cv/maximumcrash"
             }
           ],
