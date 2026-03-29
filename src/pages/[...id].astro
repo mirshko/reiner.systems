@@ -1,5 +1,5 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Prose from "../components/Prose.astro";
 import { format } from "date-fns";
@@ -7,18 +7,18 @@ import { format } from "date-fns";
 export async function getStaticPaths() {
   const posts = await getCollection("post");
 
-  return posts.map((entry) => ({
-    params: { slug: entry.slug },
-    props: { entry },
+  return posts.map((post) => ({
+    params: { id: post.id },
+    props: { post },
   }));
 }
 
-const { entry } = Astro.props;
+const { post } = Astro.props;
 
-const { Content } = await entry.render();
+const { Content } = await render(post);
 ---
 
-<Layout title={entry.data.title} path={`/${entry.slug}`}>
+<Layout title={post.data.title} path={`/${post.id}`}>
   <main class="max-w-[80ch]">
     <div class="p-5">
       <a href="/" class="">← Index</a>
@@ -26,11 +26,11 @@ const { Content } = await entry.render();
 
     <header class="p-5">
       <h1 class="text-2xl font-bold mb-2">
-        {entry.data.title}
+        {post.data.title}
       </h1>
 
-      <time datetime={entry.data.date.toISOString()}>
-        {format(entry.data.date, "dd MMM yyyy")}
+      <time datetime={post.data.date.toISOString()}>
+        {format(post.data.date, "dd MMM yyyy")}
       </time>
     </header>
 

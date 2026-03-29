@@ -1,7 +1,9 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from "astro:content";
+import { glob } from "astro/loaders";
+import { z } from "astro/zod";
 
 const vinylCollection = defineCollection({
-  type: "data",
+  loader: glob({ pattern: "**/*.json", base: "./src/vinyl" }),
   schema: z.object({
     artist: z.string(),
     cover_image: z.string(),
@@ -15,7 +17,7 @@ const vinylCollection = defineCollection({
 });
 
 const postCollection = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "**/*.(md|mdx)", base: "./src/post" }),
   schema: z.object({
     title: z.string(),
     date: z.date(),
