@@ -1,6 +1,7 @@
 ---
 import { parse } from "valibot";
 import { MetadataSchema, type Metadata } from "../schemas/metadata";
+import LinkPreviewStatic from "./LinkPreviewStatic.astro";
 
 export type Props = {
   url: string;
@@ -19,42 +20,6 @@ try {
 } catch {
   console.error("Failed to parse metadata:", rawMetadata);
 }
-
-const { hostname: domainOnly } = new URL(url);
 ---
 
-{
-  !metadata ? (
-    <a href={url} target="_blank" rel="nofollow">
-      {url}
-    </a>
-  ) : (
-    <a
-      href={url}
-      target="_blank"
-      rel="nofollow"
-      title={url}
-      class="grid grid-cols-[1fr_2fr] items-center my-5"
-    >
-      {metadata.image && (
-        <img
-          src={metadata.image}
-          alt=""
-          width={80}
-          class="object-cover w-full aspect-1200/630 m-0!"
-          loading="lazy"
-        />
-      )}
-
-      <span class="pl-5 only:pl-0 flex flex-col gap-2 only:col-span-full">
-        <span class="leading-tight font-bold">{metadata.title}</span>
-
-        <span class="text-sm leading-tight opacity-60">
-          {metadata.description}
-        </span>
-
-        <span class="text-sm leading-none opacity-40">{domainOnly}</span>
-      </span>
-    </a>
-  )
-}
+<LinkPreviewStatic url={url} metadata={metadata} />
