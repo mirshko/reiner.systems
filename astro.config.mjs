@@ -1,4 +1,6 @@
+import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
+import rehypeFigure from "@microflash/rehype-figure?bundle";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 
@@ -14,12 +16,13 @@ export default defineConfig({
     "/experiments": "/",
     "/portfolio": "/",
   },
-  integrations: [react()],
-  markdown: {
-    shikiConfig: {
-      theme: "github-dark-default",
-    },
-  },
+  integrations: [
+    react(),
+    mdx({
+      rehypePlugins: [rehypeFigure],
+      shikiConfig: { theme: "github-dark" },
+    }),
+  ],
   vite: {
     plugins: [tailwindcss()],
   },

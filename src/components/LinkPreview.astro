@@ -1,0 +1,25 @@
+---
+import { parse } from "valibot";
+import { MetadataSchema, type Metadata } from "../schemas/metadata";
+import LinkPreviewStatic from "./LinkPreviewStatic.astro";
+
+export type Props = {
+  url: string;
+};
+
+const { url } = Astro.props;
+
+const metadataRes = await fetch(`https://og.metadata.vision/${url}`);
+const rawMetadata = await metadataRes.json();
+
+let metadata: Metadata["data"] | null = null;
+
+try {
+  const parsed = parse(MetadataSchema, rawMetadata);
+  metadata = parsed.data;
+} catch {
+  console.error("Failed to parse metadata:", rawMetadata);
+}
+---
+
+<LinkPreviewStatic url={url} metadata={metadata} />
