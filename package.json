@@ -13,14 +13,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.8",
-    "@astrojs/mdx": "^5.0.3",
-    "@astrojs/react": "^5.0.3",
+    "@astrojs/check": "0.9.9",
+    "@astrojs/mdx": "5.0.4",
+    "@astrojs/react": "5.0.4",
     "@fontsource-variable/inter": "^5.2.8",
     "@microflash/rehype-figure": "^2.1.4",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "astro": "^6.1.8",
+    "astro": "6.2.1",
     "date-fns": "^4.1.0",
     "framer-motion": "^12.38.0",
     "react": "^19.2.5",
@@ -36,7 +36,7 @@
     "@tailwindcss/vite": "^4.2.4",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.2.4",
-    "wrangler": "^4.84.1",
+    "wrangler": "^4.87.0",
     "zx": "^8.8.5"
   },
   "repository": {
