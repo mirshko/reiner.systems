@@ -1,6 +1,6 @@
 ---
+import Header from "../components/Header.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 
 export interface Props {
@@ -9,11 +9,27 @@ export interface Props {
   path: `/${string}`;
 }
 
-const props = Astro.props;
+const { ...rest } = Astro.props;
 ---
 
-<BaseLayout {...props}>
+<BaseLayout {...rest}>
+  <Header />
+
   <slot />
 
-  <Footer />
+  <footer class="p-5 max-w-[80ch]">
+    <div class="flex items-baseline gap-[1ch]">
+      <span class="whitespace-nowrap text-right">
+        {`[${new Date().getFullYear()}]`}
+      </span>
+
+      <span
+        class="inline text-overflow-clip min-w-2 whitespace-nowrap flex-1 overflow-hidden"
+      >
+        .......................................................
+      </span>
+
+      <p class="uppercase whitespace-nowrap">reiner.systems</p>
+    </div>
+  </footer>
 </BaseLayout>

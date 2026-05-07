@@ -20,21 +20,25 @@ const { Content } = await render(post);
 
 <Layout title={post.data.title} path={`/${post.id}`}>
   <main class="max-w-[80ch]">
-    <div class="p-5">
-      <a href="/" class="">← Index</a>
-    </div>
+    <section class="p-5 space-y-5">
+      <div>
+        <dl class="inline-grid grid-cols-[auto_minmax(0,1fr)] gap-x-[1ch]">
+          <dt class="uppercase sr-only">{"Date"}</dt>
 
-    <header class="p-5">
-      <h1 class="text-2xl font-bold mb-2">
-        {post.data.title}
-      </h1>
+          <dd>
+            <time class="uppercase" datetime={post.data.date.toISOString()}>
+              {`${format(post.data.date, "MMM.dd.yyyy")}`}
+            </time>
+          </dd>
+        </dl>
+      </div>
 
-      <time datetime={post.data.date.toISOString()}>
-        {format(post.data.date, "dd MMM yyyy")}
-      </time>
-    </header>
+      <div>
+        <h1 class="font-bold">
+          {post.data.title}
+        </h1>
+      </div>
 
-    <section class="p-5">
       <Prose>
         <Content />
       </Prose>

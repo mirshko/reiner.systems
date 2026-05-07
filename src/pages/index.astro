@@ -9,54 +9,36 @@ const posts = await getCollection("post");
 <Layout title="Jeff Reiner, Product Engineer" path="/">
   <main class="max-w-[80ch]">
     <section>
-      <div class="p-5 space-y-5">
-        <p>
-          Jeff Reiner engineers high performance products and experiences.
-          Berlin
-        </p>
+      <div class="p-5">
+        <h3>Writing</h3>
 
         <ul>
-          <li>
-            <a href="https://bsky.app/profile/mirshko.bsky.social">
-              {"@mirshko ↗"}
-            </a>
-          </li>
-          <li><a href="https://github.com/mirshko">{"<>mirshko ↗"}</a></li>
-          <li>
-            <a href="mailto:email@reiner.systems">{"email@reiner.systems"}</a>
-          </li>
+          {
+            posts.map((post) => (
+              <li>
+                <div class="flex items-baseline gap-[1ch]">
+                  <time
+                    class="whitespace-nowrap uppercase"
+                    datetime={post.data.date.toISOString()}
+                  >
+                    {`[${format(post.data.date, "MMM.dd.yyyy")}]`}
+                  </time>
+
+                  <span class="hidden sm:inline text-overflow-clip min-w-2 whitespace-nowrap flex-1 overflow-hidden">
+                    ..............................................................
+                  </span>
+
+                  <a
+                    href={post.id}
+                    class="sm:whitespace-nowrap sm:text-right underline"
+                  >
+                    {post.data.title}
+                  </a>
+                </div>
+              </li>
+            ))
+          }
         </ul>
-      </div>
-    </section>
-
-    <section>
-      <div class="p-5">
-        <table>
-          <thead>
-            <tr>
-              <th class="text-left whitespace-nowrap pr-5">Date Modified</th>
-              <th class="text-left whitespace-nowrap pr-5">Name</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            {
-              posts.map((post) => (
-                <tr>
-                  <td class="pr-5 whitespace-nowrap">
-                    <time datetime={post.data.date.toISOString()}>
-                      {format(post.data.date, "dd MMM yyyy")}
-                    </time>
-                  </td>
-
-                  <td class="pr-5">
-                    <a href={post.id}>{post.data.title}</a>
-                  </td>
-                </tr>
-              ))
-            }
-          </tbody>
-        </table>
       </div>
     </section>
   </main>

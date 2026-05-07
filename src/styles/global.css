@@ -13,14 +13,6 @@
 
 /* Base styles */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
-  }
-
   /* @font-face {
     font-family: "CommitMono";
     src: url("/fonts/CommitMono-Italic.woff2") format("woff2");
@@ -57,25 +49,17 @@
 /* Utilities */
 @layer utilities {
   html {
-    @apply text-sm font-mono md:text-xs antialiased;
+    @apply font-mono antialiased;
     text-rendering: optimizeLegibility;
   }
 
   body {
-    @apply bg-ibm-background text-ibm-foreground;
+    @apply bg-ibm-background text-sm/snug text-ibm-foreground;
   }
 
-  a[href] {
-    text-decoration: underline;
-  }
-
-  a[class] {
-    text-decoration: none;
-  }
-
-  a[href]:focus,
+  a[href]:focus-visible,
   a[href]:hover {
-    @apply outline-hidden no-underline bg-ibm-foreground text-ibm-background;
+    @apply outline-hidden bg-ibm-foreground text-ibm-background;
   }
 }
 
@@ -117,4 +101,5 @@
 /* Set the font family for prose */
 .prose {
   font-family: var(--font-commitmono);
+  font-size: var(--text-sm);
 }
