@@ -20,7 +20,7 @@ export default defineConfig({
     react(),
     mdx({
       rehypePlugins: [rehypeFigure],
-      shikiConfig: { theme: "github-dark" },
+      shikiConfig: { theme: "github-dark-high-contrast" },
     }),
   ],
   vite: {
