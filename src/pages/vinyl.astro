@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
+import "../styles/vinyl.css";
 
 const collection = await getCollection("vinyl");
 
@@ -30,6 +31,15 @@ const records = collection.sort(
                   data-title={record.data.title}
                   data-year={record.data.year}
                 >
+                  {record.data.video_id && (
+                    <div class="relative size-40">
+                      <lite-youtube
+                        data-id={record.data.video_id}
+                        data-title={record.data.title}
+                      />
+                    </div>
+                  )}
+
                   <a
                     target="_blank"
                     rel="noopener nofollow"
@@ -77,6 +87,7 @@ const records = collection.sort(
   </div>
 
   <script>
+    import "../lite-youtube";
     import "../vinyl-stack";
   </script>
 </Layout>
