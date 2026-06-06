@@ -17,7 +17,7 @@ const records = collection.sort(
 
         <ul data-vinyl-list class="relative flex flex-col w-full">
           {
-            records.map((record, i) => {
+            records.map((record) => {
               const q = encodeURIComponent(
                 `${record.data.artist} ${record.data.title} ${record.data.year}`,
               );
