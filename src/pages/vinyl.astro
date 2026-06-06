@@ -53,10 +53,8 @@ const records = collection.sort(
                     <span class="whitespace-nowrap">{".".repeat(200)}</span>
                   </span>
 
-                  <span class="sm:whitespace-nowrap sm:text-right tabular-nums">
-                    <span class="select-none">{`[`}</span>
-                    {record.data.year}
-                    <span class="select-none">{`]`}</span>
+                  <span class="sm:whitespace-nowrap sm:text-right tabular-nums select-none">
+                    {`[${record.data.year}]`}
                   </span>
 
                   <a
@@ -76,13 +74,13 @@ const records = collection.sort(
     </section>
   </main>
 
-  <!-- <div
+  <div
     data-vinyl-stack
     class="fixed inset-0 items-center justify-center pointer-events-none z-40 hidden lg:flex"
     style="display:none"
   >
     <div class="relative" style="width:320px;height:320px"></div>
-  </div> -->
+  </div>
 
   <style>
     lite-youtube {

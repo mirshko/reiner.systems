@@ -5,12 +5,16 @@
   "author": "@mirshko",
   "private": true,
   "license": "UNLICENSED",
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "generate-content": "node scripts/generate-vinyl-files.ts",
+    "generate-content:download": "node scripts/generate-vinyl-files.ts --download",
+    "download-covers": "node scripts/download-cover-images.ts"
   },
   "dependencies": {
     "@astrojs/check": "0.9.9",
@@ -34,6 +38,7 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.2.4",
+    "@types/node": "25.9.0",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.2.4",
     "wrangler": "^4.88.0"
