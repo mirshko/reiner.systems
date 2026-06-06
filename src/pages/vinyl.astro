@@ -1,8 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import Record from "../components/Record.astro";
 import Layout from "../layouts/Layout.astro";
-import "../styles/vinyl.css";
 
 const collection = await getCollection("vinyl");
 
@@ -12,18 +10,142 @@ const records = collection.sort(
 ---
 
 <Layout title="Vinyl" path="/vinyl">
-  <main class="p-5">
-    <section class="record-list">
-      {records.map((record) => <Record record={record} />)}
+  <main class="max-w-360">
+    <section>
+      <div class="p-5">
+        <h1>Vinyl</h1>
+
+        <ul id="vinyl-list" class="relative flex flex-col w-full">
+          {
+            records.map((record, i) => {
+              const hasVideo = !!record.data.video_id;
+
+              return (
+                <li
+                  class="flex items-baseline gap-[1ch] select-none"
+                  data-cover={record.data.file_name}
+                  data-artist={record.data.artist}
+                  data-title={record.data.title}
+                  data-year={record.data.year}
+                  data-has-video={String(hasVideo)}
+                >
+                  <button class="cursor-pointer text-left whitespace-nowrap vinyl-btn">
+                    {record.data.artist}
+                    <span class="mx-[0.5ch]">—</span>
+                    <span
+                      class={
+                        hasVideo
+                          ? "underline decoration-dotted underline-offset-4"
+                          : ""
+                      }
+                    >
+                      {record.data.title}
+                    </span>
+                  </button>
+
+                  <span class="hidden sm:inline overflow-hidden flex-1 min-w-2">
+                    <span class="whitespace-nowrap">{".".repeat(200)}</span>
+                  </span>
+
+                  <span class="sm:whitespace-nowrap sm:text-right tabular-nums">
+                    [{record.data.year}]
+                  </span>
+
+                  <a
+                    target="_blank"
+                    rel="noopener nofollow"
+                    href={`https://www.discogs.com/release/${record.data.resource_id}`}
+                    class="sm:whitespace-nowrap sm:text-right"
+                  >
+                    {`↗`}
+                  </a>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </div>
     </section>
   </main>
-</Layout>
 
-<style>
-  .record-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 16rem);
-    gap: 1.6rem;
-    justify-content: center;
-  }
-</style>
+  <div
+    id="vinyl-stack"
+    class="fixed inset-0 flex items-center justify-center pointer-events-none z-40"
+    style="display:none"
+  >
+    <div class="relative" style="width:320px;height:320px"></div>
+  </div>
+
+  <style>
+    .vinyl-btn:hover {
+      background-color: var(--color-ibm-foreground);
+      color: var(--color-ibm-background);
+    }
+  </style>
+
+  <script>
+    const list = document.getElementById("vinyl-list");
+    const stack = document.getElementById("vinyl-stack");
+    const container = stack.querySelector(".relative");
+
+    const items = [...list.querySelectorAll("li")];
+    let prevIdx = -1;
+
+    function esc(s) {
+      const d = document.createElement("div");
+      d.textContent = s;
+      return d.innerHTML;
+    }
+
+    const GAP = 72;
+    const S = 320;
+    const STACK = [1, 0.875, 0.75, 0.625].map((scale, i) => ({
+      size: scale * S,
+      z: 10 - i,
+      y: -i * GAP,
+    }));
+
+    function cardHTML(cover, artist, title, s) {
+      const bg = "#c9c5c0";
+      return `<div style="position:absolute;left:50%;bottom:0;width:${s.size}px;height:${s.size}px;z-index:${s.z};transform:translateX(-50%) translateY(${s.y}px)">
+        <div style="position:absolute;inset:0;overflow:hidden">
+          <div style="position:absolute;inset:0;background:${bg}"></div>
+          <img src="/cover_images/${cover}" alt="${esc(artist)} — ${esc(title)}" class="w-full h-full object-cover" draggable="false" style="position:absolute;height:100%;width:100%;inset:0;color:transparent">
+        </div>
+      </div>`;
+    }
+
+    function buildStack(idx) {
+      let html = "";
+      for (let i = 0; i < 4; i++) {
+        const si = idx + i;
+        const s = STACK[i];
+        if (si >= 0 && si < items.length) {
+          const c = items[si].dataset;
+          html += cardHTML(c.cover, c.artist, c.title, s);
+        }
+      }
+      container.innerHTML = html;
+    }
+
+    list.addEventListener("mouseover", (e) => {
+      const li = e.target.closest("li");
+      if (!li || !li.dataset.cover) return;
+
+      const idx = items.indexOf(li);
+      if (idx === prevIdx) return;
+
+      prevIdx = idx;
+
+      buildStack(idx);
+      stack.style.display = "";
+    });
+
+    list.addEventListener("mouseout", (e) => {
+      const li = e.target.closest("li");
+      if (!li) return;
+      if (e.relatedTarget && li.contains(e.relatedTarget)) return;
+      stack.style.display = "none";
+    });
+  </script>
+</Layout>
