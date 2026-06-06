@@ -36,8 +36,7 @@
     "@tailwindcss/vite": "^4.2.4",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.2.4",
-    "wrangler": "^4.88.0",
-    "zx": "^8.8.5"
+    "wrangler": "^4.88.0"
   },
   "repository": {
     "type": "git",
