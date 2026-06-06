@@ -15,7 +15,7 @@ const records = collection.sort(
       <div class="p-5">
         <h1>Vinyl</h1>
 
-        <ul id="vinyl-list" class="relative flex flex-col w-full">
+        <ul data-vinyl-list class="relative flex flex-col w-full">
           {
             records.map((record, i) => {
               const q = encodeURIComponent(
@@ -67,7 +67,7 @@ const records = collection.sort(
   </main>
 
   <div
-    id="vinyl-stack"
+    data-vinyl-stack
     class="fixed inset-0 flex items-center justify-center pointer-events-none z-40"
     style="display:none"
   >
@@ -82,12 +82,11 @@ const records = collection.sort(
   </style>
 
   <script>
-    const list = document.getElementById("vinyl-list");
-    const stack = document.getElementById("vinyl-stack");
+    const list = document.querySelector("[data-vinyl-list]");
+    const stack = document.querySelector("[data-vinyl-stack]");
     const container = stack.querySelector(".relative");
 
     const items = [...list.querySelectorAll("li")];
-    let prevIdx = -1;
 
     function esc(s) {
       const d = document.createElement("div");
