@@ -12,7 +12,12 @@ function esc(s: string) {
   return d.innerHTML;
 }
 
-function cardHTML(cover: string, artist: string, title: string, s: (typeof STACK)[number]) {
+function cardHTML(
+  cover: string,
+  artist: string,
+  title: string,
+  s: (typeof STACK)[number],
+) {
   const bg = "#c9c5c0";
   return `<div style="position:absolute;left:50%;bottom:0;width:${s.size}px;height:${s.size}px;z-index:${s.z};transform:translateX(-50%) translateY(${s.y}px)">
     <div style="position:absolute;inset:0;overflow:hidden">

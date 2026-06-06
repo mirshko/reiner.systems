@@ -34,7 +34,7 @@ const records = collection.sort(
                     target="_blank"
                     rel="noopener nofollow"
                     href={`https://www.youtube.com/results?search_query=${q}`}
-                    class="text-left whitespace-nowrap vinyl-btn"
+                    class="text-left sm:whitespace-nowrap"
                   >
                     {record.data.artist}
                     <span class="mx-[0.5ch]">—</span>
@@ -68,18 +68,11 @@ const records = collection.sort(
 
   <div
     data-vinyl-stack
-    class="fixed inset-0 flex items-center justify-center pointer-events-none z-40"
+    class="fixed inset-0 items-center justify-center pointer-events-none z-40 hidden lg:flex"
     style="display:none"
   >
     <div class="relative" style="width:320px;height:320px"></div>
   </div>
-
-  <style>
-    .vinyl-btn:hover {
-      background-color: var(--color-ibm-foreground);
-      color: var(--color-ibm-background);
-    }
-  </style>
 
   <script>
     import "../vinyl-stack";
