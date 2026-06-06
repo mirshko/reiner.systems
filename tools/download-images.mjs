@@ -2,11 +2,8 @@
 import "zx/globals";
 
 try {
-  /**
-   * @type {import("../src/discogs").RecordInterface[]}
-   */
   const vinyl = await fs.readJSON(
-    `${process.cwd()}/src/data/vinyl-patched.json`
+    `${process.cwd()}/src/data/vinyl-patched.json`,
   );
 
   for (const record of vinyl) {

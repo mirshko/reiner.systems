@@ -2,12 +2,6 @@
 import "zx/globals";
 
 try {
-  const token = argv["token"];
-
-  if (!token) {
-    throw new Error(`Missing 'token'`);
-  }
-
   /**
    * @name URL
    * @description Discogs endpoint to fetch collection releases by username 'mirshko'
@@ -17,9 +11,7 @@ try {
     "https://api.discogs.com/users/mirshko/collection/folders/0/releases" +
     "?per_page=500" +
     "&sort=added" +
-    "&sort_order=desc" +
-    "&token=" +
-    token;
+    "&sort_order=desc";
 
   const response = await fetch(URL);
 
@@ -27,9 +19,6 @@ try {
     throw new Error((await response.json()).message);
   }
 
-  /**
-   * @type {{ releases: import("../src/discogs").ReleaseInterface[] }}
-   */
   const data = await response.json();
 
   const vinyl = data.releases.map((release) => {
@@ -43,9 +32,6 @@ try {
 
     const file_name = cover_image.substring(cover_image.lastIndexOf("/") + 1);
 
-    /**
-     * @type {import("../src/discogs").RecordInterface}
-     */
     return {
       title,
       artist,
