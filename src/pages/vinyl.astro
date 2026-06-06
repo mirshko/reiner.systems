@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
-import "../styles/vinyl.css";
 
 const collection = await getCollection("vinyl");
 
@@ -32,12 +31,11 @@ const records = collection.sort(
                   data-year={record.data.year}
                 >
                   {record.data.video_id && (
-                    <div class="relative size-40">
-                      <lite-youtube
-                        data-id={record.data.video_id}
-                        data-title={record.data.title}
-                      />
-                    </div>
+                    <lite-youtube
+                      videoid={record.data.video_id}
+                      videotitle={record.data.title}
+                      posterquality="maxresdefault"
+                    />
                   )}
 
                   <a
@@ -78,13 +76,29 @@ const records = collection.sort(
     </section>
   </main>
 
-  <div
+  <!-- <div
     data-vinyl-stack
     class="fixed inset-0 items-center justify-center pointer-events-none z-40 hidden lg:flex"
     style="display:none"
   >
     <div class="relative" style="width:320px;height:320px"></div>
-  </div>
+  </div> -->
+
+  <style>
+    lite-youtube {
+      width: 160px;
+      --lite-youtube-aspect-ratio: 1 / 1;
+    }
+
+    lite-youtube::part(playButton) {
+      filter: grayscale(1);
+      transition: filter 0.1s cubic-bezier(0, 0, 0.2, 1);
+    }
+
+    lite-youtube:hover::part(playButton) {
+      filter: none;
+    }
+  </style>
 
   <script>
     import "../lite-youtube";
