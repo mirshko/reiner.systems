@@ -14,7 +14,8 @@
     "astro": "astro",
     "generate-content": "node scripts/generate-vinyl-files.ts",
     "generate-content:download": "node scripts/generate-vinyl-files.ts --download",
-    "download-covers": "node scripts/download-cover-images.ts"
+    "download-covers": "node scripts/download-cover-images.ts",
+    "check-videos": "node scripts/check-video-titles.ts"
   },
   "dependencies": {
     "@astrojs/check": "0.9.9",
