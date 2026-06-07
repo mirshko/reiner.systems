@@ -30,13 +30,13 @@ const records = collection.sort(
                   data-title={record.data.title}
                   data-year={record.data.year}
                 >
-                  {record.data.video_id && (
+                  {/* {record.data.video_id && (
                     <lite-youtube
                       videoid={record.data.video_id}
                       videotitle={record.data.title}
                       posterquality="maxresdefault"
                     />
-                  )}
+                  )} */}
 
                   <a
                     target="_blank"
@@ -99,7 +99,7 @@ const records = collection.sort(
   </style>
 
   <script>
-    import "../lite-youtube";
+    // import "../lite-youtube";
     import "../vinyl-stack";
   </script>
 </Layout>
